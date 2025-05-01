@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Megapad-64 Processor Architecture — Complete Developer Spec v1.0-rc</title>
+<style>
+/* ———  TYPO / LAYOUT  ——————————————————————————— */
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;margin:0;padding:0 1rem;background:#f6f8fb;color:#1b1e23}
+h1,h2,h3{font-weight:600;color:#0d1117;margin:2rem 0 1rem}
+h1{font-size:2rem;border-bottom:3px solid #3a5bff;padding-bottom:.5rem;margin-top:1.5rem}
+h2{font-size:1.4rem;border-bottom:2px solid #d0d7de;padding-bottom:.3rem}
+h3{font-size:1.15rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+th,td{border:1px solid #d0d7de;padding:.4rem .6rem;text-align:left;vertical-align:top}
+thead th{background:#e6edf3}
+code,pre{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.82rem}
+pre{background:#0d1117;color:#e6edf3;padding:1rem;border-radius:6px;overflow:auto}
+aside.note{background:#fff9c4;border-left:4px solid #f5c940;padding:.75rem;margin:1.25rem 0}
+aside.tip{background:#e6f7ea;border-left:4px solid #46c36f;padding:.75rem;margin:1.25rem 0}
+.legal{font-size:.8rem;color:#57606a;margin:2.5rem 0}
+@media (min-width:900px){
+  .col2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<h1>Megapad-64 Processor Architecture<br>
+<span style="font-weight:400;font-size:1.1rem">(a 64-bit, tile-native successor to the RCA 1802 COSMAC)</span></h1>
+
+<aside class="note">
+<strong>Goal:</strong> Preserve the 1802’s single-byte opcode simplicity and deterministic behaviour while delivering
+64-bit compute, multi-MiB on-die scratchpad (“Megapad”) and tile-level vector ALU (<em>MEX</em>).
+</aside>
+
+<!-- ——— 1  CORE PARAMETERS ——————————————— -->
+<h2 id="core">1 Core Parameters</h2>
+<table>
+<thead><tr><th>Feature</th><th>Value</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Native word / address</td><td>64 bit</td><td>SHA-512 blocks, 64-bit OS kernels, 64-GiB+ address space.</td></tr>
+<tr><td>Pipeline</td><td>4-stage in-order (IF, ID, EX, WB)</td><td>Cycle-accurate emulation: one table lookup per stage.</td></tr>
+<tr><td>Megapad</td><td>8 / 16 / 32 / 64 MiB SRAM (config at tape-out)</td><td>16 banks, 64-byte <em>tiles</em>; 4 read + 2 write ports to ALU.</td></tr>
+<tr><td>Tile issue rate</td><td>1 tile cycle-1 (512 bit datapath)</td><td>64 GB s⁻¹ @1 GHz — small-GPU throughput without caches.</td></tr>
+<tr><td>Element widths</td><td>8, 16, 32, 64 bit S/U</td><td>Select per-op via <code>TMODE.E</code>.</td></tr>
+<tr><td>External memory</td><td>x16 quad-SPI or 64-bit DDR4/LPDDR4 (optional)</td><td>Project-builder picks BOM cost.</td></tr>
+</tbody></table>
+
+<!-- ——— 2  MEMORY MAP ——————————————— -->
+<h2 id="memmap">2 Physical Memory Map</h2>
+<table>
+<thead><tr><th>Address range (hex)</th><th>Size</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><code>0000 0000 0000 0000 – 0000 0000 03FF FFFF</code></td><td>per bank</td><td><strong>Megapad bank 0</strong> (example 8 MiB part: 512 KiB)</td></tr>
+<tr><td>… 15 more contiguous banks …</td><td> </td><td><strong>Megapad bank 15</strong></td></tr>
+<tr><td><code>0001 0000 0000 0000 – 000F FFFF FFFF FFFF</code></td><td>≤ 256 TiB</td><td>External DDR/PSRAM (optional)</td></tr>
+<tr><td><code>FFFF FF00 0000 0000 – FFFF FF7F FFFF FFFF</code></td><td>2 GiB</td><td>Memory-mapped I/O (GPIO, UART, Quad-SPI, USB-DEV, timers…)</td></tr>
+<tr><td><code>FFFF FFFF FFF0 0000 – FFFF FFFF FFFFFFFF</code></td><td>64 KiB</td><td>CSR / system registers (incl. <code>SB/SR/SC/SW</code>, <code>TMODE</code>, IVT)</td></tr>
+</tbody></table>
+
+<!-- ——— 3  REGISTER FILE ——————————————— -->
+<h2 id="regs">3 Program-Visible Registers</h2>
+<div class="col2">
+<table>
+<thead><tr><th>Standard regs</th><th>Bits</th><th>Power-up</th></tr></thead>
+<tbody>
+<tr><td>R0 – R15</td><td>64</td><td>0</td></tr>
+<tr><td>PC (alias of any R)</td><td>64</td><td>R3</td></tr>
+<tr><td>DP (DMA pointer alias)</td><td>64</td><td>R2</td></tr>
+<tr><td>FLAGS <small> Z C N V P G I S </small></td><td>8</td><td>0</td></tr>
+</tbody></table>
+
+<table>
+<thead><tr><th>Megapad &amp; MEX regs</th><th>Bits</th><th>Function</th></tr></thead>
+<tbody>
+<tr><td>SB</td><td>4</td><td>Bank selector (0–15)</td></tr>
+<tr><td>SR / SC / SW</td><td>20 / 20 / 20</td><td>Row, Column, Stride-width (tiles)</td></tr>
+<tr><td>TMODE</td><td>8</td><td>Element width [3:0] and sign bit [4]</td></tr>
+<tr><td>TCTRL</td><td>8</td><td>ACC accumulate (bit0), Zero ACC (bit1), Saturate (bit2)</td></tr>
+<tr><td>TSRC0 / TSRC1 / TDST</td><td>64</td><td>Tile addresses for MEX</td></tr>
+<tr><td>ACC0 – ACC3</td><td>64</td><td>Per-bank accumulators</td></tr>
+</tbody></table>
+</div>
+
+<!-- ——— 4  OPCODE FAMILIES OVERVIEW ——————————————— -->
+<h2 id="opc">4 Primary Opcode Families (0×00 – 0×F0)</h2>
+<table>
+<thead><tr><th>F nibble</th><th>Mnemonic range</th><th>Summary (one-byte unless stated)</th></tr></thead>
+<tbody>
+<tr><td>0x0</td><td>SYS</td><td><code>NOP, HALT, IDLE, RESET</code>; unused slots trap.</td></tr>
+<tr><td>0x1</td><td>IMM</td><td><code>LDI, LHI, ADDI</code> (imm8; <em>or</em> imm64 via EXT).</td></tr>
+<tr><td>0x2</td><td>ALU</td><td>64-bit <code>ADD, SUB, AND, OR, XOR, CMP, MOV</code>.</td></tr>
+<tr><td>0x3</td><td>SHIFT / BIT</td><td><code>SHL, SHR, SAR, ROL, ROR, BSET, BCLR, BTST</code>.</td></tr>
+<tr><td>0x4</td><td>BR</td><td>PC-relative branches &amp; SKIP family (cond = RRRR).</td></tr>
+<tr><td>0x5</td><td>LD1D / ST1D</td><td>Tile-aligned loads/stores with auto-column.</td></tr>
+<tr><td>0x6</td><td>LD2D / ST2D</td><td>Auto-row-&amp;-column walker for true 2-D.</td></tr>
+<tr><td>0x7</td><td>CTL</td><td><code>INC.R, DEC.R, SETW, GETW, TILECPY, FILL, CLRROW, CLRCOL</code>.</td></tr>
+<tr><td>0x8</td><td>SIMD</td><td>8×8-bit / 4×16-bit <code>SADD, SMUL, SMAX …</code> (host ALU).</td></tr>
+<tr><td>0x9</td><td>I/O</td><td><code>IN, OUT</code> (port 0-15) + memory-mapped sub-regs.</td></tr>
+<tr><td>0xA</td><td>ATOM</td><td><code>LL, SC, CAS, SWAP</code> (single 64-bit word).</td></tr>
+<tr><td>0xB</td><td>MUL/DIV</td><td><code>MUL, UMULH, DIV, UDIV</code> (micro-coded).</td></tr>
+<tr><td>0xC</td><td>FPU</td><td>IEEE-754 <code>FADD, FMUL, FDIV, FSQRT</code> (optional).</td></tr>
+<tr><td>0xD</td><td>CSR</td><td><code>CSR Rn, idx</code> – read/write CSR block.</td></tr>
+<tr><td>0xE</td><td>MEX (tile ALU)</td><td><code>TALU, TMUL, TRED, TSYS</code>; 1–3 bytes total.</td></tr>
+<tr><td>0xF</td><td>EXT</td><td>Prefix for imm64, long stride, future op-map.</td></tr>
+</tbody></table>
+
+<!-- ——— 5  MEX DETAIL ——————————————— -->
+<h2 id="mex">5 MEX Family 0xE — Tile-ALU Detail</h2>
+<p>Primary byte structure: <code>1110 S Op</code>, where <code>S</code>=operand selector and <code>Op</code>=2-bit major.</p>
+
+<table>
+<thead><tr><th>Op</th><th>Sub-funct (2<sup>nd</sup> byte)</th><th>Description (1 tile unless noted)</th></tr></thead>
+<tbody>
+<tr><td>00 (TALU)</td><td>0 ADD, 1 SUB, 2 AND, 3 OR, 4 XOR, 5 MIN, 6 MAX, 7 ABS</td><td>Element-wise ALU (8,16,32,64-bit lanes).</td></tr>
+<tr><td>01 (TMUL)</td><td>0 MUL, 1 DOT (ACCx), 2–3 RES</td><td>Multiply or 8-lane dot-product to accumulator.</td></tr>
+<tr><td>10 (TRED)</td><td>0 SUM, 1 MIN, 2 MAX, 3 POPCNT, 4 L1</td><td>Tile reduction to ACCx.</td></tr>
+<tr><td>11 (TSYS)</td><td>0 TRANS, 1 CONV3, 2 MOVBANK, 3 LOADC, 4 ZERO</td><td>System / matrix helpers.</td></tr>
+</tbody></table>
+
+<p><strong>Operand selector S</strong></p>
+<table>
+<thead><tr><th>S</th><th>Source A</th><th>Source B</th></tr></thead>
+<tbody>
+<tr><td>00</td><td>tile @ TSRC0</td><td>tile @ TSRC1</td></tr>
+<tr><td>01</td><td>tile @ TSRC0</td><td>broadcast Rn (third byte)</td></tr>
+<tr><td>10</td><td>imm8 splat</td><td>tile @ TSRC0</td></tr>
+<tr><td>11</td><td>tile @ TDST (in-place)</td><td>tile @ TSRC0</td></tr>
+</tbody></table>
+
+<aside tip>
+<strong>Latency:</strong> TALU/TRED/TRANS/LOADC/ZERO 1 cycle; MUL 2 cycles; DOT/CONV3 4 cycles; MOVBANK 3 cycles (cross-bank).
+</aside>
+
+<!-- ——— 6  EXAMPLES ——————————————— -->
+<h2 id="examples">6 Programming Examples</h2>
+
+<h3>6.1 Tile memset (fill 128 KiB with 0×00)</h3>
+<pre><code>; assume SB/SR/SC = 0 / 0 / 0, SW = 512 tiles per row
+LDI  R0, 0                  ; pattern
+CSR  R0, TSRC1              ; broadcast
+LDI  R1, 0                  ; dest base
+CSR  R1, TDST
+
+LDI  R2, 0x400              ; 0x400 tiles = 128 KiB
+fill_loop:
+  7D                        ; FILL  (opcode 0x7D)
+  INC.C                     ; auto column already done, but for clarity
+  DEC  R2
+  BNE  fill_loop
+</code></pre>
+
+<h3>6.2 8×8 matrix transpose in place</h3>
+<pre><code>; TDST already points at matrix tile
+E3 00                       ; TSYS TRANS (op=11 funct=0)</code></pre>
+
+<h3>6.3 8-lane dot-product of two vectors</h3>
+<pre><code>LDI  R0, vecA_tile
+LDI  R1, vecB_tile
+CSR  R0, TSRC0
+CSR  R1, TSRC1
+CSR  R0, TDST              ; dest same as srcA (unused)
+E1 11                      ; TMUL DOT  (ACC0 += dot)
+CSR  ACC0, R2              ; result → R2</code></pre>
+
+<h3>6.4 Interrupt entry / exit pseudo-sequence</h3>
+<pre><code>NMI_vector:
+  PUSH FLAGS
+  PUSH PC
+  CSR  R0, IVEC_ID         ; which IRQ?
+  ... handle ...
+  POP  PC
+  POP  FLAGS
+  RTI                      ; alias of SEP PC</code></pre>
+
+<!-- ——— 7  BOOT SEQUENCE ——————————————— -->
+<h2 id="boot">7 Reset &amp; Boot Sequence</h2>
+<ol>
+<li>Hardware clears all regs to 0, selects R3 as PC.</li>
+<li>Fetch begins at <code>0x0000 0000 0000 0000</code> (bank 0, row 0, col 0).</li>
+<li>External debugger or SPI loader may DMA code into Megapad rows 0-3 while CPU spins in <code>IDLE</code>.</li>
+<li>Firmware may copy itself to high Megapad rows, enable DDR, then jump to OS.</li>
+</ol>
+
+<!-- ——— 8  SIGNALS ——————————————— -->
+<h2 id="signals">8 Key External Signals (RTL targets)</h2>
+<table>
+<thead><tr><th>Pin</th><th>Dir</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><code>CLK</code></td><td>in</td><td>System clock (≤ 1.2 GHz in 7 nm).</td></tr>
+<tr><td><code>RESETn</code></td><td>in</td><td>Active-low reset.</td></tr>
+<tr><td><code>DMAREQ / DMAACK</code></td><td>in/out</td><td>1802-style transparent DMA.</td></tr>
+<tr><td><code>NMI</code></td><td>in</td><td>Non-maskable interrupt.</td></tr>
+<tr><td><code>INT[3:0]</code></td><td>in</td><td>Maskable interrupt lines (vectorised).</td></tr>
+<tr><td><code>PORT[3:0]</code></td><td>in/out</td><td>Legacy 4-bit port bus for <code>INP/OUT</code>.</td></tr>
+<tr><td><code>QSPI*</code></td><td>—</td><td>Quad-SPI flash / PSRAM.</td></tr>
+<tr><td><code>SWD</code></td><td>—</td><td>3-wire debug (exec-in-place via DMA).</td></tr>
+</tbody></table>
+
+<!-- ——— 9  ARCHITECTURAL DIFFERENCES ——————————————— -->
+<h2 id="archdiffs">9 Megapad vs GPU – Architectural Divergence</h2>
+
+<aside class="note">
+<strong>Why not just use a GPU?</strong> Megapad-64 isn’t a GPU, and that’s the point. It trades warp-scale parallelism for tile-native determinism, bit-level precision, and single-cycle scratchpad access — enabling new classes of workloads that GPUs mishandle or overheat trying.
+</aside>
+
+<div class="col2">
+<table>
+<thead><tr><th>Feature</th><th>Megapad-64</th><th>GPU SM / CU</th></tr></thead>
+<tbody>
+<tr><td>Exec model</td><td>Single 512-bit datapath; no warps, no divergence</td><td>SIMT (32–64 threads); warp divergence stalls</td></tr>
+<tr><td>Scratch memory</td><td>8–64 MiB SRAM; 1 cycle, 2-D tile native</td><td>64–128 KiB shared; coalesced access only</td></tr>
+<tr><td>Instruction width</td><td>8-bit opcodes; deterministic decode</td><td>32/64-bit; superscalar, out-of-order</td></tr>
+<tr><td>Memory latency</td><td>1 cycle to tile; flat banked map</td><td>100–500 cycles to L2 or global mem</td></tr>
+<tr><td>Interrupts</td><td>Regular + NMI; DMA pointer aliasing</td><td>No standard IRQ entry in kernels</td></tr>
+<tr><td>CSR / I/O</td><td>Memory-mapped CSRs & 4-bit ports</td><td>Host-managed; no sub-µs device I/O</td></tr>
+<tr><td>Power budget</td><td>&lt; 1 W @ 1 GHz (7 nm)</td><td>10–400 W typical</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>9.1 What Megapad-64 does easily — and GPUs don’t</h3>
+
+<ul>
+  <li><strong>Bitwise-heavy math:</strong> POPCNTs, bloom filters, byte-parallel automata — all live in tile, no cache thrashing or vector mask stalls.</li>
+  <li><strong>Strided 2-D access:</strong> Row/col walkers, tile transposes, convolution helpers all operate in-place, cycle-accurate.</li>
+  <li><strong>Graph traversal:</strong> Scratchpad fits adjacency subgraphs; pointer-chasing is deterministic with `LL/SC`, no global stalls.</li>
+  <li><strong>Massive dot products, exactly:</strong> Accumulators span 256+ bits across banks — no need for Kahan summation or FP fudge.</li>
+  <li><strong>Cycle-predictable IO:</strong> Real-time tasks, protocol FSMs, and GPIO loops fit right in — including interruptible micro-loops.</li>
+</ul>
+
+<h3>9.2 Ideal Workloads</h3>
+<p>Megapad excels when:</p>
+<ul>
+  <li>Data fits in ≤ 64 MiB, and reuse patterns are 2-D or tile-parallel</li>
+  <li>Latency matters more than throughput (e.g. edge analytics, real-time control)</li>
+  <li>You want **bitwise determinism** — no warp-level divergence, no cache unpredictability</li>
+  <li>You need **accumulator fidelity** — exact reductions over 8–64 element arrays</li>
+</ul>
+
+<h3>9.3 Where GPUs still win</h3>
+<ul>
+  <li>Massive FP32/FP16 throughput (e.g. CNNs, raytracing, fluid sims)</li>
+  <li>Off-chip bandwidth to HBM/GDDR in TB/s range</li>
+  <li>Hardware blocks: NVENC, RT cores, texture units</li>
+</ul>
+
+<aside class="tip">
+<strong>Use case sweet spot:</strong> Bit-dense logic, tile-native math, pointer-rich data structures, embedded signal pipelines. Megapad-64 isn’t here to beat GPUs — it’s here to dodge them.
+</aside>
+
+<!-- ——— 10  ADAPTIVE SAMPLING CASE STUDY ——————————————— -->
+<h2 id="case-study">10 Case Study — Real-Time Adaptive Sequencing</h2>
+
+<aside class="note">
+<strong>Use case:</strong> Field DNA sequencing using nanopore sensors requires live analysis and decision-making —
+including the ability to <em>eject DNA strands mid-read</em> if they are not relevant. Known as “adaptive sampling,” this
+reduces pore wear and improves target enrichment.
+</aside>
+
+<h3>10.1 Problem</h3>
+<p>Conventional pipelines (e.g. Guppy + GPU or CPU-only Bonito) incur multi-millisecond latency due to:</p>
+<ul>
+  <li>USB buffer copy to host memory</li>
+  <li>Kernel launch and PCIe transfer delays</li>
+  <li>Non-deterministic task preemption in general-purpose OSes</li>
+</ul>
+<p>This makes timely pore ejection difficult: most systems over-read by hundreds of base pairs, reducing selectivity.</p>
+
+<h3>10.2 Solution</h3>
+<p><strong>Megapad-64 executes the entire pipeline in-tile:</strong></p>
+<ul>
+  <li>64 B raw signal tile is ingested via DMA</li>
+  <li>1-D CNN base-calling via <code>TSYS CONV3</code></li>
+  <li>Beam-search decoding and hash lookup for k-mer matching</li>
+  <li>Branchy decision logic executed in-line</li>
+  <li>Pore ejection triggered via <code>CSR OUT</code> in next cycle</li>
+</ul>
+
+<table>
+  <thead><tr><th>Stage</th><th>Cycles @ 1 GHz</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>Ingest tile</td><td>1</td><td>DMA 64-byte sample block</td></tr>
+    <tr><td>CNN conv (CONV3)</td><td>40</td><td>8 filters, stride-1</td></tr>
+    <tr><td>CTC decode</td><td>60</td><td>Beam width 4, priority logic</td></tr>
+    <tr><td>k-mer hash lookup</td><td>20</td><td>Minimiser in SRAM</td></tr>
+    <tr><td>Decision + eject</td><td>4</td><td><code>CSR</code> triggers GPIO</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>~130</strong></td><td>~130 ns total</td></tr>
+  </tbody>
+</table>
+
+<h3>10.3 Impact (Hypothetical)</h3>
+<p>Compared to conventional solutions:</p>
+<table>
+  <thead><tr><th>Metric</th><th>GPU-based</th><th>CPU-only</th><th><strong>Megapad-64</strong></th></tr></thead>
+  <tbody>
+    <tr><td>Median eject latency</td><td>800 µs</td><td>500 µs</td><td><strong>48 µs</strong></td></tr>
+    <tr><td>Base pairs saved/read</td><td>37%</td><td>44%</td><td><strong>62%</strong></td></tr>
+    <tr><td>Power per read</td><td>1875 µJ</td><td>1450 µJ</td><td><strong>≤150 µJ</strong></td></tr>
+  </tbody>
+</table>
+
+<aside class="tip">
+<strong>Predicted Result:</strong> Megapad-64 enables <em>fully deterministic, sub-millisecond feedback</em> in hand-held molecular diagnostic kits.
+No other solution hits the power, latency, and selectivity targets simultaneously.
+</aside>
+
+</body>
+</html>
+
