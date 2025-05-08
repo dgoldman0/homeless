@@ -49,4 +49,4 @@ Fourth-person narration clearly encapsulates the complex interaction inherent in
 
 ### Draft Note
 
-Initial version was created with a very quick and dirty search and sources may not be valid, and certain theories, etc. may be incorrect. Consider this a work in progress. I'll note when it feels more complete, if I get that far. 
+Initial version was created with a very quick and dirty search and sources may not be valid, and certain theories, etc. may be incorrect. Consider this a work in progress. I'll note when it feels more complete, if I get that far. Do not trust citations. And they will be corrected. General definition seems on point though. 
