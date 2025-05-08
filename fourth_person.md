@@ -12,6 +12,22 @@ Traditional narratology typically recognizes three distinct "persons":
 
 However, this framework inadequately describes scenarios involving real-time interpreter mediation. In interpreter-dependent communication—such as a Deaf signer (Party A) conveying a narrative through a hearing interpreter (Party B) to an audience (Party C)—the voice that emerges is neither singular nor dual but rather composite.
 
+### Theory Review
+
+The concept of fourth-person narration addresses narrative voices that emerge from interactions between multiple agents rather than any singular narrator. Existing scholarship offers foundational insights into how such composite voices form.
+
+Enfield and Kockelman (2017) present a foundational perspective on distributed agency, highlighting how agency is relationally constructed through interactions among human actors, objects, and environments. They argue convincingly that agency must be viewed as a relational effect emerging from interconnected interactions rather than residing in any single entity or individual.
+
+Goffman’s (1981) influential framework categorizes speech production into distinct roles: animator (the speaker), author (the composer of words), and principal (the originator of intent). His analysis clarifies how multiple roles cooperate in generating narrative meaning, thereby prefiguring the composite narrative voice central to fourth-person narration.
+
+Within translation studies, Schiavi (1996) introduces the concept of an "implied translator," proposing that the translated text carries dual voices—the original author's and the translator’s. This resonates with O'Sullivan (2003), who further elaborates on the translator’s agency, demonstrating how translations become sites of significant narrative transformation, involving active negotiation between source material and translator creativity. Hermans (1996) similarly foregrounds the translator’s active presence in narrative texts, illustrating how the translator’s interventions in vocabulary, structure, and context produce discernible textual effects and alter narrative reception.
+
+Empirical studies further validate the composite nature of narrative voice in interpreter-mediated contexts. Du (2021) shows how court interpreters mediate and reshape defendants’ statements, producing narratives significantly distinct from the originals through conversational adjustments and rhetorical framing. Berk-Seligson’s (2002) comprehensive ethnography of bilingual courtroom interpreting highlights interpreters’ substantial impact on trial outcomes, demonstrating that interpreter-mediated narration materially alters narrative meaning and participant perceptions.
+
+Finally, Tenen (2022) extends the idea of distributed agency into literary studies through computational analysis, revealing how narratives themselves can embody collective, distributed agents. His exploration of "scene-agents" in literature underscores how agency—and thus narrative voice—can emerge from interactions among characters, contexts, and narrative events.
+
+Collectively, these theoretical and empirical insights from linguistics, narratology, translation studies, interpreting studies, and literary analysis establish a robust foundation for conceptualizing fourth-person narration as inherently composite, relational, and emergent from multiple interacting sources.
+
 ### Interpreter-Mediated Storytelling as a Convolution
 
 In interpreter-mediated storytelling:
@@ -59,3 +75,22 @@ Fourth-person narration clearly encapsulates the complex interaction inherent in
 ### Draft Note
 
 Initial version was created with a very quick and dirty search and sources may not be valid, and certain theories, etc. may be incorrect. Consider this a work in progress. I'll note when it feels more complete, if I get that far. Do not trust citations. And they will be corrected. General definition seems on point though. 
+
+### Bibliography
+
+Berk-Seligson, Susan. (2002). *The Bilingual Courtroom: Court Interpreters in the Judicial Process*. University of Chicago Press.
+
+Du, Biyu (Jade). (2021). “The Mediated Voice: A Discursive Study of Interpreter-Mediated Closing Statements in Chinese Criminal Trials.” *Target. International Journal of Translation Studies* 33 (2): 341–367. [https://doi.org/10.1075/target.21066.du](https://doi.org/10.1075/target.21066.du).
+
+Enfield, N. J., & Kockelman, Paul (Eds.). (2017). *Distributed Agency*. Oxford University Press.
+
+Goffman, Erving. (1981). *Forms of Talk*. University of Pennsylvania Press.
+
+Hermans, Theo. (1996). “The Translator’s Voice in Translated Narrative.” *Target. International Journal of Translation Studies* 8 (1): 23–48. [https://doi.org/10.1075/target.8.1.03her](https://doi.org/10.1075/target.8.1.03her).
+
+O'Sullivan, Emer. (2003). “Narratology Meets Translation Studies, or, The Voice of the Translator in Children's Literature.” *Meta* 48 (1–2): 220–235. [https://doi.org/10.7202/006967ar](https://doi.org/10.7202/006967ar).
+
+Schiavi, Giuliana. (1996). “There Is Always a Teller in a Tale.” *Target. International Journal of Translation Studies* 8 (1): 13–25. [https://doi.org/10.1075/target.8.1.02sch](https://doi.org/10.1075/target.8.1.02sch).
+
+Tenen, Dennis Yi. (2022). “Distributed Agency in the Novel.” *New Literary History* 54 (1): 903–937. [https://doi.org/10.1353/nlh.2022.a898333](https://doi.org/10.1353/nlh.2022.a898333).
+
