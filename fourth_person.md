@@ -31,7 +31,7 @@ Erving Goffman's participation framework offers closer relevance by dividing spe
 
 To better describe this emergent phenomenon, we propose **fourth-person narration** as:
 
-> Fourth-person narration refers to a narrative voice that only materializes through the necessary interaction between multiple agents, such that none of the agents constitute the narrator alone, and yet there is only one narrative voice. 
+> A narrative mode that only materializes through the necessary interaction between multiple agents, such that none of the agents constitute the narrator alone, and yet there is only one narrative voice. 
 
 ### Situating Fourth-Person Narration in Current Scholarship
 
