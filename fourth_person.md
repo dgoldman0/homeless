@@ -78,8 +78,8 @@ Fourth-person narration clearly encapsulates the complex interaction inherent in
 Initial version was created with a very quick and dirty search and sources may not be valid, and certain theories, etc. may be incorrect. Consider this a work in progress. I'll note when it feels more complete, if I get that far. Do not trust citations. And they will be corrected. General definition seems on point though. 
 
 ### Thoughts
-
 - What is the "prime narrator" i.e. first or fundamental? The character in the story who acts to convey information to the listener/reader/end recipient. 
+- What story? Well that's the point. We have to fix the version of a story to even discuss perspective.
 
 ### Bibliography
 
