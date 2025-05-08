@@ -64,9 +64,10 @@ Live storytelling offers another space where this blended narration becomes espe
 This collaborative shaping explains why some storytellers deeply engage their listeners, even when sharing the same source material. Each performer contributes unique rhythms, interpretations, and emotional cues, creating distinct storytelling experiences. For instance, one parent might emphasize calmness and reassurance, while another draws out suspense, humor, or excitement. Each version relies on the same written text, yet each voice carries a personal imprint that becomes part of the narration itself.
 
 In all of these settings, narration functions as a relational process. The storyteller and the originating content both contribute essential layers, each enhancing the whole without fully defining it alone. The narrative voice heard by the listener emerges from this cooperation. Fourth-person narration describes this synthesis: a storytelling voice shaped through multiple agents acting together, forming a unified channel through which the story reaches the audience. This voice expresses a single narrative presence while carrying the depth and complexity of its plural origins.
+
 ### Practical Implications and Future Directions
 
-Recognizing interpreter-mediated narratives as fourth-person narration highlights the interpreter’s significant, yet traditionally undervalued, contribution. This understanding could lead to increased transparency about interpreter influences, improved interpreter training emphasizing narrative agency, and better methodologies in discourse analysis and interpretation studies. 
+Recognizing interpreter-mediated narratives as fourth-person narration highlights the interpreter’s significant, yet traditionally undervalued, contribution. This understanding could lead to increased transparency about interpreter influences, improved interpreter training emphasizing narrative agency, and better methodologies in discourse analysis and interpretation studies. Additionally, if this narrative mode is recognized, a direct consequence is that it becomes apparent that the transition from oral tradition to written and beyond has obliterated the mode. It is still used, but where it was once nearly universal in storycraft, it is now quite rare. 
 
 ### Conclusion
 
