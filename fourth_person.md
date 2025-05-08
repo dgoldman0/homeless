@@ -31,7 +31,7 @@ Erving Goffman's participation framework offers closer relevance by dividing spe
 
 To better describe this emergent phenomenon, we propose **fourth-person narration** as:
 
-> A narrative mode in which the story's voice emerges uniquely and irreversibly from real-time linguistic and cultural negotiation between two distinct communicative agents—originator and interpreter—creating a composite narrator perceivable only by a third-party audience.
+> Fourth-person narration refers to a narrative voice that only materializes through the necessary mediation of a second agent, such that neither the originator of the discourse (A) nor the transmitter (B) constitutes the narrator alone" and yet there is only one narrative voice. 
 
 This "fourth-person" explicitly indicates narrative agency distributed across individuals, transcending traditional singular or plural authorial voice conceptions.
 
@@ -48,3 +48,7 @@ Recognizing interpreter-mediated narratives as fourth-person narration highlight
 ### Conclusion
 
 Fourth-person narration clearly encapsulates the complex interaction inherent in interpreter-mediated storytelling, moving beyond traditional narrative frameworks to accurately represent an emergent, composite voice. Its recognition can substantially enrich theoretical models and practical approaches in translation, interpretation, and narrative studies, acknowledging the nuanced reality of narrative agency as inherently collaborative and transformative.
+
+### Draft Note
+
+Initial version was created with a very quick and dirty search and sources may not be valid, and certain theories, etc. may be incorrect. Consider this a work in progress. I'll note when it feels more complete, if I get that far. 
