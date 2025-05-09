@@ -1,5 +1,3 @@
-Absolutely — let’s now take the Hebrew sentence:
-
 ### 🔹 Original Gendered Hebrew Sentence:
 
 **הסבתא הגאה סיפרה לנכדות שלה איך היא הייתה רוקמת שמיכות ביד כשהייתה צעירה.**
@@ -88,34 +86,26 @@ This is rich with gendered elements:
 
 ---
 
-## Final Step: Klingon-style Transliteration
+### 🔸 Final Step: Modern Canaanite Writing
 
-Now we transliterate this sentence **based on its Modern Canaanite Hebrew script**, following our established Klingon-style rules.
-
-### 🔸 Transliteration Table for Unique Forms
-
-| Hebrew     | Transliteration | Notes                            |
-| ---------- | --------------- | -------------------------------- |
-| סיבר       | *siber*         | neutral for “grandparent”        |
-| גיאה       | *giy'e*         | neutral adjective "proud"        |
-| סיפר       | *sipar*         | neutral past verb                |
-| נכידאן     | *nikhidan*      | neutral plural “grandchildren”   |
-| שלין       | *shelin*        | neutral possessive               |
-| איה        | *iya*           | 3rd person sg. pronoun (neutral) |
-| חייא       | *hiya*          | neutral past “was”               |
-| ריקם       | *riqem*         | participle, “stitching”          |
-| שמיכות     | *smikot*        | unchanged; plural noun           |
-| ביד        | *beyad*         | prepositional phrase             |
-| כשאיה חייא | *keshiya hiya*  | “when they were”                 |
-| צעיר       | *tsaʿir*        | neutral adjective “young”        |
+| Hebrew  | Change Analysis                                  | Transliteration |
+| ------- | ------------------------------------------------ | ----------------------------- |
+| הסיבר   | ה = h; ס = s; י = i; ב = b; ר = r                | **hasiber**                   |
+| הגיאה   | ה = h; ג = g; י = i; א = ' (glottal); ה = a      | **hagiy'a**                   |
+| סיפר    | ס = s; י = i; פ = p; ר = r                       | **sipar**                     |
+| לנכידאן | ל = l; נ = n; כ = kh; י = i; ד = d; א = a; ן = n | **lankhidan**                 |
+| שלה     | ש = S; ל = l; ה = a                              | **Shela**                     |
+| איך     | א = ' (glottal); י = i; כ = kh                   | **'eykh**                     |
+| איה     | א = ' (glottal); י = i; ה = a                    | **'iya**                      |
+| חייא    | ח = H; י = i; א = a                              | **Hiya**                      |
+| ריקם    | ר = r; י = i; ק = q; מ = m                       | **riqam**                     |
+| שמיכות  | ש = S; מ = m; י = i; כ = kh; ו = o; ת = t        | **Smikhot**                   |
+| ביד     | ב = b; י = i; ד = d                              | **biyad**                     |
+| כשאיה   | כ = k; ש = S; א = ' (glottal); י = i; ה = a      | **keS'iya**                   |
+| צעיר    | צ = ts; ע = ' (glottal); י = i; ר = r            | **ts'iir**                    |
 
 ---
 
-## ✅ Final Klingon-style Transliteration:
+### ✅ Final Modern Canaanite:
 
-**hasiber giy'e sipar lanikhidan shelin ekh iya hiya riqem smikot beyad keshiya hiya tsa'ir.**
-
----
-
-Would you like to walk through a more poetic or literary version of this sentence next?
-
+**hasiber hagiy'a sipar lankhidan Shela 'eykh 'iya Hiya riqam Smikhot biyad keS'iya Hiya ts'iir.**
