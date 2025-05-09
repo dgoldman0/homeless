@@ -75,4 +75,5 @@ Thought for 1m 11s
 | ת         | t           | t     |
 
 **תרגום המשפט כולו בכתיב זה**
+
 hamizqer kira la'ividan kedei lehakhin et hamismakhim lapgiSa, veim higi'an bazman.
