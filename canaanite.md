@@ -172,11 +172,7 @@ This system isn’t just for neutrality — it creates space for **nonbinary ide
 
 ## Sample Translation Process
 
-## Sample Translation Process
-
 ---
-
-## 4 . Making the sentence inclusive — step by step  
 
 Let's begin by selecting a sentence in Standard Hebrew that contains gendered elements and would benefit from neutralization.
 
