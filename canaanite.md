@@ -20,43 +20,114 @@ This project draws inspiration from two sources:
 
 ## Core Linguistic Features
 
-### 1. **Gender Neutralization**
+Modern Canaanite restructures Hebrew grammar to enable **gender neutrality** and **morphological clarity** while honoring the **root-based, nonconcatenative structure** of Semitic languages. This approach avoids artificial suffixes and instead leverages **internal vocalic patterns** and **templatic morphology** to mark neutral forms.
 
-Modern Hebrew grammatically marks almost everything for gender: verbs, adjectives, pronouns, nouns. Modern Canaanite restructures this system.
+---
+
+### 1. **Gender Neutralization via Root-Pattern Morphology**
+
+Rather than adding external suffixes like *‑n* or *‑an*, Modern Canaanite introduces **dedicated gender-neutral patterns** (paradigms) for each part of speech, mirroring Hebrew’s own internal flexibility.
 
 #### A. Pronouns
 
+Pronouns are simplified and neutralized. Gender distinctions are removed, and plurality is regularized.
+
 | Role          | Hebrew (Masc./Fem.)     | Modern Canaanite |
 | ------------- | ----------------------- | ---------------- |
-| 1st person sg | אני (ani)               | ani              |
-| 2nd person sg | אתה / את (ata / at)     | iya              |
-| 3rd person sg | הוא / היא (hu / hi)     | iya              |
-| 1st person pl | אנחנו (anachnu)         | anakhnu          |
-| 2nd person pl | אתם / אתן (atem / aten) | im               |
-| 3rd person pl | הם / הן (hem / hen)     | im               |
+| 1st person sg | אני (ani)               | **ani**          |
+| 2nd person sg | אתה / את (ata / at)     | **iya**          |
+| 3rd person sg | הוא / היא (hu / hi)     | **iya**          |
+| 1st person pl | אנחנו (anachnu)         | **anakhnu**      |
+| 2nd person pl | אתם / אתן (atem / aten) | **im**           |
+| 3rd person pl | הם / הן (hem / hen)     | **im**           |
 
-#### B. Verbs & Adjectives
+*Note: Singular/plural distinctions are retained, but **gender is collapsed into a unified form.***
 
-Modern Canaanite adds a **neutral suffix** `‑n` (singular) and `‑an` (plural) to verbs and adjectives where Hebrew marks gender. For example:
+---
 
-* Hebrew: הוא הלך → *hu halakh* (he walked)
-* Modern Canaanite: איה הלכנ → *iya halakhn* (they-neutral walked)
+#### B. Verbs: Neutral Binyanim (Verb Templates)
 
-#### C. Nouns
+Modern Hebrew marks gender through conjugation (e.g., *halakh* vs. *halkha*), but verbs are derived from roots inserted into **binyanim** (verb templates). Modern Canaanite proposes a **neutral binyan**, which applies consistent vowel and pattern choices to form gender-inclusive verbs.
 
-Commonly gendered nouns are neutralized using `‑n` or root-level changes:
+**Neutral Binyan Example:**
 
-* תלמיד / תלמידה → תלמידנ (talmidn)
-* שחקן / שחקנית → שחקננ (shakhnan)
+| Root | Masculine Hebrew     | Feminine Hebrew       | **Modern Canaanite** (Neutral)     |
+| ---- | -------------------- | --------------------- | ---------------------------------- |
+| הל״ך | *halakh* (he walked) | *halkha* (she walked) | **hilakh** (they walked – neutral) |
+| אמר  | *amar* (he said)     | *amra* (she said)     | **imer** (they said – neutral)     |
+| עבד  | *avad* (he worked)   | *avda* (she worked)   | **ivid** (they worked – neutral)   |
 
-### 2. **Syntax and Grammar**
+*This neutral binyan — tentatively called **Binyan HaShava** ("equalizing pattern") — uses vowel forms like **i-a**, **i-e**, or **i-i**, depending on root consonant compatibility.*
 
-While mostly following Hebrew structure, Modern Canaanite allows a bit more flexibility in word order (SVO and VSO both acceptable) and aims for minimal gender inflection.
+---
 
-Additional inflections include:
+#### C. Nouns: Gender-Neutral Mishkalim (Noun Patterns)
 
-* Possessive suffixes like `-in` for "his/her/their"
-* Use of particles rather than fused pronouns for clarity in spoken form
+Rather than appending suffixes like *‑n*, Modern Canaanite creates neutral versions of common noun patterns by adjusting internal vowels or drawing from existing unmarked forms.
+
+**Examples:**
+
+| Hebrew Gendered | Meaning       | **Modern Canaanite** | Method                          |
+| --------------- | ------------- | -------------------- | ------------------------------- |
+| תלמיד / תלמידה  | Student       | **telmid**           | New neutral pattern (CeCCiC)    |
+| שחקן / שחקנית   | Actor/Actress | **sakhin**           | Triconsonantal root in CiCCiC   |
+| מורה / מורה     | Teacher       | **moray**            | Based on unmarked form + stress |
+| עובד / עובדת    | Worker        | **ʿivid**            | Pattern aligned with verb root  |
+
+*Where existing forms are already neutral (e.g., *moreh/morah*, *rofeh/rofah*), context-based neutrality is favored or a regularized vowel form is proposed.*
+
+---
+
+#### D. Adjectives and Participles
+
+Adjectives often align with verb participles in Hebrew. Modern Canaanite extends the **neutral binyan** logic here:
+
+| Root | Masculine | Feminine   | **Neutral** |
+| ---- | --------- | ---------- | ----------- |
+| חייב | *khayav*  | *khayevet* | **khayiv**  |
+| בטוח | *batuach* | *btuḥa*    | **bitiḥ**   |
+| פתוח | *patuach* | *ptucha*   | **pituḥ**   |
+
+*This makes adjectives consistent with verbal morphology, reducing redundancy.*
+
+---
+
+### 2. **Flexible Syntax with Clarified Agreement**
+
+Modern Canaanite accepts both **SVO** and **VSO** structures (like Hebrew and Arabic), but relaxes strict agreement rules that rely on gendered noun-verb matching. Instead, agreement is based on:
+
+* **Number** (singular/plural)
+* **Person** (1st/2nd/3rd)
+* **Clarity in context**, rather than rigid inflection
+
+**Example:**
+
+> *iya hilakh el hamisrad le’haqin et hamatsag.*
+> “They \[neutral] went to the office to prepare the presentation.”
+
+---
+
+### 3. **Possession and Reference**
+
+To avoid gendered possessive suffixes (e.g., *‑o*, *‑a*), Modern Canaanite uses:
+
+* **Unified suffix `‑in`** for “their/his/her” (context-resolved)
+* Optional **particles** (like *shel*) in speech to clarify when needed
+
+**Examples:**
+
+* *seferin* – their/his/her book
+* *ha'beit shel iya* – the house of them (neutral)
+
+---
+
+### 4. **Inclusivity Beyond the Binary**
+
+This system isn’t just for neutrality — it creates space for **nonbinary identities**, **ambiguous cases**, and **institutional/collective references**. By using **morphological symmetry** instead of artificial additions, it supports:
+
+* **Natural-sounding speech**
+* **Ease of acquisition** for those familiar with Semitic structure
+* **Cultural continuity** with Hebrew, Arabic, and Aramaic roots
 
 ---
 
@@ -99,16 +170,7 @@ Additional inflections include:
 
 ---
 
-## Sample Text
-
-### 1 . English source  
-*The project manager told the team that they must submit the final report by next Wednesday, and after the meeting she went to her office to prepare the presentation.*
-
-### 2 . Standard Hebrew (gendered)  
-מנהלת הפרויקט אמרה לצוות שהם חייבים להגיש את הדוח הסופי עד יום רביעי הבא, ולאחר הפגישה היא הלכה למשרדה כדי להכין את המצגת.
-
-### 3 . “Classical” Hebrew transliteration  
-**Menahelet ha‑proyekt amra la‑tsevet she‑hem ḥayavim lehagish et ha‑dokh ha‑sofi ad yom reviʿi ha‑ba, ve‑leʾaḥar ha‑pgiša hi halḵa le‑misrada kedei lehakhin et ha‑matzeget.**
+## Sample Translation Process
 
 ---
 
