@@ -321,9 +321,6 @@ This sentence now:
 - Follows **consistent morphological patterns**
 - Preserves **phonological authenticity** via Klingon-style Latinization
 
-### 8 . Inclusive sentence – Klingon‑style transliteration  
-**hamenahelm amarn latsevet she im Hayavan lehagish et hadokh hasofin ad yom revii haba, ve‑le'akharkhen iya halakhn lemisrado kedei lehakhin et hamatzgan.**
-
 ## Cultural and Philosophical Implications
 
 Modern Canaanite is not just a linguistic construct — it is a **political and cultural statement**:
