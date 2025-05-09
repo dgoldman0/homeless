@@ -172,36 +172,154 @@ This system isn’t just for neutrality — it creates space for **nonbinary ide
 
 ## Sample Translation Process
 
+## Sample Translation Process
+
 ---
 
 ## 4 . Making the sentence inclusive — step by step  
 
-| Step | Action | Result (Hebrew) | Explanation |
-|------|--------|-----------------|-------------|
-| 1 | **Neutralise the subject noun.** | המנהל**מ** | Add **‑m** suffix to create a singular neutral noun (*hamenahelm*). |
-| 2 | **Replace binary pronouns.** | היא → **איה**, הם → **אימ** | *iya* (neutral singular), *im* (neutral plural). |
-| 3 | **Apply verb/adjective neutral suffixes.** | אמרה → **אמר**נ, חייבים → **חייב**אנ, הלכה → **הלכ**נ, סופי → **סופ**נ, מצגת → **מצג**נ | Singular: **‑n** ; plural: **‑an** ; adjectives & participles match their heads. |
-| 4 | **Check agreement & particles.** | שאימ, ולאחר | Make sure subordinators & particles remain unchanged. |
-| 5 | **Read once for flow.** | — | Confirm no binary forms remain. |
+Let's begin by selecting a sentence in Standard Hebrew that contains gendered elements and would benefit from neutralization.
 
-### 5 . Inclusive Modern‑Canaanite Hebrew  
-המנהלמ אמרנ לצוות שאימ חייבאנ להגיש את הדוח הסופנ עד יום רביעי הבא, ולאחר הפגישה איה הלכנ למשרדו כדי להכין את המצגנ.
+### 🔹 Selected Hebrew Sentence
 
-### 6 . Inclusive sentence – classical transliteration  
-**hamenahelm amarn la‑tsevet she im ḥayavan lehagish et ha‑dokh ha‑sofin ad yom reviʿi ha‑ba, ve‑leʾaḥar ha‑pgiša iya halakhn le‑misrado kedei lehakhin et ha‑matzgan.**
+**המזכירה קראה לעובדים כדי להכין את המסמכים לפגישה, והם הגיעו בזמן.**  
+*“The secretary (fem.) called the workers (masc.) to prepare the documents for the meeting, and they (masc.) arrived on time.”*
+
+This sentence is gendered in multiple ways:
+
+- **המזכירה** – explicitly feminine noun.
+- **עובדים** – masculine plural noun.
+- **הם** – masculine plural pronoun.
+- **הגיעה** – feminine verb conjugation.
+- **הכין** – masculine verb.
+
+We will now proceed step-by-step to transform this into an inclusive Modern Canaanite sentence.
 
 ---
 
-## 7 . Converting to the Klingon‑style romanisation  
+### 🔸 Step 1: Neutralize Subject Nouns
 
-| Hebrew letter | Classical  | Klingon‑style | Example          |
-|--------------|------------|---------------|------------------|
-| ח            | ḥ / ch     | **H**         | ḥayavan → **Hayavan** |
-| כּ / ק       | k / q      | k / **q**     | none here        |
-| כ (fric.)    | kh         | **kh**        | lehakhin → *lehakhin* |
-| ה            | h          | **h**         | ha‑dokh → *hadokh* |
-| א / ע        | ʾ          | **'**         | le'ahar → *le'ahar* |
-| שׁ           | sh         | **S**         | pgiša → *pgiSa* (if needed) |
+Replace **המזכירה** (hamazkira) with a **neutral form** derived from the same root — ז-כ-ר ("to remember/record") — in a neutralized noun pattern. A proposed pattern is **CeCCiC**, resulting in **mazkir → mezkir** or **mazkira → mizker**. We’ll choose **mizker** for clarity and neutrality.
+
+**עובדים** (ʿovdim, masc. pl.) becomes **ʿividan**, following the **i‑i** neutral verbal noun pattern extended with plural marker **‑an**.
+
+| Original     | Neutral Form  | Notes                                 |
+|--------------|---------------|---------------------------------------|
+| המזכירה      | **hamizker**  | Root ז-כ-ר in neutral CeCCeR form     |
+| עובדים       | **ʿividan**   | Verb root ע-ב-ד, nounized with **‑an** |
+
+---
+
+### 🔸 Step 2: Replace Binary Pronouns
+
+**הם** (hem, masc. pl.) is replaced with **im**, the **gender-neutral plural third-person pronoun**.
+
+| Original | Neutral |
+|----------|---------|
+| הם       | **im**  |
+
+---
+
+### 🔸 Step 3: Neutralize Verbs
+
+Now, conjugate the verbs **קראה**, **להכין**, and **הגיעו** using the **neutral binyan** (Binyan HaShava). Each root must be retemplated into its **gender-neutral i‑a / i‑e / i‑i** form, then pluralized with **‑an** if needed.
+
+#### Verb: *קראה* (“she called”)
+- Root: ק‑ר‑א
+- Masculine: *kara*
+- Feminine: *kar’a*
+- Neutral: **kira** (singular neutral)
+- In this context, since the subject is singular (hamizker), we use **kira**
+
+#### Verb: *להכין* (“to prepare”)
+- Root: כ‑ו‑נ
+- Infinitive remains **lehakhin** — infinitives in Hebrew are already somewhat neutral; no change needed.
+
+#### Verb: *הגיעו* (“they arrived”)
+- Root: נ‑ג‑ע (or ה‑ג‑ע in Hif'il binyan)
+- Masculine: *higiʿu*
+- Feminine: *higiʿu*
+- Neutral: **higiʿan** — plural neutral with suffix **‑an**
+
+| Original     | Neutral     | Explanation                          |
+|--------------|-------------|--------------------------------------|
+| קראה         | **kira**    | Singular, neutral subject            |
+| להכין        | **lehakhin**| Already neutral infinitive           |
+| הגיעו        | **higiʿan** | Pluralized neutral verb              |
+
+---
+
+### 🔸 Step 4: Check Agreement and Particles
+
+Ensure that:
+- Particles like **כדי**, **את**, **ל־**, **וה־**, **ב־** remain intact.
+- Agreement in number is preserved (e.g., plural **higiʿan** agrees with plural pronoun **im** and noun **ʿividan**).
+
+---
+
+### 🔸 Step 5: Assemble the Inclusive Modern Canaanite Sentence
+
+**hamizker kira la‑ʿividan kedei lehakhin et hamismakhim la‑pgiSha, ve‑im higiʿan ba‑zman.**
+
+---
+
+### 6 . Inclusive Sentence – Classical Transliteration
+
+**hamizker kira la‑ʿividan kedei lehakhin et hamismakhim la‑pgiSha, ve‑im higiʿan ba‑zman.**
+
+*“The secretary [neutral] called the workers [neutral plural] to prepare the documents for the meeting, and they [neutral plural] arrived on time.”*
+
+---
+
+### 7 . Converting to the Klingon‑Style Romanisation
+
+We now transliterate **directly from the inclusive Hebrew sentence** into **Klingon-style romanisation**, based strictly on the phoneme mapping from the original Hebrew letters — not from classical or scholarly transliteration.
+
+---
+
+#### Inclusive Hebrew Sentence (Modern Canaanite):
+
+**המזקר קירא לעיבידן כדי להכין את המסמכים לפגישה, ואימ הגיעאן בזמן.**
+
+---
+
+#### Step-by-step Transliteration Rules (from Hebrew letters):
+
+| Hebrew Letter | Sound         | Klingon‑Style | Example (from sentence)          |
+|---------------|---------------|----------------|----------------------------------|
+| א / ע         | glottal stop  | **'**          | עיבידן → *'ividan*              |
+| ב             | b             | **b**          | בזמן → *bazman*                  |
+| ג             | g             | **g**          | הגיעאן → *higi'an*              |
+| ד             | d             | **d**          | לעיבידן → *la'ividan*           |
+| ה             | h             | **h**          | המזקר → *hamizqer*              |
+| ו             | v             | **v**          | ואימ → *veim*                    |
+| ז             | z             | **z**          | בזמן → *bazman*                 |
+| ח             | ḥ             | **H**          | להכין → *lehakhin*              |
+| י             | y / i         | **y / i**      | קירא → *kira*                    |
+| כ             | kh            | **kh**         | להכין → *lehakhin*              |
+| ל             | l             | **l**          | לעיבידן → *la'ividan*           |
+| מ             | m             | **m**          | מסמכים → *mismakhim*            |
+| נ             | n             | **n**          | בזמן → *bazman*                 |
+| פ             | p             | **p**          | לפגישה → *lapgiSa*              |
+| ק             | q             | **q**          | המזקר → *hamizqer*              |
+| ר             | r             | **r**          | קירא → *kira*                    |
+| ס             | s             | **s**          | מסמכים → *mismakhim*            |
+| שׁ            | sh            | **S**          | פגישה → *pgiSa*                 |
+| ת             | t             | **t**          | את → *et*                        |
+
+---
+
+#### Final Klingon‑Style Transliteration:
+
+**hamizqer kira la'ividan kedei lehakhin et hamismakhim lapgiSa, veim higi'an bazman.**
+
+---
+
+This sentence now:
+- Uses **gender-neutral pronouns and nouns**
+- Applies **templatic internal vowel changes** for neutrality
+- Follows **consistent morphological patterns**
+- Preserves **phonological authenticity** via Klingon-style Latinization
 
 ### 8 . Inclusive sentence – Klingon‑style transliteration  
 **hamenahelm amarn latsevet she im Hayavan lehagish et hadokh hasofin ad yom revii haba, ve‑le'akharkhen iya halakhn lemisrado kedei lehakhin et hamatzgan.**
