@@ -26,7 +26,7 @@ aside.tip{background:#e6f7ea;border-left:4px solid #46c36f;padding:.75rem;margin
 </head>
 <body>
 
-<h1>Megapad-64 Tyle-Strutured Processor (TSP) Architecture<br>
+<h1>Megapad-64 Tile-Strutured Processor (TSP) Architecture<br>
 <span style="font-weight:400;font-size:1.1rem">(a 64-bit, tile-native successor to the RCA 1802 COSMAC)</span></h1>
 
 <aside class="note">
@@ -54,10 +54,10 @@ tuned for branch-heavy real-world workloads and guaranteed-cycle execution.
 <table>
 <thead><tr><th>Address range (hex)</th><th>Size</th><th>Description</th></tr></thead>
 <tbody>
-<tr><td><code>0000 0000 0000 0000 – 0000 0000 03FF FFFF</code></td><td>per bank</td><td><strong>Megapad bank 0</strong> (example 8 MiB part: 512 KiB)</td></tr>
+<tr><td><code>0000 0000 0000 0000 – 0000 0000 03FF FFFF</code></td><td>per bank</td><td><strong>Megapad bank 0</strong> (fixed 4 MiB aperture - 512 KiB active in 8 MiB build)</td></tr>
 <tr><td>… 15 more contiguous banks …</td><td> </td><td><strong>Megapad bank 15</strong></td></tr>
-<tr><td><code>0001 0000 0000 0000 – 000F FFFF FFFF FFFF</code></td><td>≤ 256 TiB</td><td>External DDR/PSRAM (optional)</td></tr>
-<tr><td><code>FFFF FF00 0000 0000 – FFFF FF7F FFFF FFFF</code></td><td>2 GiB</td><td>Memory-mapped I/O (GPIO, UART, Quad-SPI, USB-DEV, timers…)</td></tr>
+<tr><td><code>0001 0000 0000 0000 – 000F FFFF FFFF FFFF</code></td><td>≤ 240 TiB</td><td>External DDR/PSRAM (optional)</td></tr>
+<tr><td><code>FFFF FF00 0000 0000 – FFFF FF7F FFFF FFFF</code></td><td>32 GiB</td><td>Memory-mapped I/O (GPIO, UART, Quad-SPI, USB-DEV, timers…)</td></tr>
 <tr><td><code>FFFF FFFF FFF0 0000 – FFFF FFFF FFFFFFFF</code></td><td>64 KiB</td><td>CSR / system registers (incl. <code>SB/SR/SC/SW</code>, <code>TMODE</code>, IVT)</td></tr>
 </tbody></table>
 
@@ -116,7 +116,7 @@ tuned for branch-heavy real-world workloads and guaranteed-cycle execution.
 <thead><tr><th>Op</th><th>Sub-funct (2<sup>nd</sup> byte)</th><th>Description (1 tile unless noted)</th></tr></thead>
 <tbody>
 <tr><td>00 (TALU)</td><td>0 ADD, 1 SUB, 2 AND, 3 OR, 4 XOR, 5 MIN, 6 MAX, 7 ABS</td><td>Element-wise ALU (8,16,32,64-bit lanes).</td></tr>
-<tr><td>01 (TMUL)</td><td>0 MUL, 1 DOT (ACCx), 2–3 RES</td><td>Multiply or 8-lane dot-product to accumulator.</td></tr>
+<tr><td>01 (TMUL)</td><td>0 MUL, 1 DOT (lane count per TMODE), 2–3 RES</td><td>Multiply or 8-lane dot-product to accumulator.</td></tr>
 <tr><td>10 (TRED)</td><td>0 SUM, 1 MIN, 2 MAX, 3 POPCNT, 4 L1</td><td>Tile reduction to ACCx.</td></tr>
 <tr><td>11 (TSYS)</td><td>0 TRANS, 1 CONV3, 2 MOVBANK, 3 LOADC, 4 ZERO</td><td>System / matrix helpers.</td></tr>
 </tbody></table>
@@ -157,7 +157,7 @@ fill_loop:
 <pre><code>; TDST already points at matrix tile
 E3 00                       ; TSYS TRANS (op=11 funct=0)</code></pre>
 
-<h3>6.3 8-lane dot-product of two vectors</h3>
+<h3>6.3 lane‑wide dot‑product of two vectors</h3>
 <pre><code>LDI  R0, vecA_tile
 LDI  R1, vecB_tile
 CSR  R0, TSRC0
@@ -217,7 +217,7 @@ CSR  ACC0, R2              ; result → R2</code></pre>
 <tr><td>Memory latency</td><td>1 cycle to tile; flat banked map</td><td>100–500 cycles to L2 or global mem</td></tr>
 <tr><td>Interrupts</td><td>Regular + NMI; DMA pointer aliasing</td><td>No standard IRQ entry in kernels</td></tr>
 <tr><td>CSR / I/O</td><td>Memory-mapped CSRs & 4-bit ports</td><td>Host-managed; no sub-µs device I/O</td></tr>
-<tr><td>Power budget</td><td>&lt; 1 W @ 1 GHz (7 nm)</td><td>10–400 W typical</td></tr>
+<tr><td>Power budget</td><td>&lt; 1 W typical @ 1 GHz, 0.7 V (8 MiB); 2–3 W worst‑case</td><td>10–400 W typical</td></tr>
 </tbody>
 </table>
 </div>
@@ -288,7 +288,7 @@ reduces pore wear and improves target enrichment.
     <tr><td>CTC decode</td><td>60</td><td>Beam width 4, priority logic</td></tr>
     <tr><td>k-mer hash lookup</td><td>20</td><td>Minimiser in SRAM</td></tr>
     <tr><td>Decision + eject</td><td>4</td><td><code>CSR</code> triggers GPIO</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>~130</strong></td><td>~130 ns total</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>~130</strong></td><td>~130 ns core compute (48 µs sensor‑to‑eject)</td></tr>
   </tbody>
 </table>
 
