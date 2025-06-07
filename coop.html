@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cebu Multipurpose Cooperative: Launch Plan</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f4f6fa;
+        color: #222e3a;
+        margin: 0;
+        padding: 0 0 40px 0;
+    }
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(30,42,70,0.10);
+        padding: 40px 32px;
+    }
+    h1, h2, h3 {
+        font-family: 'Segoe UI Semibold', Arial, sans-serif;
+        color: #1c334a;
+        margin-top: 0;
+    }
+    h1 {
+        font-size: 2.3em;
+        margin-bottom: 0.25em;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 2.2em;
+    }
+    h3 {
+        font-size: 1.12em;
+        margin-top: 1.8em;
+        color: #3261b0;
+    }
+    ul, ol {
+        padding-left: 1.5em;
+    }
+    .step {
+        padding: 18px 0;
+        border-bottom: 1px solid #eef1f7;
+    }
+    .step:last-child {
+        border-bottom: none;
+    }
+    .highlight {
+        background: #e8f0ff;
+        padding: 6px 12px;
+        border-radius: 8px;
+        display: inline-block;
+        font-size: 1.02em;
+        margin: 4px 0;
+    }
+    .table-wrapper {
+        overflow-x: auto;
+        margin: 18px 0;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0;
+        background: #fafbfc;
+    }
+    th, td {
+        border: 1px solid #e1e7ee;
+        padding: 10px 12px;
+        text-align: left;
+    }
+    th {
+        background: #eef4fb;
+        font-weight: 600;
+    }
+    code {
+        background: #f7f7ff;
+        color: #4465a2;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-size: 1em;
+    }
+    .note {
+        background: #f7fdf7;
+        border-left: 5px solid #47d188;
+        padding: 14px 24px;
+        margin: 18px 0;
+        border-radius: 9px;
+        color: #225c33;
+        font-size: 1.07em;
+    }
+    /* --- TABS --- */
+    .tabs {
+        display: flex;
+        border-bottom: 2px solid #e1e7ee;
+        margin-bottom: 28px;
+        margin-top: 16px;
+    }
+    .tab-btn {
+        font-size: 1.12em;
+        font-family: 'Segoe UI Semibold', Arial, sans-serif;
+        padding: 14px 34px;
+        background: none;
+        border: none;
+        border-bottom: 4px solid transparent;
+        color: #3a4b67;
+        cursor: pointer;
+        outline: none;
+        transition: border 0.15s, background 0.2s;
+        margin-right: 4px;
+    }
+    .tab-btn.active, .tab-btn:hover {
+        border-bottom: 4px solid #468cff;
+        background: #eef4fb;
+        color: #23417a;
+    }
+    .tab-content {
+        display: none;
+        animation: fadeIn 0.5s;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @media (max-width: 600px) {
+        .container { padding: 14px 4px; }
+        table, th, td { font-size: 0.97em; }
+        .tab-btn { padding: 12px 12px; font-size: 1em; }
+    }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var tabBtns = document.querySelectorAll('.tab-btn');
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabBtns.forEach(function(btn, idx) {
+        btn.addEventListener('click', function() {
+            tabBtns.forEach(function(b) { b.classList.remove('active'); });
+            tabContents.forEach(function(tc) { tc.classList.remove('active'); });
+            btn.classList.add('active');
+            tabContents[idx].classList.add('active');
+        });
+    });
+    tabBtns[0].classList.add('active');
+    tabContents[0].classList.add('active');
+});
+</script>
+</head>
+<body>
+<div class="container">
+    <h1>Cebu Multipurpose Cooperative: Launch Plan</h1>
+    <div class="tabs">
+        <button class="tab-btn">Startup Plan</button>
+        <button class="tab-btn">Build & Run: Cost & Timeline</button>
+    </div>
+
+    <!-- TAB 1: STARTUP PLAN -->
+    <div class="tab-content">
+        <p><strong>Business Model:</strong> Member-only restaurant, grocery, laundry, and convenience store. Non-members access via to-go/ordering only. 15+ founding members, with robust capital-build-up and profit-sharing structure. Targeting startup financing via Philippine government and SME lenders.</p>
+        <h2>1. Entity Formation & Registration</h2>
+        <div class="step">
+            <h3>1.1. Organize Founding Members & Capital</h3>
+            <ul>
+                <li>Minimum <span class="highlight">15 natural-person members</span> (RA 9520 compliance).</li>
+                <li><strong>Paid-up share capital:</strong> <span class="highlight">₱100,000 (minimum)</span> (multipurpose cooperative).</li>
+                <li><strong>Authorized capital:</strong> Recommend ₱1,000,000 (ensures no one member holds &gt;10% of shares even if one person funds all paid-up capital).</li>
+                <li>Open co-op bank account or escrow and deposit initial paid-up capital. Obtain bank certificate.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h3>1.2. Draft and Approve By-Laws</h3>
+            <ul>
+                <li><strong>Capital build-up:</strong> Each member pays a <span class="highlight">₱300/month “membership fee”</span> credited 100% to share capital.</li>
+                <li><strong>Patronage refund:</strong> At least 30% of net surplus is allocated annually to members, distributed proportionally to member purchases/usage; a % may be retained as additional shares.</li>
+                <li><strong>Membership admission:</strong> New applicants must pass a knowledge test (mission/history) and demonstrate “goodwill” (e.g., volunteering, advocacy, etc.).</li>
+                <li>Set refund policy: Initial paid-up capital is refundable if startup loan is not approved (add explicit clause to subscription agreements and by-laws).</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h3>1.3. File with Cooperative Development Authority (CDA)</h3>
+            <ol>
+                <li>Reserve co-op name via CDA portal.</li>
+                <li>Submit Articles of Cooperation, By-laws, Treasurer’s Affidavit (with escrow certificate), Board Resolution, list of members, and IDs/specimen signatures.</li>
+                <li>Receive Certificate of Registration as a multipurpose cooperative.</li>
+            </ol>
+        </div>
+        <h2>2. Capitalization & Funding Structure</h2>
+        <div class="step">
+            <h3>2.1. Initial Equity</h3>
+            <ul>
+                <li>₱100,000 paid-up share capital deposited in escrow/coop bank account (refundable per subscription clause if loan fails).</li>
+                <li>Monthly capital build-up dues increase equity over time.</li>
+            </ul>
+        </div>
+        <div class="step">
+            <h3>2.2. Loan Sourcing</h3>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>Lender</th>
+                        <th>Loan Amount</th>
+                        <th>Tenor</th>
+                        <th>Interest Rate</th>
+                        <th>Grace Period</th>
+                        <th>Collateral / Guarantee</th>
+                    </tr>
+                    <tr>
+                        <td>Land Bank Term Loan Facility</td>
+                        <td>Up to 80% project cost</td>
+                        <td>Up to 5 years (2 yrs grace)</td>
+                        <td>~6–8% p.a.</td>
+                        <td>Up to 2 years (principal)</td>
+                        <td>REM/CM, hold-out deposit, CSF guarantee</td>
+                    </tr>
+                    <tr>
+                        <td>DBP Retail Lending for MSEs</td>
+                        <td>Up to 90% of TPC</td>
+                        <td>Up to 15 years (3 yrs grace short/5 yrs long gestation)</td>
+                        <td>~7–10% p.a.</td>
+                        <td>Up to 3–5 years</td>
+                        <td>REM/CM, hold-out deposit, CSF, surety</td>
+                    </tr>
+                    <tr>
+                        <td>SB Corp RISE UP Loan</td>
+                        <td>Up to ₱20M (₱3–5M collateral-free)</td>
+                        <td>Up to 3–5 years</td>
+                        <td>8–12% p.a. diminishing</td>
+                        <td>Up to 1 year</td>
+                        <td>Unsecured up to ₱3–5M; CSF option</td>
+                    </tr>
+                    <tr>
+                        <td>Coop Bank/Partner Coop</td>
+                        <td>Up to 3× share capital (₱300–400K typical)</td>
+                        <td>Up to 4 years</td>
+                        <td>2%/month</td>
+                        <td>1–6 months</td>
+                        <td>Share capital, CSF, surety</td>
+                    </tr>
+                    <tr>
+                        <td>Fintech/Digital Lenders</td>
+                        <td>₱100K–₱2M per line</td>
+                        <td>3–12 months</td>
+                        <td>1–3.5%/month</td>
+                        <td>None</td>
+                        <td>Minimal (cash flow–based)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="note">
+                <strong>Tip:</strong> Combine Land Bank/DBP long-term loans for property & buildout, SB Corp/fintech for quick cashflow, and CSF to minimize hard collateral needs.
+            </div>
+        </div>
+        <h2>3. Property & Fit-Out</h2>
+        <div class="step">
+            <ol>
+                <li>Identify and negotiate property acquisition/lease.</li>
+                <li>Apply for loan using Certificate of Registration, business plan, financial projections, and escrow/hold-out deposit as initial security.</li>
+                <li>On loan approval: mortgage property/equipment as required; begin build-out of restaurant, grocery, laundry, convenience store.</li>
+            </ol>
+        </div>
+        <h2>4. Member & Non-Member Participation</h2>
+        <div class="step">
+            <h3>4.1. Member Benefits</h3>
+            <ul>
+                <li>Access to all facilities (dine-in, grocery, laundry, etc.).</li>
+                <li>Monthly share capital growth via dues and patronage refunds.</li>
+                <li>Voting rights and participation in governance and profit allocation.</li>
+            </ul>
+            <h3>4.2. Non-Member Access</h3>
+            <ul>
+                <li>Limited to to-go orders/services (restaurant, laundry, retail).</li>
+                <li>Revenues from non-member sales are taxable (VAT/percentage tax); maintain separate ledgers.</li>
+            </ul>
+        </div>
+        <h2>5. Membership Admission & Growth</h2>
+        <div class="step">
+            <ol>
+                <li>Require applicants to complete a knowledge test and a defined goodwill contribution (volunteer hours, advocacy, etc.).</li>
+                <li>After 2 years’ audited operations, consider opening membership and scaling capital build-up.</li>
+                <li>Allow portion of future patronage refunds to be retained as additional shares (“revolving capital”).</li>
+            </ol>
+        </div>
+        <h2>6. Compliance & Best Practices</h2>
+        <div class="step">
+            <ul>
+                <li>Ensure ongoing compliance with CDA capital rules (₱100,000 paid-up; CBU in by-laws; ≤10% share cap).</li>
+                <li>Appoint auditor and prepare annual financial statements.</li>
+                <li>Disclose member equity statements annually (show share growth via dues and refunds).</li>
+                <li>File BIR returns, pay VAT/tax on non-member transactions.</li>
+                <li>Maintain open communication with all lenders and fulfill all post-approval requirements.</li>
+            </ul>
+        </div>
+        <h2>7. Timeline Overview</h2>
+        <div class="step">
+            <div class="table-wrapper">
+                <table>
+                    <tr><th>Task</th><th>Estimated Duration</th></tr>
+                    <tr><td>Founding group organization, capital collection, by-law drafting</td><td>1–2 months</td></tr>
+                    <tr><td>CDA filing, name reservation, certificate of registration</td><td>1–1.5 months</td></tr>
+                    <tr><td>Loan application (Land Bank/DBP/SB Corp), documentation</td><td>1–2 months</td></tr>
+                    <tr><td>Property search & acquisition/lease negotiation</td><td>1–2 months (may overlap loan application)</td></tr>
+                    <tr><td>Fit-out, equipment procurement, hiring, soft opening</td><td>3–6 months</td></tr>
+                    <tr><td>Ongoing operations, membership onboarding, reporting</td><td>Continuous</td></tr>
+                </table>
+            </div>
+        </div>
+        <h2>8. Key Documents & Templates</h2>
+        <div class="step">
+            <ul>
+                <li>Articles of Cooperation & By-laws (incl. capital build-up, refund policies, member screening)</li>
+                <li>Treasurer’s Affidavit & bank certificate (escrow/paid-up capital)</li>
+                <li>Board Resolutions (formation, loan application)</li>
+                <li>Subscription Agreement with refund contingency</li>
+                <li>Member application forms & knowledge test materials</li>
+                <li>Business plan & financial projections</li>
+            </ul>
+        </div>
+        <div class="note">
+            <strong>Want a by-laws or subscription agreement template?</strong> Ask and you’ll receive a tailored, ready-to-file draft.
+        </div>
+    </div>
+
+    <!-- TAB 2: COST TO BUILD, COST TO OPERATE, TIME TO LAUNCH -->
+    <div class="tab-content">
+        <h2>Build & Run: Capital, Operating, and Timeline Estimates</h2>
+        <h3>1. Total Capital Needed to Build</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Business</th>
+                    <th>Lean Build</th>
+                    <th>Comfortable Build</th>
+                </tr>
+                <tr>
+                    <td>Eatery</td>
+                    <td>₱90,000</td>
+                    <td>₱150,000</td>
+                </tr>
+                <tr>
+                    <td>Bodega Store</td>
+                    <td>₱90,000</td>
+                    <td>₱180,000</td>
+                </tr>
+                <tr>
+                    <td>Laundromat</td>
+                    <td>₱220,000</td>
+                    <td>₱480,000</td>
+                </tr>
+                <tr>
+                    <td>Leases, Deposits, Fit-Out (3 rooms)</td>
+                    <td>₱210,000</td>
+                    <td>₱360,000</td>
+                </tr>
+                <tr>
+                    <td>Utilities & Opening Float</td>
+                    <td>₱60,000</td>
+                    <td>₱80,000</td>
+                </tr>
+                <tr>
+                    <th>Grand Total (3 concepts)</th>
+                    <th>₱670,000</th>
+                    <th>₱1,250,000</th>
+                </tr>
+            </table>
+        </div>
+        <div class="note">
+            Typical range for launch is <b>₱670,000–₱1,250,000</b>. This covers everything from permits to equipment to initial stock.
+        </div>
+
+        <h3>2. Monthly Operating Expenses</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Expense</th>
+                    <th>Monthly Estimate (₱)</th>
+                    <th>Details</th>
+                </tr>
+                <tr><td><b>Payroll (4 core staff)</b></td><td>48,600</td><td>Cook, part-time server, bodega clerk, laundry attendant, incl. government contributions</td></tr>
+                <tr><td>Rent (3 rooms)</td><td>36,000</td><td>₱12,000/room, typical Cebu rates</td></tr>
+                <tr><td>Electricity, water, internet, upkeep</td><td>30,000</td><td>Average for 3 concepts</td></tr>
+                <tr><td>LPG, detergent, cleaning</td><td>6,000</td><td>Gas for kitchen, laundry supplies</td></tr>
+                <tr><td><b>Core fixed overhead</b></td><td><b>120,000</b></td><td>Minimum to stay open</td></tr>
+                <tr><td>Food/retail inventory restock</td><td>103,000</td><td>Includes ingredients and bodega stock for sales turnover</td></tr>
+                <tr>
+                    <th>Grand Operating Budget</th>
+                    <th>≈223,000</th>
+                    <th>Monthly minimum, adjust for sales volume</th>
+                </tr>
+            </table>
+        </div>
+        <div class="note">
+            <b>Minimum monthly cash needed:</b> <span class="highlight">₱120–130K</span> fixed costs + <span class="highlight">₱100K+</span> for merchandise/ingredients.
+        </div>
+        <h3>3. Timeline: From Lease to Opening</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>Milestone</th><th>Typical Duration</th><th>Notes</th></tr>
+                <tr>
+                    <td>Permits & Registration</td>
+                    <td>2–3 weeks</td>
+                    <td>DTI, Barangay, Mayor’s, BIR, etc. (mostly online, can parallelize with design)</td>
+                </tr>
+                <tr>
+                    <td>Fit-Out (all 3 rooms)</td>
+                    <td>4–6 weeks</td>
+                    <td>Light framing, paint, basic plumbing/wiring, counters</td>
+                </tr>
+                <tr>
+                    <td>Equipment Order & Delivery</td>
+                    <td>2–8 weeks</td>
+                    <td>Kitchen gear, laundromat machines—local supply is faster, imports (laundry) up to 8 weeks</td>
+                </tr>
+                <tr>
+                    <td>Utility Hookups</td>
+                    <td>1–2 weeks</td>
+                    <td>Electric, water, internet (apply early)</td>
+                </tr>
+                <tr>
+                    <td>Inspections, Training, Soft Opening</td>
+                    <td>2–3 weeks</td>
+                    <td>Health/sanitary/fire, dry runs, staff onboarding</td>
+                </tr>
+                <tr>
+                    <th>Total Time to Revenue</th>
+                    <th>3–4 months</th>
+                    <th>Faster if equipment is local and team is ready</th>
+                </tr>
+            </table>
+        </div>
+        <div class="note">
+            <b>From lease signing to soft opening:</b> <span class="highlight">Approx. 90–120 days</span> with good planning and no import bottlenecks.
+        </div>
+    </div>
+</div>
+</body>
+</html>
