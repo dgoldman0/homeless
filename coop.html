@@ -132,6 +132,55 @@
         table, th, td { font-size: 0.97em; }
         .tab-btn { padding: 12px 12px; font-size: 1em; }
     }
+    @media (prefers-color-scheme: dark) {
+        body {
+            background: #161b22;
+            color: #e8ecf2;
+        }
+        .container {
+            background: #232a34;
+            box-shadow: 0 8px 32px rgba(30,42,70,0.22);
+        }
+        h1, h2, h3 {
+            color: #e2eaff;
+        }
+        .highlight {
+            background: #294872;
+            color: #e8ecf2;
+        }
+        .table-wrapper table {
+            background: #202635;
+        }
+        th, td {
+            border: 1px solid #3c4860;
+            color: #e0e7ef;
+        }
+        th {
+            background: #1b2231;
+        }
+        code {
+            background: #2a3042;
+            color: #89aaff;
+        }
+        .note {
+            background: #182a1e;
+            border-left: 5px solid #47d188;
+            color: #88edb6;
+        }
+        .tabs {
+            border-bottom: 2px solid #334053;
+        }
+        .tab-btn {
+            background: none;
+            color: #b5c9f1;
+            border-bottom: 4px solid transparent;
+        }
+        .tab-btn.active, .tab-btn:hover {
+            background: #223055;
+            border-bottom: 4px solid #47a3ff;
+            color: #fff;
+        }
+    }
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
