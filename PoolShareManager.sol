@@ -77,7 +77,7 @@ contract PoolShareManager {
     event Redeemed(address indexed tokenA, address indexed user, uint256 creditBurned, uint256 amountA);
     event TransferManagerSet(address indexed tokenA, address previous, address current);
     event CreditsTransferred(address indexed tokenA, address indexed from, address indexed to, uint256 amount);
-
+    event Dissolved(address indexed tokenA, uint256 amountP, uint256 amountA)
     modifier onlyOwner() {
         require(msg.sender == owner, "PoolShareManager: caller must be owner");
         _;
@@ -243,14 +243,10 @@ contract PoolShareManager {
             uint128(type(uint256).max)
         );
 
-        // 4) Send them to the owner
-        IERC20(tokenA).transfer(owner, outA);
-        IERC20(PRIME).transfer(owner, outP);
-
-        // 5) Reset the window
+        // 4) Reset the window
         delete dissolutionWindows[tokenA];
 
-        emit Redeemed(tokenA, owner, pctShare, outA); // optional event
+        emit Dissolved(tokenA, pctShare, amountP, amountA); // optional event
     }
 
     /// @notice Transfer contract ownership
