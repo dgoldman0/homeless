@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "./utils/ownable.sol";
-
 /**
  * @title PoolShareManager
  * @notice This contract manages shared liquidity provisioning into Uniswap v4 pools for pairs of PRIME and various tokenA tokens.
@@ -14,6 +12,13 @@ import "./utils/ownable.sol";
  * @dev Designed to simplify liquidity contribution by allowing users to provide only tokenA while the contract handles PRIME pairing
  *      and position management through Uniswap v4’s PoolManager. Price alignment is assumed to be handled externally.
  */
+
+import "./utils/ownable.sol";
+import {BaseHook} from "v4-periphery/src/utils/BaseHook.sol";
+import {Hooks}    from "v4-core/src/libraries/Hooks.sol";
+import {PoolKey}  from "v4-core/src/types/PoolKey.sol";
+import {IPoolManager, BalanceDelta} 
+                  from "v4-core/src/interfaces/IPoolManager.sol";
 
 interface IERC20 {
     function totalSupply() external view returns (uint256);
@@ -46,7 +51,7 @@ interface IPoolManager {
     ) external returns (uint256 amount0, uint256 amount1);
 }
 
-contract PoolShareManager is Ownable {
+contract PoolShareManager is Ownable,BaseHook {
     /// @notice Token used as the base pair asset for all pools
     address public immutable PRIME;
     /// @notice Uniswap v4 PoolManager address
@@ -79,15 +84,59 @@ contract PoolShareManager is Ownable {
     event TransferManagerSet(address indexed tokenA, address previous, address current);
     event CreditsTransferred(address indexed tokenA, address indexed from, address indexed to, uint256 amount);
     event Dissolved(address indexed tokenA, uint256 amountP, uint256 amountA)
-    modifier onlyOwner() {
-        require(msg.sender == owner, "PoolShareManager: caller must be owner");
-        _;
-    }
 
+    // This is definitely broken now...
     constructor(address _prime, address _poolManager) {
         PRIME        = _prime;
         POOL_MANAGER = _poolManager;
         owner        = msg.sender;
+        BaseHook(IPooolManager)_pm)
+    }
+
+
+    /// @notice Grant only the add/remove-liquidity hooks
+    function getHookPermissions() 
+      public pure override returns (Hooks.Permissions memory)
+    {
+      return Hooks.Permissions({
+        beforeInitialize:         false,
+        afterInitialize:          false,
+        beforeAddLiquidity:       true,
+        afterAddLiquidity:        false,
+        beforeRemoveLiquidity:    true,
+        afterRemoveLiquidity:     false,
+        beforeSwap:               false,
+        afterSwap:                false,
+        beforeDonate:             false,
+        afterDonate:              false,
+        beforeSwapReturnDelta:    false,
+        afterSwapReturnDelta:     false,
+        afterAddLiquidityReturnDelta:    false,
+        afterRemoveLiquidityReturnDelta: false
+      });
+    }
+
+    /// @notice Only allow _your_ manager contract to mint/burn LP
+    function _beforeAddLiquidity(
+      address sender,
+      PoolKey calldata key,
+      IPoolManager.ModifyLiquidityParams calldata params,
+      BalanceDelta delta,
+      bytes calldata
+    ) internal override onlyPoolManager returns (bytes4, BalanceDelta) {
+      require(sender == address(this), "hook: only manager");
+      return (BaseHook.beforeAddLiquidity.selector, delta);
+    }
+
+    function _beforeRemoveLiquidity(
+      address sender,
+      PoolKey calldata key,
+      IPoolManager.ModifyLiquidityParams calldata params,
+      BalanceDelta delta,
+      bytes calldata
+    ) internal override onlyPoolManager returns (bytes4, BalanceDelta) {
+      require(sender == address(this), "hook: only manager");
+      return (BaseHook.beforeRemoveLiquidity.selector, delta);
     }
 
     /// @notice Initialize a new Uniswap v4 pool for a given tokenA
