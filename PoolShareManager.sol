@@ -210,15 +210,32 @@ contract PoolShareManager {
 
     /// @notice Owner-triggered withdrawal of a portion of the pool’s tokenA and PRIME
     /// @param tokenA Pool token to dissolve
-    /// @param pctShare Percentage of total credit base to withdraw (in 1e18)
+    /// @param pctShare Percentage of total credits to withdraw (1e18 = 100%)
     function dissolvePoolShare(address tokenA, uint256 pctShare) external onlyOwner {
         DissolutionWindow memory dw = dissolutionWindows[tokenA];
         require(block.timestamp <= dw.unlockUntil, "PoolShareManager: not unlocked");
-        require(pctShare <= dw.maxPct, "PoolShareManager: exceeds maxPct");
+        require(pctShare <= dw.maxPct,     "PoolShareManager: exceeds maxPct");
 
         PoolConfig memory cfg = pools[tokenA];
-        require(cfg.pool != address(0), "PoolShareManager: pool not ready");
+        require(cfg.pool != address(0),    "PoolShareManager: pool not ready");
 
+        // 1) Figure out how much of each token to pull
+        uint256 poolBalanceA = IERC20(tokenA).balanceOf(cfg.pool);
+        uint256 poolBalanceP = IERC20(PRIME).balanceOf(cfg.pool);
+
+        uint256 amountA = (poolBalanceA * pctShare) / 1e18;
+        uint256 amountP = (poolBalanceP * pctShare) / 1e18;
+
+        // 2) Remove those exact amounts from your position
+        IPoolManager(POOL_MANAGER).modifyPosition(
+            cfg.pool,
+            cfg.lowerTick,
+            cfg.upperTick,
+            -int256(amountP),
+            -int256(amountA)
+        );
+
+        // 3) Collect the withdrawn tokens
         (uint256 outP, uint256 outA) = IPoolManager(POOL_MANAGER).collect(
             cfg.pool,
             address(this),
@@ -226,8 +243,14 @@ contract PoolShareManager {
             uint128(type(uint256).max)
         );
 
-        // Reset the window immediately
+        // 4) Send them to the owner
+        IERC20(tokenA).transfer(owner, outA);
+        IERC20(PRIME).transfer(owner, outP);
+
+        // 5) Reset the window
         delete dissolutionWindows[tokenA];
+
+        emit Redeemed(tokenA, owner, pctShare, outA); // optional event
     }
 
     /// @notice Transfer contract ownership
