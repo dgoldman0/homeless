@@ -60,6 +60,13 @@ contract PoolShareManager {
         int24   upperTick;  // Upper tick for the pool position
     }
 
+    struct DissolutionWindow {
+        uint256 unlockUntil;
+        uint256 maxPct; // percentage in 1e18 (e.g., 1e17 = 10%)
+    }
+
+    mapping(address => DissolutionWindow) public dissolutionWindows;
+
     mapping(address => PoolConfig) public pools;      // tokenA => PoolConfig
     mapping(address => mapping(address => uint256)) public credits;    // tokenA => user => credit balance
     mapping(address => uint256)           public totalCredits;         // tokenA => total supply of credits
@@ -186,6 +193,41 @@ contract PoolShareManager {
         credits[tokenA][from] -= amount;
         credits[tokenA][to]   += amount;
         emit CreditsTransferred(tokenA, from, to, amount);
+    }
+
+    /// @notice Temporarily unlocks a pool for partial dissolution
+    /// @param tokenA Pool token to unlock
+    /// @param duration Seconds until lock re-engages
+    /// @param maxPct Maximum percentage of total credits to allow for withdrawal (in 1e18)
+    function unlockForDissolution(address tokenA, uint256 duration, uint256 maxPct) external onlyOwner {
+        require(pools[tokenA].pool != address(0), "PoolShareManager: pool not initialized");
+        require(maxPct <= 1e18, "PoolShareManager: maxPct > 100%");
+        dissolutionWindows[tokenA] = DissolutionWindow({
+            unlockUntil: block.timestamp + duration,
+            maxPct: maxPct
+        });
+    }
+
+    /// @notice Owner-triggered withdrawal of a portion of the pool’s tokenA and PRIME
+    /// @param tokenA Pool token to dissolve
+    /// @param pctShare Percentage of total credit base to withdraw (in 1e18)
+    function dissolvePoolShare(address tokenA, uint256 pctShare) external onlyOwner {
+        DissolutionWindow memory dw = dissolutionWindows[tokenA];
+        require(block.timestamp <= dw.unlockUntil, "PoolShareManager: not unlocked");
+        require(pctShare <= dw.maxPct, "PoolShareManager: exceeds maxPct");
+
+        PoolConfig memory cfg = pools[tokenA];
+        require(cfg.pool != address(0), "PoolShareManager: pool not ready");
+
+        (uint256 outP, uint256 outA) = IPoolManager(POOL_MANAGER).collect(
+            cfg.pool,
+            address(this),
+            uint128(type(uint256).max),
+            uint128(type(uint256).max)
+        );
+
+        // Reset the window immediately
+        delete dissolutionWindows[tokenA];
     }
 
     /// @notice Transfer contract ownership
