@@ -152,6 +152,40 @@ contract PoolShareManager {
         credits[tokenA][msg.sender] += delta;
         totalCredits[tokenA]      += delta;
 
+        // — check for auto-top-off any earned fees so long as we're NOT in a dissolution window —
+        DissolutionWindow memory dw = dissolutionWindows[tokenA];
+        if (block.timestamp > dw.unlockUntil) {
+            // 1) pull any fees/rewards from the pool back into this contract
+            IPoolManager(POOL_MANAGER).collect(
+                cfg.pool,
+                address(this),
+                uint128(type(uint256).max),
+                uint128(type(uint256).max)
+            );
+
+            // 2) if the contract now holds more tokenA than just the user's deposit, top off
+            uint256 extraA = IERC20(tokenA).balanceOf(address(this));
+            if (extraA > amountA) {
+                // figure out matching PRIME based on current pool ratios
+                uint256 poolA = IERC20(tokenA).balanceOf(cfg.pool);
+                uint256 poolP = IERC20(PRIME).balanceOf(cfg.pool);
+                uint256 neededP = (extraA * poolP) / poolA;
+
+                // only proceed if we have enough PRIME on-hand
+                if (IERC20(PRIME).balanceOf(address(this)) >= neededP) {
+                    IERC20(tokenA).approve(POOL_MANAGER, extraA);
+                    IERC20(PRIME).approve(POOL_MANAGER, neededP);
+                    IPoolManager(POOL_MANAGER).modifyPosition(
+                        cfg.pool,
+                        cfg.lowerTick,
+                        cfg.upperTick,
+                        int256(neededP),
+                        int256(extraA)
+                    );
+                }
+            }
+        }
+
         emit Deposited(tokenA, msg.sender, amountA, amountP, delta);
     }
 
@@ -167,6 +201,7 @@ contract PoolShareManager {
 
         uint256 share = (creditAmount * 1e18) / total;
 
+        // Same issue where 4o had us liquidate everything... 
         PoolConfig memory cfg = pools[tokenA];
         (uint256 outP, uint256 outA) = IPoolManager(POOL_MANAGER).collect(
             cfg.pool,
