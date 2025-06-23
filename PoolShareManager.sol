@@ -189,20 +189,43 @@ contract PoolShareManager {
         emit Deposited(tokenA, msg.sender, amountA, amountP, delta);
     }
 
-    /// @notice Burn credits to withdraw proportional share of tokenA from pool
+    /// @notice Redeem credits for a share of tokenA (PRIME remains in vault)
+    /// @param tokenA Pool token to redeem
+    /// @param creditAmount Amount of credits to burn
     function burnCredits(address tokenA, uint256 creditAmount) external {
         uint256 userCredit = credits[tokenA][msg.sender];
         require(userCredit >= creditAmount, "PoolShareManager: insufficient credit");
+
         uint256 total = totalCredits[tokenA];
         require(total > 0, "PoolShareManager: no credits");
 
+        // 1) Burn the credits
         credits[tokenA][msg.sender] -= creditAmount;
         totalCredits[tokenA]        -= creditAmount;
 
+        // 2) Compute user's share (1e18 = 100%)
         uint256 share = (creditAmount * 1e18) / total;
 
-        // Same issue where 4o had us liquidate everything... 
         PoolConfig memory cfg = pools[tokenA];
+        require(cfg.pool != address(0), "PoolShareManager: pool not ready");
+
+        // 3) Figure out exact token amounts in the pool
+        uint256 poolBalanceA = IERC20(tokenA).balanceOf(cfg.pool);
+        uint256 poolBalanceP = IERC20(PRIME).balanceOf(cfg.pool);
+
+        uint256 amountA = (poolBalanceA * share) / 1e18;
+        uint256 amountP = (poolBalanceP * share) / 1e18;
+
+        // 4) Remove that slice of liquidity
+        IPoolManager(POOL_MANAGER).modifyPosition(
+            cfg.pool,
+            cfg.lowerTick,
+            cfg.upperTick,
+            -int256(amountP),
+            -int256(amountA)
+        );
+
+        // 5) Collect the withdrawn tokens
         (uint256 outP, uint256 outA) = IPoolManager(POOL_MANAGER).collect(
             cfg.pool,
             address(this),
@@ -210,9 +233,10 @@ contract PoolShareManager {
             uint128(type(uint256).max)
         );
 
-        IERC20(tokenA).transfer(msg.sender, (outA * share) / 1e18);
+        // 6) Transfer tokenA to the user
+        IERC20(tokenA).transfer(msg.sender, outA);
 
-        emit Redeemed(tokenA, msg.sender, creditAmount, (outA * share) / 1e18);
+        emit Redeemed(tokenA, msg.sender, creditAmount, outA);
     }
 
     /// @notice Called by wrapper to transfer credits between users
