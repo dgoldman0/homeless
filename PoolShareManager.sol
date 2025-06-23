@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
+import "./utils/ownable.sol";
+
 /**
  * @title PoolShareManager
  * @notice This contract manages shared liquidity provisioning into Uniswap v4 pools for pairs of PRIME and various tokenA tokens.
@@ -44,13 +46,12 @@ interface IPoolManager {
     ) external returns (uint256 amount0, uint256 amount1);
 }
 
-contract PoolShareManager {
+contract PoolShareManager is Ownable {
     /// @notice Token used as the base pair asset for all pools
     address public immutable PRIME;
     /// @notice Uniswap v4 PoolManager address
     address public immutable POOL_MANAGER;
     /// @notice Admin address
-    address public owner;
 
     /// @dev Configuration for each tokenA-based pool
     struct PoolConfig {
@@ -306,10 +307,5 @@ contract PoolShareManager {
         delete dissolutionWindows[tokenA];
 
         emit Dissolved(tokenA, pctShare, amountP, amountA); // optional event
-    }
-
-    /// @notice Transfer contract ownership
-    function transferOwnership(address newOwner) external onlyOwner {
-        owner = newOwner;
     }
 }
