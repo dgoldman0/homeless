@@ -6,6 +6,8 @@ The National Contribution Credit System is a framework for recognizing and rewar
 
 Contributions are evaluated across a broad range of domains, scored using a standardized rubric, and recorded in a public or semi-public **Merit Ledger**. Rather than relying solely on hierarchy or inheritance, this system affirms merit through action, integrity, and sustained service. Credit is conferred only after structured review and approval via a **DAO-based governance mechanism**, ensuring both fairness and transparency.
 
+The rank system will be used in a number of areas. Among other benefits will be provision of stipends to those who obtain a given rank and maintain a certain level of continued activity. In public domains and other matters, rank may also influence how authoritative a member's words are taken to be by the representative systems.
+
 ### The Rank System
 
 The rank system exists to recognize those who contribute meaningfully, consistently, and across the full spectrum of national life. It is based on two measures:
