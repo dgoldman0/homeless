@@ -289,3 +289,8 @@ Rather than updating the ledger directly:
 * The LLM based system also will have a vote based on an assigned voting power, and will vote based after the public voting and comments are closed and will take into account the information in the proposal discussion board as well. 
 * On approval, the proposal triggers a smart contract call to **update the contributor’s Merit Ledger profile**
 
+---
+
+## **Scoring Rubric**
+
+The scoring rebric creates a fair grading system that will be used to inform voters and also the LLM based auto processor. The full rubric has its own [markdown file](https://github.com/dgoldman0/homeless/blob/main/nation_credit/rubric.md).
