@@ -286,5 +286,6 @@ Rather than updating the ledger directly:
 * A **DAO proposal** is issued automatically
 * Includes all structured data, rubric scores, and verification logs
 * DAO members review, approve, modify, or reject proposals
+* The LLM based system also will have a vote based on an assigned voting power, and will vote based after the public voting and comments are closed and will take into account the information in the proposal discussion board as well. 
 * On approval, the proposal triggers a smart contract call to **update the contributor’s Merit Ledger profile**
 
