@@ -13,6 +13,9 @@ pragma solidity ^0.8.19;
  *      and position management through Uniswap v4’s PoolManager. Price alignment is assumed to be handled externally.
  */
 
+// Note: Would be great to add a timeout lock where you get bonus. Maybe different factories... We'll see...
+// But the lockout could allow some of the potential earnings in the form of A token to also get claimed. 
+
 import "./utils/ownable.sol";
 import {BaseHook} from "v4-periphery/src/utils/BaseHook.sol";
 import {Hooks}    from "v4-core/src/libraries/Hooks.sol";
