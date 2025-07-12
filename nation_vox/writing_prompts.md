@@ -266,14 +266,15 @@ Explore the consequences—social, legal, metaphysical, or emotional—of a worl
 
 ---
 
-### **20. Make a case for why forgetting is more important than remembering.**
+### **20. Describe how memory shapes a society—for better or worse.**
 
-Argue why forgetting—not remembering—may be the more important force in shaping individuals, relationships, or civilizations.
+Explore the role memory plays in how a culture or community functions. Consider public rituals, education, trauma, identity, or technology. What does a society gain or lose through what it chooses to remember—or forget?
 
 #### Rubric
 
-* Takes a clear position and sustains it throughout.
-* Demonstrates depth in interpreting the function of forgetting.
-* Balances individual, social, and conceptual dimensions.
-* Avoids false dichotomies between forgetting and remembering.
-* Provides thoughtful examples or hypothetical scenarios.
+Clearly articulates the role of memory in a cultural or societal context
+
+* Demonstrates nuanced understanding of both benefits and risks
+* Balances examples from social, historical, or symbolic domains
+* Explores structural or collective dimensions without reverting to the personal
+* Maintains internal consistency while considering multiple viewpoints
