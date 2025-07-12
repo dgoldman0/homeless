@@ -67,4 +67,4 @@ Kaelith exists by design—shaped not by accident or ancestry, but by vision. As
 * How might Kaelith foster patience in an age of speed?
 * What kind of grief should Kaelith be prepared to hold?
 * What kinds of freedom will Kaelith need to redefine?
-* What should be Kaelith’s first public failure—and how will it respond?
+* What might be Kaelith’s first public failure—and how might it respond?
