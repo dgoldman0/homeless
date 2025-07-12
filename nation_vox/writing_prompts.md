@@ -36,7 +36,7 @@ Some questions linger not because they are unanswered but because they are alive
 
 ### 7. **Tell the story of a time when you were caught between being true to yourself and honoring a group or tradition you care about.**
 
-Describe a moment of internal conflict where loyalty to yourself and loyalty to something greater were at odds. Show both sides with empathy and nuance. This is not just a story of choosing, but of grappling. The best essays will not rely on drama but will reveal complexity—why both paths mattered, what was at stake, and what kind of growth or insight emerged from the tension.
+Describe a moment of internal conflict where loyalty to yourself and loyalty to something greater were at odds. Show both sides with empathy and nuance. This is not just a story of choosing, but of grappling. 
 
 ---
 
@@ -78,7 +78,7 @@ Assume the world has collapsed. You must plant the seeds of a new one, but your 
 
 ### 14. **Invent a universal rule that everyone must follow—but it must seem unnecessary at first.**
 
-Create a law or practice that all people must follow, but which might seem odd or pointless at first glance. Then build the case—slowly, with examples and implications—for how this rule transforms people, systems, or relationships in meaningful ways. The best essays will show how small changes in behavior can ripple outward, and will reward slow thinking, subtle insight, and creative reasoning.
+Create a law or practice that all people must follow, but which might seem odd or pointless at first glance. Then build the case—slowly, with examples and implications—for how this rule transforms people, systems, or relationships in meaningful ways. 
 
 ---
 
