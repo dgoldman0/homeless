@@ -7,3 +7,6 @@
 3. Should probably take a collection of either essays, or maybe a collection of answers for the same subquestion and have a system of prompt-completion pairs generated there.
 
 4. Need to create a chain of thought base model that relies heavily on the subquestions. Essentially we'll train it to rely heavily on those questions and potential answers as part of its broader chain of thought. That's also why we'll need a lot of questions to have reasonable entry and exit points from real world questions to real world answers.
+
+  a. I suppose we can train it to get a reasonable list of which questions apply to a given sample issue. And that's chain of thought step (a) getting it to reasonably relate a general issue to think about to a set of the questions we have. Step two is to get it to reasonably evaluate how the questions relate to an issue, and then relate it back to the real world through logical evaluation training. 
+
