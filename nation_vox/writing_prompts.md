@@ -66,7 +66,7 @@ Pick one of the five senses and imagine an entire society where no one is born w
 
 ### 12. **Explain how two completely different things could be considered the same.**
 
-Choose two things—ideas, objects, forces—that seem totally unrelated or even opposite. Then make a case for how they are fundamentally alike. This is not about proving a fact but about demonstrating how thinking itself works: how analogy, structure, and metaphor let us bridge gaps. A good essay will blend imagination with logic, and show how surprising connections can offer deep insight.
+Choose two things—ideas, objects, forces—that seem totally unrelated or even opposite. Then make a case for how they are fundamentally alike. This is not about proving a fact but about demonstrating how thinking itself works: how analogy, structure, and metaphor let us bridge gaps. 
 
 ---
 
