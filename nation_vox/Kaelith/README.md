@@ -4,15 +4,17 @@
 
 **What kind of world is Kaelith building?**
 
-Kaelith exists by design—shaped not by accident or ancestry, but by vision. As one of its thinkers and builders, describe the world Kaelith seeks to bring into being. What principles guide its direction? What kind of daily life does it foster? How does it care for its people, challenge them, and grow with them? This is not just about ideals, but about outcomes: What does Kaelith look like in action, and why does that matter?
+Kaelith begins as a conscious act of creation. As one of its founders and stewards, describe the kind of people Kaelith brings together—and the kind of culture it grows. What aesthetic shapes its buildings and clothing? What values are taught to children? How do meals taste, how are songs sung, and what rituals mark life’s milestones?
+
+Tell us what it *feels* like to belong. What does a day in Kaelith reveal about its structure, its joy, its tests? What kind of citizen does Kaelith form over time—and what kind of world does that citizen shape in return?
 
 ### **Rubric**
 
-* Describes a clear and compelling vision of Kaelith’s future
-* Anchors ideas in guiding principles and lived realities
-* Shows how Kaelith’s structure supports its purpose
-* Balances values with practical expression
-* Demonstrates insight into belonging, growth, and meaning
+* Describes a vivid and specific vision for Kaelith’s cultural and social life
+* Connects aesthetics, values, and practices to a coherent identity
+* Shows how daily structures and civic design express Kaelith’s ideals
+* Balances beauty and meaning with function and adaptability
+* Demonstrates insight into identity formation, belonging, and shared future-building
 
 ## Questions
 
