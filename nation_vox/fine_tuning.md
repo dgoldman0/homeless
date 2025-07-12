@@ -7,7 +7,7 @@ This outlines a training path for fine-tuning a language model to reason through
 ## Stage 1: Chain-of-Thought Reasoning Base
 
 **Purpose:**
-Teach the model to reason from a real-world issue through a structured pathway to an actionable output using a curated map of subquestions.
+Teach the model to reason from a real-world issue through a structured pathway to an actionable output using a curated map of subquestions. This model can be saved as a base model and used over and over again with new training data sets based on submissions to the essay prompts. 
 
 **Reasoning Path:**
 
