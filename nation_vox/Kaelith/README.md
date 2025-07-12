@@ -68,3 +68,24 @@ Kaelith exists by design—shaped not by accident or ancestry, but by vision. As
 * What kind of grief should Kaelith be prepared to hold?
 * What kinds of freedom will Kaelith need to redefine?
 * What might be Kaelith’s first public failure—and how might it respond?
+
+---
+
+## Intersection Questions
+
+These questions are designed to reflect thematic intersections across a set of potential responses, evaluating patterns, tensions, and differences in worldview that may emerge:
+
+1. **What tensions appear most often in visions of Kaelith—between freedom and cohesion, between ambition and humility, or between preservation and transformation?**
+   *(Highlights contrast in the moral architecture of imagined Kaeliths.)*
+
+2. **How do different visions of Kaelith handle the role of the outsider—do they center inclusion, skepticism, boundaries, or fluid identity?**
+   *(Reveals assumptions about national identity, openness, and otherness.)*
+
+3. **In what ways do people envision Kaelith as a reflection of personal values vs. a stage for collective aspiration?**
+   *(Explores whether Kaelith is inward-facing or socially idealistic.)*
+
+4. **Do visions of Kaelith rely more on reinvented systems or transformed relationships—and how do they balance the two?**
+   *(Surfaces whether people trust structural change or relational culture more deeply.)*
+
+5. **How do different respondents imagine Kaelith’s legacy—do they emphasize permanence, adaptability, moral influence, or symbolic resonance?**
+   *(Assesses how Kaelith is projected into the future and what values are meant to endure.)*
