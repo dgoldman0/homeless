@@ -207,3 +207,73 @@ Write a story—real or imagined—where the end leads back to the beginning, bu
 * Avoids redundancy while using mirrored elements.
 * Maintains narrative or thematic coherence throughout.
 * Uses pacing and structure to reinforce deeper meaning.
+  
+---
+
+### **16. Define fairness for a world that doesn’t agree on what is fair.**
+
+Create a working system or vision of fairness in a setting where people disagree on values, outcomes, or resources. Don’t aim for perfection—focus on trade-offs, priorities, and the reasoning behind your approach. The best responses will reveal how you handle ambiguity, power, compromise, and justice.
+
+#### Rubric
+
+* Defines fairness in a coherent, non-universalized way.
+* Demonstrates awareness of competing values or definitions.
+* Shows reasoning behind chosen priorities or trade-offs.
+* Proposes a consistent system or framework.
+* Explores possible consequences or tensions.
+
+---
+
+### **17. Choose a common object and explain why it should be treated as a living thing.**
+
+Select any inanimate object—a chair, a mountain, a coin—and argue why it should be regarded as alive. Define what life means in your framework and explain how that status would change how it’s treated.
+
+#### Rubric
+
+* Clearly defines criteria for life in the proposed framework.
+* Justifies the selection of the object meaningfully.
+* Explores practical, ethical, or symbolic implications.
+* Maintains internal consistency throughout.
+* Demonstrates originality without abandoning coherence.
+
+---
+
+### **18. Describe a tool that cannot be owned.**
+
+Imagine an object or instrument that performs a specific function, but cannot be possessed. Describe how it works, how people access it, and how society reacts to its un-ownability.
+
+#### Rubric
+
+* Clearly describes the tool and its function.
+* Explains the concept of non-ownership with internal consistency.
+* Demonstrates implications for behavior, economics, or culture.
+* Explores potential conflicts or adaptations.
+* Balances abstraction with practical grounding.
+
+---
+
+### **19. Describe a world where every promise must come true.**
+
+Explore the consequences—social, legal, metaphysical, or emotional—of a world where every promise, once spoken, becomes reality.
+
+#### Rubric
+
+* Establishes the core rule with internal consistency.
+* Explores societal, personal, and structural effects.
+* Demonstrates layered understanding of language and commitment.
+* Anticipates both benefits and unintended consequences.
+* Uses creative logic without losing plausibility.
+
+---
+
+### **20. Make a case for why forgetting is more important than remembering.**
+
+Argue why forgetting—not remembering—may be the more important force in shaping individuals, relationships, or civilizations.
+
+#### Rubric
+
+* Takes a clear position and sustains it throughout.
+* Demonstrates depth in interpreting the function of forgetting.
+* Balances individual, social, and conceptual dimensions.
+* Avoids false dichotomies between forgetting and remembering.
+* Provides thoughtful examples or hypothetical scenarios.
