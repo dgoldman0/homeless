@@ -272,8 +272,7 @@ Explore the role memory plays in how a culture or community functions. Consider 
 
 #### Rubric
 
-Clearly articulates the role of memory in a cultural or societal context
-
+* Clearly articulates the role of memory in a cultural or societal context
 * Demonstrates nuanced understanding of both benefits and risks
 * Balances examples from social, historical, or symbolic domains
 * Explores structural or collective dimensions without reverting to the personal
