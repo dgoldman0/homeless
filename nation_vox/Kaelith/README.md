@@ -87,5 +87,5 @@ These questions are designed to reflect thematic intersections across a set of p
 4. **Do visions of Kaelith rely more on reinvented systems or transformed relationships—and how do they balance the two?**
    *(Surfaces whether people trust structural change or relational culture more deeply.)*
 
-5. **How do different respondents imagine Kaelith’s legacy—do they emphasize permanence, adaptability, moral influence, or symbolic resonance?**
-   *(Assesses how Kaelith is projected into the future and what values are meant to endure.)*
+5. **What kind of legacy should Kaelith strive for, and how might its structure, values, or ambitions shape the way it is remembered or misunderstood?**
+   *(Explores Kaelith’s long-term imprint, inviting reflection on intention, design, and perception across time.)*
