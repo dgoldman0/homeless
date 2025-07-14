@@ -17,11 +17,16 @@ By taking a collection of answers for the same subquestion from a writing prompt
     
 ## 2. Tell the story of a belief or value that has remained constant throughout your life.
 
-1. How do people differentiate between a value that is deeply held and one that is socially inherited?
-2. What tensions arise when the same value leads to different choices for different people?
-3. How do individuals respond when someone else’s core value contradicts their own?
-4. In what ways do communities shape or challenge the constancy of personal values?
-5. How do beliefs that remain unchanged coexist with changing circumstances?
+1. **How do different individuals maintain constancy—through reinforcement, resistance, or reinterpretation—and how do those strategies diverge?**
+2. **What contrasts emerge in how people express commitment to a value—through quiet consistency, active advocacy, or internal dialogue?**
+3. **How do two people handle external challenges to their belief—do they adapt, defend, or reframe the value?**
+4. **What differences appear in the emotional tone surrounding constancy—pride, burden, gratitude, or ambivalence?**
+5. **How does personal experience shape whether a value feels grounding, aspirational, or constraining across accounts?**
+6. **What happens when two people share a similar value but trace it through entirely different domains of life?**
+7. **How do different life contexts—mobility, stability, cultural continuity—affect the way a belief is preserved?**
+8. **What kinds of metaphors or analogies are used to describe enduring values, and how do those choices affect interpretation?**
+9. **How do writers differ in locating the source of their belief—within themselves, others, or something transcendent?**
+10. **What tensions appear when comparing whether a value is seen as a static anchor or a flexible thread across time?**
 
 ## 3. Write about a cultural tradition, story, or ancestral teaching that continues to shape you.
 
