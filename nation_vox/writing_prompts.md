@@ -266,14 +266,14 @@ Explore the consequences—social, legal, metaphysical, or emotional—of a worl
 
 ---
 
-### **20. Describe how memory shapes a society—for better or worse.**
+### **20. Describe a kind of silence that speaks volumes.**
 
-Explore the role memory plays in how a culture or community functions. Consider public rituals, education, trauma, identity, or technology. What does a society gain or lose through what it chooses to remember—or forget?
+Write about a moment, place, or kind of silence that carried meaning—whether between people, within yourself, or in the world around you. What was communicated, withheld, or transformed in that silence?
 
-#### Rubric
+#### **Rubric**
 
-* Clearly articulates the role of memory in a cultural or societal context
-* Demonstrates nuanced understanding of both benefits and risks
-* Balances examples from social, historical, or symbolic domains
-* Explores structural or collective dimensions without reverting to the personal
-* Maintains internal consistency while considering multiple viewpoints
+* Demonstrates awareness of silence as a communicative force, not an absence
+* Explores how silence shapes or reflects relationships, decisions, or insight
+* Anchors abstract meaning in a specific scene, moment, or context
+* Shows cultural or emotional dimensions of silence without overgeneralizing
+* Balances subtlety and clarity in conveying what the silence “said”
