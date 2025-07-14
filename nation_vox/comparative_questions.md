@@ -154,10 +154,13 @@ By taking a collection of answers for the same subquestion from a writing prompt
 4. What happens to creativity or play when all statements are binding?
 5. How might language evolve to handle responsibility differently?
 
-## 20. Describe how memory shapes a society—for better or worse.
+## 20. **Describe a kind of silence that speaks volumes.**
 
-1. How do collective memories define what a society values or fears?
-2. In what ways do shared memories unify or divide people?
-3. Can forgetting be as powerful a tool as remembering?
-4. How do different societies pass down memory—through story, symbol, space, or silence?
-5. What happens when memories conflict—between generations, groups, or institutions?
+Write about a moment, place, or kind of silence that carried meaning—whether between people, within yourself, or in the world around you. What was communicated, withheld, or transformed in that silence?
+
+1. How do different cultures interpret silence—as respect, tension, wisdom, or absence?
+2. In what ways does silence shape communication more powerfully than speech?
+3. Can silence be used to resist or protest, and how is it received?
+4. How does internal silence relate to emotional clarity or confusion?
+5. What rituals or moments in life are marked by purposeful quiet?
+
