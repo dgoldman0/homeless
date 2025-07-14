@@ -4,12 +4,17 @@ By taking a collection of answers for the same subquestion from a writing prompt
 
 ## 1. Describe a moment when you felt entirely yourself.
 
-1. In what kinds of situations do people most often report feeling aligned with themselves—solitude, challenge, connection, or stillness?
-2. How do different worldviews shape what it means to be “authentic” or “fully oneself”?
-3. Can two people describe opposite situations—chaos vs. calm—as equally authentic?
-4. How does physical environment influence the sense of personal truth?
-5. What role does memory play in shaping the feeling of being “entirely oneself”?
-
+1. **What contrasts emerge in how people recognize a moment as authentic—through sudden insight, gradual unfolding, or retrospective reflection?**
+2. **How does the presence or absence of other people affect the perceived authenticity across different contexts?**
+3. **What similarities or divergences appear in the kinds of actions people take when feeling most aligned with themselves?**
+4. **In what ways do different physical settings (urban vs. natural, enclosed vs. open) shape the structure or tone of authentic experiences?**
+5. **When two people describe feeling ‘entirely themselves,’ what internal states—confidence, peace, determination—are emphasized differently or similarly?**
+6. **How do different writers narrate the transition into authenticity—through escape, confrontation, return, or discovery?**
+7. **How does the relationship between place and identity shift when comparing two moments of felt alignment?**
+8. **What tensions emerge when comparing how much control individuals seem to have over their moment of authenticity?**
+9. **How does the role of memory—clarity, blur, detail, distortion—shape the framing of authentic moments across perspectives?**
+10. **What kinds of transformation, if any, occur after the moment—does authenticity mark a turning point, a reaffirmation, or a brief reprieve?**
+    
 ## 2. Tell the story of a belief or value that has remained constant throughout your life.
 
 1. How do people differentiate between a value that is deeply held and one that is socially inherited?
