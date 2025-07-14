@@ -337,4 +337,184 @@ Write about a moment, place, or kind of silence that carried meaning—whether b
 * Reflects on implications for systems that depend on number
 * Pushes the boundary of mathematical or metaphysical imagination
 
+---
+
+### 26. Build an economy where the only currency is attention.
+
+#### Rubric
+
+* Constructs a functional or speculative system of value rooted in attention
+* Explores incentives, inequalities, and emergent behaviors
+* Demonstrates awareness of psychological and social consequences
+* Balances imaginative reach with internal coherence
+* Reflects on how this economy redefines productivity or worth
+
+---
+
+### 27. Imagine a government that taxes emotions. How is fairness determined?
+
+#### Rubric
+
+* Identifies a system of emotional classification or measurement
+* Proposes a consistent method of taxation with sociopolitical consequences
+* Analyzes fairness through cultural, ethical, or economic frames
+* Highlights distortions or adaptations in human behavior
+* Sustains a speculative logic without oversimplifying complexity
+
+---
+
+### 28. Design a society where ownership expires. What replaces permanence?
+
+#### Rubric
+
+* Builds alternative systems to replace fixed possession
+* Examines consequences on memory, inheritance, or identity
+* Demonstrates nuanced thought about impermanence in economic life
+* Explores cultural, legal, or emotional adaptations
+* Balances theoretical elegance with plausible lived dynamics
+
+---
+
+### 29. Construct a political system where lies physically alter the speaker.
+
+#### Rubric
+
+* Defines the mechanism and scope of transformation
+* Explores consequences on power, persuasion, and fear
+* Reflects on truth as performance, perception, or constraint
+* Develops internal logic for enforcement and subversion
+* Considers both systemic and interpersonal effects
+
+---
+
+### 30. Suppose labor could be stored like electricity. Who controls the grid?
+
+#### Rubric
+
+* Explores the mechanics of labor storage and transmission
+* Identifies stakeholders and tensions around control
+* Analyzes value, efficiency, and the human cost
+* Demonstrates insight into automation, trust, and scarcity
+* Builds a speculative system grounded in symbolic logic
+
+---
+
+### 31. Suppose every friendship leaves a trail in the air—visible, but unreadable. What do people do with them?
+
+#### Rubric
+
+* Introduces a unique social aesthetic or spatial element
+* Explores how relationships change under visible but cryptic evidence
+* Reflects on privacy, curiosity, and interpretation
+* Balances beauty and ambiguity in world design
+* Engages deeply with relational psychology
+
+---
+
+### 32. Design a ritual for forgetting someone respectfully. Who decides when it begins?
+
+#### Rubric
+
+* Constructs a coherent and emotionally resonant ritual
+* Explores power, timing, and consent in interpersonal closure
+* Reflects on memory, dignity, and erasure
+* Balances poetic symbolism with social insight
+* Demonstrates awareness of grief and transformation
+
+---
+
+### 33. Imagine a world where you can borrow someone’s reputation like clothing. What changes?
+
+#### Rubric
+
+* Creates a consistent system of reputation exchange
+* Explores identity, consent, and social stratification
+* Demonstrates imaginative flair in social design
+* Examines both liberatory and exploitative dynamics
+* Reflects on authenticity, trust, and impersonation
+
+---
+
+### 34. Create a language that can only be spoken by two people at once. What does it allow that solo speech cannot?
+
+#### Rubric
+
+* Invents linguistic features tied to shared cognition or timing
+* Explores interpersonal consequences of mutual expression
+* Demonstrates creativity in grammatical or phonetic logic
+* Reflects on collaboration, intimacy, and exclusivity
+* Maintains coherence across speculative language structure
+
+---
+
+### 35. What would it mean if shame had a smell, and it lingered?
+
+#### Rubric
+
+* Explores sensory metaphor as a social force
+* Reflects on regulation, concealment, and embodiment
+* Considers moral and psychological implications
+* Demonstrates originality in linking affect and environment
+* Balances absurdity and realism in narrative or concept
+
+---
+
+### 36. Imagine a society where names decay over time unless spoken by others. How do people adapt?
+
+#### Rubric
+
+* Builds symbolic logic around memory and naming
+* Explores interpersonal strategies of survival and legacy
+* Reflects on loneliness, fame, and reciprocity
+* Demonstrates consistency in mechanics and metaphor
+* Evokes cultural depth in response to identity impermanence
+
+---
+
+### 37. Design a world where intimacy must be licensed—and licenses expire. What emerges in their place?
+
+#### Rubric
+
+* Constructs a bureaucratic or symbolic system around connection
+* Explores renewal, resistance, and black markets of care
+* Reflects on consent, control, and emotional value
+* Demonstrates insight into attachment and detachment
+* Sustains creative tension between rule and feeling
+
+---
+
+### 38. Suppose every argument creates a physical echo in the home. How does this change how people live together?
+
+#### Rubric
+
+* Develops a unique sensory or spatial consequence of conflict
+* Reflects on avoidance, reconciliation, or ritual cleanup
+* Explores architectural, emotional, and social responses
+* Maintains metaphorical richness with plausible structure
+* Demonstrates sensitivity to lived domestic experience
+
+---
+
+### 39. Suppose emotions could only be felt communally. How do people learn to feel?
+
+#### Rubric
+
+* Explores systems of shared affect and collective response
+* Reflects on individuality, conformity, and empathy
+* Demonstrates originality in modeling emotional development
+* Considers isolation, ritual, and cultural adaptation
+* Balances poetic logic with psychological nuance
+
+---
+
+### 40. Imagine apologies had to be grown, not spoken. What would shape their growth?
+
+#### Rubric
+
+* Constructs a symbolic ecology of contrition
+* Explores growth variables—time, care, sincerity, witness
+* Reflects on authenticity, repair, and time
+* Balances metaphor with speculative realism
+* Demonstrates emotional intelligence and conceptual precision
+
 
