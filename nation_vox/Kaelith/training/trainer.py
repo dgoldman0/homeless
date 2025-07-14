@@ -99,7 +99,7 @@ def generateEssaySignature(essay):
     # Cap of 100 just prevents endless loops but should never be reached because it's unlikely the LLM won't produce new keywords
     while len(keywords) < max_keywords and attempts < 100:
         prompt = (
-            f"Generate a comma-separated list of {max_keywords} keywords that uniquely identify and summarize the following essay. Only output the keywords, separated by commas:\n\n"
+            f"Generate a comma-separated list of {max_keywords} keywords (single word each) that uniquely identify and summarize the following essay. Only output the keywords, separated by commas:\n\n"
             f"{essay}\n\n"
         )
         response = client.chat.completions.create(
