@@ -277,3 +277,64 @@ Write about a moment, place, or kind of silence that carried meaning—whether b
 * Anchors abstract meaning in a specific scene, moment, or context
 * Shows cultural or emotional dimensions of silence without overgeneralizing
 * Balances subtlety and clarity in conveying what the silence “said”
+* 
+
+### **21. What would it mean for something to be both invented and discovered?**
+
+#### **Rubric**
+
+* Explores the conceptual tension between creation and revelation
+* Develops a coherent framework where the two can coexist
+* Draws examples or metaphors that clarify the paradox
+* Demonstrates original reasoning and flexible thought
+* Engages deeply with philosophical or ontological stakes
+
+---
+
+### **22. Imagine a thought so contagious it has to be quarantined. What is it?**
+
+#### **Rubric**
+
+* Proposes a compelling and unusual thought or idea
+* Explains mechanisms of its spread—social, cognitive, emotional
+* Justifies the perceived danger or need for containment
+* Explores ethical or existential implications of suppression
+* Demonstrates imaginative risk balanced by structured reasoning
+
+---
+
+### **23. Suppose mirrors started showing not reflections, but intentions. How would the world change?**
+
+#### **Rubric**
+
+* Builds a speculative framework for how intention could be visualized
+* Explores individual, social, and philosophical consequences
+* Shows creativity in imagining the mechanics and symbolism
+* Reflects on issues of privacy, self-knowledge, or power
+* Balances surreal concept with coherent internal logic
+
+---
+
+### **24. What kind of logic might plants use to make decisions—and how would you prove it exists?**
+
+#### **Rubric**
+
+* Constructs a plausible or poetic form of non-human logic
+* Suggests testable or symbolic ways of validating this logic
+* Engages deeply with the limits of human perspective
+* Demonstrates insight into cognition beyond anthropocentrism
+* Weaves science, metaphor, and imagination into a unified vision
+
+---
+
+### **25. Invent a number that isn’t between others. How does it behave?**
+
+#### **Rubric**
+
+* Introduces a novel kind of number outside standard continuity
+* Explores its properties with internal mathematical coherence
+* Demonstrates abstract reasoning and playfulness
+* Reflects on implications for systems that depend on number
+* Pushes the boundary of mathematical or metaphysical imagination
+
+
