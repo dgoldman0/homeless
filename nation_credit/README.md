@@ -13,7 +13,7 @@ The rank system will be used in a number of areas. Among other benefits will be 
 The rank system exists to recognize those who contribute meaningfully, consistently, and across the full spectrum of national life. It is based on two measures:
 
 1. **Total Credits Earned** – a cumulative measure of all contributions across nine major domains.
-2. **Geometric Mean Across Domains** – the 9th-root of the individual category scores, ensuring some degree of balance and engagement across all fields.
+2. **Geometric Mean Across Domains** – the 10th-root of the individual category scores, ensuring some degree of balance and engagement across all fields.
 
 Unlike linear point systems that reward specialization at the expense of broader involvement, the geometric mean model ensures that no one can ascend while ignoring entire areas of contribution. This doesn’t mean everyone must perform equally in every category—far from it—but each person must show at least a baseline level of engagement in all domains to progress.
 
