@@ -14,7 +14,7 @@ Fourth, the conventional view **fails to account for intentionality**. Communiti
 
 For these reasons, a better standard centers on **ethnic integrality and communal function**. A language is alive when it is actively used to create and transmit new ideas within an ethnic group that sees it as inseparable from its own identity. This definition acknowledges that languages live in hearts, in institutions, in texts, and in memory—so long as they continue to grow, serve, and belong.
 
-## Ethnicity-Centered Definition of a Living Language
+### Ethnicity-Centered Definition of a Living Language
 
 A language is alive if it is actively and continually used by an ethnic group to express new ideas and transmit meaningful information, provided that the language is considered integral to that group's identity. This definition does not rely on native spoken usage alone but on three interwoven conditions: ethnic integrality, internal circulation, and creative productivity. A language thrives when it is deeply tied to the identity of a people, when it flows between members of that group, and when it continues to generate new content in culturally meaningful ways.
 
