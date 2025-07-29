@@ -18,6 +18,8 @@ Tell us what it *feels* like to belong. What does a day in Kaelith reveal about 
 
 ## Questions
 
+Note: Static questions may be replaced with dynamic pair creation.
+
 ### **What kind of world is Kaelith building?**
 
 * What should Kaelith promise to those who join it?
