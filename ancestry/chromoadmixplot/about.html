@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About – Pulse & Stability Scores</title>
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <!-- KaTeX JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #111827;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .math-block {
+      background: #fff;
+      padding: 0.8rem 1rem;
+      margin: 1rem 0;
+      border-left: 4px solid #3b82f6;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>About the Pulse & Stability Scores</h1>
+
+  <p>
+    This page explains how we calculate two metrics from GEDmatch-style chromosome
+    admixture data: the <strong>Pulse Score</strong> and the <strong>Stability Score</strong>.
+    These measures are designed to distinguish between short-term admixture events
+    and long-term mixing in an ancestry profile, while accounting for the varying
+    sizes of chromosomes.
+  </p>
+
+  <h2>Step 1: Data Cleaning</h2>
+  <p>
+    Each region provides a vector of chromosome-level admixture percentages
+    \(x_1,\dots,x_{22}\). We also require the line <em>“Nbr of SNPs eval”</em>,
+    which supplies per-chromosome SNP counts \(w_1,\dots,w_{22}\).
+  </p>
+  <ul>
+    <li>Dashes (<code>-</code>) are replaced with 0.</li>
+    <li>Regions that are completely zero are dropped.</li>
+    <li>Percent signs are stripped and values stored as raw numbers (0–100).</li>
+  </ul>
+
+  <h2>Step 2: Weighted Mean and Variance</h2>
+  <p>
+    The SNP counts act as weights to correct for the fact that shorter
+    chromosomes fluctuate more. The weighted mean and variance are:
+  </p>
+  <div class="math-block">
+    \[
+      W = \sum_{i=1}^{22} w_i,\quad
+      \mu_w = \frac{\sum_i w_i x_i}{W}, \quad
+      \mathrm{Var}_w = \frac{\sum_i w_i(x_i - \mu_w)^2}{W}
+    \]
+  </div>
+  <p>
+    The weighted standard deviation is then
+    \(\mathrm{SD}_w = \sqrt{\mathrm{Var}_w}\).
+  </p>
+
+  <h2>Step 3: Adjusted Chromosomal Spike</h2>
+  <p>
+    To capture unusual spikes on individual chromosomes without letting short
+    chromosomes dominate, we rescale deviations by the square root of their
+    weight relative to the average weight:
+  </p>
+  <div class="math-block">
+    \[
+      \bar{w} = \frac{1}{22}\sum_i w_i, \quad
+      \Delta_i = (x_i - \mu_w)\sqrt{\tfrac{w_i}{\bar{w}}}
+    \]
+  </div>
+  <p>
+    The largest deviation defines the adjusted maximum:
+  </p>
+  <div class="math-block">
+    \[
+      \mathrm{Max}_{\text{adj}} = \mu_w + \max_i \Delta_i, \quad
+      R_{\text{adj}} = \frac{\mathrm{Max}_{\text{adj}}}{\mu_w}
+    \]
+  </div>
+
+  <h2>Step 4: Raw Metrics</h2>
+  <h3>Pulse (weighted)</h3>
+  <p>
+    Pulse measures the relative spike size, adjusted by the information content
+    of the mean proportion. Since values are in percent, we use
+    \(\log_2(100/\mu_w)\) as the denominator:
+  </p>
+  <div class="math-block">
+    \[
+      \mathrm{Pulse}_w = \frac{R_{\text{adj}}}{\log_2\!\left(\tfrac{100}{\mu_w}\right)}
+    \]
+  </div>
+
+  <h3>Stability (weighted)</h3>
+  <p>
+    Stability is a signal-to-noise ratio: higher when a region’s mean is large
+    and its variance across chromosomes is low.
+  </p>
+  <div class="math-block">
+    \[
+      \mathrm{Stability}_w = \frac{\mu_w}{\mathrm{Var}_w + 0.1} \times 100
+    \]
+  </div>
+  <p>
+    The constant 0.1 prevents division by very small variances.
+  </p>
+
+  <h2>Step 5: Box–Cox Standardization</h2>
+  <p>
+    Because distributions of Pulse and Stability across regions are highly skewed,
+    we apply the Box–Cox transformation separately to each metric, then z-score
+    the results. For a set of positive values \(x^{(1)},\dots,x^{(n)}\):
+  </p>
+  <div class="math-block">
+    \[
+      y_\lambda(x) =
+      \begin{cases}
+        \tfrac{x^\lambda - 1}{\lambda}, & \lambda \neq 0 \\\\
+        \ln(x), & \lambda = 0
+      \end{cases}
+    \]
+  </div>
+  <p>
+    The algorithm searches over \(\lambda \in [-2,2]\) to maximize the
+    normal-likelihood. Each transformed series is then centered and scaled:
+  </p>
+  <div class="math-block">
+    \[
+      z^{(j)} = \frac{y_\lambda(x^{(j)}) - \overline{y_\lambda}}{\mathrm{SD}(y_\lambda)}
+    \]
+  </div>
+
+  <h2>Final Scores</h2>
+  <p>
+    The outputs for each region are:
+  </p>
+  <ul>
+    <li><strong>Pulse Score</strong>: Box–Cox standardized z-score of \(\mathrm{Pulse}_w\).</li>
+    <li><strong>Stability Score</strong>: Box–Cox standardized z-score of \(\mathrm{Stability}_w\).</li>
+  </ul>
+  <p>
+    Together, these provide interpretable metrics of whether a region reflects
+    a deep, stable ancestry signal (high stability) or a sharper, pulse-like
+    admixture event (high pulse).
+  </p>
+</body>
+</html>
