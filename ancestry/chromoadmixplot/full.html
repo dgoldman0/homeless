@@ -84,6 +84,72 @@
         <div class="form-text">Larger circles indicate higher overall mean admixture. Blue points indicate low sparcity (many of the chromosomes have a high percentage and few are empty), and red indicates high sparcity. Upper left quadrant indicates deep ancestry, whether recent or not. Lower left quadrant is likely noise. Lower right quandrant indicates mild potential crossover. Upper right quadrant indicates recent admixture event amplifying basal ancestry.</div>
       </div>
     </div>
+  <!-- Documentation-->
+  <h5 class="mt-4">About This Tool</h5>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <p>
+        Gedmatch offers access to a number of admixture calculators. These calculators come in a few different modes. The most straightforward mode just gives just the proportions by population. These calculators are under the proportion mode are the easiest to use and are useful in testing broad theories about personal ancestry. They offer little in the way of testing more complex theories such as timing and type of admixture events. The chromosome stratified admixture output mode offers chromosome by chromosome admixture breakdown, but creates 22 data points per population, which is too many.
+      </p>
+      <p>
+        This tool takes the chromosome stratified admixture output and distills it into a few key metrics that summarize the <em>dynamics</em> of ancestry contributions across the genome. At its core, it treats each chromosome’s percentage as a random variable shaped by admixture history, recombination, and drift. The result is a compact summary of how ancestry from a given source is distributed across chromosomes, and how this compares to other populations in the dataset. The tool is a work in progress and should be used with caution and in conjunction with other lines of evidence. There are still plenty of open questions about interpretations of different patterns, especially in complex admixture scenarios.
+      </p>
+
+      <h6 class="mt-4">Parameters</h6>
+      <ul>
+        <li><strong>Top-n Mean</strong>: controls how much emphasis is placed on the largest chromosome values. Small <em>n</em> highlights isolated tracts (sensitive to very recent admixture), while larger <em>n</em> captures broad elevation across the genome.</li>
+        <li><strong>Weighting</strong>: when enabled, per-chromosome percentages are scaled by SNP counts (a proxy for genetic length). This brings the statistics closer to theoretical expectations where variance shrinks with chromosome length and tract count.</li>
+      </ul>
+
+      <h6 class="mt-4">Returned Metrics</h6>
+      <p>
+        For each population, the tool computes:
+      </p>
+      <ul>
+        <li><strong>Mean (%)</strong>: overall ancestry share across chromosomes, analogous to admixture proportion.</li>
+        <li><strong>Pulse</strong>: how concentrated the ancestry is on top chromosomes relative to what would be expected given the mean. It divides the “spikiness” (Top-n / Mean) by <code>log2(100 / Mean)</code>, which acts like a halving clock under simple dilution models.</li>
+        <li><strong>Stability</strong>: the ratio of mean to coefficient of variation, reflecting how evenly ancestry is spread across chromosomes. Higher values indicate smoother distributions shaped by many tracts and longer diffusion times.</li>
+        <li><strong>Sparsity</strong>: a normalized measure of whether ancestry mass is concentrated on few chromosomes (high sparsity) or spread broadly (low sparsity). Founder events and bottlenecks drive sparsity upward; broad admixture lowers it.</li>
+      </ul>
+
+      <h6 class="mt-4">Standardized Scores & Chart</h6>
+      <p>
+        To make different populations comparable within a run, each metric is Box–Cox transformed and standardized into a z-score:
+      </p>
+      <ul>
+        <li><strong>Pulse Score (z)</strong> → plotted on the X-axis: higher values mean stronger top-heavy concentration after adjusting for mean.</li>
+        <li><strong>Stability Score (z)</strong> → plotted on the Y-axis: higher values mean more even distribution across chromosomes.</li>
+        <li><strong>Sparsity Score (z)</strong> → encoded in bubble color: blue = denser, black = average, red = concentrated on few chromosomes.</li>
+        <li><strong>Mean (%)</strong> → sets bubble area: larger bubbles represent greater total ancestry share.</li>
+      </ul>
+      <p>
+        The scatter plot thus encodes each ancestry component as a four-tuple (<em>x</em>=Pulse Score, <em>y</em>=Stability Score, bubble size=Mean, bubble color=Sparsity Score). Quadrant positions suggest admixture dynamics:
+        upper-right = recent amplification of a broad ancestry, lower-right = narrow, recent contribution, upper-left = old diffuse background, lower-left = minimal/noise-level signal.
+      </p>
+
+      <h6 class="mt-4">Theoretical Interpretation</h6>
+      <p>
+        In population genetic terms, admixture tracts follow an exponential length distribution with mean length inversely
+        proportional to generations since admixture. Over time, recombination breaks donor tracts into many small fragments,
+        lowering between-chromosome variance and reducing sparsity. Thus:
+      </p>
+      <ul>
+        <li><strong>Recent pulses</strong> → high Pulse, often high Sparsity (few long tracts stand out).</li>
+        <li><strong>Older admixture</strong> → moderate Pulse, high Stability, low Sparsity (ancestry diffused across the genome).</li>
+        <li><strong>Founder effects / bottlenecks</strong> → elevate Sparsity even when Mean is large, since the same regions are repeatedly inherited.</li>
+        <li><strong>Broad-source admixture</strong> → suppresses Sparsity, since many donor lineages contribute segments across chromosomes.</li>
+      </ul>
+
+      <h6 class="mt-4">Limitations</h6>
+      <ul>
+        <li>Scores are standardized within the dataset, so interpretation is relative, not absolute.</li>
+        <li>Pulse is normalized by a theoretical halving clock but does not literally date admixture events.</li>
+        <li>Weighting by SNP counts approximates genetic length but is imperfect; true recombination maps would refine estimates.</li>
+        <li>Signals in closely related reference populations can move together; interpretation must consider correlated ancestry panels.</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- JS libs (deferred where possible) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -761,3 +827,4 @@
   </script>
 </body>
 </html>
+
