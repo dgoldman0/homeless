@@ -241,15 +241,35 @@
       return values.reduce((s,v,i)=>s + v * weights[i], 0) / sumW;
     }
 
-    function weightedVariance(values, weights, mean){
+    function weightedVariance(values, weights){
       const sumW = weights.reduce((a,b)=>a+b,0);
       if(sumW <= 0){
         const m = values.reduce((a,b)=>a+b,0) / (values.length || 1);
         return values.reduce((a,b)=>a + Math.pow(b - m, 2), 0) / (values.length || 1);
       }
+      const mean = weightedMean(values, weights);
       return values.reduce((acc, v, i) => acc + weights[i] * Math.pow(v - mean, 2), 0) / sumW;
     }
 
+    function weightedSparsity(values, snpCount){
+      const n = values.length;
+
+      // Fractions of fullness
+      const fractions = values.map((val, i) => val / snpCount[i]);
+
+      // L1 and L2 norms
+      const l1 = fractions.reduce((a, b) => a + Math.abs(b), 0);
+      const l2 = Math.sqrt(fractions.reduce((a, b) => a + b*b, 0));
+
+      // Hoyer sparsity
+      const sparsity = (Math.sqrt(n) - (l1 / l2)) / (Math.sqrt(n) - 1);
+
+      // Handle edge case: all bins empty
+      const finalSparsity = (l2 === 0) ? 1 : sparsity;
+    }
+
+
+    // Probably best to just have "calculateProperty" and then have a switch for weighted or not... Maybe...
     function parseGedmatch(raw, opts={}){
       const topN = Math.max(1, Math.floor(opts.topN ?? 1));
       const weighted = !!opts.weighted;
@@ -311,18 +331,31 @@
         const sdU   = Math.sqrt(varU);
         const cvU   = meanU === 0 ? 0 : (sdU / meanU);
 
+        // Calculate Hoyer Sparsity
+        const n = nums.length;
+        // L1 norm (sum of absolute values, but nums are >=0 so just sum)
+        const l1 = nums.reduce((a, b) => a + Math.abs(b), 0);
+
+        // L2 norm (square root of sum of squares)
+        const l2 = Math.sqrt(nums.reduce((a, b) => a + b*b, 0));
+
+        // Hoyer sparsity
+        const sparsityU = (Math.sqrt(n) - (l1 / l2)) / (Math.sqrt(n) - 1);
+
         const topSorted = [...nums].sort((a,b)=>b-a);
         const nActual   = Math.min(topN, topSorted.length || 1);
         const topMeanU  = topSorted.slice(0, nActual).reduce((a,b)=>a+b,0) / nActual;
 
         // --- Weighted counterparts (by SNP counts) ---
-        let mean = meanU, sd = sdU, cv = cvU, topMean = topMeanU;
+        let mean = meanU, sd = sdU, cv = cvU, topMean = topMeanU, sparsity = sparsityU;
 
         if(weighted && sumWKept > 0){
           mean = weightedMean(nums, wKept);
-          const varW = weightedVariance(nums, wKept, mean);
+          const varW = weightedVariance(nums, wKept);
           sd = Math.sqrt(varW);
           cv = mean === 0 ? 0 : (sd / mean);
+          sparsity = weightedSparsity(nums, wKept);
+
 
           // Weighted Top-n mean: pick top n by value, then weight by SNPs within that subset
           const pairs = nums.map((v,i)=>({ v, w: wKept[i] })).sort((a,b)=>b.v - a.v);
@@ -339,6 +372,7 @@
         const pulse = (spike / denom);
         const stability = (mean / (cv + EPS));
 
+
         return {
           label: r.label,
           nums, percs, mean, cv, topMean, spike, pulse, stability
@@ -348,18 +382,18 @@
       // Table rows for main table
       const outRows = calcRows.map(r => [
         r.label,
+        (r.pulse / 2).toFixed(2),
+        r.stability.toFixed(2),
         r.topMean.toFixed(2)+"%",
         r.mean.toFixed(2)+"%",
         r.cv.toFixed(2),
         r.spike.toFixed(2),
-        (r.pulse / 2).toFixed(2),
-        r.stability.toFixed(2),
         ...keptIdx.map(i => r.percs[keptIdx.indexOf(i)])
       ]);
 
       // Header: Population, Top-n Mean/Max, Mean, CV, Spike, Pulse, Stability, Chr 1..N (renumbered cleanly)
-      const firstColLabel = (topN === 1) ? "Max" : `Top-${topN} Mean`;
-      const header = ["Population", firstColLabel, "Mean", "CV", "Spike", "Pulse", "Stability"];
+      const extremaLabel = (topN === 1) ? "Max" : `Top-${topN} Mean`;
+      const header = ["Population", "Pulse", "Stability", extremaLabel, "Mean", "CV", "Spike"];
       for(let i=1;i<=keptIdx.length;i++) header.push(`Chr ${i}`);
 
       // Scores sheet (Box–Cox z of Pulse and Stability)
@@ -667,4 +701,5 @@
   </script>
 </body>
 </html>
+
 
