@@ -77,7 +77,7 @@
     </div>
 
     <!-- Scatter Plot: Pulse Score (x) vs Stability Score (y) -->
-    <h5 class="mt-4">Pulse vs Stability (Scores)</h5>
+    <h5 class="mt-4">Visual Analysis</h5>
     <div class="card shadow-sm mb-4">
       <div class="card-body">
         <div id="scorePlot" style="width:100%;height:600px"></div>
@@ -376,6 +376,18 @@
         };
       });
 
+      // Header: Population, Top-n Mean/Max, Mean, CV, Spike, Pulse, Stability, Chr 1..N (renumbered cleanly)
+      const extremaLabel = (topN === 1) ? "Max" : `Top-${topN} Mean`;
+      const header = ["Population", "Pulse", "Stability", "Sparsity", extremaLabel, "Mean", "CV", "Spike"];
+      for(let i=1;i<=keptIdx.length;i++) header.push(`Chr ${i}`);
+
+      // Scores sheet (Box–Cox z of Pulse and Stability)
+      const pulseVals = calcRows.map(r=>r.pulse);
+      const stabVals = calcRows.map(r=>r.stability);
+      const {lambda: lamPulse, z: zPulse} = boxCoxZ(pulseVals);
+      const {lambda: lamStab, z: zStab}   = boxCoxZ(stabVals);
+      const {lambda: lamSparsity, z: zSparsity} = boxCoxZ(calcRows.map(r=>r.sparsity));
+
       // Table rows for main table
       const outRows = calcRows.map(r => [
         r.label,
@@ -389,22 +401,12 @@
         ...keptIdx.map(i => r.percs[keptIdx.indexOf(i)])
       ]);
 
-      // Header: Population, Top-n Mean/Max, Mean, CV, Spike, Pulse, Stability, Chr 1..N (renumbered cleanly)
-      const extremaLabel = (topN === 1) ? "Max" : `Top-${topN} Mean`;
-      const header = ["Population", "Pulse", "Stability", "Sparsity", extremaLabel, "Mean", "CV", "Spike"];
-      for(let i=1;i<=keptIdx.length;i++) header.push(`Chr ${i}`);
-
-      // Scores sheet (Box–Cox z of Pulse and Stability)
-      const pulseVals = calcRows.map(r=>r.pulse);
-      const stabVals = calcRows.map(r=>r.stability);
-      const {lambda: lamPulse, z: zPulse} = boxCoxZ(pulseVals);
-      const {lambda: lamStab, z: zStab}   = boxCoxZ(stabVals);
-
-      const scoreHeader = ["Region", "Pulse Score", "Stability Score"];
+      const scoreHeader = ["Region", "Pulse Score", "Stability Score", "Sparsity Score"];
       const scoreRows   = calcRows.map((r,idx)=>[
         r.label,
         zPulse[idx].toFixed(4),
-        zStab[idx].toFixed(4)
+        zStab[idx].toFixed(4),
+        zSparsity[idx].toFixed(4)
       ]);
 
       return {
@@ -552,17 +554,25 @@
       const sVals = idxs.map(i => Math.max(allMeans[i], 0.01)); // keep visible
 
       // --- Use per row sparsity from parsed.data (col 3) to color bubbles. Since sparsity ranges from 0 to 1, we'll use 0.5 as black, 0 as bright blue, 1 as bright red ---
-      const allSparsity = (parsed.data || []).map(row => {
+      let allSparsity = (parsed.data || []).map(row => {
         const s = row?.[3] ?? "0";               // "Sparsity" column in main table
         return parseFloat(String(s)) || 0;
       });
+
+      if (true) {
+        // Use box-cox sparsity instead, which is from rows (parsed.scoreRows col 3)
+        allSparsity = (parsed.scoreRows || []).map(row => {
+          const s = row?.[3] ?? "0";               // "Sparsity Score" column in scores table
+          return parseFloat(String(s)) || 0;
+        });
+      }
 
       const spVals = idxs.map(i => allSparsity[i]);
 
       // Store both as customdata
       const customData = idxs.map(i => [sVals[idxs.indexOf(i)], spVals[idxs.indexOf(i)]]);
 
-      const cVals = idxs.map(i => {
+      let cVals = idxs.map(i => {
         const s = allSparsity[i];
         if (s <= 0.5) {
           // Blue to Black: s=0 → blue, s=0.5 → black
@@ -580,6 +590,30 @@
           return `rgb(${r},${g},${b})`;
         }
       });
+
+      if (true) {
+        // Black is now 0, Blue is negative, Red is positive
+        const minS = Math.min(...spVals);
+        const maxS = Math.max(...spVals);
+        const range = Math.max(Math.abs(minS), Math.abs(maxS), 1);
+        cVals = spVals.map(s => {
+          if (s < 0) {
+            // Blue to Black: s=-range → blue, s=0 → black
+            const t = (s + range) / range;
+            const r = Math.round(0 * (1 - t) + 0 * t);
+            const g = Math.round(0 * (1 - t) + 0 * t);
+            const b = Math.round(255 * (1 - t) + 0 * t);
+            return `rgb(${r},${g},${b})`;
+          } else {
+            // Black to Red: s=0 → black, s=+range → red
+            const t = s / range;
+            const r = Math.round(0 * (1 - t) + 255 * t);
+            const g = Math.round(0 * (1 - t) + 0 * t);
+            const b = Math.round(0 * (1 - t) + 0 * t);
+            return `rgb(${r},${g},${b})`;
+          }
+        });
+      }
 
       // Size so the largest bubble ≈ 40px diameter
       const desiredMaxPx = 40;
@@ -615,7 +649,7 @@
       };
 
       const layout = {
-        title: 'Pulse Score vs Stability Score',
+        title: 'Population Admixture Multimodal Analysis',
         xaxis: { title: 'Pulse Score (z)', range: [-R, R], zeroline: false, mirror: true },
         yaxis: { title: 'Stability Score (z)', range: [-R, R], zeroline: false, mirror: true, scaleanchor: 'x', scaleratio: 1 },
         margin: { l: 60, r: 40, t: 60, b: 60 },
