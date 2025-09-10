@@ -544,12 +544,36 @@
         }
       }
 
-      // --- Use per-row Mean from parsed.data (col 2) to size bubbles ---
+      // --- Use per-row Mean from parsed.data (col 5) to size bubbles ---
       const allMeans = (parsed.data || []).map(row => {
-        const m = row?.[2] ?? "0%";               // "Mean" column in main table
+        const m = row?.[5] ?? "0%";               // "Mean" column in main table
         return parseFloat(String(m).replace('%','')) || 0;
       });
       const sVals = idxs.map(i => Math.max(allMeans[i], 0.01)); // keep visible
+
+      // --- Use per row sparsity from parsed.data (col 3) to color bubbles. Since sparsity ranges from 0 to 1, we'll use 0.5 as black, 0 as bright blue, 1 as bright red ---
+      const allSparsity = (parsed.data || []).map(row => {
+        const s = row?.[3] ?? "0";               // "Sparsity" column in main table
+        return parseFloat(String(s)) || 0;
+      });
+      const cVals = idxs.map(i => {
+        const s = allSparsity[i];
+        if (s <= 0.5) {
+          // Blue to Black: s=0 → blue, s=0.5 → black
+          const t = s / 0.5;
+          const r = Math.round(0 * (1 - t) + 0 * t);
+          const g = Math.round(0 * (1 - t) + 0 * t);
+          const b = Math.round(255 * (1 - t) + 0 * t);
+          return `rgb(${r},${g},${b})`;
+        } else {
+          // Black to Red: s=0.5 → black, s=1 → red
+          const t = (s - 0.5) / 0.5;
+          const r = Math.round(0 * (1 - t) + 255 * t);
+          const g = Math.round(0 * (1 - t) + 0 * t);
+          const b = Math.round(0 * (1 - t) + 0 * t);
+          return `rgb(${r},${g},${b})`;
+        }
+      });
 
       // Size so the largest bubble ≈ 40px diameter
       const desiredMaxPx = 40;
@@ -573,7 +597,8 @@
           sizemode: 'area',
           sizeref,
           sizemin: 6,
-          line: { width: 1 }
+          line: { width: 1 },
+          color: cVals // <-- color bubbles by sparsity
         },
         hovertemplate:
           '<b>%{text}</b><br>' +
@@ -598,7 +623,7 @@
       if(window.Plotly && document.getElementById('scorePlot')){
         Plotly.react('scorePlot', [trace], layout, config);
       }
-    }
+    } 
 
     // ---------- Actions ----------
     async function doProcess(){
