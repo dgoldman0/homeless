@@ -158,6 +158,66 @@
       return {lambda: bestL, z};
     }
 
+    // Yeo–Johnson: returns { lambda, z }
+    // Might be important in the future... but Box–Cox suffices for now.
+    // - values: Array<number>
+    // - Grid-search MLE for lambda, then standardize transformed values to z-scores.
+    function yeoJohnsonZ(values){
+      const n = values.length;
+      if(n === 0) return { lambda: 1, z: [] };
+
+      const TOL = 1e-12;
+
+      // Helpers
+      const mean = arr => arr.reduce((a,b)=>a+b,0) / (arr.length || 1);
+      const transformOne = (x, lambda) => {
+        if (x >= 0) {
+          if (Math.abs(lambda) < TOL) return Math.log(x + 1);
+          return (Math.pow(x + 1, lambda) - 1) / lambda;
+        } else {
+          if (Math.abs(lambda - 2) < TOL) return -Math.log(1 - x);
+          return - (Math.pow(1 - x, 2 - lambda) - 1) / (2 - lambda);
+        }
+      };
+      const transform = (arr, lambda) => arr.map(x => transformOne(x, lambda));
+
+      // Precompute Jacobian pieces for profile log-likelihood
+      let sumLogPos = 0, sumLogNeg = 0;
+      for (const x of values) {
+        if (x >= 0) sumLogPos += Math.log(x + 1);
+        else        sumLogNeg += Math.log(1 - x);
+      }
+
+      let bestL = 1, bestLL = -Infinity;
+
+      // Coarse grid search
+      for (let L = -5; L <= 5; L += 0.05) {
+        const t = transform(values, L);
+        const m = mean(t);
+        const sse = t.reduce((a,b)=>a + Math.pow(b - m, 2), 0);
+        const ll = -(n/2)*Math.log((sse/n) || TOL) + (L - 1)*sumLogPos + (1 - L)*sumLogNeg;
+        if (ll > bestLL) { bestLL = ll; bestL = L; }
+      }
+
+      // Fine search around bestL
+      const start = bestL - 0.05, end = bestL + 0.05, step = 0.005;
+      for (let L = start; L <= end; L += step) {
+        const t = transform(values, L);
+        const m = mean(t);
+        const sse = t.reduce((a,b)=>a + Math.pow(b - m, 2), 0);
+        const ll = -(n/2)*Math.log((sse/n) || TOL) + (L - 1)*sumLogPos + (1 - L)*sumLogNeg;
+        if (ll > bestLL) { bestLL = ll; bestL = L; }
+      }
+
+      // Final transform and z-standardization
+      const T = transform(values, bestL);
+      const mT = mean(T);
+      const sdT = Math.sqrt(T.reduce((a,b)=>a + Math.pow(b - mT, 2), 0) / (n || 1));
+      const z = sdT === 0 ? T.map(_ => 0) : T.map(v => (v - mT) / sdT);
+
+      return { lambda: bestL, z };
+    }
+
     // --- SNP weight parsing + weighting helpers ---
     function parseSnpWeightsLine(lines){
       const snpLine = lines.find(l => /^Nbr\s*of\s*SNPs\s*eval:/i.test(l));
@@ -440,21 +500,33 @@
     function renderPlot(parsed){
       const rows = parsed.scoreRows || [];
       const regions = rows.map(r => r[0]);
-      const xAll = rows.map(r => parseFloat(r[1])); // Pulse Score
-      const yAll = rows.map(r => parseFloat(r[2])); // Stability Score
+      const xAll = rows.map(r => parseFloat(r[1])); // Pulse Score (z)
+      const yAll = rows.map(r => parseFloat(r[2])); // Stability Score (z)
 
-      // Filter to finite values only
-      const X = [], Y = [], T = [];
+      // Keep only finite points and remember their indices
+      const X = [], Y = [], T = [], idxs = [];
       for(let i=0;i<regions.length;i++){
         const xi = xAll[i], yi = yAll[i];
         if(Number.isFinite(xi) && Number.isFinite(yi)){
-          X.push(xi); Y.push(yi); T.push(regions[i]);
+          X.push(xi); Y.push(yi); T.push(regions[i]); idxs.push(i);
         }
       }
 
+      // --- Use per-row Mean from parsed.data (col 2) to size bubbles ---
+      const allMeans = (parsed.data || []).map(row => {
+        const m = row?.[2] ?? "0%";               // "Mean" column in main table
+        return parseFloat(String(m).replace('%','')) || 0;
+      });
+      const sVals = idxs.map(i => Math.max(allMeans[i], 0.01)); // keep visible
+
+      // Size so the largest bubble ≈ 40px diameter
+      const desiredMaxPx = 40;
+      const maxS = Math.max(...sVals, 1);
+      const sizeref = (2 * maxS) / (desiredMaxPx ** 2);
+
+      // Axis ranges (square)
       const maxAbs = Math.max(1, ...X.map(Math.abs), ...Y.map(Math.abs));
-      const pad = 0.1 * maxAbs;
-      const R = maxAbs + pad;
+      const R = maxAbs * 1.1;
 
       const trace = {
         x: X,
@@ -463,26 +535,25 @@
         mode: 'markers+text',
         type: 'scatter',
         textposition: 'top center',
-        marker: { size: 12, line: { width: 1 } },
-        hovertemplate: '<b>%{text}</b><br>Pulse: %{x:.3f}<br>Stability: %{y:.3f}<extra></extra>'
+        customdata: sVals, // Mean for hover
+        marker: {
+          size: sVals,
+          sizemode: 'area',
+          sizeref,
+          sizemin: 6,
+          line: { width: 1 }
+        },
+        hovertemplate:
+          '<b>%{text}</b><br>' +
+          'Pulse: %{x:.3f}<br>' +
+          'Stability: %{y:.3f}<br>' +
+          'Mean: %{customdata:.2f}%<extra></extra>'
       };
 
       const layout = {
         title: 'Pulse Score vs Stability Score',
-        xaxis: {
-          title: 'Pulse Score (z)',
-          range: [-R, R],
-          zeroline: false,
-          mirror: true
-        },
-        yaxis: {
-          title: 'Stability Score (z)',
-          range: [-R, R],
-          zeroline: false,
-          mirror: true,
-          scaleanchor: 'x',
-          scaleratio: 1
-        },
+        xaxis: { title: 'Pulse Score (z)', range: [-R, R], zeroline: false, mirror: true },
+        yaxis: { title: 'Stability Score (z)', range: [-R, R], zeroline: false, mirror: true, scaleanchor: 'x', scaleratio: 1 },
         margin: { l: 60, r: 40, t: 60, b: 60 },
         shapes: [
           { type: 'line', x0: -R, x1: R, y0: 0, y1: 0, line: { width: 1, dash: 'dot' } },
@@ -492,7 +563,6 @@
       };
 
       const config = { responsive: true, displaylogo: false, modeBarButtonsToRemove: ['select2d','lasso2d'] };
-
       if(window.Plotly && document.getElementById('scorePlot')){
         Plotly.react('scorePlot', [trace], layout, config);
       }
@@ -597,3 +667,4 @@
   </script>
 </body>
 </html>
+
