@@ -264,8 +264,7 @@
       // Hoyer sparsity
       const sparsity = (Math.sqrt(n) - (l1 / l2)) / (Math.sqrt(n) - 1);
 
-      // Handle edge case: all bins empty
-      const finalSparsity = (l2 === 0) ? 1 : sparsity;
+      return sparsity;
     }
 
 
@@ -356,7 +355,6 @@
           cv = mean === 0 ? 0 : (sd / mean);
           sparsity = weightedSparsity(nums, wKept);
 
-
           // Weighted Top-n mean: pick top n by value, then weight by SNPs within that subset
           const pairs = nums.map((v,i)=>({ v, w: wKept[i] })).sort((a,b)=>b.v - a.v);
           const topPairs = pairs.slice(0, nActual);
@@ -372,10 +370,9 @@
         const pulse = (spike / denom);
         const stability = (mean / (cv + EPS));
 
-
         return {
           label: r.label,
-          nums, percs, mean, cv, topMean, spike, pulse, stability
+          nums, percs, mean, cv, topMean, spike, pulse, stability, sparsity
         };
       });
 
@@ -384,6 +381,7 @@
         r.label,
         (r.pulse / 2).toFixed(2),
         r.stability.toFixed(2),
+        r.sparsity.toFixed(4),
         r.topMean.toFixed(2)+"%",
         r.mean.toFixed(2)+"%",
         r.cv.toFixed(2),
@@ -393,7 +391,7 @@
 
       // Header: Population, Top-n Mean/Max, Mean, CV, Spike, Pulse, Stability, Chr 1..N (renumbered cleanly)
       const extremaLabel = (topN === 1) ? "Max" : `Top-${topN} Mean`;
-      const header = ["Population", "Pulse", "Stability", extremaLabel, "Mean", "CV", "Spike"];
+      const header = ["Population", "Pulse", "Stability", "Sparsity", extremaLabel, "Mean", "CV", "Spike"];
       for(let i=1;i<=keptIdx.length;i++) header.push(`Chr ${i}`);
 
       // Scores sheet (Box–Cox z of Pulse and Stability)
@@ -701,5 +699,6 @@
   </script>
 </body>
 </html>
+
 
 
