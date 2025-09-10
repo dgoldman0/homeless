@@ -556,6 +556,12 @@
         const s = row?.[3] ?? "0";               // "Sparsity" column in main table
         return parseFloat(String(s)) || 0;
       });
+
+      const spVals = idxs.map(i => allSparsity[i]);
+
+      // Store both as customdata
+      const customData = idxs.map(i => [sVals[idxs.indexOf(i)], spVals[idxs.indexOf(i)]]);
+
       const cVals = idxs.map(i => {
         const s = allSparsity[i];
         if (s <= 0.5) {
@@ -591,7 +597,7 @@
         mode: 'markers+text',
         type: 'scatter',
         textposition: 'top center',
-        customdata: sVals, // Mean for hover
+        customdata: customData, // Mean for hover
         marker: {
           size: sVals,
           sizemode: 'area',
@@ -604,7 +610,8 @@
           '<b>%{text}</b><br>' +
           'Pulse: %{x:.3f}<br>' +
           'Stability: %{y:.3f}<br>' +
-          'Mean: %{customdata:.2f}%<extra></extra>'
+          'Sparsity: %{customdata[1]:.4f}<br>' +
+          'Mean: %{customdata[0]:.2f}%<extra></extra>'
       };
 
       const layout = {
@@ -724,6 +731,7 @@
   </script>
 </body>
 </html>
+
 
 
 
