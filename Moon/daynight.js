@@ -12,11 +12,9 @@ const wrap180 = (deg: number) => {
 };
 
 // --- Physical-ish constants & assumptions ---
-const SYNODIC_DAYS = 29.530588853; // mean synodic month
-const FULL_DAY_ILLUM_MAX = 120_000; // lux, bright sun over a reflective surface under clear sky (Earthlike 1.2 atm)
-const FULL_EARTHLIGHT_MAX = 50; // lux at zenith for full Earth under clear sky (near side only)
-
-// New Moon reference (close): 2000-01-06 18:14 UTC (J2000-era new moon)
+const SYNODIC_DAYS = 29.530588853;
+const FULL_DAY_ILLUM_MAX = 120_000;
+const FULL_EARTHLIGHT_MAX = 50;
 const NEW_MOON_EPOCH_UTC = Date.UTC(2000, 0, 6, 18, 14, 0, 0);
 
 function lunarAgeDays(dateUTCms: number): number {
@@ -85,17 +83,15 @@ function describeLux(lux: number): string {
 
 // --- Perceptual scales ---
 function toLogLux(lux: number): number {
-  return lux > 0 ? Math.log10(lux) : -4; // safe floor
+  return lux > 0 ? Math.log10(lux) : -4;
 }
 
 function toCIE_L(lux: number): number {
-  // Normalize lux to Y/Yn (using 100k lux as white reference)
   const Yn = 100_000;
   const Y = Math.min(lux, Yn);
   return Y <= 0 ? 0 : 116 * Math.cbrt(Y / Yn) - 16;
 }
 
-// Build time series
 function buildSeries(lat: number, lon: number, centerUTCms: number, scale: string, spanDays = 30, stepMinutes = 60) {
   const pts: any[] = [];
   const halfSpanMs = (spanDays / 2) * 24 * 3600 * 1000;
@@ -126,13 +122,20 @@ function buildSeries(lat: number, lon: number, centerUTCms: number, scale: strin
 }
 
 export default function App() {
-  const now = new Date();
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
   const [dtLocal, setDtLocal] = useState(() => new Date().toISOString().slice(0, 16));
   const [scale, setScale] = useState("linear");
 
-  const dt = useMemo(() => new Date(dtLocal), [dtLocal]);
+  // Robust date parsing
+  const dt = useMemo(() => {
+    const d = new Date(dtLocal);
+    if (isNaN(d.getTime())) {
+      return new Date(); // fallback to now if invalid
+    }
+    return d;
+  }, [dtLocal]);
+
   const age = lunarAgeDays(dt.getTime());
   const sunEl = solarElevationDeg(lat, lon, age);
   const skyLux = skyLuxFromSun(sunEl);
@@ -168,7 +171,7 @@ export default function App() {
 
             <label className="block text-sm font-medium mt-4">Date & Time (local)</label>
             <input type="datetime-local" value={dtLocal} onChange={(e)=>setDtLocal(e.target.value)} className="w-full border rounded px-2 py-1"/>
-            <p className="text-xs mt-2 opacity-70">Interpreted in your local timezone, converted to UTC internally.</p>
+            <p className="text-xs mt-2 opacity-70">If input is invalid, defaults to current date/time.</p>
 
             <label className="block text-sm font-medium mt-4">Scale</label>
             <select value={scale} onChange={(e)=>setScale(e.target.value)} className="w-full border rounded px-2 py-1">
@@ -198,6 +201,7 @@ export default function App() {
               <li>Sky lux uses twilight model for 1.2 atm atmosphere.</li>
               <li>Earthlight peaks ~50 lux at zenith full Earth, scaled by phase and altitude.</li>
               <li>Chart supports Linear, Log Lux, and CIE L* perceptual scales.</li>
+              <li>Invalid date inputs automatically fall back to current date/time.</li>
             </ul>
           </div>
         </section>
