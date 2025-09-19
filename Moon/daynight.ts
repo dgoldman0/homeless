@@ -121,12 +121,39 @@ function buildSeries(lat: number, lon: number, centerUTCms: number, scale: strin
   return pts;
 }
 
+// Special build for ±12h window around a date
+function buildSeries24h(lat: number, lon: number, centerUTCms: number, scale: string, stepMinutes = 30) {
+  const pts: any[] = [];
+  const start = centerUTCms - 12 * 3600 * 1000;
+  const end = centerUTCms + 12 * 3600 * 1000;
+  const steps = Math.ceil(((end - start) / (1000 * 60)) / stepMinutes);
+  for (let i = 0; i <= steps; i++) {
+    const t = start + i * stepMinutes * 60 * 1000;
+    const age = lunarAgeDays(t);
+    const sunEl = solarElevationDeg(lat, lon, age);
+    const skyLux = skyLuxFromSun(sunEl);
+    const earthLux = earthlightLux(lat, lon, age);
+    const totalLux = skyLux + earthLux;
+
+    let scaleFn = (x: number) => x;
+    if (scale === "log") scaleFn = toLogLux;
+    if (scale === "cie") scaleFn = toCIE_L;
+
+    pts.push({
+      t,
+      time: new Date(t).toISOString().slice(0, 16).replace("T", " "),
+      TotalLux: Number(scaleFn(totalLux).toFixed(3)),
+    });
+  }
+  return pts;
+}
+
 export default function App() {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
   const [dtLocal, setDtLocal] = useState(() => new Date().toISOString().slice(0, 16));
   const [scale, setScale] = useState("linear");
-  const [viewMode, setViewMode] = useState("all"); // all or total-only
+  const [viewMode, setViewMode] = useState("all"); // all, total, total-24h
 
   const dt = useMemo(() => {
     const d = new Date(dtLocal);
@@ -145,7 +172,10 @@ export default function App() {
   const totalLux = skyLux + eLux;
 
   const nearSide = eAlt > 0;
-  const series = useMemo(() => buildSeries(lat, lon, dt.getTime(), scale, 30, 60), [lat, lon, dt, scale]);
+  const series = useMemo(() => {
+    if (viewMode === "total-24h") return buildSeries24h(lat, lon, dt.getTime(), scale, 30);
+    return buildSeries(lat, lon, dt.getTime(), scale, 30, 60);
+  }, [lat, lon, dt, scale, viewMode]);
 
   let displayVal = totalLux;
   if (scale === "log") displayVal = toLogLux(totalLux);
@@ -183,7 +213,8 @@ export default function App() {
             <label className="block text-sm font-medium mt-4">View Mode</label>
             <select value={viewMode} onChange={(e)=>setViewMode(e.target.value)} className="w-full border rounded px-2 py-1">
               <option value="all">All curves (Total, Sun, Earthlight)</option>
-              <option value="total">Total only</option>
+              <option value="total">Total only (30 days)</option>
+              <option value="total-24h">Total only (24h window)</option>
             </select>
           </div>
 
@@ -207,13 +238,14 @@ export default function App() {
               <li>Sky lux uses twilight model for 1.2 atm atmosphere.</li>
               <li>Earthlight peaks ~50 lux at zenith full Earth, scaled by phase and altitude.</li>
               <li>Chart supports Linear, Log Lux, and CIE L* perceptual scales.</li>
+              <li>View modes: all curves, total (30 days), total (24h window).</li>
               <li>Invalid date inputs automatically fall back to current date/time.</li>
             </ul>
           </div>
         </section>
 
         <section className="p-4 bg-white rounded-2xl shadow">
-          <h2 className="font-semibold mb-2">30-day Light Curve (hourly)</h2>
+          <h2 className="font-semibold mb-2">Light Curve</h2>
           <div className="w-full h-72">
             <ResponsiveContainer>
               <LineChart data={series} margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
@@ -232,7 +264,7 @@ export default function App() {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="text-xs opacity-70 mt-2">Tip: switch scale and view mode to compare physical vs perceptual brightness and total vs component curves.</div>
+          <div className="text-xs opacity-70 mt-2">Tip: switch scale and view mode to compare physical vs perceptual brightness, total vs components, or a focused 24h window.</div>
         </section>
       </div>
     </div>
