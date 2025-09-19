@@ -126,12 +126,12 @@ export default function App() {
   const [lon, setLon] = useState(0);
   const [dtLocal, setDtLocal] = useState(() => new Date().toISOString().slice(0, 16));
   const [scale, setScale] = useState("linear");
+  const [viewMode, setViewMode] = useState("all"); // all or total-only
 
-  // Robust date parsing
   const dt = useMemo(() => {
     const d = new Date(dtLocal);
     if (isNaN(d.getTime())) {
-      return new Date(); // fallback to now if invalid
+      return new Date();
     }
     return d;
   }, [dtLocal]);
@@ -179,6 +179,12 @@ export default function App() {
               <option value="log">Log Lux (log10)</option>
               <option value="cie">CIE L* (perceptual)</option>
             </select>
+
+            <label className="block text-sm font-medium mt-4">View Mode</label>
+            <select value={viewMode} onChange={(e)=>setViewMode(e.target.value)} className="w-full border rounded px-2 py-1">
+              <option value="all">All curves (Total, Sun, Earthlight)</option>
+              <option value="total">Total only</option>
+            </select>
           </div>
 
           <div className="p-4 bg-white rounded-2xl shadow space-y-2">
@@ -217,14 +223,19 @@ export default function App() {
                 <Tooltip formatter={(v: any, n: string) => [v, n]} />
                 <Legend />
                 <Line yAxisId="left" type="monotone" dataKey="TotalLux" dot={false} strokeWidth={2} name="Total" />
-                <Line yAxisId="left" type="monotone" dataKey="SkyLux" dot={false} strokeWidth={1.5} name="Sky (Sun)" />
-                <Line yAxisId="left" type="monotone" dataKey="EarthlightLux" dot={false} strokeWidth={1.5} name="Earthlight" />
+                {viewMode === "all" && (
+                  <>
+                    <Line yAxisId="left" type="monotone" dataKey="SkyLux" dot={false} strokeWidth={1.5} name="Sky (Sun)" />
+                    <Line yAxisId="left" type="monotone" dataKey="EarthlightLux" dot={false} strokeWidth={1.5} name="Earthlight" />
+                  </>
+                )}
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="text-xs opacity-70 mt-2">Tip: switch scale to Linear, Log Lux, or CIE L* to see physical vs perceptual differences.</div>
+          <div className="text-xs opacity-70 mt-2">Tip: switch scale and view mode to compare physical vs perceptual brightness and total vs component curves.</div>
         </section>
       </div>
     </div>
   );
 }
+
