@@ -14,7 +14,7 @@ This paper describes a principled and practical path to such a system:
 
 1. **Single bidirectional model.** One set of parameters handles both directions via explicit direction tags. Shared parameters concentrate knowledge into a **single latent space**, encouraging coherent mappings across directions.
 
-2. **Cycle-consistent objective.** The system improves by **minimizing information loss** in round-trip translation: for a source sentence (s), translate forward (y=T(s)) and back-translate (\hat{s}=T^{-1}(y)), then reward high agreement between (s) and (\hat{s}).
+2. **Cycle-consistent objective.** The system improves by **minimizing information loss** in round-trip translation: for a source sentence (s), translate forward (y=T(s)) and back-translate $(\hat{s}=T^{-1}(y))$, then reward high agreement between (s) and $(\hat{s})$.
 
 3. **Small supervised seed; large self-supervised loop.** A small supervised seed aligns the mapping; a round-trip objective scales quality using a **phrase bank** that can be far larger and unpaired.
 
@@ -36,12 +36,12 @@ Two practical questions guide the design:
 
 ## 3. Problem Setup
 
-Let (L_s) be a high-resource source language and (L_c) the constructed target language. We train a single model (T_\theta(x,|,d)) that maps input text (x) to the other language, controlled by a **direction tag** (d \in {\text{S2C}, \text{C2S}}).
+Let (L_s) be a high-resource source language and (L_c) the constructed target language. We train a single model $(T_\theta(x,|,d))$ that maps input text (x) to the other language, controlled by a **direction tag** $(d \in {\text{S2C}, \text{C2S}})$.
 
 We assume:
 
-* A **draft parallel set** (\mathcal{D}_{\text{draft}}={(u_i,v_i)}) with approximate translations in both directions (hundreds to a few thousand pairs).
-* A **phrase bank** (\mathcal{B}={b_j}) consisting of sentences in either language (tens of thousands or more).
+* A **draft parallel set** $(\mathcal{D}_{\text{draft}}={(u_i,v_i)})$ with approximate translations in both directions (hundreds to a few thousand pairs).
+* A **phrase bank** $(\mathcal{B}={b_j})$ consisting of sentences in the base language (the larger the bank the better).
 
 **Goal.** Produce a translator that (i) preserves source meaning across directions, (ii) respects conlang constraints (orthography, morphology), and (iii) generalizes beyond the drafts.
 
@@ -51,35 +51,35 @@ We assume:
 
 ### 4.1 Single-Model Bidirectional SFT
 
-We first perform supervised fine-tuning on (\mathcal{D}_{\text{draft}}) using chat-style examples with explicit tags:
+We first perform supervised fine-tuning on $(\mathcal{D}_{\text{draft}})$ using chat-style examples with explicit tags:
 
 ```
-<System> Translate between the two languages; obey the direction tag.
+<System> Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between the two languages; obey the direction tag.
 <User> <S2C>
 <User> [source sentence in L_s]
 <Assistant> [target sentence in L_c]
 ```
 
-and symmetrically for ( \text{C2S} ). Balancing directions encourages a shared latent space and stable inverse behavior.
+and symmetrically for $( \text{C2S} )$. Balancing directions encourages a shared latent space and stable inverse behavior.
 
 ### 4.2 Cycle-Consistent Round-Trip Objective
 
-We continue from the SFT checkpoint with **reinforcement-style fine-tuning** that optimizes a scalar reward for each input sentence (s\in\mathcal{B}).
+We continue from the SFT checkpoint with **reinforcement-style fine-tuning** that optimizes a scalar reward for each input sentence $(s\in\mathcal{B})$.
 
-**Forward step.** (y=T_\theta(s,|,\text{S2C}))
+**Forward step.** $(y=T_\theta(s,|,\text{S2C}))$
 
-**Backward step.** (\hat{s}=T_\theta(y,|,\text{C2S}))
+**Backward step.** $(\hat{s}=T_\theta(y,|,\text{C2S}))$
 
 **Reward.** We use a **likelihood-based round-trip signal** plus light regularizers:
-[
+$[
 r(s) ;=; \underbrace{\frac{1}{|\hat{s}|}\sum_{t=1}^{|\hat{s}|}\log p_\theta!\left(\hat{s}*t ,\middle|, \hat{s}*{<t}, , y, , \text{C2S}\right)}_{\text{mean token logprob } \approx -\text{CE}(s,\hat{s})}
 ;-; \beta,\text{Overlap}(s,y)
 ;-; \gamma,\text{LenDrift}(s,y).
-]
+]$
 
 * The first term maximizes the model’s probability of regenerating the source after a round trip (a length-normalized negative cross-entropy).
-* (\text{Overlap}) computes Jaccard similarity over words or character (n)-grams to **discourage identity mapping**.
-* (\text{LenDrift}(s,y)=\big|\frac{|y|}{|s|}-1\big|) keeps translations length-stable without forcing strict equality.
+* $(\text{Overlap})$ computes Jaccard similarity over words or character (n)-grams to **discourage identity mapping**.
+* $(\text{LenDrift}(s,y)=\big|\frac{|y|}{|s|}-1\big|)$ keeps translations length-stable without forcing strict equality.
 
 The same recipe handles inputs that originate in (L_c) by flipping the direction tags.
 
@@ -87,7 +87,7 @@ The same recipe handles inputs that originate in (L_c) by flipping the direction
 
 A large phrase bank offers diversity and better coverage. Two practical regimes:
 
-* **Sampling:** choose a fresh subset ((5\text{k})–(50\text{k}) lines) per training job with a new seed; this improves exploration and reduces overfitting.
+* **Sampling:** choose a fresh subset $((5\text{k})–(50\text{k}) lines)$ per training job with a new seed; this improves exploration and reduces overfitting.
 * **Full sweep:** use the entire bank when the bank is modest and compute is ample.
 
 ### 4.4 Constraints and Validators
@@ -105,13 +105,13 @@ Validators can contribute additional small penalties or serve as post-hoc qualit
 
 **Stage A: SFT.**
 
-1. Format (\mathcal{D}_{\text{draft}}) into bidirectional chat examples.
+1. Format $(\mathcal{D}_{\text{draft}})$ into bidirectional chat examples.
 2. Fine-tune the base model for a few epochs.
 
 **Stage B: Cycle-Consistent Fine-Tuning.**
 
-1. Sample a subset from (\mathcal{B}).
-2. For each sentence (s): produce (y=T_\theta(s,|,\text{S2C})), back-translate (\hat{s}=T_\theta(y,|,\text{C2S})), compute (r(s)), and update (\theta) to maximize (r).
+1. Sample a subset from $(\mathcal{B})$.
+2. For each sentence (s): produce $(y=T_\theta(s,|,\text{S2C}))$, back-translate $(\hat{s}=T_\theta(y,|,\text{C2S}))$, compute (r(s)), and update (\theta) to maximize (r).
 3. Rotate seeds and subsets across runs for breadth.
 
 ---
@@ -235,12 +235,12 @@ A small set of approximate bilingual drafts, coupled with a **single bidirection
 
 ```json
 {"messages":[
-  {"role":"system","content":"Translate between the two languages; obey the direction tag."},
+  {"role":"system","content":"Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between the two languages; obey the direction tag."},
   {"role":"user","content":"<S2C>\n[source sentence]"},
   {"role":"assistant","content":"[target sentence]"}
 ]}
 {"messages":[
-  {"role":"system","content":"Translate between the two languages; obey the direction tag."},
+  {"role":"system","content":"Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between the two languages; obey the direction tag."},
   {"role":"user","content":"<C2S>\n[target sentence]"},
   {"role":"assistant","content":"[source sentence]"}
 ]}
@@ -250,11 +250,11 @@ A small set of approximate bilingual drafts, coupled with a **single bidirection
 
 ```json
 {"src":"[sentence in source]","dir":"S2C","messages":[
-  {"role":"system","content":"Translate between the two languages; obey the direction tag."},
+  {"role":"system","content":"Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between the two languages; obey the direction tag."},
   {"role":"user","content":"<S2C>\n[sentence in source]"}
 ]}
 {"src":"[sentence in conlang]","dir":"C2S","messages":[
-  {"role":"system","content":"Translate between the two languages; obey the direction tag."},
+  {"role":"system","content":"Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between the two languages; obey the direction tag."},
   {"role":"user","content":"<C2S>\n[sentence in conlang]"}
 ]}
 ```
