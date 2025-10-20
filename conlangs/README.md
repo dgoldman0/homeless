@@ -71,12 +71,17 @@ We continue from the SFT checkpoint with **reinforcement-style fine-tuning** tha
 **Backward step.** $(\hat{s}=T_\theta(y,|,\text{C2S}))$
 
 **Reward.** We use a **likelihood-based round-trip signal** plus light regularizers:
-$[
-r(s) ;=; \underbrace{\frac{1}{|\hat{s}|}\sum_{t=1}^{|\hat{s}|}\log p_\theta!\left(\hat{s}*t ,\middle|, \hat{s}*{<t}, , y, , \text{C2S}\right)}_{\text{mean token logprob } \approx -\text{CE}(s,\hat{s})}
-;-; \beta,\text{Overlap}(s,y)
-;-; \gamma,\text{LenDrift}(s,y).
-]$
 
+$$
+r(s) := 
+\underbrace{
+\frac{1}{|\hat{s}|} \sum_{t=1}^{|\hat{s}|}
+\log p_\theta\!\left(\hat{s}_t \mid \hat{s}_{<t}, y, \text{C2S}\right)
+}_{\text{mean token logprob } \approx -\text{CE}(s,\hat{s})}
+- \beta\,\text{Overlap}(s,y)
+- \gamma\,\text{LenDrift}(s,y)
+
+$$
 * The first term maximizes the model’s probability of regenerating the source after a round trip (a length-normalized negative cross-entropy).
 * $(\text{Overlap})$ computes Jaccard similarity over words or character (n)-grams to **discourage identity mapping**.
 * $(\text{LenDrift}(s,y)=\big|\frac{|y|}{|s|}-1\big|)$ keeps translations length-stable without forcing strict equality.
