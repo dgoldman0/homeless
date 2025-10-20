@@ -72,16 +72,8 @@ We continue from the SFT checkpoint with **reinforcement-style fine-tuning** tha
 
 **Reward.** We use a **likelihood-based round-trip signal** plus light regularizers:
 
-$$
-r(s) := 
-\underbrace{
-\frac{1}{|\hat{s}|} \sum_{t=1}^{|\hat{s}|}
-\log p_\theta\!\left(\hat{s}_t \mid \hat{s}_{<t}, y, \text{C2S}\right)
-}_{\text{mean token logprob } \approx -\text{CE}(s,\hat{s})}
-- \beta\,\text{Overlap}(s,y)
-- \gamma\,\text{LenDrift}(s,y)
+<img width="737" height="90" alt="image" src="https://github.com/user-attachments/assets/4569d325-61ed-495f-91b1-e362138b4caa" />
 
-$$
 * The first term maximizes the model’s probability of regenerating the source after a round trip (a length-normalized negative cross-entropy).
 * $(\text{Overlap})$ computes Jaccard similarity over words or character (n)-grams to **discourage identity mapping**.
 * $(\text{LenDrift}(s,y)=\big|\frac{|y|}{|s|}-1\big|)$ keeps translations length-stable without forcing strict equality.
