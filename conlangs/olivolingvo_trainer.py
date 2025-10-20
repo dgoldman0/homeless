@@ -117,7 +117,7 @@ def build_rft_pool(phrase_bank_path: str, out_path: str, use_full: bool, sample_
                 "src": text,
                 "dir": direction,
                 "messages": [
-                    {"role": "system", "content": "Translate between Esperanto and Olivolingvo per the direction tag."},
+                    {"role": "system", "content": "Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between Esperanto and Olivolingvo per the direction tag."},
                     {"role": "user",   "content": msg}
                 ]
             }
@@ -163,7 +163,7 @@ def grade(sample, item=None):
     resp = client.chat.completions.create(
         model=BT_MODEL,
         messages=[
-            {"role": "system", "content": "Translate between Esperanto and Olivolingvo per the direction tag."},
+            {"role": "system", "content": "Olivolingvo is a derivative of Esperanto focused on the Mediterranean. It largely strips out the non-Mediterranean components replacing them with grammar and vocabulary from Hebrew, ancient Egyptian, and Tamazight. Translate between Esperanto and Olivolingvo per the direction tag."},
             {"role": "user",   "content": f"{back_tag}\n{y}"}
         ],
         temperature=0,
