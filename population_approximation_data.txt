@@ -1,0 +1,23 @@
+World population at time (source: https://www.worldometers.info/world-population/world-population-by-year/)
+
+1200 CE: 360,000,000 
+1900 CE: 1,600,000,000
+2025 CE: 8,231,613,070
+
+Population of Palestine (source: https://en.wikipedia.org/wiki/Timeline_of_the_demographics_of_Palestine_(region))
+
+1200 CE: 225,000 (listed as '>' and for the 'end of 1100s')
+1900 CE: 594,500 (linear best fit estimate based on the 1890, 1890-1, 1914 data points)
+2025 CE: 5,630,683 (source: https://www.worldometers.info/world-population/state-of-palestine-population/ as of Dec 5, 2025 | using Gaza and West Bank)
+
+Population of Jews globally (https://www.jewishvirtuallibrary.org/the-holocaust-wing/rescuers/other-26/jewish-population-of-the-world)
+
+1200 CE: 1,650,000 (rough visual estimate from https://www.mdpi.com/2313-5778/8/1/2)
+1900 CE: 10,600,000
+2025 CE: 17,490,495 (linear extrapolation from 2023 - 2024)
+
+Population of Palestinians globally (will assume nearly all lived in Palestine until recently)
+
+1200 CE: 225,000 (listed as '>' and for the 'end of 1100s')
+1900 CE: 594,500 (linear best fit estimate based on the 1890, 1890-1, 1914 data points)
+2025 CE: 15,200,000 (https://www.pcbs.gov.ps/portals/_pcbs/PressRelease/Press_En_WPD2025E.pdf)
