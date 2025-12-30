@@ -8,7 +8,7 @@ Population of Palestine (source: https://en.wikipedia.org/wiki/Timeline_of_the_d
 
 1200 CE: 225,000 (listed as '>' and for the 'end of 1100s')
 1900 CE: 594,500 (linear best fit estimate based on the 1890, 1890-1, 1914 data points)
-1947 CE: 1,340,000 (excluding the Jewish population)
+1947 CE: 1,340,000 (excluding the Jewish population and 1,970,000 total)
 2025 CE: 5,630,683 (source: https://www.worldometers.info/world-population/state-of-palestine-population/ as of Dec 5, 2025 | using Gaza and West Bank)
 
 Population of Jews globally (https://www.jewishvirtuallibrary.org/the-holocaust-wing/rescuers/other-26/jewish-population-of-the-world)
