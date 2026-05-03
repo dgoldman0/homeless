@@ -1,294 +1,346 @@
-# Nitro Cocktail Shaker/Dispenser — Commercial Product Design Spec
+# Nitro Cocktail Shaker/Dispenser — Commercial Product Design Specification
 
-First version of an idea for a nitro infusing cocktail shaker. While this design suggests alcohol based drinks, the nitro infusion is a great option for non-alcoholic cocktails.
-## Executive Summary
+## Overview
 
-A handheld, pressure-rated cocktail shaker that integrates a nitrogen charging system to produce a nitro-style cascade and creamy texture during dispensing.
-
-- **Target capacity:** ~650 mL total
-- **Max liquid fill:** ~325 mL
-- **Gas source:** 2 g N₂ cartridge (single-use per drink)
-- **Dispense style:** Upright via dip tube + restrictor nozzle
-- **Target MSRP:** $199–$299
-- **Estimated COGS (25k units):** $35–$60
+A handheld, pressure-rated cocktail shaker and nitro dispensing system designed to produce a smooth, cascading nitro texture using a single nitrogen cartridge. The system supports real-world cocktail ingredients including gomme syrup and quillaia extract while maintaining consistent flow, foam quality, and ease of cleaning, making it especially useful for non-alcoholic cocktails that need more finesse to shine. 
 
 ---
 
-## 1. Product Definition
+## Product Definition
 
-### Core Function
-1. Add ingredients + ice  
-2. Shake normally  
+### Core Functionality
+
+1. Add ingredients and ice  
+2. Seal and shake  
 3. Charge with nitrogen  
 4. Dispense upright  
-5. Produce nitro cascade + texture  
-
-### Ideal Drink Types
-- Espresso martini  
-- Clarified cocktails  
-- Strained citrus drinks  
-- Coffee cocktails  
-- Spirit-forward shaken drinks  
-
-### Not Supported (Gen 1)
-- Crushed ice  
-- Muddled fruit/herbs  
-- Frozen drinks  
-- Pulp-heavy mixtures  
+5. Achieve nitro cascade and creamy mouthfeel  
 
 ---
 
-## 2. System Architecture
+## Target Use Cases
 
-### Overview
-Upright pressure-dispensing system with internal dip tube.
+### Optimized For
+
+- Espresso martinis  
+- Coffee cocktails  
+- Clarified citrus cocktails  
+- Spirit-forward shaken drinks  
+- Gomme syrup-based cocktails  
+- Quillaia-enhanced foam cocktails  
+
+### Supported Ingredients
+
+| Category | Status |
+|----------|--------|
+| Simple syrup | Supported |
+| Rich syrup | Supported |
+| Gomme syrup | Supported |
+| Quillaia extract | Supported |
+| Citrus (strained) | Supported |
+| Coffee | Supported |
+
+### Not Intended For
+
+- Crushed ice  
+- Fruit pulp or seeds  
+- Muddled herbs  
+- Frozen drinks  
+- High-viscosity gums (xanthan, guar)  
+
+---
+
+## System Architecture
 
 ### Fluid Path
-Headspace pressure → bottom intake → dip tube → filters → valve → restrictor → glass
+
+Headspace pressure → bottom intake → dip tube → screen filter → valve → restrictor nozzle → glass
 
 ### Gas Path
-N₂ cartridge → puncture system → headspace → pressure control → relief system
+
+Nitrogen cartridge → puncture system → controlled gas release → headspace → pressure regulation
 
 ---
 
-## 3. Key Specifications
+## Capacity & Performance
 
 | Parameter | Value |
 |----------|------|
-| Total volume | 600–700 mL |
-| Max liquid fill | 300–350 mL |
+| Total volume | 650 mL |
+| Max liquid fill | 325 mL |
+| Headspace | ~325 mL |
 | Operating pressure | 35–45 psi |
-| Relief valve trigger | ~65–75 psi |
-| Burst safety target | ≥4× operating pressure |
-| Cartridge | 2 g nitrogen |
+| Relief valve activation | 65–75 psi |
+| Max intended pressure | 50 psi |
+| Burst safety margin | ≥4× operating pressure |
 
 ---
 
-## 4. Mechanical Design
+## Mechanical Design
 
-### 4.1 Body
+### Vessel Body
+
 - Material: 304 or 316 stainless steel  
-- Construction: Deep-drawn or hydroformed  
-- Internal: Smooth, passivated  
-- External: Brushed or coated  
+- Construction: Deep drawn or hydroformed  
+- Interior: Smooth, passivated  
+- Exterior: Brushed or coated  
 - Features:
-  - Max fill line
-  - Non-slip base
-  - Slight internal taper
+  - Laser-etched max fill line  
+  - Slight internal taper  
+  - Non-slip base  
 
 ---
 
-### 4.2 Lid / Head Assembly
-- Bayonet or threaded locking system  
+### Lid & Head Assembly
+
+- Bayonet or threaded locking mechanism  
 - Secondary safety latch  
 - Silicone gasket seal  
-- Pressure lockout (cannot open under pressure)  
-- Integrated:
-  - Cartridge chamber
-  - Trigger valve
-  - Vent button
-  - Relief valve
+- Integrated components:
+  - Cartridge chamber  
+  - Trigger dispense valve  
+  - Manual vent button  
+  - Pressure relief valve  
   - Pressure indicator  
 
 ---
 
-### 4.3 Dip Tube & Intake
-- Removable tube (stainless or food-grade polymer)  
-- Bottom-position intake  
-- 360° intake cage (ice-resistant)  
-- Intake surface area: 8–12× nozzle area  
+### Dip Tube & Intake System
+
+- Removable dip tube  
+- Internal diameter: 4–6 mm  
+- Bottom-positioned intake  
+- 360° slotted intake cage  
+- Intake area: 12–20× nozzle flow area  
 
 ---
 
-### 4.4 Filtering System
-- Coarse strainer (ice/pulp)  
-- Fine filter before nozzle  
-- Fully removable and cleanable  
+### Filtration System
+
+- Coarse intake cage (ice barrier)  
+- Wide-area removable screen filter  
+- No fine mesh or clog-prone micro filters  
+- Fully cleanable components  
 
 ---
 
-### 4.5 Restrictor Nozzle
-- Stout-style restrictor insert  
-- Removable  
-- Variants:
-  - Cascade (standard)
-  - High-foam  
+### Restrictor Nozzle System
+
+- Removable restrictor cartridge design  
+- Located after valve with short expansion chamber  
+
+#### Available Inserts
+
+| Insert Type | Purpose |
+|------------|--------|
+| Standard Nitro | Balanced cascade |
+| Syrup Nitro | Optimized for gomme syrup |
+| High Foam | Enhanced cascade |
 
 ---
 
-### 4.6 Materials
+## Fluid Compatibility
+
+### Viscosity Range
+
+| Parameter | Target |
+|----------|------|
+| Normal operation | ≤50 cP |
+| Maximum supported | 100–150 cP |
+| Syrup proportion | ≤25% of drink |
+
+---
+
+## Foam & Cascade Optimization
+
+- Designed for nitrogen cascade through restrictor  
+- Supports foam-active ingredients like quillaia  
+- Expansion chamber prevents foam lock  
+- Smooth internal flow path ensures consistent pour  
+
+---
+
+## Gas System
+
+- Single-use 2 g nitrogen cartridge  
+- Enclosed puncture mechanism  
+- Controlled gas release into headspace  
+- Cartridge lockout prevents double charging  
+
+---
+
+## Safety Systems
+
+### Integrated Safety Features
+
+- Mechanical locking lid  
+- Pressure indicator  
+- Manual vent button  
+- Automatic pressure relief valve  
+- Secondary pressure safety margin  
+- Cartridge insertion lockout  
+- Max fill line  
+
+---
+
+## User Workflow
+
+1. Add ingredients and ice  
+2. Lock lid  
+3. Shake  
+4. Insert nitrogen cartridge  
+5. Charge system  
+6. Dispense upright  
+7. Vent pressure  
+8. Open and clean  
+
+---
+
+## Ice Management
+
+- Upright dispensing keeps ice away from outlet  
+- Bottom dip tube draws liquid below floating ice  
+- Intake cage prevents blockage  
+
+### Ice Guidelines
+
+- Use large cubes only  
+- Avoid crushed ice  
+
+---
+
+## Cleaning System
+
+### Features
+
+- Tool-less nozzle removal  
+- Removable dip tube  
+- Smooth internal surfaces  
+- No hidden cavities  
+- Rinse-through cleaning mode  
+
+### Cleaning Workflow
+
+1. Vent system  
+2. Add warm water  
+3. Shake  
+4. Dispense rinse water  
+5. Remove and rinse components  
+
+---
+
+## Materials
 
 | Component | Material |
 |----------|--------|
 | Body | Stainless steel |
 | Seals | Platinum-cured silicone |
-| Valves | Stainless + EPDM/silicone |
+| Valves | Stainless + elastomer |
 | Plastics | POM / PPSU / PP |
 
 ---
 
-## 5. Gas System
-
-- 2 g nitrogen cartridge  
-- Enclosed puncture mechanism  
-- Controlled gas release into headspace  
-- Prevents uncontrolled full discharge  
-
----
-
-## 6. Safety Systems
-
-### Required Features
-- Locking lid (mechanical)  
-- Pressure indicator  
-- Manual vent button  
-- Automatic relief valve  
-- Secondary fail-safe relief  
-- Cartridge lockout (no double charge)  
-- Nozzle blockage protection  
-- Max fill line  
-
-### Safety Constraints
-- No hot liquids  
-- No CO₂ use  
-- No crushed ice  
-
----
-
-## 7. User Workflow
-
-### Normal Operation
-1. Add ingredients + ice  
-2. Lock lid  
-3. Shake  
-4. Insert cartridge  
-5. Charge  
-6. Dispense upright  
-7. Vent  
-8. Open and clean  
-
----
-
-## 8. Ice Management
-
-### Design Approach
-- Upright dispensing prevents ice blocking outlet  
-- Bottom dip tube draws liquid below floating ice  
-
-### Constraints
-- Large cubes only  
-- No crushed ice  
-- No solids/pulp  
-
----
-
-## 9. Testing & Validation
-
-### Engineering Tests
-- Pressure proof testing  
-- Burst testing  
-- Pressure cycling  
-- Overcharge testing  
-- Blocked nozzle test  
-- Drop testing  
-- Thermal testing  
-- Chemical compatibility  
-
-### Production QA
-- Leak test per unit  
-- Valve function check  
-- Seal inspection  
-- Pressure retention test  
-
----
-
-## 10. Manufacturing
+## Manufacturing
 
 ### Processes
+
 - Stainless forming (deep draw/spin)  
-- CNC/machined lid components  
-- Injection molding (handle/trigger)  
-- Silicone seal molding  
-- Assembly + QA testing  
+- CNC/machining (lid components)  
+- Injection molding (trigger, housing)  
+- Seal molding  
+- Final assembly and testing  
 
 ---
 
-## 11. Cost Breakdown (10k–25k units)
+## Cost Structure
+
+### Unit Cost (10k–25k units)
 
 | Component | Cost |
 |----------|------:|
 | Body | $5–$9 |
 | Lid/head | $6–$12 |
 | Gas system | $3.5–$8 |
-| Valves + relief | $5–$12 |
-| Dip tube + filters | $2–$6 |
-| Nozzle | $1.5–$4.5 |
-| Seals | $0.75–$2 |
+| Valves & safety | $5–$12 |
+| Dip tube & intake | $2–$6 |
+| Nozzle system | $2–$5 |
+| Seals | $1–$2 |
 | Assembly | $3–$7 |
-| QA + packaging | $4–$10 |
+| QA & packaging | $4–$10 |
 | **Total** | **$35–$80** |
 
 ---
 
-## 12. Tooling & Development Costs
+## Development Cost
 
 | Category | Cost |
 |---------|------:|
-| Industrial design | $35k–$100k |
-| Engineering | $75k–$200k |
+| Design & engineering | $100k–$300k |
 | Prototyping | $75k–$250k |
-| Safety testing | $40k–$175k |
+| Testing & validation | $40k–$175k |
 | Tooling | $150k–$450k |
 | Pilot production | $75k–$250k |
 | **Total** | **$550k–$1.6M** |
 
 ---
 
-## 13. Pricing Strategy
+## Pricing Strategy
 
-| Channel | Price |
+| Market | MSRP |
 |--------|------:|
 | Consumer | $199–$249 |
-| Pro/bar | $249–$399 |
+| Professional | $249–$349 |
 
 ### Consumables
-- N₂ cartridge: $0.55–$2.00 each  
-- ~1 cartridge per cocktail  
+
+- Nitrogen cartridge: $0.55–$2.00 each  
+- Usage: ~1 cartridge per cocktail  
 
 ---
 
-## 14. Risks & Mitigation
+## Testing & Validation
 
-| Risk | Mitigation |
-|-----|-----------|
-| Weak cascade | Optimize restrictor + pressure |
-| Ice blockage | Upright dip tube design |
-| Clogging | Multi-stage filtering |
-| Overpressure | Relief valves + lockouts |
-| User misuse | UX design + warnings |
-| High cost | Simplify head assembly |
+### Engineering Tests
 
----
+- Pressure proof testing  
+- Burst testing  
+- Pressure cycle testing  
+- Overcharge testing  
+- Blocked nozzle testing  
+- Drop testing  
+- Thermal testing  
+- Chemical compatibility  
 
-## 15. Recommended MVP
+### Production QA
 
-**650 mL stainless nitro shaker with:**
-- Upright dispensing
-- 2 g nitrogen cartridge system
-- Locking pressure lid
-- Dip tube + intake cage
-- Dual-stage filtration
-- Removable restrictor nozzle
-- Full pressure safety system
+- Leak testing  
+- Valve function verification  
+- Seal inspection  
+- Pressure retention testing  
 
 ---
 
-## Bottom Line
+## Final Product Specification
 
-- **Feasible product**
-- Requires **real pressure-vessel engineering**
-- **$800k–$1.2M** to reach production-ready
-- **Strong premium positioning**
-- Clear path to bar and consumer markets
+- 650 mL stainless steel pressure vessel  
+- Upright nitro dispensing system  
+- 2 g nitrogen cartridge operation  
+- Locking pressure-rated lid  
+- Bottom dip tube with anti-ice intake  
+- Wide-area filtration system  
+- Removable restrictor nozzle cartridges  
+- Full safety and pressure control system  
+- Designed for real cocktail ingredients including gomme syrup and quillaia  
+
+---
+
+## Outcome
+
+A premium nitro cocktail system delivering:
+
+- Consistent cascade and texture  
+- Reliable flow with syrup-based cocktails  
+- Clean operation and maintenance  
+- Strong positioning for both consumer and professional markets  
 
 ---
