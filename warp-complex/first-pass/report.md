@@ -225,7 +225,7 @@ The positive `theta_plus theta_minus` values in the high-capacity moving cases a
 
 ### Interpretation
 
-The largest curvature values occur in the combination expected from the ansatz: high `C0`, narrow `Delta`, and nonzero `V`. The dominant cases are not isolated numerical surprises; they follow the design knobs that concentrate capacity into a compact wall while also driving that wall through the throat.
+The largest curvature values occur for high C0, narrow Delta, and nonzero V. This follows the ansatz structure: capacity concentration enters through the compact wall, and motion adds the shift-driven contribution during throat overlap.
 
 ## Concerns identified
 
