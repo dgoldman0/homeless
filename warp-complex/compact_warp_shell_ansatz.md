@@ -684,9 +684,6 @@ The original question is represented by a concrete metric family: a Morris-Thorn
 
 The decisive issue is whether the compact exterior remains the relevant geometric footprint during traversal, or whether the large interior volume returns through the invariant quantities of the combined spacetime. In this ansatz, that issue is carried by $G_{\mu\nu}$, the conformal curvature terms in $A$, the throat-area derivatives of $A^2r^2$, and the null expansions of the effective areal radius $Ar$.
 
-## Author Note
-
-This work is a continuation of ideas first discussed in 
 ## References
 
 Morris and Thorne introduced the traversable wormhole framework used here in “Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity,” *American Journal of Physics* 56, 395 (1988), available at <https://www.pas.rochester.edu/~tim/introframe/AmJPhysBlackHoles.pdf>.
