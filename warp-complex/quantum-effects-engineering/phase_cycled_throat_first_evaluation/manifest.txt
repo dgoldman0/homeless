@@ -1,0 +1,17 @@
+Phase-Cycled Throat Support first evaluation bundle
+Generated: 2026-05-12
+
+Contents:
+- phase_cycled_throat_first_evaluation_report.md
+- README.md
+- manifest.txt
+- stage1_static_wormhole_qi_outputs.zip
+- stage2_dynamic_throat_qi_outputs.zip
+- stage1_static_wormhole_qi/ static-throat raw outputs and original report
+- stage2_dynamic_throat_qi/ dynamic-throat raw outputs and original report
+
+Working name:
+Phase-Cycled Throat Support (PCTS)
+
+Scope:
+Reduced QI-proxy evaluation of static and dynamic wormhole throat support before adding transport/catch/passenger layers.

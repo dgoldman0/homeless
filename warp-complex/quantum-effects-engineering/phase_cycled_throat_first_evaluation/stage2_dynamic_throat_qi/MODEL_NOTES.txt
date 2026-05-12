@@ -1,0 +1,6 @@
+
+# Stage 2 dynamic throat QI proxy model.
+# Metric: ds^2 = -dt^2 + dl^2 + R(l,t)^2 dOmega^2, R=sqrt(a(t)^2+l^2).
+# Effective source: T_eff = G/(8*pi).
+# QI proxy: Lorentzian sampled rho >= -3/(32*pi^2*tau0^4).
+# The computation used JAX automatic differentiation over the metric.
