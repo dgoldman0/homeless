@@ -1,0 +1,155 @@
+{
+  "bundle": "source_realism_prescreen_v01_frozen_geometry_handoff",
+  "created_utc": "2026-05-12T23:30:39.963877Z",
+  "scope": "Source-realism prescreen v0.1 for frozen Reference Geometry v0.3; memo plus associated code/data/docs.",
+  "reference_geometry": {
+    "label": "Reference Geometry v0.3",
+    "B0": 8.0,
+    "wB": 10.0,
+    "T_B": 150.0,
+    "T_R": 5.0,
+    "T_H": 60.0,
+    "T_C": 20.0,
+    "T_Breset": 150.0,
+    "Rc": 1.0,
+    "wFlat": 1.6,
+    "r_sh_amp": 0.0,
+    "r_sh_center": 2.5,
+    "r_sh_width": 1.2,
+    "n_sh_amp": -0.18,
+    "n_sh_center": 2.3,
+    "n_sh_width": 1.0,
+    "src_support_amp": 0.0082,
+    "src_support_width": 0.9,
+    "src_shoulder_amp": 0.0019,
+    "src_shoulder_center": 2.3,
+    "src_shoulder_width": 1.0
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f152631584294da0f43e9f28084c87828e2ce5ee4702ba0dc56983d24c0eac99",
+      "bytes": 649
+    },
+    {
+      "path": "data/polish_context/TR_polish_extracts.json",
+      "sha256": "3c7e16aab38f4059265083ca00e6b839ecb596e6f422048bc1530d91fda1c697",
+      "bytes": 3191
+    },
+    {
+      "path": "data/polish_context/TR_polish_highres_validation.csv",
+      "sha256": "6edb99e2210611cae79fc16680ebcdc77682e8428d9682fd3fb080fdda3aa599",
+      "bytes": 18085
+    },
+    {
+      "path": "data/polish_context/polish_extracts.json",
+      "sha256": "9e40bb2ce25df6561c635343e4a96062b15038b46a68de7aa10a05c50bc1a712",
+      "bytes": 7865
+    },
+    {
+      "path": "data/polish_context/shoulder_polish_targeted_highres.csv",
+      "sha256": "f3742ce069364530ea106717ea17bc79a6ee8d6b60ccda0818d661fb8781d918",
+      "bytes": 42268
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_extracts.json",
+      "sha256": "55fefe8ffd403ca6e99e6e22f95bca460c51b4919a51b849fabea12621a0ec41",
+      "bytes": 3055
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_lifecycle_digest_401.csv",
+      "sha256": "60d8b10625028aba9c8eb623d7724ae312f8e89ee79839ad42ee38b33019bf6a",
+      "bytes": 221881
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_lifecycle_timeseries.csv",
+      "sha256": "f95dab5de639432a9f7633a2f9938dc568e5ec4386470edbc7edd4e957ad99dc",
+      "bytes": 886997
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_observer_ledgers.csv",
+      "sha256": "d1ecdf744ee19e6772d33764127b1fd64f7a71d0b13c8721d6f8ce5112a8ae98",
+      "bytes": 4308
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_phase_zone_extrema.csv",
+      "sha256": "6943f043eafd54b80105def9eb5281e13cf49352fdb9929320a60f694af3faa9",
+      "bytes": 21692
+    },
+    {
+      "path": "data/reference_geometry_v03/invariant_v03_timeslice_profiles.csv",
+      "sha256": "94c25d15e57ff61ac8b28eebe54c48549ecfd84ffd5e0652edf27fe8218ab0d4",
+      "bytes": 2363816
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/candidate_source_priority_table.csv",
+      "sha256": "0b9b8542b00123e499e2b99b4dda05a8317629c7539397745a000d6be08ac0bd",
+      "bytes": 871
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/lorentzian_sampled_Tkk_screen.csv",
+      "sha256": "398b7e081742818dd089f095ae1a0b1b46457e69999e7121748793dc23d0de3c",
+      "bytes": 13505
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/quantum_interest_ledger.csv",
+      "sha256": "21f85dfd09ad76113431c52d042d520d43b43ee26e72d0830a50d46f7a9c9655",
+      "bytes": 1313
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/required_source_observer_ledgers.csv",
+      "sha256": "538a51bceea0330cf1c2d82ff9c420835689b5c7b17a2fe5efe65ed85c5167fe",
+      "bytes": 6370
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/required_source_phase_zone_extrema.csv",
+      "sha256": "e88e596816aeb2b8a2b10107b7be7432ac3b36b3ced82b391b778aa48aee3442",
+      "bytes": 6441
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/source_embedding_status.csv",
+      "sha256": "baad98b390daa557524a8ae4c1f80deb6e5130ac5d2dba6f6105f33829eb95a2",
+      "bytes": 1170
+    },
+    {
+      "path": "data/source_realism_prescreen_v01/source_realism_prescreen_extracts.json",
+      "sha256": "cd85f9a7dbbc6889cf1c16ccf68cc8ee8c7acb62e1bd849f67d4d8ca99010ee7",
+      "bytes": 4040
+    },
+    {
+      "path": "docs/report_progress_notes.md",
+      "sha256": "145f32b6fdcc1708011f407f2d85596c11fa6c362a1fed6a391e0aebf1dcd2be",
+      "bytes": 1755
+    },
+    {
+      "path": "docs/source_realism_report_tracker.md",
+      "sha256": "fa7900f9a9a9d94891751b242deb824ba2d587727931ec45e52f57a918c2b439",
+      "bytes": 928
+    },
+    {
+      "path": "memo/source_realism_prescreen_v01_memo.md",
+      "sha256": "b8099ffc54bc2f60848e2933769cf045f85b4080f46ebaa861be685643600f33",
+      "bytes": 7653
+    },
+    {
+      "path": "scripts/run_TR_polish_comparison.py",
+      "sha256": "412122d04fc74ab668a70a72b2ba79d6cb2416abde7e75b736e27298b3c06ad8",
+      "bytes": 10416
+    },
+    {
+      "path": "scripts/run_invariant_packet_v03.py",
+      "sha256": "e58648bee20709a9f5b659407810005adba5d74c95389435c64e7d309f3ce37d",
+      "bytes": 17812
+    },
+    {
+      "path": "scripts/run_reference_polish_screen.py",
+      "sha256": "6983bb3cd349b0b83c8c124b0b980618df92906a1c501a178385b56e6dc9bc51",
+      "bytes": 9317
+    },
+    {
+      "path": "scripts/run_source_realism_prescreen_v01.py",
+      "sha256": "8ab497f92a7c5d49d2b2652eaae85dc891075741577c5dfbebcd8694b66100c9",
+      "bytes": 17018
+    }
+  ]
+}

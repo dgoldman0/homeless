@@ -1,0 +1,116 @@
+{
+  "reference": {
+    "label": "Reference Geometry v0.3",
+    "B0": 8.0,
+    "wB": 10.0,
+    "T_B": 150.0,
+    "T_R": 5.0,
+    "T_H": 60.0,
+    "T_C": 20.0,
+    "T_Breset": 150.0,
+    "Rc": 1.0,
+    "wFlat": 1.6,
+    "r_sh_amp": 0.0,
+    "r_sh_center": 2.5,
+    "r_sh_width": 1.2,
+    "n_sh_amp": -0.18,
+    "n_sh_center": 2.3,
+    "n_sh_width": 1.0,
+    "src_support_amp": 0.0082,
+    "src_support_width": 0.9,
+    "src_shoulder_amp": 0.0019,
+    "src_shoulder_center": 2.3,
+    "src_shoulder_width": 1.0
+  },
+  "phase_times": {
+    "B_setup_end": 150.0,
+    "R_open_end": 155.0,
+    "hold_end": 215.0,
+    "R_close_end": 220.0,
+    "comp_end": 240.0,
+    "B_reset_end": 390.0
+  },
+  "source_ledgers": {
+    "core_line": {
+      "open_negative_total": 0.08077432882240415,
+      "comp_positive_total": 0.08746603213021695,
+      "overlay_positive_total": 0.08746605208551643,
+      "comp_total_to_open_neg": 1.0828444309642553,
+      "delay": 44.99993701374717
+    },
+    "support_mean": {
+      "open_negative_total": 0.07339698189895219,
+      "comp_positive_total": 0.0769402930580408,
+      "overlay_positive_total": 0.07984492931777323,
+      "comp_total_to_open_neg": 1.0482759790309326,
+      "delay": 44.99621006560554
+    },
+    "shoulder_mean": {
+      "open_negative_total": 0.00759587188819009,
+      "comp_positive_total": 0.008297181148997551,
+      "overlay_positive_total": 0.011036973968962657,
+      "comp_total_to_open_neg": 1.0923276841855047,
+      "delay": 44.97311434367967
+    },
+    "access_mean": {
+      "open_negative_total": 0.0824484983759303,
+      "comp_positive_total": 0.08731256777723151,
+      "overlay_positive_total": 0.08735951889674315,
+      "comp_total_to_open_neg": 1.0589952454818772,
+      "delay": 44.999591393394354
+    }
+  },
+  "lorentzian_sampling_summary": {
+    "core_total": {
+      "num_tau_tested": 7,
+      "num_below_proxy_bound": 5,
+      "worst_tau": 5.0,
+      "worst_center": 176.9625,
+      "worst_sampled_avg": -0.0010822671538350708,
+      "worst_qi_proxy_bound": -1.5198177546350666e-05,
+      "worst_qi_proxy_margin": -0.0010670689762887202
+    },
+    "support_total": {
+      "num_tau_tested": 7,
+      "num_below_proxy_bound": 6,
+      "worst_tau": 2.0,
+      "worst_center": 8.2875,
+      "worst_sampled_avg": -0.009179682544885267,
+      "worst_qi_proxy_bound": -0.0005936788104043229,
+      "worst_qi_proxy_margin": -0.008586003734480943
+    },
+    "shoulder_total": {
+      "num_tau_tested": 7,
+      "num_below_proxy_bound": 5,
+      "worst_tau": 2.0,
+      "worst_center": 8.2875,
+      "worst_sampled_avg": -0.008786146884654539,
+      "worst_qi_proxy_bound": -0.0005936788104043229,
+      "worst_qi_proxy_margin": -0.008192468074250215
+    },
+    "access_total": {
+      "num_tau_tested": 7,
+      "num_below_proxy_bound": 5,
+      "worst_tau": 5.0,
+      "worst_center": 175.98749999999998,
+      "worst_sampled_avg": -0.0010466570642957862,
+      "worst_qi_proxy_bound": -1.5198177546350666e-05,
+      "worst_qi_proxy_margin": -0.0010314588867494357
+    },
+    "core_geometry_only": {
+      "num_tau_tested": 7,
+      "num_below_proxy_bound": 5,
+      "worst_tau": 5.0,
+      "worst_center": 184.7625,
+      "worst_sampled_avg": -0.0011404789837343838,
+      "worst_qi_proxy_bound": -1.5198177546350666e-05,
+      "worst_qi_proxy_margin": -0.0011252808061880332
+    }
+  },
+  "embedding_reading": [
+    "The geometry-implied effective source has a clean observer-family ledger for the frozen v0.3 metric.",
+    "The explicit positive repayment overlay gives the desired compensation ratios but is currently a target null-contraction schedule, not a full conserved stress tensor.",
+    "Lorentzian sampled histories remain the active physics gate: open/hold windows produce negative sampled averages below the simple QI proxy for long sampling times in the core/support observer families.",
+    "The next constructive step is a minimal conserved stress-tensor ansatz for the compensation overlay, followed by QI/quantum-interest comparison for that ansatz."
+  ]
+}
