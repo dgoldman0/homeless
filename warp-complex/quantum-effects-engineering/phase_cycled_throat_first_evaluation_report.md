@@ -1,191 +1,251 @@
-# Phase-Cycled Throat Support: First Evaluation of QI-Managed Wormhole Throat Operation
+# Phase-Cycled Throat Support — First Reduced Evaluation
 
-**Author:** Daniel S. Goldman  
-**ORCID:** https://orcid.org/0000-0003-2835-3521  
-**Date:** 2026-05-12
+## Scope
 
-## Abstract
+This report starts a new line of work after the catch-rematched throat-loaded transit paper. The earlier geometry work treated the wormhole complex as a classical control system for capacity, lapse, shift, and passenger capture. The present report asks a different question:
 
-This report begins a new direction separate from the catch-rematched transport geometry: the quantum-effects engineering problem at the throat itself. The central idea, called **phase-cycled throat support**, is to replace the mental picture of a static exotic material band with an actively controlled throat plant whose negative-energy support appears in timed phases, is paired with positive-energy repayment structure, and is allowed to participate in a controlled geometric envelope. The goal is modest and operational. The evaluation asks whether quantum-inequality pressure can be brought into a classical engineering control envelope, not whether it can be bypassed.
+> Can the quantum-energy support problem of a traversable throat be shaped into an engineering control problem, rather than treated as a static exotic-material requirement?
 
-Two reduced tests were performed. The first keeps a standard zero-redshift Morris--Thorne throat static and asks whether a smooth persistent source or a pulse train can satisfy a local Lorentzian quantum-inequality proxy. The second lets the throat radius breathe dynamically and asks whether source cycling creates a usable traversable phase while keeping curvature, null projections, and tidal proxies within a controlled range. The static model reproduces the expected Ford--Roman obstruction: a macroscopic smooth throat requires sampled negative energy far outside the proxy bound. The simple pulse-train attempt also returns the averaged negative support when sampled over many cycles. The dynamic breathing model creates positive-energy repayment phases and short negative-energy support phases, but the first reduced sweep places the apparent improvements in regimes with severe source pulses, expansion pulses, tidal spikes, and open windows far shorter than a throat crossing time.
+The test begins with the throat alone. The transport/catch layer is deliberately left out as the quantum-inequality pressure lands first on the throat support band. A transport profile may help passengers access a working throat, but it should not be asked to solve the throat's quantum support problem.
 
-The first evaluation therefore gives a clear boundary. A static smooth macroscopic throat lies outside the tested quantum-inequality envelope. A single-zone breathing throat creates the right source bookkeeping ingredients while pushing the geometry into violent operating phases. The next viable refinement, if this line is pursued, is a **spatially separated phase-cycled throat plant**: support bands, repayment bands, buffer regions, and protected access phases, rather than a globally breathing throat.
+The working name for this direction is **phase-cycled throat support**, i.e. a throat-support architecture in which negative-energy support, positive-energy repayment, geometric ripple, and access timing are treated as coordinated phases of a controlled plant.
 
-## 1. Motivation
+## Core idea
 
-The classical throat-loaded transit architecture moved the hard geometric burden into a prepared infrastructure region. That result is useful: the vehicle no longer carries the main warp-like support. The throat complex becomes the active system, while the passenger/coupling region becomes an operational interface. The quantum problem then becomes sharper. The throat support band carries the same kind of exotic burden that quantum inequalities target.
+A static traversable wormhole needs sustained null-energy-condition violation at or near the throat. In a classical reduced model, that burden can be written as an effective source obtained from the Einstein tensor:
 
-A static macroscopic traversable wormhole asks for negative energy that persists over macroscopic sampling times. Known quantum inequality results restrict this combination of magnitude and duration. The question in this report is therefore an engineering question rather than a loophole claim:
+```math
+T_{\mu\nu}^{\rm eff}=\frac{1}{8\pi}G_{\mu\nu}.
+```
 
-\[
-\text{Can the throat plant operate as a controlled quantum-source system rather than a static exotic material?}
-\]
+Quantum inequalities make the static picture severe. Negative energy can occur in quantum field theory, but an observer cannot sample a large negative energy density for an arbitrary duration. The engineering idea tested here is to replace a persistent support demand with a controlled cycle:
 
-Phase-cycled throat support treats the throat as a timed plant. Negative support phases are paired with positive repayment phases. The metric is allowed to respond within a controlled envelope. Passage, if it ever becomes possible, would occur during scheduled safe phases. This reframes the quantum issue as a control problem involving duty cycle, support amplitude, repayment delay, geometric ripple, and passenger access timing.
+```math
+\text{negative support phase}
+\quad\rightarrow\quad
+\text{positive repayment phase}
+\quad\rightarrow\quad
+\text{buffer / recovery phase}
+\quad\rightarrow\quad
+\text{access phase}.
+```
 
-The first evaluation deliberately removes the transport/catch layer. The transport layer can help a vessel use a throat plant, but the plant itself must first show a plausible quantum-support operating envelope. This report studies the throat alone.
+The first evaluation separates two versions of that idea.
 
-## 2. Background: sampled negative energy as the controlling constraint
+The first version keeps the throat static and pulses the source. This tests whether short negative pulses can impersonate a static exotic material while satisfying sampled-energy bounds.
 
-Quantum field theory permits local negative energy densities in special states and boundary configurations, but sampled negative energy is constrained. A standard local Lorentzian sampling form in flat-space quantum inequality estimates is
+The second version lets the throat itself become dynamic. This tests whether the geometry can participate in the source cycle by opening, breathing, repaying, and returning to an access condition.
 
-\[
-\int_{-\infty}^{\infty}\rho(\tau)
-\frac{\tau_0/\pi}{\tau^2+\tau_0^2}\,d\tau
-\geq
--\frac{3}{32\pi^2\tau_0^4}.
-\]
+## Stage A: static throat sampled-energy test
 
-The exact bound depends on field content, spacetime curvature, observer state, sampling assumptions, and domain of validity. The scaling captures the relevant engineering fact: allowed negative averaged energy becomes much smaller for long sampling times. A throat support band that remains negative over a macroscopic duration is therefore much harder to fit inside the quantum envelope than a short negative pulse.
+The baseline throat is the zero-redshift Morris--Thorne radial model:
 
-Ford and Roman used this logic to constrain traversable wormhole geometries. Pfenning and Ford applied related quantum-inequality reasoning to Alcubierre-type warp geometries and found extremely thin wall requirements and overwhelming integrated negative energy. The phase-cycled idea accepts this pressure and asks whether the source can be operated as a high-frequency managed plant whose cycle remains compatible with a usable classical envelope.
-
-## 3. The tested throat model
-
-The starting geometry is the clean zero-redshift radial throat
-
-\[
+```math
 ds^2=-dt^2+dl^2+r(l)^2d\Omega^2,
 \qquad
 r(l)=\sqrt{r_0^2+l^2}.
-\]
+```
 
-At the throat, the effective static source has
+At the throat, the effective static source is:
 
-\[
+```math
 \rho_0=-\frac{1}{8\pi r_0^2},
 \qquad
 \rho_0+p_l=-\frac{1}{4\pi r_0^2}.
-\]
+```
 
-The first test applies the sampled-energy proxy directly to this static source. The second test promotes the throat radius to a time-dependent envelope,
+The local Lorentzian-sampling proxy was:
 
-\[
+```math
+\int \rho(\tau)
+\frac{\tau_0/\pi}{\tau^2+\tau_0^2}
+\,d\tau
+\geq
+-\frac{3}{32\pi^2\tau_0^4}.
+```
+
+The sampling time was taken as a fraction of the throat radius:
+
+```math
+\tau_0=\eta r_0.
+```
+
+The resulting ratio between the required static negative density and the local sampling allowance is:
+
+```math
+\mathcal R_{\rm QI}
+=
+\frac{|\rho_0|}{3/(32\pi^2\tau_0^4)}
+=
+\frac{4\pi}{3}\eta^4 r_0^2.
+```
+
+The static proxy condition is:
+
+```math
+\mathcal R_{\rm QI}\leq 1.
+```
+
+The allowed radii remain near the Planck scale for the tested sampling fractions.
+
+| Sampling fraction `eta` | Maximum `r0 / L_P` | Maximum radius in meters |
+|---:|---:|---:|
+| 0.1 | `4.886e1` | `7.897e-34` |
+| 0.03 | `5.429e2` | `8.775e-33` |
+| 0.01 | `4.886e3` | `7.897e-32` |
+| 0.003 | `5.429e4` | `8.775e-31` |
+| 0.001 | `4.886e5` | `7.897e-30` |
+
+A one-meter throat has:
+
+```math
+r_0\approx6.19\times10^{34}L_P.
+```
+
+That places a smooth static macroscopic throat far outside the sampled-energy envelope. The gap is the expected Ford--Roman scale problem appearing in the cleanest reduced throat model.
+
+## Stage A pulse-train result
+
+The next static test added compensated negative and positive source phases while preserving the same average throat requirement. This is the simplest pulse version of phase-cycled support:
+
+```math
+\rho(t)=\rho_{\rm mean}
++\sum_n \rho^-_n(t)
++\sum_n \rho^+_n(t).
+```
+
+The pulse train exposes a direct fork.
+
+| Pulse regime | Throat support seen by geometry | Sampled-energy behavior | Result |
+|---|---|---|---|
+| Fast carrier | Smooth averaged support | Broad sampling windows recover the negative mean | Same static QI problem |
+| Slow carrier | Interrupted support | The negative average is less persistent | Static throat support is lost |
+
+This is the first useful boundary. A pulse train that behaves like a static exotic material also inherits the static sampled-energy obstruction. A pulse train that improves the sampled-energy average stops behaving like static support.
+
+That result motivates the dynamic test. The throat must participate in the control cycle if this direction is to remain viable.
+
+## Stage B: dynamic breathing-throat test
+
+The dynamic model lets the throat radius become a controlled envelope:
+
+```math
 R(l,t)=\sqrt{a(t)^2+l^2},
 \qquad
- ds^2=-dt^2+dl^2+R(l,t)^2d\Omega^2.
-\]
+ds^2=-dt^2+dl^2+R(l,t)^2d\Omega^2.
+```
 
-The function \(a(t)\) is the throat-control degree of freedom. Smooth sinusoidal cycles and short open-gate pulses were tested. The effective source was read from
+Here `a(t)` is the throat-control degree of freedom. The evaluation used smooth sinusoidal cycles and short open-gate pulses. The source was again read from the Einstein tensor:
 
-\[
-T_{\mu\nu}^{\rm eff}=\frac{1}{8\pi}G_{\mu\nu},
-\]
+```math
+T_{\mu\nu}^{\rm eff}=\frac{1}{8\pi}G_{\mu\nu}.
+```
 
-and the evaluation tracked sampled energy, radial null projections, angular tidal proxies, expansion-product proxies, and the fractional open/quasi-static part of the cycle.
+The diagnostics tracked sampled energy, radial null projections, angular tidal proxies, expansion-product proxies, throat-rate severity through `|adot/a|`, and the fraction of time spent in a quasi-static open condition.
 
-This is a reduced diagnostic model. It identifies the direction of the constraints and the tradeoffs among source cycling, open time, and geometric violence. It is not a complete semiclassical solution.
+The dynamic model creates the desired source phases. Negative-support intervals and positive-repayment intervals appear naturally when the throat breathes. Some cases improve the strict sampled-energy proxy. The improvement arrives with strong classical cost: null-projection pulses, tidal pulses, expansion pulses, and small access windows.
 
-## 4. Static throat result
-
-Let the sampling time be a fixed fraction of the throat radius,
-
-\[
-\tau_0=\eta r_0.
-\]
-
-The ratio between the required static negative energy density and the Lorentzian QI allowance is
-
-\[
-\mathcal R_{\rm QI}
-=\frac{|\rho_0|}{3/(32\pi^2\tau_0^4)}
-=\frac{4\pi}{3}\eta^4 r_0^2.
-\]
-
-The condition \(\mathcal R_{\rm QI}\leq1\) gives a maximum radius in Planck units. The reduced sweep produced the following scale limits.
-
-| Sampling fraction \(\eta\) | Maximum \(r_0/L_P\) | Maximum radius in meters |
-|---:|---:|---:|
-| 0.1 | \(4.89\times10^1\) | \(7.90\times10^{-34}\) |
-| 0.03 | \(5.43\times10^2\) | \(8.77\times10^{-33}\) |
-| 0.01 | \(4.89\times10^3\) | \(7.90\times10^{-32}\) |
-| 0.003 | \(5.43\times10^4\) | \(8.77\times10^{-31}\) |
-| 0.001 | \(4.89\times10^5\) | \(7.90\times10^{-30}\) |
-
-For a meter-scale throat, \(r_0\approx6.19\times10^{34}L_P\). The corresponding static violation factor is enormous across the tested sampling fractions. This result places the static smooth throat far outside the known sampled-energy envelope.
-
-The pulse-train test added compensated negative and positive source phases while keeping the same static support requirement. The result follows the scaling directly. When the pulse period is short enough for the throat to see an effectively steady support, Lorentzian windows spanning many cycles also recover the negative mean. When the period is stretched enough to reduce that averaged sampling burden, the geometry no longer receives continuous static support. The static-pulse version therefore compresses the problem into a timing contradiction: fast enough for the throat also means visible to the sampling bound; slow enough for the bound means discontinuous support.
-
-## 5. Dynamic throat result
-
-The dynamic test asks a different question. The throat is allowed to breathe, so the source does not have to mimic a static negative band at every moment. Negative support phases can coincide with throat opening, and positive repayment phases can coincide with compression or buffer states. This gives the phase-cycled idea its cleanest first trial.
-
-The sweep tested sinusoidal breathing and open-pulse profiles. The core behavior is summarized by representative cases below. The quantities are dimensionless reduced proxies. Larger null projection, tidal, and expansion values indicate more severe source and geometry pulses.
-
-| Case | Strict \(\log_{10}(L_{0,\max}/L_P)\) | Max radial null-projection proxy | Max angular tidal proxy | Max expansion-product proxy | Max \(|\dot a/a|\) | Quasi-static open fraction |
+| Case | Strict `log10(L0_max / L_P)` | Max radial null-projection proxy | Max angular tidal proxy | Max expansion-product proxy | Max `|adot/a|` | Quasi-static open fraction |
 |---|---:|---:|---:|---:|---:|---:|
-| static \(a=1\) | -0.31 | 2.0 | 0.0 | 0.0 | 0.0 | 1.000 |
-| sinusoid \(\epsilon=0.1,\Omega=20\) | 3.84 | 91.36 | 44.44 | 16.16 | 2.01 | 0.017 |
-| sinusoid \(\epsilon=0.6,\Omega=5\) | 2.48 | 87.50 | 37.50 | 56.25 | 3.75 | 0.017 |
-| pulse \(a_c=0.5,w=0.02\) | 2.53 | \(1.43\times10^5\) | \(7.16\times10^4\) | \(1.11\times10^5\) | 154.04 | 0.0015 |
-| pulse \(a_c=0.1,w=0.02\) | 1.12 | \(6.94\times10^5\) | \(3.47\times10^5\) | \(1.07\times10^6\) | 500.98 | 0.0005 |
+| static `a=1` | -0.31 | 2.0 | 0.0 | 0.0 | 0.0 | 1.000 |
+| sinusoid `eps=0.1, Omega=20` | 3.84 | 91.36 | 44.44 | 16.16 | 2.01 | 0.017 |
+| sinusoid `eps=0.6, Omega=5` | 2.48 | 87.50 | 37.50 | 56.25 | 3.75 | 0.017 |
+| pulse `a_c=0.5, w=0.02` | 2.53 | `1.43e5` | `7.16e4` | `1.11e5` | 154.04 | 0.0015 |
+| pulse `a_c=0.1, w=0.02` | 1.12 | `6.94e5` | `3.47e5` | `1.07e6` | 500.98 | 0.0005 |
 
-The dynamic model produces the desired qualitative ingredients: the effective source contains both negative-support and positive-repayment phases, and some sampling windows become less hostile than the static case. The improvement appears together with strong dynamical cost. The cases that move the strict scale upward also introduce rapid breathing, null-projection pulses, angular tidal spikes, and a very small quasi-static open fraction.
+The one-zone dynamic throat behaves like a strongly driven resonator. It can improve one sampled-energy metric by pushing the geometry into violent time dependence. The reportable result is the trade:
 
-The interpretation is direct. A single-zone throat can improve sampled-energy bookkeeping by becoming strongly time dependent, but the time dependence itself becomes a classical engineering burden. The throat behaves more like a violently driven resonator than a calm traversable gate.
+```math
+\text{better sampled-energy bookkeeping}
+\quad\Longleftrightarrow\quad
+\text{stronger geometric ripple and smaller useful windows}.
+```
 
-## 6. Passage-window estimate
+## Passage-window estimate
 
-A useful macroscopic gate must remain open long enough for causal passage through the throat. The crude QI-compatible open-window estimate used in the evaluation gives, for a throat radius \(r_0\), an allowed open duration scaling like
+A working gate needs an open window long enough for causal passage. The first evaluation used a crude open-window estimate:
 
-\[
+```math
 T_{\max}\sim (8\pi C_{\rm QI})^{1/4}\sqrt{r_0},
 \qquad
 C_{\rm QI}=\frac{3}{32\pi^2},
-\]
+```
 
-in Planck units. The light-crossing time scales like \(r_0\). This difference is decisive for macroscopic radii: the open duration grows as \(\sqrt{r_0}\), while the traversal time grows as \(r_0\).
+in Planck units. A light-crossing time scales as `r0`. The QI-friendlier open duration grows like `sqrt(r0)`, while the crossing time grows linearly with `r0`.
 
 | Throat radius | Estimated QI open duration | Light-crossing time | Ratio |
 |---:|---:|---:|---:|
-| \(10^{-15}\,\mathrm m\) | \(2.96\times10^{-34}\,\mathrm s\) | \(3.34\times10^{-24}\,\mathrm s\) | \(8.89\times10^{-11}\) |
-| \(10^{-9}\,\mathrm m\) | \(2.96\times10^{-31}\,\mathrm s\) | \(3.34\times10^{-18}\,\mathrm s\) | \(8.89\times10^{-14}\) |
-| \(10^{-3}\,\mathrm m\) | \(2.96\times10^{-28}\,\mathrm s\) | \(3.34\times10^{-12}\,\mathrm s\) | \(8.89\times10^{-17}\) |
-| \(1\,\mathrm m\) | \(9.37\times10^{-27}\,\mathrm s\) | \(3.34\times10^{-9}\,\mathrm s\) | \(2.81\times10^{-18}\) |
-| \(10^3\,\mathrm m\) | \(2.96\times10^{-25}\,\mathrm s\) | \(3.34\times10^{-6}\,\mathrm s\) | \(8.89\times10^{-20}\) |
+| `1e-15 m` | `2.96e-34 s` | `3.34e-24 s` | `8.89e-11` |
+| `1e-12 m` | `9.37e-33 s` | `3.34e-21 s` | `2.81e-12` |
+| `1e-9 m` | `2.96e-31 s` | `3.34e-18 s` | `8.89e-14` |
+| `1e-6 m` | `9.37e-30 s` | `3.34e-15 s` | `2.81e-15` |
+| `1e-3 m` | `2.96e-28 s` | `3.34e-12 s` | `8.89e-17` |
+| `1 m` | `9.37e-27 s` | `3.34e-9 s` | `2.81e-18` |
+| `1e3 m` | `2.96e-25 s` | `3.34e-6 s` | `8.89e-20` |
 
-This estimate gives the first evaluation its strongest engineering conclusion. A simple open-close throat strategy produces windows far shorter than a causal crossing interval. Passage therefore requires something more structured than a globally open throat pulse.
+This estimate is the sharpest practical boundary from the first evaluation. A simple whole-throat open-close cycle gives a QI-friendlier open phase that is far shorter than the throat light-crossing time at macroscopic scale.
 
-## 7. Engineering interpretation
+## Engineering interpretation
 
-Phase-cycled throat support is still a useful concept because it names the correct engineering target. The throat plant would need control variables analogous to carrier frequency, duty cycle, repayment delay, positive-energy overshoot, buffer capacity, geometric ripple, and access phase. These are engineering handles. The first evaluation shows that the simplest single-zone versions put those handles in conflict.
+Phase-cycled support gives useful engineering language even though the first one-zone models fail as operating designs.
 
-The static source asks for a persistent negative average. The static pulse train returns that negative average under broad sampling. The global breathing throat creates repayment phases, yet it concentrates the burden into violent geometry pulses. The open-window estimate then shows that a gate which opens only during QI-friendly intervals gives unusably short macroscopic windows.
+The static throat test identifies the unsupported demand: a persistent negative-energy average across a macroscopic throat. The static pulse train shows that a high-frequency source carrier still returns that average to broad sampling windows. The dynamic breathing test supplies repayment phases, but the whole throat becomes the oscillator. The open-window estimate then shows that the simple access phase is too short for macroscopic passage.
 
-The next version must spatially organize the quantum bookkeeping. The natural refinement is a throat plant with separate regions:
+The next design should stop treating the throat as one globally breathing object. The natural refinement is a multi-zone throat plant:
 
-\[
-\text{support band}\quad + \quad\text{repayment/buffer band}\quad + \quad\text{protected passage island}.
-\]
+```math
+\text{support band}
+\quad + \quad
+\text{repayment band}
+\quad + \quad
+\text{buffer region}
+\quad + \quad
+\text{protected passage island}.
+```
 
-In that architecture, negative support phases would be localized where flare-out needs them, positive repayment would be routed into buffer regions, and the accessible path would be scheduled through a comparatively quiet phase. The success criterion would be a bounded ripple in the effective geometry, not a static throat held open by a steady exotic band.
+The support band carries the flare-out burden. The repayment band handles positive-energy compensation. The buffer region absorbs flux and suppresses radiative coupling. The protected passage island is the region that remains smooth enough for access. A later transport/catch layer would synchronize passengers with low-ripple access phases rather than solving the source problem directly.
 
-The transport/catch system belongs after this step. It can protect passengers, time entry and exit, and decouple a vessel from throat-control phases. It does not carry the primary quantum support problem. The throat plant must first establish a workable phase-cycled envelope.
+That architecture turns the quantum-effects question into a plant-control question: phase timing, spatial routing, buffer capacity, ripple amplitude, repayment delay, and access scheduling.
 
-## 8. Boundary established by the first evaluation
+## Boundary established
 
-This first evaluation establishes three boundaries.
+The first evaluation establishes a firm boundary for this direction.
 
-First, the smooth static macroscopic throat remains outside the tested quantum-inequality envelope. The Planck-scale radius bounds recovered by the simple proxy agree with the established Ford--Roman message.
+A smooth static macroscopic throat sits outside the sampled-energy envelope. A pulse train that averages into the same static support retains that obstruction. A single-zone breathing throat creates repayment structure, but its improvement comes with severe geometric ripple and extremely small access fractions. A simple globally pulsed or globally breathing throat does not provide a usable macroscopic operating mode in this reduced proxy.
 
-Second, pulse trains that merely approximate a static negative-energy source do not change the sampled-average problem. A fast carrier restores the required mean support to the sampling observer; a slow carrier removes the steady support needed by the static geometry.
+The surviving next step is specific: test a **multi-zone phase-cycled throat plant**. The next model should spatially separate support, repayment, buffering, and access. It should track sampled energy for support observers, repayment/buffer observers, and candidate passage paths, while recording null expansions, tidal histories, horizon indicators, and source-flux proxies.
 
-Third, single-zone dynamic breathing creates positive repayment phases and shorter negative-energy episodes, while the associated geometric dynamics become severe. The improved sampled-energy cases come with strong null-projection pulses, tidal pulses, expansion pulses, and very short open fractions.
+A meaningful improvement would look like a bounded phase schedule:
 
-These results do not close the whole phase-cycled program. They identify the next necessary design feature: spatial separation between support, repayment, buffering, and passage. A future second evaluation should test a multi-zone throat model rather than a global breathing radius.
+```math
+\text{support phases maintain flare-out,}
+```
 
-## 9. Next model to test
+```math
+\text{repayment phases route away from the protected passage island,}
+```
 
-The next reduced model should introduce at least three coupled envelopes:
+```math
+\text{metric ripple along the accessible path remains inside causal and tidal margins.}
+```
 
-\[
-a(l,t)=a_0(l)+a_{\rm support}(l,t)+a_{\rm repay}(l,t)+a_{\rm buffer}(l,t),
-\]
+## Data products
 
-with compactly separated profiles in \(l\). The diagnostics should track sampled energy along static throat observers, radial geodesic observers, and candidate protected passage paths. The geometric side should track null expansions, tidal histories, horizon indicators, and radiative source flux.
+This report summarizes the first reduced evaluation of phase-cycled throat support. The run products are:
 
-A meaningful success would look like a stable phase schedule: support phases maintain flare-out, repayment phases remain outside the protected passage island, and the metric ripple along the accessible path stays within a prescribed tidal and causal margin. The first evaluation shows that global breathing lacks this spatial structure. The next test should add it deliberately.
+- `stage1_static_wormhole_qi/`
+  - static throat QI ratio sweep
+  - allowed-radius table
+  - compressed-band estimate
+  - pulse-train Lorentzian sampling demonstration
+  - summary metadata
+
+- `stage2_dynamic_throat_qi/`
+  - dynamic throat case summary
+  - representative time series
+  - Lorentzian sampling records
+  - analytic open-window estimates
+  - model notes
 
 ## References
 
@@ -198,11 +258,3 @@ M. J. Pfenning and L. H. Ford, “The unphysical nature of ‘warp drive’,” 
 L. H. Ford and T. A. Roman, “The quantum interest conjecture,” *Physical Review D* **60**, 104018 (1999). This motivates the repayment-phase language used in phase-cycled support.
 
 C. J. Fewster and E. Teo, “Quantum inequalities and ‘quantum interest’ as eigenvalue problems,” *Physical Review D* **59**, 104016 (1999). This supports the interpretation of sampled-energy restrictions as constraints over sampling windows rather than instantaneous energy-density signs alone.
-
-## Data products used
-
-This report summarizes the outputs of the first two reduced evaluations:
-
-`stage1_static_wormhole_qi_outputs.zip` contains the static throat QI ratio sweep, allowed-radius table, compressed-band estimate, pulse-train sampling demonstration, and summary metadata.
-
-`stage2_dynamic_throat_qi_outputs.zip` contains the dynamic throat case summary, representative time series, Lorentzian sampling records, analytic open-window estimates, and model notes.
