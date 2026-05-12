@@ -1,19 +1,19 @@
-# Flare-Gated Radial Stretch: Moving from B-Only Control to a Coupled B,R Protocol
+# Flare-Gated Radial Stretch: Coupled B,R Control for Source-History-Aware Wormhole Support Screening
 
 ## Executive summary
 
-The earlier adiabatic radial-stretch protocol used the metric
+The adiabatic radial-stretch protocol established `B(l,t)` as a useful radial proper-length actuator for a prescribed wormhole-support geometry:
 
 ```math
-ds^2 = -dt^2 + B(l,t)^2 dl^2 + R_0(l)^2 d\Omega^2,
+ds^2=-dt^2+B(l,t)^2dl^2+R_0(l)^2d\Omega^2,
 \qquad R_0(l)=\sqrt{1+l^2}.
 ```
 
-That protocol correctly identified `B(l,t)` as a strong radial proper-length actuator. It softened local support during the hold and made setup/reset peak-rate and flux budgets scale down with ramp time. The serious source-history screen changed the interpretation: with `R_0(l)` held fixed, the `A_B=0` state is still an active areal throat. The system was not cycling between an ordinary standby state and an active throat. It was cycling between an unstretched exotic throat and a stretched exotic throat.
+That screen showed a real control advantage: increasing the ramp time lowers peak radial-rate, acceleration, and shoulder-flux budgets during setup/reset. The source-history screen then supplied the next design requirement. With `R_0(l)` fixed, the `A_B=0` state still contains the areal throat `R_0(l)=sqrt(1+l^2)`. The full cycle therefore keeps the flare-support geometry active through the long `B` setup and reset intervals.
 
-The new branch therefore lets `R(l,t)` participate. The role of `R` is not rapid access-core breathing during traversal. The role is **flare gating**: use `R` to flatten the standby flare curvature and restore the flared access geometry only after `B` has already been stretched.
+The new branch adds `R(l,t)` as the flare-state actuator. Its job is **flare gating**: flatten the standby flare curvature, prestretch the radial infrastructure with `B`, restore the access flare for a quiet hold, close the flare, and then reset `B`.
 
-The best reduced protocol tested here is:
+The tested protocol is:
 
 ```math
 B\text{-prestretch}
@@ -27,13 +27,13 @@ R\text{-flare-close}
 B\text{-reset}.
 ```
 
-This branch strongly improves the source-history ledger relative to the old `B`-only cycle. For the representative `B0=8, wB=8, TH=60` cases, the old `B`-only full-cycle core negative exposure grows from about `0.448` at `Tr=10` to `3.809` at `Tr=100`. The flare-gated branch with `TB=100` gives `0.081-0.112` across `TR=5-30`. This confirms that `R` participation is useful in the exact way the screening framework predicted: `B` remains the support-dilution actuator, while `R` supplies areal flare state and access-geometry control.
+This branch sharply improves the source-history ledger. For the representative `B0=8, wB=8, TH=60` cases, the earlier `B`-only cycle gives full-cycle core negative exposure from about `0.448` at `Tr=10` to `3.809` at `Tr=100`. The flare-gated branch with `TB=100` gives `0.081-0.112` across `TR=5-30`. The result supports a clear design allocation: `B` prestretches and dilutes the local support burden; `R` controls the flare/access state; the access hold freezes both actuators.
 
-The branch still does not pass source realism. The quiet hold carries the same remaining support burden, approximately `Tkk(0)=-1/(4 pi B0^2)` for the restored access throat. The value of the branch is that it localizes the core negative history to the `R`-open/hold/`R`-close interval instead of letting the long `B` setup/reset phases carry throat support debt.
+The branch is a geometry/control improvement at the prescribed-source level. Source realism, null-contracted quantum-inequality sampling, backreaction, matching, and shoulder compensation remain the next development gates. The immediate advance is operational: the long `B` setup/reset phases can be carried while the core flare is flattened, and the remaining core negative exposure is concentrated into `R`-open, hold, and `R`-close.
 
-## 1. Why B-only was no longer enough
+## 1. What the B-only screen established
 
-The B-only adiabatic protocol used
+The previous adiabatic protocol used
 
 ```math
 B(l,t)=1+(B_0-1)F_B(l)A_B(t),
@@ -41,7 +41,7 @@ B(l,t)=1+(B_0-1)F_B(l)A_B(t),
 R(l,t)=\sqrt{1+l^2}.
 ```
 
-The prior result was positive at the peak-dynamics level:
+It produced the desired peak-dynamics scaling:
 
 ```math
 \max |B_t/B| \sim T_r^{-1},
@@ -51,19 +51,19 @@ The prior result was positive at the peak-dynamics level:
 \max |B_{tt}/B| \sim T_r^{-2}.
 ```
 
-But the source-history screen asks a different question: what does a support observer sample over the full setup/hold/reset history? At the core of the B-only model, the areal throat exists at every phase because `R_0(l)` is fixed. The unstretched state is not a standby state. It is the baseline throat.
+Those results identify `B(l,t)` as a strong actuator for radial proper-length control. The quiet hold inherits the static long-throat benefit, while the setup/reset disturbances decrease under slower `B` ramps.
 
-For the B-only model, the core null-contracted support approximately behaves as
+The source-history screen added a second metric: the support observer's accumulated null-contracted exposure over the full cycle. At the core of the fixed-`R` model,
 
 ```math
 T_{kk}(0,t) \approx -\frac{1}{4\pi B(0,t)^2}.
 ```
 
-Therefore, longer B ramps reduce peak rate/flux but increase the duration of negative source history. This is why pure adiabaticity becomes the wrong objective after the source-history gate is activated.
+Longer `B` ramps lower peak rate/flux and extend the time spent carrying the fixed areal flare. The design lesson is direct: `B` supplies support dilution, and a separate areal-geometry control is needed to manage the active flare state during setup/reset.
 
-## 2. Why R participation is consistent with the screening framework
+## 2. Framework alignment
 
-The previously developed framework assigns the metric controls as follows:
+The screening framework assigns subsystem roles before making source-realism claims:
 
 ```math
 B(l,t) \rightarrow \text{radial proper-length and support-dilution control},
@@ -77,37 +77,42 @@ R(l,t) \rightarrow \text{areal access geometry and flare shaping},
 N(l,t) \rightarrow \text{redshift, timing, matching, and horizon control}.
 ```
 
-It also emphasizes that these assignments are hypotheses to be screened, not assumptions of success. The B-only test passed a dynamic cleanliness gate and then failed a source-history gate. That failure naturally redirects the design back to the role-allocation layer.
+The `B`-only screen advanced through the dynamic-cleanliness gate and activated the source-history gate. That result sends the design back to the framework's role-allocation layer, where `R` naturally enters as the areal flare/access-state control.
 
-The important point is that this is not a reversal of the earlier claim that access-core `R(t)` breathing is dangerous. The dynamic throat gate contains
+The dynamic gate also gives the access rule for `R`:
 
 ```math
-\theta_\pm = \frac{2}{R}\left(\frac{R_t}{N}\pm\frac{R_l}{B}\right),
+\theta_\pm=\frac{2}{R}\left(\frac{R_t}{N}\pm\frac{R_l}{B}\right).
 ```
 
-so strong `R_t` in the access core activates expansion, access-quietness, tidal-history, and dynamic-throat gates. The updated branch avoids using `R` as continuous access-core breathing. Instead, it uses `R` outside the traversal hold to decide whether the flare/access geometry is active.
+During traversal, the design keeps
 
-The branch therefore matches the framework's expected sequence:
+```math
+R_t\approx0,
+\qquad B_t\approx0.
+```
+
+During setup/reset, `R` participates through flare opening and closure. This follows the framework sequence:
 
 ```math
 B\text{-only geometry screen}
 \rightarrow
-\text{source-history failure}
+\text{source-history gate}
 \rightarrow
-R\text{ participates in access/flare state}
+R\text{ flare/access-state control}
 \rightarrow
 \text{new source-history screen}.
 ```
 
 ## 3. Updated design: flare-gated radial stretch
 
-The tested family uses
+The branch uses the prescribed metric
 
 ```math
 ds^2=-dt^2+B(l,t)^2dl^2+R(l,t)^2d\Omega^2.
 ```
 
-The B actuator is
+The radial actuator is
 
 ```math
 B(l,t)=1+(B_0-1)F_B(l)A_B(t),
@@ -115,13 +120,13 @@ B(l,t)=1+(B_0-1)F_B(l)A_B(t),
 F_B(l)=\exp[-(|l|/w_B)^4].
 ```
 
-The active access geometry is
+The access areal profile is
 
 ```math
 R_{\rm access}(l)=\sqrt{1+l^2}.
 ```
 
-The standby geometry is
+The standby profile is
 
 ```math
 R_{\rm standby}(l)
@@ -133,37 +138,42 @@ W_R(l)\left(R_c-R_{\rm access}(l)\right),
 W_R(l)=\exp[-(|l|/w_R)^4].
 ```
 
-The best first target used `Rc=1`, so the core radius stays essentially fixed but the flare curvature is flattened in standby:
+The branch screen used `Rc=1` as the clean first target. This keeps the core radius essentially fixed while changing the local flare curvature:
 
 ```math
 R_{\rm standby}(0)=R_{\rm access}(0)=1,
 \qquad
-R'_\text{standby}(0)\approx 0,
+R'_{\rm standby}(0)\approx0,
 \qquad
-R''_\text{standby}(0)\approx 0.
+R''_{\rm standby}(0)\approx0.
 ```
 
-During access, the flare is restored:
+The time schedule is
 
 ```math
-R(l,t)=R_{\rm access}(l),
-\qquad
-R_t\approx 0,
-\qquad
-B_t\approx 0.
+R(l,t)=R_{\rm standby}(l)+A_R(t)
+\left(R_{\rm access}(l)-R_{\rm standby}(l)\right).
 ```
 
-This means `R` is being used to turn the flare condition on/off rather than to pulse the throat radius.
+The operational phases are:
+
+1. **B-prestretch:** increase `B` while the core flare is flattened.
+2. **R-flare-open:** restore the access flare after the radial infrastructure is stretched.
+3. **Quiet hold:** freeze `B` and `R` for access.
+4. **R-flare-close:** flatten the flare after access.
+5. **B-reset:** return the radial infrastructure after the flare is closed.
+
+This gives the name **flare-gated radial stretch**.
 
 ## 4. Reduced source-history test
 
-The branch test reconstructs effective source proxies from `G_{mu nu}/8pi` for the warped-product metric. It computes radial null contractions
+The script reconstructs effective source proxies from `G_{mu nu}/8pi` for the warped-product metric. It computes the radial null contractions
 
 ```math
 T_{kk}^{\pm}=T_{tt}+T_{ll}/B^2\pm2T_{tl}/B,
 ```
 
-and uses the more negative branch
+and records
 
 ```math
 T_{kk}^{\rm min}=\min(T_{kk}^{+},T_{kk}^{-}).
@@ -175,7 +185,7 @@ The main history score is the core negative exposure
 I^-_{\rm core}=\int[-T_{kk}^{\rm min}(l=0,t)]_+\,dt.
 ```
 
-This is not a full quantum-inequality calculation. It is a source-history screen designed to catch whether a candidate has converted a peak-dynamics win into a long negative-exposure loss.
+This diagnostic screens whether a control protocol concentrates support history into the intended access interval while keeping the setup/reset ledger small. It is the branch-level source-history ledger that comes before a full quantum-field source model.
 
 ## 5. Main results
 
@@ -192,37 +202,37 @@ Representative cases with `B0=8, wB=8, TH=60`:
 | flare-gated `TB=100, TR=10` | 0.086777 | 0.043467 | 0.000395 |
 | flare-gated `TB=100, TR=30` | 0.111570 | 0.043466 | 0.000132 |
 
-The old B-only result shows the adiabatic trade clearly: longer `Tr` reduces peak dynamic rates but greatly increases the full-cycle negative source history. The flare-gated branch breaks that coupling because the B setup/reset phases occur while the flare is off.
+The comparison shows the design gain. The fixed-`R` `B` cycle trades peak cleanliness against a long active-flare history. The flare-gated branch carries the long `B` setup/reset phases with a flattened core flare, so the full-cycle core exposure stays far below the comparable `B`-only cases.
 
 ### 5.2 Phase ledger for the representative branch
 
 For `B0=8, wB=8, wR=5, Rc=1, TB=100, TR=10, TH=60`:
 
-| Phase | core negative exposure | comment |
+| Phase | core negative exposure | design reading |
 |---|---:|---|
-| B setup | 4.37e-7 | effectively zero throat-support debt while flare is flat |
-| R open | 0.006043 | flare debt appears only as access geometry opens |
-| hold | 0.074225 | remaining quiet-hold support burden |
-| R close | 0.006198 | symmetric closure cost |
-| B reset | 4.37e-7 | effectively zero after flare is closed |
-| full cycle | 0.086777 | much lower than B-only at comparable B ramp cleanliness |
+| B setup | 4.37e-7 | radial infrastructure stretches while the core flare is flat |
+| R open | 0.006043 | flare support appears during access-geometry opening |
+| hold | 0.074225 | quiet-hold support burden dominates the ledger |
+| R close | 0.006198 | closure carries a small flare-history cost |
+| B reset | 4.37e-7 | radial reset occurs after flare closure |
+| full cycle | 0.086777 | source history is concentrated into open/hold/close |
 
-The hold remains the dominant cost after the old B-ramp debt is removed.
+The phase ledger supplies the central result: the long `B` phases contribute essentially zero core exposure once `R` controls the flare state.
 
 ### 5.3 Order matters
 
 For `B0=8, wB=8, TB=100, TR=30, TH=60`:
 
-| Order | full-cycle core negative exposure | interpretation |
+| Order | full-cycle core negative exposure | design reading |
 |---|---:|---|
-| B first, then R open | 0.111570 | best tested ordering |
-| simultaneous B,R with `TB=100, TR=30` | 1.725187 | R opens too early relative to B stretch |
-| R first, then B | 6.188991 | worst; active flare exists while B is unstretched |
+| B first, then R open | 0.111570 | radial support dilution is in place before flare activation |
+| simultaneous B,R with `TB=100, TR=30` | 1.725187 | the flare is active during part of radial stretching |
+| R first, then B | 6.188991 | the active flare is carried through the unstretched radial state |
 
-The design rule is therefore:
+The design rule is:
 
 ```math
-\text{Stretch first while flare is off; open the flare only after B is already large.}
+\text{Stretch first while flare is flat; open the flare after B is already large.}
 ```
 
 ### 5.4 Stretch strength matters
@@ -235,11 +245,11 @@ For `wB=8, TB=100, TR=10, TH=60`:
 | 5 | 0.222148 | -0.003174 |
 | 8 | 0.086777 | -0.001240 |
 
-A larger B stretch lowers the restored-hold support burden. This is consistent with the long-throat branch: increasing proper radial stretch weakens local null-contracted support, but it does not remove the source-realism gate.
+A larger `B` stretch lowers the restored-hold support burden. This is the long-throat support-dilution branch in operational form: radial proper-length stretch weakens the local null-contracted burden while source realism remains the next physics gate.
 
-## 6. Interpretation
+## 6. Design interpretation
 
-The best branch is not simply `B+R` in any order. It is specifically:
+The branch has a precise actuator allocation:
 
 ```math
 \text{flare-gated radial stretch}:
@@ -247,21 +257,21 @@ The best branch is not simply `B+R` in any order. It is specifically:
 R\text{ controls flare state, }B\text{ controls support dilution.}
 ```
 
-The most important design insight is that `R` should not be treated primarily as a throat-radius pulse. The useful standby/access distinction comes from changing the flare curvature, not from making the core radius breathe. With `Rc=1`, the core radius is approximately fixed across standby and access. This keeps `R_t/R` small in the access core while allowing the flare condition to be absent during B setup/reset.
+The useful `R` action is flare-curvature control. With `Rc=1`, the core radius stays approximately fixed across standby and access, so the access-core `R_t/R` budget remains small. The flare condition is restored only after `B` has built the radial proper-length infrastructure.
 
-The branch also explains why the previous B-only protocol was incomplete rather than wrong. B-only was a good way to test radial support dilution under a fixed areal throat. The serious source-history screen then exposed that the areal throat itself had to become a controlled subsystem. That is exactly the framework's role-and-gate logic.
+The `B`-only screen remains the foundation of this branch. It established the support-dilution actuator and the adiabatic ramp scaling. The source-history screen then identified the areal flare as a controlled subsystem, exactly as the framework assigns `R(l,t)`.
 
-## 7. Remaining failure modes
+## 7. Development gates
 
-This branch is still a prescribed-geometry engineering screen.
+This branch sits at the geometry/control stage and advances the source-history ledger. The next gates are:
 
-It does not yet solve:
+1. **Quiet-hold source realism:** identify a quantum/effective source that carries the restored-hold `Tkk` history.
+2. **Null-contracted QI sampling:** replace the integrated exposure proxy with sampled-stress windows for throat, shoulder, and traversing observers.
+3. **Backreaction and stability:** evolve a candidate source or initial-data construction and track ringing or feedback.
+4. **Matching and boundary interpretation:** connect the flattened standby profile to a cap, boundary, matching layer, exterior, or topology model.
+5. **Shoulder stress and compensation:** add explicit shoulder/buffer/source-management terms and scan off-core observer families.
 
-1. **Quiet-hold source realism.** The restored hold still has negative `Tkk` at the support core.
-2. **Quantum-inequality compatibility.** The score here is integrated negative exposure, not a full Fewster-Roman-style sampled bound.
-3. **Backreaction and stability.** No source model has been evolved; no ringing, instability, or semiclassical feedback is included.
-4. **Topology or boundary interpretation.** The standby profile is a reduced local geometry. A true off/no-throat state may require matching, capping, boundary, or topology assumptions beyond this coordinate patch.
-5. **Shoulder stress and compensation.** The next design should include explicit shoulder/buffer/source-management terms and scan sampled observers outside the core.
+These gates turn the present control improvement into the next source-realism test program.
 
 ## 8. Next branch
 
@@ -281,7 +291,7 @@ B\text{-reset}
 \text{shoulder compensation/source reset}.
 ```
 
-The next objective should combine dynamic cleanliness with source-history sampling:
+The next objective should combine dynamic cleanliness with sampled source history:
 
 ```math
 J =
@@ -293,16 +303,14 @@ w_1\max|B_t/B|
 +w_6S_{\rm shoulder}.
 ```
 
-The immediate design question is whether shoulder `R`, lapse `N`, or explicit source terms can add positive compensation without re-contaminating the access observer family.
+The immediate design question is which shoulder mechanism—`R`, lapse `N`, or explicit source terms—can provide positive compensation while preserving the quiet access observer family.
 
 ## 9. Bottom-line conclusion
 
-The results support moving from the old B-only adiabatic protocol to a coupled B,R design.
-
-The new design should be named **flare-gated radial stretch**:
+The results support the move from the `B`-only adiabatic protocol to the coupled `B,R` design named **flare-gated radial stretch**.
 
 - `B` prestretches and dilutes the support burden.
-- `R` gates the flare/access state by flattening/restoring flare curvature.
+- `R` gates the flare/access state by flattening and restoring flare curvature.
 - The access hold keeps `B_t≈0` and `R_t≈0`.
-- The branch sharply reduces full-cycle core negative exposure compared with B-only ramps.
-- The branch remains upstream of source realism and must next add shoulder compensation and null-contracted sampled-stress tests.
+- The branch sharply reduces full-cycle core negative exposure compared with `B`-only ramps.
+- The branch advances naturally to shoulder compensation and null-contracted sampled-stress tests.

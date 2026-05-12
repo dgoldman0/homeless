@@ -1,10 +1,10 @@
 # Flare-Gated Radial Stretch Branch Bundle
 
-This bundle documents and reproduces the reduced branch test that moved the design from a B-only adiabatic radial-stretch protocol to a coupled B,R flare-gated radial-stretch protocol.
+This bundle documents and reproduces the reduced branch test that advances the adiabatic radial-stretch design from a `B`-only protocol to a coupled `B,R` flare-gated protocol.
 
 ## Contents
 
-- `MEMO_flare_gated_radial_stretch_branch.md` - main memo.
+- `MEMO_flare_gated_radial_stretch_branch.md` - main memo with design motivation, framework alignment, test results, and next gates.
 - `scripts/run_flare_gated_radial_stretch_branch.py` - reproducible reduced source-history screen.
 - `data/branch_case_summary.csv` - full case table.
 - `data/branch_phase_exposures.csv` - phase-by-phase exposure ledger.
@@ -23,4 +23,4 @@ From this folder:
 python scripts/run_flare_gated_radial_stretch_branch.py --outdir data
 ```
 
-The script uses only NumPy and pandas. It is a prescribed-geometry screen, not a source construction.
+The script uses NumPy and pandas. It evaluates a prescribed-geometry source-history screen for the coupled `B,R` control branch.

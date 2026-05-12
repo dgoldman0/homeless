@@ -1,17 +1,19 @@
 {
   "bundle_name": "flare_gated_radial_stretch_branch",
+  "revision": "positive-affirmative-prose-revision",
   "created_utc": "2026-05-12T22:02:51Z",
-  "description": "Memo, code, data, figures, and context docs for the reduced B,R flare-gated radial-stretch branch test.",
+  "revised_utc": "2026-05-12T22:12:28Z",
+  "description": "Revised memo, context notes, code, data, figures, and manifest for the reduced B,R flare-gated radial-stretch branch test. The prose states the positive design role of each actuator and the affirmative framework alignment.",
   "files": [
     {
       "path": "MEMO_flare_gated_radial_stretch_branch.md",
-      "size_bytes": 11834,
-      "sha256": "d92d070aa95ce39adbc8fb885e0bced2f6540cc60951e05ad20cb73694d1cf76"
+      "size_bytes": 11898,
+      "sha256": "b329d338db678b7f96465918e63b52b0bee55583f382f5a5a104605f9e7d3876"
     },
     {
       "path": "README.md",
-      "size_bytes": 1237,
-      "sha256": "d2889084a1a97232d448855b204bf3f7f66ac172735f7bfc065731c2a7588784"
+      "size_bytes": 1330,
+      "sha256": "c3185cfd846e081b9f2cab5de9f87ff73e055f663782a106d88bf8a8665b6837"
     },
     {
       "path": "data/branch_case_summary.csv",
@@ -30,13 +32,13 @@
     },
     {
       "path": "data/extracts.json",
-      "size_bytes": 7671,
-      "sha256": "9e5022040210a23d9997ef524eb56ae8634ecd4ef92972bf04afc6b1e9e6b4d5"
+      "size_bytes": 8128,
+      "sha256": "cc201ffddd20ae156cf44413734e67875bcc5d684051de8d05c206252e6ff40a"
     },
     {
       "path": "docs/framework_alignment_notes.md",
-      "size_bytes": 1078,
-      "sha256": "bf4ce0b93af9960008e12012e7ca98209b2eeed400e2833ff88d1ec9824a4fb3"
+      "size_bytes": 1123,
+      "sha256": "c4908daba736c41226276c2ddee00d9d033fa1e352b95472b4be10f9d0d7fbde"
     },
     {
       "path": "docs/model_equations.md",
@@ -45,13 +47,13 @@
     },
     {
       "path": "docs/prior_context_and_references.md",
-      "size_bytes": 983,
-      "sha256": "fd4b5ddfe44735ebd950ab34debb07d858fbcec0f89f8c448dd94a8c8862ae51"
+      "size_bytes": 1155,
+      "sha256": "7e77871dee7da5388d674dc6e764dd3692eb4db3be9bd40701b7b4b6ea4ed077"
     },
     {
       "path": "docs/source_history_screen_notes.md",
-      "size_bytes": 864,
-      "sha256": "f9cfc0b1e0bc5c46155637dec0065c44c430fd244b34764833039e743860117b"
+      "size_bytes": 829,
+      "sha256": "be3ce101fa418a2767016c4892abe6868239430afd6204bdd2b2ba342eb56425"
     },
     {
       "path": "figures/full_cycle_exposure_comparison.png",
