@@ -1,0 +1,7 @@
+{
+  "name": "lapse + radial metric freedom throat reduced evaluation",
+  "scope": "wormhole/QEE component only; no transport/catch layer",
+  "metric": "ds^2=-N(l,t)^2 dt^2 + B(l,t)^2 dl^2 + R(l,t)^2 dOmega^2",
+  "high_level_question": "Does lapse/radial freedom create a useful middle regime beyond R(l,t)-only multi-zone cycling?",
+  "provisional_result": "Radial B freedom can strongly reduce or remove the rho-energy-density QI obstruction in this proxy, but the radial NEC/flaring support debt remains and the burden shifts into long radial throat geometry / radial metric engineering. Lapse freedom alone does not help the throat-core energy density and mostly adds gradient/acceleration burdens. Dynamic core actuation still loses quiet access."
+}

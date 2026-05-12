@@ -1,0 +1,43 @@
+{
+  "bundle": "lapse_radial_freedom_throat",
+  "generated": "2026-05-12",
+  "scope": "wormhole/QEE component only; lapse/radial/proper-length reduced evaluation",
+  "root_folder": "lapse_radial_freedom_throat/",
+  "main_report": "lapse_radial_freedom_throat_report.md",
+  "files": [
+    "README.md",
+    "lapse_radial_case_summary.csv",
+    "lapse_radial_freedom_throat_report.md",
+    "lapse_radial_model_summary.json",
+    "lapse_radial_parameter_sweep.csv",
+    "lapse_radial_result_extracts.json",
+    "lapse_radial_time_digest.csv",
+    "manifest.json",
+    "proper_length_manifest.json",
+    "proper_length_optimized_sweep.csv",
+    "proper_length_profile_digest.csv",
+    "proper_length_sweep_extracts.json",
+    "proper_length_sweep_summary.json",
+    "references.bib",
+    "run_lapse_radial_freedom_eval.py",
+    "run_proper_length_optimized_sweep.py"
+  ],
+  "sha256": {
+    "README.md": "78207bffca0dcca2b39591c297bd7714294743564b73397210e122859a30e303",
+    "lapse_radial_case_summary.csv": "0baff215410da00325aafbd5f9b42e7242253a757ac74a4961e2063b3f11cfff",
+    "lapse_radial_freedom_throat_report.md": "32be73f778044f72263416f8bd598331b3601df2e2a1ac58b9db784cff083af2",
+    "lapse_radial_model_summary.json": "3ea97e51b4632cdbf777861992d25023716526272e8c3c44df9437b2f7a4220b",
+    "lapse_radial_parameter_sweep.csv": "8528fd4ab2a79ba76bcbfcc86dd89d61600ded0ff764bb63d595627dfeccdcfa",
+    "lapse_radial_result_extracts.json": "5e8b8285433ab452add2a8bc23cb7555d05742ffc9c33b5e34ee20bdc1d537b6",
+    "lapse_radial_time_digest.csv": "ee76c2b252832c4fca29ce6ffc1ded8af7e06dc27b28ff8c1033876dcfa2ac0e",
+    "manifest.json": "dd5cf1c0f4e2b6052e5cc7cbcbaeb26dcc645a770261f0a5f84edc36f2817438",
+    "proper_length_manifest.json": "f688b92bc4b3ab639a36b167699e8d2408662691897a7aba75ea46dda0a3ac75",
+    "proper_length_optimized_sweep.csv": "51b5583cb12960ee4ef86365b1e9194a3f94b06ef8438eb538aaf4275ae1e271",
+    "proper_length_profile_digest.csv": "6f60081343968ca90bd5ee05f6f09a8375325b3ec07d2832cae4e6802a3e816a",
+    "proper_length_sweep_extracts.json": "f952850d92a9bd1e3618bf4c3bb80e0bed1214f534f4181a90807272297e8bb5",
+    "proper_length_sweep_summary.json": "fac768516e4b4ace9fdc92015ade0494344ab7a5b30556fd81d7238682795a07",
+    "references.bib": "77f3ac9e45e38b0f612630323f8dc3f6741273038153861dcd5b4e55aabbe5e2",
+    "run_lapse_radial_freedom_eval.py": "86def2f97cd5e72550c138a7cd85a0b883dc5807f285b855c5bda977563f9810",
+    "run_proper_length_optimized_sweep.py": "506bea805b654ea37de44847bc7fc253694ba222641e7cc24b2cb7a9551e03ca"
+  }
+}
