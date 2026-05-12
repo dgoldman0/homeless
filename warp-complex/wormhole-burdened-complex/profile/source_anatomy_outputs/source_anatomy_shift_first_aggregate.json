@@ -1,0 +1,21 @@
+{
+  "configs": 144,
+  "exit_gtt_positive_configs": 0,
+  "traverse_gtt_positive_configs": 0,
+  "exit_nec_violation_configs": 144,
+  "exit_neg_rho_configs": 144,
+  "worst_exit_min_rho_src": -4842.804410686412,
+  "worst_exit_maxabs_rho_src": 4842.804410686412,
+  "worst_exit_maxabs_pressure": 5611.4082629926215,
+  "worst_exit_maxabs_flux": 456.4854460775659,
+  "worst_exit_min_nec": -2871.939514733865,
+  "worst_exit_max_neg_nec_sum": 4325.757636526345,
+  "median_exit_throat_share_neg_rho": 0.9878022033106573,
+  "min_exit_throat_share_neg_rho": 0.9768729032864313,
+  "median_exit_throat_share_neg_nec": 0.9849240383055362,
+  "min_exit_throat_share_neg_nec": 0.9304983095949039,
+  "max_exit_passenger_share_neg_rho": 0.9692851148479117,
+  "max_exit_passenger_share_neg_nec": 0.9696961317574145,
+  "worst_exit_pressure_over_absrho_p999": 12182.755192206248,
+  "worst_exit_flux_over_absrho_p999": 87.89379553450968
+}

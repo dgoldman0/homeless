@@ -1,0 +1,235 @@
+{
+  "description": "Mirror entrance branch reduced evaluation for the throat-loaded gated-shift ansatz.",
+  "config_count": 336,
+  "sample_points_per_config": 1183,
+  "total_sample_points": 397488,
+  "branch_definition": {
+    "synchronized": "q and E rise together as passenger approaches throat",
+    "preload_first": "q rises first; E/shift support rises later by release_gap",
+    "rapid_preload_first": "same ordering with narrower release layer"
+  },
+  "mode_stats": [
+    {
+      "mode": "preload_first",
+      "configs": 144,
+      "gtt_positive_configs": 0,
+      "clean_configs": 144,
+      "worst_max_gtt": -1.0,
+      "worst_min_margin": 1.0,
+      "median_min_margin": 1.0,
+      "worst_theta_product_max": 180.10597494571255,
+      "median_theta_product_max": 33.524047676541386,
+      "worst_Kretsch": 80136999.15517999,
+      "median_Kretsch": 28637160.26132053,
+      "worst_tidal_proxy": 2783.6762732607162,
+      "median_tidal_proxy": 1069.6788338899541,
+      "mean_throat_burden_share": 0.9937388347852267,
+      "min_throat_burden_share": 0.9123384976141348,
+      "max_passenger_region_burden_share": 0.798585262206723,
+      "max_E_minus_q": -0.002137273026168174,
+      "min_q_minus_E": 0.002137273026168174
+    },
+    {
+      "mode": "rapid_preload_first",
+      "configs": 144,
+      "gtt_positive_configs": 0,
+      "clean_configs": 144,
+      "worst_max_gtt": -1.0,
+      "worst_min_margin": 1.0,
+      "median_min_margin": 1.0,
+      "worst_theta_product_max": 657.3693185260391,
+      "median_theta_product_max": 105.5212931116885,
+      "worst_Kretsch": 70248380.26265204,
+      "median_Kretsch": 26904828.219435416,
+      "worst_tidal_proxy": 2429.9873175920134,
+      "median_tidal_proxy": 1034.1057471559147,
+      "mean_throat_burden_share": 0.9965661642588715,
+      "min_throat_burden_share": 0.9445765021546422,
+      "max_passenger_region_burden_share": 0.7904305390751063,
+      "max_E_minus_q": -0.0024272252879322664,
+      "min_q_minus_E": 0.0024272252879322664
+    },
+    {
+      "mode": "synchronized",
+      "configs": 48,
+      "gtt_positive_configs": 0,
+      "clean_configs": 48,
+      "worst_max_gtt": -1.0,
+      "worst_min_margin": 1.0,
+      "median_min_margin": 1.0,
+      "worst_theta_product_max": 170.44219108600177,
+      "median_theta_product_max": 35.65603165683606,
+      "worst_Kretsch": 70170753.73788601,
+      "median_Kretsch": 29039658.831896827,
+      "worst_tidal_proxy": 2422.276799655521,
+      "median_tidal_proxy": 1088.3523109323942,
+      "mean_throat_burden_share": 0.9929187267518772,
+      "min_throat_burden_share": 0.9123384976141348,
+      "max_passenger_region_burden_share": 0.5064405427322649,
+      "max_E_minus_q": 0.0,
+      "min_q_minus_E": 0.0
+    }
+  ],
+  "velocity_stats": [
+    {
+      "V": 0.9,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 146.88431823074882,
+      "median_theta_product_max": 31.726301068855484,
+      "worst_Kretsch": 59923393.31822025,
+      "worst_tidal_proxy": 1959.484680841452,
+      "mean_throat_burden_share": 0.9934623732508555,
+      "min_throat_burden_share": 0.9123384976141348
+    },
+    {
+      "V": 1.01,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 182.65521908828285,
+      "median_theta_product_max": 39.026819501299656,
+      "worst_Kretsch": 60774807.078191824,
+      "worst_tidal_proxy": 2046.4030018695598,
+      "mean_throat_burden_share": 0.9939920103236207,
+      "min_throat_burden_share": 0.9163105408440403
+    },
+    {
+      "V": 1.1,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 214.34921438204302,
+      "median_theta_product_max": 45.39579216342361,
+      "worst_Kretsch": 62316988.73922115,
+      "worst_tidal_proxy": 2121.366135403597,
+      "mean_throat_burden_share": 0.9943767428030463,
+      "min_throat_burden_share": 0.9198706563573673
+    },
+    {
+      "V": 1.25,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 272.38838083619993,
+      "median_theta_product_max": 56.92932491373064,
+      "worst_Kretsch": 65229685.38785055,
+      "worst_tidal_proxy": 2240.7056774125745,
+      "mean_throat_burden_share": 0.9949280723483048,
+      "min_throat_burden_share": 0.9257615741359462
+    },
+    {
+      "V": 1.5,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 383.36550444939536,
+      "median_theta_product_max": 78.62597554430891,
+      "worst_Kretsch": 70079102.45745121,
+      "worst_tidal_proxy": 2428.7425765449852,
+      "mean_throat_burden_share": 0.9956466173375654,
+      "min_throat_burden_share": 0.9351617498463504
+    },
+    {
+      "V": 2.0,
+      "configs": 56,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 657.3693185260391,
+      "median_theta_product_max": 130.86853782508118,
+      "worst_Kretsch": 80136999.15517999,
+      "worst_tidal_proxy": 2783.6762732607162,
+      "mean_throat_burden_share": 0.9965945186944685,
+      "min_throat_burden_share": 0.9512239742981758
+    }
+  ],
+  "delta_stats": [
+    {
+      "Delta": 0.1,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 657.3693185260391,
+      "median_theta_product_max": 50.951674096681955,
+      "worst_Kretsch": 80136999.15517999,
+      "worst_tidal_proxy": 2783.6762732607162,
+      "median_tidal_proxy": 1958.8432462399783,
+      "mean_throat_burden_share": 0.9948914466247706,
+      "min_throat_burden_share": 0.9123384976141348
+    },
+    {
+      "Delta": 0.3,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 657.3691696504113,
+      "median_theta_product_max": 51.02096600581248,
+      "worst_Kretsch": 1374775.2764155895,
+      "worst_tidal_proxy": 381.11581420224525,
+      "median_tidal_proxy": 272.9419873772781,
+      "mean_throat_burden_share": 0.9947753316278499,
+      "min_throat_burden_share": 0.9174230708863877
+    }
+  ],
+  "capacity_stats": [
+    {
+      "C0": 100.0,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 494.0879381736067,
+      "median_theta_product_max": 42.68838350207291,
+      "worst_Kretsch": 80136999.15517999,
+      "worst_tidal_proxy": 2783.6762732607162,
+      "median_tidal_proxy": 1128.814285924289,
+      "mean_throat_burden_share": 0.9938546780251246,
+      "min_throat_burden_share": 0.9123384976141348
+    },
+    {
+      "C0": 10000.0,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 657.3693185260391,
+      "median_theta_product_max": 60.658784788347376,
+      "worst_Kretsch": 67527295.7092966,
+      "worst_tidal_proxy": 2123.4956538668644,
+      "median_tidal_proxy": 1012.7604805119042,
+      "mean_throat_burden_share": 0.9958121002274958,
+      "min_throat_burden_share": 0.946375130767221
+    }
+  ],
+  "release_width_stats": [
+    {
+      "w_release": 0.18,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 657.3693185260391,
+      "median_theta_product_max": 95.84132276792582,
+      "worst_Kretsch": 70248380.26265204,
+      "worst_tidal_proxy": 2429.9873175920134,
+      "median_tidal_proxy": 1035.7217328999513,
+      "mean_throat_burden_share": 0.9962831382225902,
+      "min_throat_burden_share": 0.9429712626286948
+    },
+    {
+      "w_release": 0.35,
+      "configs": 168,
+      "gtt_positive_configs": 0,
+      "worst_theta_product_max": 187.4507759863506,
+      "median_theta_product_max": 31.020600589331945,
+      "worst_Kretsch": 80136999.15517999,
+      "worst_tidal_proxy": 2783.6762732607162,
+      "median_tidal_proxy": 1060.2291695888089,
+      "mean_throat_burden_share": 0.9933836400300302,
+      "min_throat_burden_share": 0.9123384976141348
+    }
+  ],
+  "global": {
+    "gtt_positive_configs": 0,
+    "clean_configs": 336,
+    "worst_max_gtt": -1.0,
+    "worst_min_lapse_shift_margin": 1.0,
+    "worst_theta_product_max": 657.3693185260391,
+    "worst_Kretsch": 80136999.15517999,
+    "worst_tidal_proxy": 2783.6762732607162,
+    "mean_throat_burden_share": 0.9948333891263103,
+    "min_throat_burden_share": 0.9123384976141348
+  },
+  "notes": [
+    "This pass used a mirrored entrance activation branch: preload q before E for the shift-first family.",
+    "It reused the reduced grid-style diagnostics: gtt, lapse-shift margin, curvature, null-expansion product, tidal proxy, and burden localization.",
+    "It is not a full geodesic/cabin-tetrad passenger-frame evaluation."
+  ]
+}
