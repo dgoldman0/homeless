@@ -1,0 +1,31 @@
+{
+  "generated": "2026-05-12",
+  "bundle": "multizone_phase_cycled_throat",
+  "scope": "wormhole/QEE component only; no transport/catch/passenger layer",
+  "root_folder": "multizone_phase_cycled_throat/",
+  "files": [
+    "README.md",
+    "multizone_case_summary.csv",
+    "multizone_model_summary.json",
+    "multizone_parameter_sweep.csv",
+    "multizone_parameter_sweep_extracts.json",
+    "multizone_phase_cycled_throat_report.md",
+    "multizone_time_digest.csv",
+    "multizone_zone_qi_summary.csv",
+    "run_multizone_parameter_sweep.py",
+    "run_multizone_phase_cycled_throat_eval.py",
+    "manifest.json"
+  ],
+  "sha256": {
+    "README.md": "87061f42f8c92971ae36fe3a4a01ff991ccdbd9c7a2a6e1ee5a0d15dbc5387ec",
+    "multizone_case_summary.csv": "bf7237ed5a5c8c00d1c5a6d5575031448a055f0a1df5980f5adcf8eca0273ebd",
+    "multizone_model_summary.json": "faabe95eddc13673d3bcbca737ceebb398785ed4daa806ae6c603cee2b8795fc",
+    "multizone_parameter_sweep.csv": "33acf64dfeef4acb8233c4370f2a218a068acef57b40f45dcaa11854a002e832",
+    "multizone_parameter_sweep_extracts.json": "da4dfa5ef86ca15abd5a834058cffe9f6e1dde4225a0f4f4bb8993af4d5e2820",
+    "multizone_phase_cycled_throat_report.md": "6c4c539962a32709bb929e21d39202bd9ab2113de8289dc531262cd0d1002318",
+    "multizone_time_digest.csv": "e8103690fc0a1a395f2bd50f7151b67b1970a595a7b35ac1c11d7fb20a6e8839",
+    "multizone_zone_qi_summary.csv": "de0c6214e6d1899f98c7584d3fdf0942ee9fb489e0dca228450f7342fde4f7c8",
+    "run_multizone_parameter_sweep.py": "6ae0a47329b5997609e45d09cd99caeb25f3608654f8f7808e38bfde5c386382",
+    "run_multizone_phase_cycled_throat_eval.py": "c8af4643327b02afc7d0d7ea1ebd4a06277840753b9eaa2a51057c241e02aa6f"
+  }
+}

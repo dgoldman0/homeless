@@ -1,0 +1,24 @@
+{
+  "name": "multi-zone phase-cycled wormhole throat plant reduced evaluation",
+  "scope": "wormhole component only; no transport/catch/passenger layer",
+  "metric_proxy": "ds^2=-dt^2+dl^2+R(l,t)^2 dOmega^2",
+  "zones": {
+    "access_core": "|l| <= 0.25",
+    "support_inner": "|l| <= 0.55",
+    "repayment_band": "0.65 <= |l| <= 1.15",
+    "buffer_band": "1.25 <= |l| <= 1.90",
+    "outer_field": "2.10 <= |l| <= 3.20"
+  },
+  "high_level_result": "Spatially separated side-band cycling can create positive repayment-like energy away from the core, but does not change the static QI obstruction seen by protected access observers. Core actuation can improve sampled-energy bookkeeping, but the improvement is purchased with access-core tidal/rate spikes or a collapsed quiet-open fraction.",
+  "interpretation": [
+    "In this metric family, the flare-out/access core remains the bottleneck.",
+    "Routing repayment away from the core is useful for reducing access exposure to repayment pulses, but it does not itself pay the local negative-energy support debt at the throat.",
+    "The next model must either add more geometric freedom than one areal-radius field R(l,t), or treat this as evidence for a no-go within spherical areal-radius throat plants under the chosen proxy."
+  ],
+  "constants": {
+    "LP_M": 1.616255e-35,
+    "C_LIGHT": 299792458.0,
+    "T_PLANCK_S": 5.391247e-44,
+    "C_QI": 0.009498860966469166
+  }
+}
