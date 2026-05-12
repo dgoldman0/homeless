@@ -1,0 +1,41 @@
+{
+  "bundle": "compensated_flare_gated_radial_stretch",
+  "created": "2026-05-12",
+  "files": [
+    {
+      "path": "MEMO_compensation_branch_screen.md",
+      "sha256": "f97c15fd191da7aff82f18556638b68f98de062e4685fd4e66a5e3cdce3e4dad",
+      "bytes": 4366
+    },
+    {
+      "path": "README.md",
+      "sha256": "348011f9182984c29edf7661d3d52cb3fff1569d802886c837985e07e3e8c8e2",
+      "bytes": 959
+    },
+    {
+      "path": "compensation_case_summary.csv",
+      "sha256": "80e77cd7fd755da2991075965d03709f70cfdb003276041a739f5d009663136d",
+      "bytes": 127912
+    },
+    {
+      "path": "compensation_class_summary.csv",
+      "sha256": "a10491f7e1bde6da73a07dac9a414cad42be8aab8f57b076547058fe01cc7074",
+      "bytes": 1310
+    },
+    {
+      "path": "compensation_compact_ranking.csv",
+      "sha256": "cea1c7284d9d59464d560af837b6893cb2810e9210a71fa2c516107ec11ae4d2",
+      "bytes": 11206
+    },
+    {
+      "path": "extracts.json",
+      "sha256": "37ad790ddaac688770005dedfdadb9dd0c601269a5ec736545269618554af257",
+      "bytes": 4866
+    },
+    {
+      "path": "run_compensation_branch_screen.py",
+      "sha256": "cd9c24709e6f54d5a43ffd3573a7bed3f7ea6c898842cb085d6a27b9e0165c3b",
+      "bytes": 16691
+    }
+  ]
+}

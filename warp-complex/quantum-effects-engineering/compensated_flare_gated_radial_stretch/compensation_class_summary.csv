@@ -1,0 +1,7 @@
+comp_kind,n,best_case,best_core_ratio,best_support_ratio,best_access_comp_flux,best_access_comp_Rt,best_quiet_case,best_quiet_core_ratio,best_quiet_support_ratio,best_quiet_access_comp_flux,best_quiet_access_comp_Rt
+explicit_source_core,9,explicit_source_core_amp_0.020,3.237477936997553,2.892469687526075,5.84289446327629e-07,5.958947827496663e-06,explicit_source_core_amp_0.020,3.237477936997553,2.892469687526075,5.84289446327629e-07,5.958947827496663e-06
+explicit_source_ring,5,explicit_source_ring_amp_0.002,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06,explicit_source_ring_amp_0.002,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06
+lapse_N_core,6,lapse_N_core_amp_-0.70,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06,lapse_N_core_amp_-0.70,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06
+lapse_N_ring,6,lapse_N_ring_amp_-0.70,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06,lapse_N_ring_amp_-0.70,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06
+none,1,baseline_flare_gated_with_idle_comp,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06,baseline_flare_gated_with_idle_comp,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06
+shoulder_R,6,shoulder_R_amp_-0.25,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06,shoulder_R_amp_-0.25,0.0,0.0,5.84289446327629e-07,5.958947827496663e-06
