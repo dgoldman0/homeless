@@ -1,0 +1,76 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Morris and Thorne(1988)]{morris_thorne_1988}
+Michael~S. Morris and Kip~S. Thorne.
+\newblock Wormholes in spacetime and their use for interstellar travel: A tool
+  for teaching general relativity.
+\newblock \emph{American Journal of Physics}, 56\penalty0 (5):\penalty0
+  395--412, 1988.
+\newblock \doi{10.1119/1.15620}.
+
+\bibitem[Ford and Roman(1996)]{ford_roman_1996}
+L.~H. Ford and Thomas~A. Roman.
+\newblock Quantum field theory constrains traversable wormhole geometries.
+\newblock \emph{Physical Review D}, 53\penalty0 (10):\penalty0 5496--5507,
+  1996.
+\newblock \doi{10.1103/PhysRevD.53.5496}.
+
+\bibitem[Ford and Roman(1999)]{ford_roman_1999}
+L.~H. Ford and Thomas~A. Roman.
+\newblock The quantum interest conjecture.
+\newblock \emph{Physical Review D}, 60:\penalty0 104018, 1999.
+\newblock \doi{10.1103/PhysRevD.60.104018}.
+
+\bibitem[Visser et~al.(2003)Visser, Kar, and Dadhich]{visser_kar_dadhich_2003}
+Matt Visser, Sayan Kar, and Naresh Dadhich.
+\newblock Traversable wormholes with arbitrarily small energy condition
+  violations.
+\newblock \emph{Physical Review Letters}, 90:\penalty0 201102, 2003.
+\newblock \doi{10.1103/PhysRevLett.90.201102}.
+
+\bibitem[Kar et~al.(2004)Kar, Dadhich, and Visser]{kar_dadhich_visser_2004}
+Sayan Kar, Naresh Dadhich, and Matt Visser.
+\newblock Quantifying energy condition violations in traversable wormholes.
+\newblock \emph{Pramana}, 63:\penalty0 859--864, 2004.
+\newblock \doi{10.1007/BF02705207}.
+
+\bibitem[Fewster and Roman(2005)]{fewster_roman_2005}
+Christopher~J. Fewster and Thomas~A. Roman.
+\newblock On wormholes with arbitrarily small quantities of exotic matter.
+\newblock \emph{Physical Review D}, 72:\penalty0 044023, 2005.
+\newblock \doi{10.1103/PhysRevD.72.044023}.
+
+\bibitem[Hochberg and Visser(1998)]{hochberg_visser_1998}
+David Hochberg and Matt Visser.
+\newblock Dynamic wormholes, antitrapped surfaces, and energy conditions.
+\newblock \emph{Physical Review D}, 58:\penalty0 044021, 1998.
+\newblock \doi{10.1103/PhysRevD.58.044021}.
+
+\bibitem[Kuhfittig(2002)]{kuhfittig_2002}
+Peter K.~F. Kuhfittig.
+\newblock Static and dynamic traversable wormhole geometries satisfying the
+  ford-roman constraints.
+\newblock \emph{Physical Review D}, 66:\penalty0 024015, 2002.
+\newblock \doi{10.1103/PhysRevD.66.024015}.
+
+\bibitem[Bobrick and Martire(2021)]{bobrick_martire_2021}
+Alexey Bobrick and Gianni Martire.
+\newblock Introducing physical warp drives.
+\newblock \emph{Classical and Quantum Gravity}, 38:\penalty0 105009, 2021.
+\newblock \doi{10.1088/1361-6382/abdf6e}.
+
+\bibitem[Helmerich et~al.(2024)Helmerich, Fuchs, Bobrick, Sellers, Melcher, and
+  Martire]{helmerich_fuchs_bobrick_2024}
+Christopher Helmerich, Jared Fuchs, Alexey Bobrick, Luke Sellers, Brandon
+  Melcher, and Gianni Martire.
+\newblock Analyzing warp drive spacetimes with warp factory.
+\newblock \emph{Classical and Quantum Gravity}, 41\penalty0 (9):\penalty0
+  095009, 2024.
+\newblock \doi{10.1088/1361-6382/ad2e42}.
+
+\end{thebibliography}

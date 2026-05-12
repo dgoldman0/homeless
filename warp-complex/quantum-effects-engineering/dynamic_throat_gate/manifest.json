@@ -1,0 +1,22 @@
+{
+  "bundle": "dynamic_throat_gate",
+  "generated": "2026-05-12",
+  "files": [
+    "run_dynamic_throat_gate_eval.py",
+    "dynamic_gate_case_summary.csv",
+    "dynamic_gate_extract_table.csv",
+    "dynamic_gate_time_digest.csv",
+    "dynamic_gate_summary.json",
+    "dynamic_gate_memo.md",
+    "README.md"
+  ],
+  "sha256": {
+    "run_dynamic_throat_gate_eval.py": "2ec6c5b640d7e1b90c5e6cfae80e2471daaeab984004151892079d0eaefcd0cf",
+    "dynamic_gate_case_summary.csv": "6e2a4911c4dbf082759fe7f1a29997db3aa6dee9de69bbe716b1880a99c78a8b",
+    "dynamic_gate_extract_table.csv": "6478d41db224c15195a3fb879b8afbc2803f4287f25aea81d9cecf80e5b3c92e",
+    "dynamic_gate_time_digest.csv": "5365058e055962241214b7e4f5d218487f52562d372b0829e343ec20586d1152",
+    "dynamic_gate_summary.json": "8e13f8ec2d99ec505fef7c2752c412d65b9926a48904a14f9367f850c3c34b2b",
+    "dynamic_gate_memo.md": "0591fdbb8cd8d4f9f569da0ab944b9917010d4f2eb2d803c5102dd4e26cda8e9",
+    "README.md": "fbb51ae956ee1067f8c6c2da77c3bc7ec679f1d609138fa39656bca8d2598008"
+  }
+}

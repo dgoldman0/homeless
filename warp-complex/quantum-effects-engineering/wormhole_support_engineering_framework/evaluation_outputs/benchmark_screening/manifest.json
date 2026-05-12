@@ -1,0 +1,22 @@
+{
+  "generated": "2026-05-12",
+  "bundle": "wormhole engineering screening benchmark phase 1+2 pilot",
+  "files": [
+    "README.md",
+    "benchmark_gate_summary.csv",
+    "benchmark_model_catalog.csv",
+    "benchmark_screening_memo.md",
+    "benchmark_screening_table.csv",
+    "references.md",
+    "run_benchmark_screen.py"
+  ],
+  "sha256": {
+    "README.md": "c3b10e47db16aff8218f7ed6a1bdd28817b537558ebc3e40e2997ebac77a7da1",
+    "benchmark_gate_summary.csv": "862189e7659e079752fc2da732a566f3d192dcb26d6eb8f0d7606c72ff6353a2",
+    "benchmark_model_catalog.csv": "214c1bd560bcb25d0c8423f47a83366b0145cc7ad7b95d7d83cd4b755fd0ea90",
+    "benchmark_screening_memo.md": "fdd0101ae35442df641816dad5f15dbab2e056f30496b7677cfbc2bc3846c232",
+    "benchmark_screening_table.csv": "7efc8b2fe9349fa5ec5a3179c5742c5116d72458b20ddd522ee630aded09f489",
+    "references.md": "62ec7a9c13be8ef525bb3903f1aa759b12212136481e5ef648486dcbd8d62cbe",
+    "run_benchmark_screen.py": "e14d262b99d401b4e7f3460167435b078a7c54b1f7ac9391fb966741dd0a5088"
+  }
+}

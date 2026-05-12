@@ -1,0 +1,371 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{orcidlink}
+\usepackage{doi}
+\usepackage[numbers,sort&compress]{natbib}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!45!black
+}
+
+\title{Engineering Screening Framework for Wormhole-Support Infrastructure Under Quantum-Inequality Constraints}
+\author[1]{Daniel S. Goldman\,\orcidlink{0000-0003-2835-3521}}
+\affil[1]{Independent researcher; ORCID: \href{https://orcid.org/0000-0003-2835-3521}{0000-0003-2835-3521}}
+\date{\today}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Tkk}{T_{\mu\nu}k^\mu k^\nu}
+\newcommand{\Gkk}{G_{\mu\nu}k^\mu k^\nu}
+\newcommand{\NEC}{\mathrm{NEC}}
+\newcommand{\QI}{\mathrm{QI}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Traversable wormhole physics already supplies the dominant physical constraints on macroscopic throat support.  Morris--Thorne throat flare-out requires exotic stress-energy; Ford--Roman quantum inequalities drive macroscopic wormholes toward Planck-scale support or severe length-scale discrepancies; quantum-interest results constrain negative/positive repayment schedules; small-exotic-matter constructions separate local stress severity from integrated burden; and null-contracted quantum-inequality tests strongly constrain slow-flare geometries.  This paper contributes an engineering organization of those established constraints.  The result is a reusable screening framework for hypothetical wormhole-support infrastructure: candidate metric controls are assigned to support, access, repayment, buffer, matching, transition, and source-realism functions, and each function is tested by a corresponding diagnostic gate.  Any proposed wormhole-support infrastructure can be decomposed into support, access, repayment, buffer, matching, transition, and source-realism functions, and each function has a corresponding diagnostic gate.  Literature benchmarks show that the gate sequence reproduces the known constraint structure of Morris--Thorne, Ford--Roman, Visser--Kar--Dadhich, Fewster--Roman, Kuhfittig, and dynamic-throat examples.  Reduced evaluations then demonstrate how the framework classifies candidate controls: access-core areal-radius actuation is assigned to tidal/rate and null-expansion gates, side-band repayment to exposure-management gates, lapse to timing and matching gates, radial proper-length stretch to the known length-scale-discrepancy branch, and dynamic throat proposals to flux/extrinsic-curvature gates.  The framework supplies a systems-engineering method for screening exotic-spacetime infrastructure proposals before source-model or numerical-relativity investment.
+\end{abstract}
+
+\section{Purpose and scope}
+
+This paper develops an engineering screening framework for hypothetical wormhole-support infrastructure.  The physics basis is inherited from established general-relativity and quantum-field-theory literature.  The contribution is the organization of that basis into subsystem roles, diagnostic gates, and decision rules suited to engineering analysis.
+
+The central engineering problem is to replace undifferentiated ``exotic matter'' language with a staged plant model.  A candidate throat-support concept should specify which part of the metric or source model performs each function: support of flare-out, protection of the access region, compensation or repayment, buffering of flux and ripple, matching to exterior geometry, transition management, and physical source realization.  The screening framework asks each function to pass the diagnostic gate that matches its role.
+
+The target class is a broad wormhole-support plant that can be written, locally or approximately, in spherically symmetric form,
+\begin{equation}
+ ds^2=-N(l,t)^2\dd t^2+B(l,t)^2\dd l^2+R(l,t)^2\dd\Omega^2,
+ \label{eq:general_metric}
+\end{equation}
+where $N$ is lapse/redshift structure, $B$ is radial proper-length structure, and $R$ is areal-radius structure.  The framework also applies to equivalent proper-radial gauges, shape-function forms, and numerical metric data, provided the candidate supplies observable throat, access, transition, and source diagnostics.
+
+The report is organized as follows.  Section~\ref{sec:literature} summarizes the established physics constraints as engineering requirements.  Section~\ref{sec:framework} defines the screening gates.  Section~\ref{sec:benchmarks} benchmarks the gates against canonical literature cases.  Sections~\ref{sec:reduced} and~\ref{sec:dynamic} summarize reduced demonstration evaluations that classify control variables by engineering role.  Section~\ref{sec:workflow} gives the reusable screening workflow.
+
+\section{Established physics constraints as engineering requirements}
+\label{sec:literature}
+
+\subsection{Throat flare-out and radial null support}
+
+The Morris--Thorne construction supplies the standard traversable-throat language: a real minimum of areal radius, finite redshift, and a flare-out condition that requires radial tension and violation of the null energy condition near the throat \citep{morris_thorne_1988}.  In engineering form, this becomes the first support-core requirement:
+\begin{equation}
+ \Tkk < 0
+\end{equation}
+for radial null directions at or near the flare-out surface.  In an orthonormal static frame this is often represented by
+\begin{equation}
+ \rho+p_r<0.
+\end{equation}
+The support gate therefore scores null-contracted stress rather than energy density alone.
+
+\subsection{Sampled energy and length-scale discrepancy}
+
+Ford and Roman applied quantum-inequality reasoning to static traversable wormhole geometries and found severe restrictions on macroscopic support \citep{ford_roman_1996}.  In engineering form, their result becomes a length-scale gate.  A proposed macroscopic support region must report the sampled negative stress seen by appropriate observers and the local curvature, boundary, and support-thickness scales controlling the validity of the sampling estimate.
+
+The key engineering lesson is that local stress reduction and macroscopic access can pull in opposite directions.  A throat may reduce peak stress by spreading flare-out over proper length, while the observer samples a longer support history.  The framework therefore scores both local peak quantities and integrated or sampled histories.
+
+\subsection{Repayment and quantum interest}
+
+The quantum-interest conjecture gives repayment language a quantitative warning: negative-energy pulses require compensating positive-energy pulses, and the temporal separation is constrained by amplitude \citep{ford_roman_1999}.  In engineering form, repayment is a constrained scheduling and locality problem.  A positive-energy repayment band away from the support core can manage access exposure, while the support observers retain their own sampled history.  The repayment gate therefore distinguishes source bookkeeping from local throat support.
+
+\subsection{Local burden versus integrated burden}
+
+Visser--Kar--Dadhich and related work introduced volume-integral quantifiers for the total amount of energy-condition violation and showed that some wormhole geometries can make that measure arbitrarily small \citep{visser_kar_dadhich_2003,kar_dadhich_visser_2004}.  This literature motivates a separate integrated-burden gate.  A profile that improves a local diagnostic advances only after the integrated negative null burden, proper length, and transition stresses are also scored.
+
+Fewster and Roman tested small-exotic-matter wormholes using quantum inequalities on null-contracted stress averaged over timelike worldlines \citep{fewster_roman_2005}.  Their results assign slow-flare and small-integral proposals to a source-realism gate: local or integrated classical bookkeeping gives an intermediate screen, while null-contracted sampled stress remains a decisive quantum-field-theoretic test.
+
+\subsection{Dynamic throats}
+
+Dynamic wormholes require local throat definitions and expansion diagnostics.  Hochberg and Visser developed a local framework for dynamic wormhole throats using marginally anti-trapped surfaces and showed that energy-condition violations remain generic near dynamic throats \citep{hochberg_visser_1998}.  Kuhfittig's static and dynamic Ford--Roman-compatible constructions also highlight the persistence of weak-energy-condition pressure in dynamic variants \citep{kuhfittig_2002}.  The engineering dynamic gate therefore tracks null expansions, flux, extrinsic curvature, and access-region quietness whenever a proposal uses time dependence.
+
+\subsection{Numerical metric screening}
+
+Engineering-adjacent warp-drive work already treats metric functions as design variables.  Bobrick and Martire separate spatial capacity, time rate, and shift structure in a broad warp-drive framework \citep{bobrick_martire_2021}.  Warp Factory extends numerical exotic-spacetime screening by evaluating Einstein equations, energy conditions, scalars, and visualizations for warp-drive geometries \citep{helmerich_fuchs_bobrick_2024}.  The present framework is complementary: it specializes the screening language to wormhole-support infrastructure, where support, access, repayment, buffering, transitions, and source realism need separate gates.
+
+\section{Engineering subsystem decomposition}
+\label{sec:framework}
+
+The framework begins by assigning each candidate control to a subsystem role.  The same metric function may serve multiple roles, but the screening treats the roles separately.  This avoids common category errors such as scoring energy-density relief as null-support relief, scoring global repayment as local support, or scoring a source-bookkeeping improvement as access viability.
+
+\begin{table}[ht]
+\centering
+\caption{Subsystem roles and primary diagnostic gates.}
+\label{tab:roles}
+\begin{tabular}{p{0.22\linewidth}p{0.33\linewidth}p{0.33\linewidth}}
+\toprule
+Subsystem role & Engineering question & Primary diagnostic gate \\
+\midrule
+Support & What maintains flare-out? & $\Tkk$, $\rho+p_r$, null expansions, sampled support history \\
+Access & What does a traversing region experience? & tidal history, quiet-open fraction, traversal time, lapse bounds \\
+Repayment & Where and when is compensation carried? & sampled stress along support and access observers; quantum-interest timing \\
+Buffer & Where are flux and ripple absorbed? & flux $T_{\hat t\hat l}$, shoulder activity, radiative coupling proxies \\
+Matching & How does the throat join exterior or later transport layers? & lapse/redshift gradients, horizon indicators, support containment \\
+Transition & Where does the geometry change rapidly? & curvature scalars, derivative budgets, shoulder stress maxima \\
+Source realism & What physical stress tensor realizes the geometry? & null-contracted QIs, state model, backreaction, stability \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The central sentence of the framework is:
+
+\begin{quote}
+Any proposed wormhole-support infrastructure can be decomposed into support, access, repayment, buffer, matching, transition, and source-realism functions, and each function has a corresponding diagnostic gate.
+\end{quote}
+
+The screening process then follows a role-and-gate rule:
+\begin{equation}
+ \text{candidate control}\quad\longrightarrow\quad\text{subsystem role}\quad\longrightarrow\quad\text{observer exposure}\quad\longrightarrow\quad\text{diagnostic gate}.
+\end{equation}
+
+For the metric family in Eq.~\eqref{eq:general_metric}, useful first assignments are:
+\begin{align}
+ B(l,t) &\rightarrow \text{radial proper-length and support-dilution control},\nonumber\\
+ R(l,t) &\rightarrow \text{areal access geometry and flare shaping},\nonumber\\
+ N(l,t) &\rightarrow \text{redshift, timing, matching, and horizon control},\nonumber\\
+ \text{phase cycling} &\rightarrow \text{repayment, buffer, and source-management control}.\nonumber
+\end{align}
+These assignments are hypotheses to be screened, not assumptions of success.  A candidate advances when the diagnostic gate corresponding to its claimed role is satisfied.
+
+\section{Diagnostic gates}
+\label{sec:gates}
+
+\subsection{Gate 1: support-core null stress}
+
+The first gate evaluates the flare-out support burden.  In static spherical form it begins with
+\begin{equation}
+ \rho+p_r,
+\end{equation}
+while the invariant target is the radial null contraction
+\begin{equation}
+ \Tkk.
+\end{equation}
+The gate records the local peak negative value, sampled negative value, and proper-integrated negative burden,
+\begin{equation}
+ I_{\NEC}=\int [-(\Tkk)]_+\,\dd\lambda,
+ \label{eq:integrated_nec}
+\end{equation}
+where $\lambda$ is the appropriate proper or affine parameter for the observer family used in the screen.
+
+\subsection{Gate 2: energy-density/null-support separation}
+
+A candidate may improve $\rho$ while retaining negative $\rho+p_r$.  The framework treats this as a useful intermediate classification rather than an endpoint.  The design advances to null-contracted sampling when
+\begin{equation}
+ \rho \geq 0\quad\text{and}\quad \rho+p_r<0
+\end{equation}
+occurs in the access or support region.  This separation is central to long-throat and slow-flare geometries.
+
+\subsection{Gate 3: local versus integrated burden}
+
+A profile that reduces local stress severity is also scored by its integrated support burden, proper length, and transition shoulders.  The gate records quantities such as
+\begin{equation}
+ L_{\rm proper}=\int B(l)\,\dd l,
+\end{equation}
+within a specified support region and compares local stress reduction against added length and shoulder activity.
+
+\subsection{Gate 4: repayment locality}
+
+Repayment and compensation are screened by observer family.  Positive energy in a repayment band is recorded as access-exposure management when it lies away from the access core.  The support gate remains attached to observers sampling the flare-out region.  This makes the repayment gate a locality and timing test rather than a global average.
+
+\subsection{Gate 5: transition and shoulder budget}
+
+Every spatial support function must transition into surrounding geometry.  The transition gate scores derivative and curvature activity in those shoulders.  For a radial metric profile $B(l)$, useful reduced proxies include
+\begin{equation}
+ \left|\frac{\dd \ln B}{\dd s}\right|,\qquad
+ \left|\frac{\dd^2 \ln B}{\dd s^2}\right|,
+\end{equation}
+where $s$ is proper radial distance.  The gate records whether support burden has moved from the core into a transition wall.
+
+\subsection{Gate 6: dynamic throat behavior}
+
+For dynamic candidates, the framework uses local null-expansion diagnostics.  In the metric form Eq.~\eqref{eq:general_metric}, a useful prototype pair is
+\begin{equation}
+ \theta_\pm=\frac{2}{R}\left(\frac{R_t}{N}\pm\frac{R_l}{B}\right).
+ \label{eq:expansions}
+\end{equation}
+The dynamic gate records expansion behavior, throat location/evolution, flux, and extrinsic-rate proxies.  Representative reduced proxies include
+\begin{equation}
+ K^l{}_l\sim -\frac{B_t}{NB},
+ \qquad
+ K^\theta{}_{\theta}\sim -\frac{R_t}{NR},
+ \label{eq:extrinsic_proxies}
+\end{equation}
+plus the mixed stress or flux term $T_{\hat t\hat l}$.
+
+\subsection{Gate 7: source realism}
+
+The source-realism gate follows successful geometric screens.  A prescribed geometry gives an effective source through
+\begin{equation}
+ T^{\rm eff}_{\mu\nu}=\frac{1}{8\pi}G_{\mu\nu}.
+\end{equation}
+The source gate asks which quantum state, boundary condition, semiclassical stress tensor, modified-gravity effective stress, or engineered material analogue could approximate that source while satisfying the relevant quantum inequalities and backreaction requirements.
+
+\section{Literature benchmark validation}
+\label{sec:benchmarks}
+
+A field-facing engineering framework should reproduce the known verdicts of canonical literature examples.  The benchmark pilot maps published cases through the gate sequence and records the expected literature outcome.  Table~\ref{tab:benchmark} summarizes the result.
+
+\begin{table}[ht]
+\centering
+\caption{Pilot benchmark mapping from literature examples to framework gates.}
+\label{tab:benchmark}
+\begin{tabular}{p{0.23\linewidth}p{0.35\linewidth}p{0.32\linewidth}}
+\toprule
+Literature example & Gate sequence & Literature-level verdict reproduced \\
+\midrule
+Morris--Thorne ultrastatic throat & energy-density sampling; radial NEC/null-contracted support; source realism & flare-out requires radial tension and NEC violation \citep{morris_thorne_1988} \\
+Ford--Roman constrained throat & length-scale discrepancy; sampled-energy gate; support-thickness gate & macroscopic support is driven toward Planck scale or large geometric length-scale discrepancy \citep{ford_roman_1996} \\
+Visser--Kar--Dadhich small-exotic-matter family & integrated-burden separation; local support; source realism & volume-integral burden can be reduced while ANEC violation remains \citep{visser_kar_dadhich_2003,kar_dadhich_visser_2004} \\
+Fewster--Roman test of VKD/Kuhfittig models & null-contracted QI; traversal/affine gate; source realism & macroscopic small-exotic-matter models face strong null-contracted QI and traversability constraints \citep{fewster_roman_2005} \\
+Hochberg--Visser dynamic throat & null-expansion gate; dynamic NEC gate & dynamic throats require local expansion diagnostics and retain generic energy-condition pressure \citep{hochberg_visser_1998} \\
+Warp Factory style numerical screening & metric evaluation; energy-condition diagnostics; scalar visualization & numerical tools can evaluate broad exotic-spacetime metric families \citep{helmerich_fuchs_bobrick_2024} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The benchmark demonstrates the role of the framework.  It organizes established results into an engineering sequence.  The support-core gate captures Morris--Thorne flare-out.  The sampled-energy and length-scale gates capture Ford--Roman.  The local/integrated split captures VKD-type small-exotic-matter constructions.  The null-contracted source-realism gate captures Fewster--Roman.  The dynamic gate captures Hochberg--Visser.  The numerical-screening comparison locates the framework alongside broader metric-analysis tools.
+
+\section{Reduced evaluations as demonstration cases}
+\label{sec:reduced}
+
+The accompanying evaluation bundle includes reduced calculations used as demonstration cases for the screening workflow.  These are prescribed-geometry diagnostic tests.  Their role in the paper is methodological: they show how candidate controls are classified by subsystem role and diagnostic gate.
+
+\subsection{Areal-radius phase cycling}
+
+The first reduced family used
+\begin{equation}
+ ds^2=-\dd t^2+\dd l^2+R(l,t)^2\dd\Omega^2.
+\end{equation}
+Static support reproduced the usual sampled-energy obstruction.  Pulse-train compensation around a static support mean preserved the averaged support debt in broad sampling windows.  Global throat breathing created positive-energy phases, while the access region acquired large rate, tidal, and small-window costs.
+
+In gate language, areal-radius actuation of the access core is assigned to the access-quietness and dynamic-throat gates.  Side-band repayment is assigned to the repayment locality and buffer gates.  The access-support gate remains attached to observers sampling the flare-out core.
+
+\subsection{Multi-zone repayment and protected access}
+
+The multi-zone evaluation separated support, repayment, buffer, and access bands.  Side-band cycling generated repayment-like activity away from the access core.  The access-core sampled-energy score remained at the static support value when the core stayed quiet.  Core actuation altered sampled-energy bookkeeping and activated the dynamic access gate.
+
+The engineering classification is:
+\begin{align}
+ \text{side-band cycling} &\rightarrow \text{repayment and buffer management},\nonumber\\
+ \text{access-core cycling} &\rightarrow \text{tidal/rate and quiet-open gate},\nonumber\\
+ \text{local flare-out debt} &\rightarrow \text{support-core null gate}.\nonumber
+\end{align}
+
+\subsection{Lapse and radial metric freedom}
+
+The next family used the broader metric form Eq.~\eqref{eq:general_metric}.  Lapse-only cases preserved the access-core support values in the reduced diagnostic while adding redshift/matching considerations.  Static radial proper-length stretch softened local access-core stress.  For example, a broad $B(l)$ core with $B_0$ around $2$--$4$ made the energy-density diagnostic nonnegative and reduced the magnitude of the radial NEC proxy, while the integrated radial support burden remained present.
+
+In gate language, the result assigns
+\begin{align}
+ B(l) &\rightarrow \text{proper-radial support-dilution gate},\nonumber\\
+ N(l) &\rightarrow \text{matching, redshift, and timing gate},\nonumber\\
+ R(l,t) &\rightarrow \text{access and dynamic-throat gate}.\nonumber
+\end{align}
+This allocation implements the known length-scale-discrepancy branch as an engineering control choice.
+
+\subsection{Proper-length optimized static sweep}
+
+The static sweep varied radial stretch $B(l)$ and slow-flare shaping $R(l)$.  The grid contained 3,087 profiles.  It showed that local stress severity can be softened by spreading support over proper radial length, while integrated radial NEC burden and transition shoulders remain central costs.  The representative baseline and stretched cases are summarized in Table~\ref{tab:proper_length}.
+
+\begin{table}[ht]
+\centering
+\caption{Representative static proper-length screening cases from the reduced sweep.}
+\label{tab:proper_length}
+\begin{tabular}{rrrrr}
+\toprule
+$B_0$ & $a_R$ & min access $\rho$ & min access $(\rho+p_r)$ & proper half-length to $R=2$ \\
+\midrule
+1 & 1 & $-3.98\times10^{-2}$ & $-7.96\times10^{-2}$ & 1.74 \\
+2 & 1 & $+1.87\times10^{-2}$ & $-1.99\times10^{-2}$ & 3.48 \\
+3 & 1 & $+2.91\times10^{-2}$ & $-8.84\times10^{-3}$ & 4.50 \\
+8 & 1 & $+3.63\times10^{-2}$ & $-1.24\times10^{-3}$ & 13.91 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The framework classifies this as local support dilution with remaining source-realism and integrated-burden gates.  The positive energy-density diagnostic advances the candidate beyond an energy-density screen; the negative radial NEC diagnostic sends it to null-contracted sampling.
+
+\subsection{Null-contracted long-throat sweep}
+
+The null-contracted sweep evaluated broad $B(l)$ profiles using radial $T_{kk}$ proxies and traversal-style sampling.  Local peak $T_{kk}$ improved with increasing radial stretch, while proper length and sampling duration grew.  Broad smooth shoulders were preferred over compact high-gradient transitions.  A representative broad $B_0=4$ case reduced the core minimum $T_{kk}$ from roughly $-7.96\times10^{-2}$ to $-4.97\times10^{-3}$ and reduced the proper integrated negative $T_{kk}$ proxy from about $0.125$ to about $0.046$, while increasing the half-length to $R=2$ by about a factor of four.
+
+The gate classification is long, weak radial NEC support plus source realism.  This is the engineering form of the established length-scale-discrepancy branch.
+
+\section{Dynamic-throat gate prototype}
+\label{sec:dynamic}
+
+The dynamic gate prototype extends the framework to candidates with time-dependent $B$, $R$, or scale-factor-like structure.  The gate uses the expansion pair in Eq.~\eqref{eq:expansions}, radial null-contracted stress, flux $T_{\hat t\hat l}$, extrinsic-rate proxies, access quietness, and shoulder activity.
+
+The test cases included a static baseline, a static $B=3$ long-throat baseline, adiabatic $B(l,t)$ ramp-up and ramp-down, slow and fast $B$ breathing, sharp fast $B$ wall motion, core $R(l,t)$ breathing, side $R(l,t)$ repayment with static $B=3$, and a global scale-factor comparison.  Table~\ref{tab:dynamic} gives the compact result.
+
+\begin{table}[ht]
+\centering
+\caption{Dynamic gate prototype classifications.}
+\label{tab:dynamic}
+\begin{tabular}{p{0.34\linewidth}p{0.28\linewidth}p{0.24\linewidth}}
+\toprule
+Case & Gate classification & Primary active gate \\
+\midrule
+static baseline & pass prototype static gate & support-core reference \\
+static $B=3$ long throat & pass prototype static gate & long-throat support dilution \\
+adiabatic $B$ ramp up/down & flux or extrinsic-curvature limited & setup/shutdown budget \\
+slow $B$ breathing & access-quietness limited & radial-rate and flux budget \\
+fast $B$ breathing / sharp $B$ wall & access-quietness limited & extrinsic curvature and shoulder activity \\
+core $R$ breathing & dynamic-throat expansion limited & null expansion and access tidal history \\
+side $R$ repayment with static $B=3$ & shoulder-management gate & repayment/buffer locality \\
+scale-factor comparison & expansion-history tracked & dynamic throat evolution \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The dynamic gate strengthens the general framework.  Static or quasi-static $B(l)$ carries support dilution.  Slowly changing $B(l,t)$ can be screened as setup/shutdown with an explicit flux and extrinsic-curvature budget.  Faster $B(l,t)$ and core $R(l,t)$ actuation move to access quietness, expansion, and shoulder gates.  Side-band $R(l,t)$ activity is naturally screened as repayment and buffer management.
+
+\section{Reusable screening workflow}
+\label{sec:workflow}
+
+A candidate wormhole-support infrastructure proposal can be screened by the following workflow.
+
+\begin{enumerate}
+\item \textbf{Normalize the candidate.}  Record the metric, coordinates, proper radial length, areal radius, lapse, shift if present, and source interpretation.
+\item \textbf{Assign subsystem roles.}  State which functions supply support, access, repayment, buffer, matching, transitions, and source realism.
+\item \textbf{Run the support-core gate.}  Score $\rho$, $\rho+p_r$, $\Tkk$, null expansions, and sampled support history.
+\item \textbf{Separate local and integrated burden.}  Record peak values, proper-integrated negative burden, support length, and curvature scale.
+\item \textbf{Run the access gate.}  Score tidal history, quiet-open fraction, traversal time, lapse boundedness, and access-region flux.
+\item \textbf{Run repayment and buffer gates.}  Identify which observer families sample the negative and positive phases; score timing, separation, and exposure.
+\item \textbf{Run transition gates.}  Score shoulder gradients, curvature scalars, source spikes, and geometric matching costs.
+\item \textbf{Run dynamic gates when time dependence is present.}  Track $\theta_\pm$, throat motion, $T_{\hat t\hat l}$, $K^i{}_j$, and rate proxies.
+\item \textbf{Run the source-realism gate.}  Compare the effective stress to candidate quantum states, boundary effects, semiclassical models, or modified-gravity branches, with null-contracted QI checks.
+\end{enumerate}
+
+This workflow supports early triage.  A proposal can advance as a geometry candidate, retreat to a subsystem redesign, or move to source-model study based on the gate that remains active.
+
+\section{Positioning and limitations}
+
+The framework is a systems-engineering translation of established physics constraints.  It supports proposal screening, design triage, and diagnostic organization.  The physical content rests on the literature summarized above.  Source construction, semiclassical backreaction, stability, and full numerical-relativity initial data remain later gates.
+
+The reduced evaluations are demonstration cases for the workflow.  They use prescribed effective sources $G_{\mu\nu}/8\pi$ and simplified sampling proxies.  They identify control roles and failure modes; they are not source models.  The next research layer is a source-model benchmark: candidate scalar-field, vacuum-polarization, Casimir-like, squeezed-state, or modified-gravity effective sources should be screened against the same support, access, transition, and null-contracted sampling gates.
+
+Gauge discipline is part of the framework.  A static $B(l)$ profile can be represented as a proper radial coordinate choice, so its engineering interpretation is proper-length and slow-flare shaping.  A dynamic $B(l,t)$ profile can mix with shift and extrinsic curvature under coordinate changes.  Candidate reports should therefore include invariant or observer-defined diagnostics: proper length, areal radius, null expansions, curvature scalars, sampled stress histories, and access-region tidal histories.
+
+\section{Conclusion}
+
+Established wormhole and quantum-inequality literature supplies the physical constraint map for macroscopic throat support.  This paper organizes that map into a reusable engineering screening framework for hypothetical wormhole-support infrastructure.  The framework decomposes candidates into support, access, repayment, buffer, matching, transition, and source-realism functions, then applies a diagnostic gate to each function.
+
+The benchmark cases show that the framework reproduces known literature verdicts: flare-out needs radial null support, Ford--Roman constraints drive length-scale discrepancy, small-integral exotic matter requires null-contracted source tests, slow-flare geometries face traversal and fine-tuning gates, and dynamic throats require local expansion diagnostics.  The reduced evaluations demonstrate how the same gate structure classifies candidate controls: radial proper-length shaping implements support dilution, areal-radius access actuation triggers dynamic access gates, lapse acts as timing and matching structure, side-band cycling belongs to repayment and buffer management, and dynamic $B(l,t)$ belongs to flux and extrinsic-curvature screening.
+
+The resulting engineering value is a structured way to make exotic-spacetime proposals fail, advance, or redirect through explicit gates.  It translates known physics constraints into a workflow for designing, screening, and communicating wormhole-scale infrastructure concepts.
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

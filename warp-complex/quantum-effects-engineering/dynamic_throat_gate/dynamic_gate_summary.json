@@ -1,0 +1,78 @@
+{
+  "scope": "dynamic throat gate prototype for wormhole-support infrastructure screening",
+  "metric_family": "ds^2=-N(l,t)^2 dt^2 + B(l,t)^2 dl^2 + R(l,t)^2 dOmega^2",
+  "cases": {
+    "static_baseline": {
+      "case": "static_baseline"
+    },
+    "static_B3_long_throat": {
+      "case": "static_B3_long_throat"
+    },
+    "adiabatic_B_ramp_up": {
+      "case": "adiabatic_B_ramp_up",
+      "B0_initial": 1.0,
+      "B0_final": 3.0,
+      "ramp_tau": 1.5
+    },
+    "adiabatic_B_ramp_down": {
+      "case": "adiabatic_B_ramp_down",
+      "B0_initial": 3.0,
+      "B0_final": 1.0,
+      "ramp_tau": 1.5
+    },
+    "slow_B_breathing": {
+      "case": "slow_B_breathing",
+      "omega": 0.75,
+      "B0_range": [
+        1.0,
+        3.0
+      ]
+    },
+    "fast_B_breathing": {
+      "case": "fast_B_breathing",
+      "omega": 9.0,
+      "B0_range": [
+        1.0,
+        3.0
+      ]
+    },
+    "sharp_fast_B_wall": {
+      "case": "sharp_fast_B_wall",
+      "omega": 9.0,
+      "B0_range": [
+        1.0,
+        6.0
+      ],
+      "profile": "sharp"
+    },
+    "core_R_breathing_compare": {
+      "case": "core_R_breathing_compare",
+      "omega": 9.0,
+      "R_access_amplitude": 0.08
+    },
+    "global_scale_factor_compare": {
+      "case": "global_scale_factor_compare",
+      "omega": 1.2,
+      "scale_factor_amplitude": 0.12
+    },
+    "side_R_repayment_with_static_B3": {
+      "case": "side_R_repayment_with_static_B3",
+      "omega": 8.0,
+      "R_shoulder_amplitude": 0.08,
+      "B0": 3.0
+    },
+    "adiabatic_B_plus_side_R": {
+      "case": "adiabatic_B_plus_side_R",
+      "B0_initial": 1.0,
+      "B0_final": 3.0,
+      "side_R_amplitude": 0.04
+    }
+  },
+  "diagnostic_notes": {
+    "null_expansions": "theta_\u00b1 = 2(R_t/N \u00b1 R_l/B)/R",
+    "null_stress": "orthonormal radial null contraction from Einstein proxy, Tkk = (G_tt/N^2 + G_ll/B^2 \u00b1 2G_tl/(NB))/(8pi)",
+    "extrinsic_rates": "zero-shift mixed K proxies: K_l=-B_t/(NB), K_ang=-R_t/(NR)",
+    "classification": "reduced engineering gate prototype, not a physical source proof"
+  },
+  "high_level_result": "Adiabatic or slow B-only variation behaves closest to a sequence of static long-throat states, while fast or sharp B variation becomes flux/extrinsic-curvature/shoulder limited. Access-core R modulation directly activates expansion/tidal/access quietness failures. The dynamic gate therefore supports treating B(l) stretch as quasi-static infrastructure and using time dependence cautiously, mainly outside the access core."
+}

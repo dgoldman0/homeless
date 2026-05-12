@@ -1,0 +1,16 @@
+{
+  "files": [
+    "run_proper_length_optimized_sweep.py",
+    "proper_length_optimized_sweep.csv",
+    "proper_length_profile_digest.csv",
+    "proper_length_sweep_extracts.json",
+    "proper_length_sweep_summary.json"
+  ],
+  "sha256": {
+    "run_proper_length_optimized_sweep.py": "506bea805b654ea37de44847bc7fc253694ba222641e7cc24b2cb7a9551e03ca",
+    "proper_length_optimized_sweep.csv": "51b5583cb12960ee4ef86365b1e9194a3f94b06ef8438eb538aaf4275ae1e271",
+    "proper_length_profile_digest.csv": "6f60081343968ca90bd5ee05f6f09a8375325b3ec07d2832cae4e6802a3e816a",
+    "proper_length_sweep_extracts.json": "f952850d92a9bd1e3618bf4c3bb80e0bed1214f534f4181a90807272297e8bb5",
+    "proper_length_sweep_summary.json": "fac768516e4b4ace9fdc92015ade0494344ab7a5b30556fd81d7238682795a07"
+  }
+}

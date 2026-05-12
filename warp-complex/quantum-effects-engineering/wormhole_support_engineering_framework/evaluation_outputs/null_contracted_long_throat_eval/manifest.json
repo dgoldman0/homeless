@@ -1,0 +1,19 @@
+{
+  "bundle": "null-contracted long-throat B-stretch scratch evaluation",
+  "scope": "wormhole/QEE component only",
+  "files": [
+    "run_null_contracted_long_throat_eval.py",
+    "null_contracted_B_stretch_sweep.csv",
+    "null_contracted_profile_digest.csv",
+    "null_contracted_result_extracts.json",
+    "README.md",
+    "manifest.json"
+  ],
+  "sha256": {
+    "run_null_contracted_long_throat_eval.py": "afe48285bbbd57668171634aa862fb3f1eee63f39c7f268c03e1437172f3b520",
+    "null_contracted_B_stretch_sweep.csv": "0b64e4264de44d992e49c6e27854222b76ec4c4775b92dba94416ce7888b1db6",
+    "null_contracted_profile_digest.csv": "7e7ce1bae16cd2f4627c1584637229b1d941fbd5f21b3660467d79df51ced42e",
+    "null_contracted_result_extracts.json": "111e37e29482f91ea1738baa06af6203d7e45ae90c7c5e3c245f673d59114d4d",
+    "README.md": "bb568f8e3476cec73db4f9753a33597969ef9a0e51c38f6ddfbccae9779e41f9"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "generated": "2026-05-12",
+  "bundle": "multi-zone phase-cycled wormhole throat plant reduced evaluation",
+  "scope": "wormhole/QEE component only; local sandbox bundle",
+  "files": [
+    "manifest.json",
+    "multizone_case_summary.csv",
+    "multizone_model_summary.json",
+    "multizone_parameter_sweep.csv",
+    "multizone_parameter_sweep_extracts.json",
+    "multizone_time_digest.csv",
+    "multizone_zone_qi_summary.csv",
+    "run_multizone_parameter_sweep.py",
+    "run_multizone_phase_cycled_throat_eval.py"
+  ],
+  "sha256": {
+    "multizone_case_summary.csv": "d580a9ad8e90a4c58c25e461d4a26ff5ac0973fa9e718262424ac1ba320e4b0f",
+    "multizone_model_summary.json": "faabe95eddc13673d3bcbca737ceebb398785ed4daa806ae6c603cee2b8795fc",
+    "multizone_parameter_sweep.csv": "40dd839d8431e7a64892638b0dc60ff32af691631534dd973c25d5a7c763ebb3",
+    "multizone_parameter_sweep_extracts.json": "2ec74eef85107f1925ab63a3a9854b85794d1db940167878058e23b82ec80460",
+    "multizone_time_digest.csv": "e8103690fc0a1a395f2bd50f7151b67b1970a595a7b35ac1c11d7fb20a6e8839",
+    "multizone_zone_qi_summary.csv": "452f1c2244c980dc9d964031605a9e486612e5f276141690fd5e0b2ca9ff17fb",
+    "run_multizone_parameter_sweep.py": "6ae0a47329b5997609e45d09cd99caeb25f3608654f8f7808e38bfde5c386382",
+    "run_multizone_phase_cycled_throat_eval.py": "7fa0ca6ead4141c77a10cda460ad2625bef1cd1e8784f6791f838dae74494266"
+  }
+}
