@@ -1,0 +1,74 @@
+{
+  "bundle_name": "flare_gated_radial_stretch_branch",
+  "revision": "positive-affirmative-prose-revision",
+  "created_utc": "2026-05-12T22:02:51Z",
+  "revised_utc": "2026-05-12T22:12:28Z",
+  "description": "Revised memo, context notes, code, data, figures, and manifest for the reduced B,R flare-gated radial-stretch branch test. The prose states the positive design role of each actuator and the affirmative framework alignment.",
+  "files": [
+    {
+      "path": "MEMO_flare_gated_radial_stretch_branch.md",
+      "size_bytes": 11898,
+      "sha256": "b329d338db678b7f96465918e63b52b0bee55583f382f5a5a104605f9e7d3876"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 1330,
+      "sha256": "c3185cfd846e081b9f2cab5de9f87ff73e055f663782a106d88bf8a8665b6837"
+    },
+    {
+      "path": "data/branch_case_summary.csv",
+      "size_bytes": 5252,
+      "sha256": "6de8a61679155f8dcb96d99db80b6d6e9a0f84f76cc4ce4cb5922d1015849a49"
+    },
+    {
+      "path": "data/branch_phase_exposures.csv",
+      "size_bytes": 9850,
+      "sha256": "c2a03ebc921b11873e139effd47b6a9223039f24a8be4fef82d465100ab434b7"
+    },
+    {
+      "path": "data/comparison_table.csv",
+      "size_bytes": 2765,
+      "sha256": "7ae2d5d086214622774a296095734fbb07e6fa5a184990244666f5a588833b2c"
+    },
+    {
+      "path": "data/extracts.json",
+      "size_bytes": 8128,
+      "sha256": "cc201ffddd20ae156cf44413734e67875bcc5d684051de8d05c206252e6ff40a"
+    },
+    {
+      "path": "docs/framework_alignment_notes.md",
+      "size_bytes": 1123,
+      "sha256": "c4908daba736c41226276c2ddee00d9d033fa1e352b95472b4be10f9d0d7fbde"
+    },
+    {
+      "path": "docs/model_equations.md",
+      "size_bytes": 804,
+      "sha256": "f913a39c0c1c933a97ebf81f778765129b1c9a7da715afb09b04d107670b4c1b"
+    },
+    {
+      "path": "docs/prior_context_and_references.md",
+      "size_bytes": 1155,
+      "sha256": "7e77871dee7da5388d674dc6e764dd3692eb4db3be9bd40701b7b4b6ea4ed077"
+    },
+    {
+      "path": "docs/source_history_screen_notes.md",
+      "size_bytes": 829,
+      "sha256": "be3ce101fa418a2767016c4892abe6868239430afd6204bdd2b2ba342eb56425"
+    },
+    {
+      "path": "figures/full_cycle_exposure_comparison.png",
+      "size_bytes": 80247,
+      "sha256": "7a2cb3aed1c1230f9fbf862da1084e0cfa9a1353d8b6dc8d643f34b6ef901505"
+    },
+    {
+      "path": "figures/phase_exposure_flare_gated_B8_TR10.png",
+      "size_bytes": 48808,
+      "sha256": "ad9e172e44b4ea0a91b8220a399190d6220d6eb7b4f0d514ab919a853798eedf"
+    },
+    {
+      "path": "scripts/run_flare_gated_radial_stretch_branch.py",
+      "size_bytes": 13126,
+      "sha256": "71ee15ca872b6d751fa3f9e060cc4918a75cfc461629c5710227cacb09cb6162"
+    }
+  ]
+}

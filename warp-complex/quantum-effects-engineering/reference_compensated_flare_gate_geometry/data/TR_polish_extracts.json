@@ -1,0 +1,81 @@
+{
+  "current_reference_after_TR_polish": {
+    "label": "Reference Geometry v0.3 candidate",
+    "B0": 8.0,
+    "wB": 10.0,
+    "T_B": 150.0,
+    "T_R": 5.0,
+    "T_H": 60.0,
+    "T_C": 20.0,
+    "src_support_amp": 0.0082,
+    "src_shoulder_amp": 0.0019,
+    "n_sh_amp": -0.18,
+    "n_sh_center": 2.3,
+    "n_sh_width": 1.0,
+    "src_shoulder_center": 2.3,
+    "src_shoulder_width": 1.0
+  },
+  "best_highres_case": {
+    "case": "HIGH_TR5_sup0.0082_sh0.0019_N-0.18",
+    "coreline_repay_ratio": 1.0843020114880242,
+    "support_repay_ratio": 1.0548277741723096,
+    "shoulder_repay_ratio": 1.0620491055618395,
+    "access_comp_leak_metric": 1.62074655526034e-07,
+    "shoulder_comp_spike_metric": 2.2957946851656993e-06,
+    "access_open_max_abs_flux": 0.000793939684526529,
+    "access_open_max_abs_Kth": 0.009107081790923411,
+    "access_open_max_abs_theta": 0.05823028296878831,
+    "access_comp_max_abs_flux": 1.4129389016722482e-08,
+    "access_comp_max_abs_Kth": 1.62074655526034e-07,
+    "access_comp_max_abs_theta": 7.380156996679392e-05,
+    "access_comp_min_N": 0.9999999984002286,
+    "shoulder_comp_min_N": 0.8200359983124775,
+    "shoulder_comp_min_R": 1.1622662785518236,
+    "coreline_open_neg": 0.08065788161311924,
+    "support_open_mean_neg": 0.07352825704761087,
+    "shoulder_open_mean_neg": 0.007581930192336042,
+    "polish_score_v2": -0.010240087291269033,
+    "pass_TR_polish": true
+  },
+  "best_by_TR_highres": {
+    "5.0": {
+      "case": "HIGH_TR5_sup0.0082_sh0.0019_N-0.18",
+      "coreline_repay_ratio": 1.0843020114880242,
+      "support_repay_ratio": 1.0548277741723096,
+      "shoulder_repay_ratio": 1.0620491055618395,
+      "access_open_max_abs_Kth": 0.009107081790923411,
+      "access_open_max_abs_flux": 0.000793939684526529,
+      "access_open_max_abs_theta": 0.05823028296878831,
+      "access_comp_leak_metric": 1.62074655526034e-07,
+      "shoulder_comp_spike_metric": 2.2957946851656993e-06,
+      "polish_score_v2": -0.010240087291269033,
+      "pass_TR_polish": true
+    },
+    "10.0": {
+      "case": "HIGH_TR10_sup0.0088_sh0.0019_N-0.18",
+      "coreline_repay_ratio": 1.0805102536597575,
+      "support_repay_ratio": 1.057347480168698,
+      "shoulder_repay_ratio": 1.1058963223373108,
+      "access_open_max_abs_Kth": 0.004597638321200224,
+      "access_open_max_abs_flux": 0.00040081417978906145,
+      "access_open_max_abs_theta": 0.05449376769752666,
+      "access_comp_leak_metric": 1.8811658009158788e-05,
+      "shoulder_comp_spike_metric": 0.0002664112274438429,
+      "polish_score_v2": -0.012400290465315116,
+      "pass_TR_polish": true
+    },
+    "20.0": {
+      "case": "HIGH_TR20_sup0.0090_sh0.0021_N-0.18",
+      "coreline_repay_ratio": 0.9668804386184864,
+      "support_repay_ratio": 0.9517272392063548,
+      "shoulder_repay_ratio": 1.0438721112921219,
+      "access_open_max_abs_Kth": 0.0023110534432166994,
+      "access_open_max_abs_flux": 0.00020147365355387728,
+      "access_open_max_abs_theta": 0.05365634796629946,
+      "access_comp_leak_metric": 3.690912358088098e-08,
+      "shoulder_comp_spike_metric": 5.228013846894205e-07,
+      "polish_score_v2": -0.22859180668840962,
+      "pass_TR_polish": false
+    }
+  }
+}

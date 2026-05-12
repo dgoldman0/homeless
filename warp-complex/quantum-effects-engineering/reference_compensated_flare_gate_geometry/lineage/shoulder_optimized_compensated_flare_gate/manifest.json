@@ -1,0 +1,37 @@
+{
+  "bundle": "shoulder_optimized_compensated_flare_gate",
+  "created": "2026-05-12",
+  "description": "Reduced geometry optimization for shoulder R/N shaping and explicit compensation in the compensated flare-gated radial-stretch design.",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "a8342ed4a55a575d0fc509019013d85621e16ce25a32df0588227ea18b58c1d0",
+      "bytes": 881
+    },
+    {
+      "path": "data/balanced_source_shoulder_sweep.csv",
+      "sha256": "d0aadd6ae262f2e72be4653986f0a6d451e7d654a33f6caedc0a4c6b285085f2",
+      "bytes": 439207
+    },
+    {
+      "path": "data/extracts.json",
+      "sha256": "6cb8e6560cf54ab938b61c08d7ad53cffd22160daeee1208bf1bc9994cbfb241",
+      "bytes": 10555
+    },
+    {
+      "path": "data/shoulder_geometry_broad_sweep.csv",
+      "sha256": "1de778192128a45a3d7d6fa86bba73529fab29523c03ed2db21c8d0c1796b58c",
+      "bytes": 261958
+    },
+    {
+      "path": "memo/shoulder_optimization_memo.md",
+      "sha256": "d9a91c2a82fffa12764e3f2ac31cf76ff839ccd1bdbcdf96ba30c310a5bb497a",
+      "bytes": 5585
+    },
+    {
+      "path": "scripts/run_shoulder_optimization_screen.py",
+      "sha256": "6983bb3cd349b0b83c8c124b0b980618df92906a1c501a178385b56e6dc9bc51",
+      "bytes": 9317
+    }
+  ]
+}

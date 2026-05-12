@@ -1,0 +1,90 @@
+{
+  "reference": {
+    "label": "Reference Geometry v0.3 candidate",
+    "B0": 8.0,
+    "wB": 10.0,
+    "T_B": 150.0,
+    "T_R": 5.0,
+    "T_H": 60.0,
+    "T_C": 20.0,
+    "T_Breset": 150.0,
+    "Rc": 1.0,
+    "wFlat": 1.6,
+    "r_sh_amp": 0.0,
+    "r_sh_center": 2.5,
+    "r_sh_width": 1.2,
+    "n_sh_amp": -0.18,
+    "n_sh_center": 2.3,
+    "n_sh_width": 1.0,
+    "src_support_amp": 0.0082,
+    "src_support_width": 0.9,
+    "src_shoulder_amp": 0.0019,
+    "src_shoulder_center": 2.3,
+    "src_shoulder_width": 1.0
+  },
+  "phase_times": {
+    "B_setup_end": 150.0,
+    "R_open_end": 155.0,
+    "hold_end": 215.0,
+    "R_close_end": 220.0,
+    "comp_end": 240.0,
+    "B_reset_end": 390.0
+  },
+  "source_history_ledgers": {
+    "coreline_open_neg": 0.08074819445072175,
+    "coreline_comp_pos": 0.08746530539396247,
+    "coreline_comp_to_open_ratio": 1.0831858964640861,
+    "support_open_neg": 0.07311092167838268,
+    "support_comp_pos": 0.07649558279621449,
+    "support_comp_to_open_ratio": 1.0462948768820068,
+    "shoulder_open_neg": 0.007473912334712363,
+    "shoulder_comp_pos": 0.008290966989114041,
+    "shoulder_comp_to_open_ratio": 1.1093208774480512
+  },
+  "access_open_bounds": {
+    "max_abs_flux": 0.0008489981906006407,
+    "max_abs_Kll": 4.37790688390662e-09,
+    "max_abs_Kth": 0.010401134640604909,
+    "max_abs_theta": 0.06259359677950795,
+    "min_N": 1.0,
+    "min_R": 1.0
+  },
+  "access_compensation_isolation": {
+    "max_abs_flux": 9.479901762642336e-07,
+    "max_abs_Kll": 4.3779064398185485e-09,
+    "max_abs_Kth": 1.1613892198046947e-05,
+    "max_abs_theta": 0.00011720261644887877,
+    "min_N": 0.9999999972813745,
+    "min_R": 1.0
+  },
+  "shoulder_compensation_bounds": {
+    "max_abs_flux": 1.374073517708483e-06,
+    "max_abs_Kll": 4.378099371924118e-09,
+    "max_abs_Kth": 0.0001440328205737629,
+    "max_abs_theta": 0.21668052339266256,
+    "min_N": 0.82003599999964,
+    "min_R": 1.1725122955710758,
+    "max_abs_dlogN_dl": 0.2998775022399438,
+    "max_abs_R_ll": 1.9873543143989352
+  },
+  "proper_lengths": {
+    "hold_mid_half_length_R2": 13.677952480584093,
+    "hold_mid_half_length_R3": 22.535071701441616,
+    "standby_preopen_half_length_R2": 15.116623479034239
+  },
+  "geometry_global_bounds": {
+    "N_min_full": 0.82003599999964,
+    "R_min_full": 1.0,
+    "B_max_full": 8.0,
+    "max_abs_dlogB_dl_full": 0.3341860071090488,
+    "max_abs_dlogN_dl_full": 0.2998775022399438,
+    "max_abs_R_ll_full": 1.9873543143989352,
+    "max_abs_R_tt_full": 0.09285023127512845
+  },
+  "design_reading": [
+    "Reference Geometry v0.3 has a bounded lapse, bounded areal radius, and stable support-dilution length scale in this reduced packet.",
+    "Compensation remains isolated from the access observer family after flare closure.",
+    "The largest dynamic access quantities occur during the deliberate R flare-open/close interval and remain within the current geometry bounds.",
+    "Shoulder lapse shaping is the active matching/compensation geometry during the repayment phase; it stays outside the access core."
+  ]
+}
