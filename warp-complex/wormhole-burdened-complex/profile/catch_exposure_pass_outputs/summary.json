@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 19.95346474647522,
+  "nominal_rows": 10,
+  "sweep_rows": 432,
+  "failures": 236,
+  "files": [
+    "nominal_dense_exposure_summary.csv",
+    "catch_exposure_sweep_summary.csv",
+    "aggregate_by_variant_V_Delta.csv",
+    "best_safe_cases_by_variant_V_Delta.csv",
+    "failure_cases.csv",
+    "catch_exposure_evaluation_report.md"
+  ]
+}
