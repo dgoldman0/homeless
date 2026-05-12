@@ -1,0 +1,18 @@
+{
+  "output_dir": "/mnt/data/proper_final_validation",
+  "report": "/mnt/data/proper_final_validation/proper_final_reduced_validation_report.md",
+  "baseline": "simple catch-rematched; no W-power adjustment adopted",
+  "files": [
+    "baseline_best_safe_timing_cases.csv",
+    "baseline_boundary_failure_cases.csv",
+    "baseline_dense_metric_hotspots.csv",
+    "baseline_dense_metric_map_summary.csv",
+    "baseline_focused_timing_basin_aggregate.csv",
+    "baseline_focused_timing_basin_sweep.csv",
+    "baseline_initial_data_readiness_proxy.csv",
+    "baseline_worldline_convergence_selected.csv",
+    "baseline_worldline_nominal_801.csv",
+    "optional_highV_W_power_aside_gtt_only.csv",
+    "proper_final_reduced_validation_report.md"
+  ]
+}
