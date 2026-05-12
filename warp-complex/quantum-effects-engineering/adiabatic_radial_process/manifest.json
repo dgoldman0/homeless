@@ -1,0 +1,38 @@
+{
+  "bundle": "adiabatic_radial_process",
+  "created": "2026-05-12",
+  "root": "adiabatic_radial_process/",
+  "description": "Standalone memo and artifacts for adiabatic radial-stretch setup/hold/reset protocol.",
+  "files": [
+    "README.md",
+    "adiabatic_radial_process_memo.md",
+    "data/adiabatic_radial_protocol_case_summary.csv",
+    "data/adiabatic_radial_protocol_extract_table.csv",
+    "data/adiabatic_radial_protocol_extracts.json",
+    "data/adiabatic_radial_protocol_scaling.csv",
+    "data/adiabatic_radial_protocol_time_digest.csv",
+    "figures/access_Kll_scaling.png",
+    "figures/access_accel_scaling.png",
+    "figures/shoulder_flux_scaling.png",
+    "manifest.json",
+    "scripts/run_adiabatic_radial_protocol_eval.py",
+    "sources/literature_review_sources.md",
+    "sources/references.bib"
+  ],
+  "sha256": {
+    "README.md": "c9b1458000dd1fe584d037242320ed654dd6d9149b6575950923f461c5e7ca47",
+    "adiabatic_radial_process_memo.md": "155a17f48f048c83b30aa0cf7c966540fca631e66f37d510b6b84395ba1e12fc",
+    "data/adiabatic_radial_protocol_case_summary.csv": "6459ebd2244950583a501590a12f8c919ebd811e2865cf1b3a1a112dcf57e6a4",
+    "data/adiabatic_radial_protocol_extract_table.csv": "309daac0c0ebe212f9847db9b73f9a39d8eae45fe6c1a0624af7666407132631",
+    "data/adiabatic_radial_protocol_extracts.json": "fbdfd9d17387ed4f2af202da4efd919f903744bb07eafa99ac66f4e613b56c69",
+    "data/adiabatic_radial_protocol_scaling.csv": "2d156522313d00c017336097670373dc750a19e03ab777f0e85cfd8dcc048933",
+    "data/adiabatic_radial_protocol_time_digest.csv": "7b4970456158efa0bb71d0e1c816918eeed7f5a15ba008f152dbadaa8dfac999",
+    "figures/access_Kll_scaling.png": "59ed0e33669dc486a3305ca772493d26e911b91e4b3bb2b2f64f06fe354e6f81",
+    "figures/access_accel_scaling.png": "df27ed492edd24a9146157ba742ede50ab01c86fb6dc4ff7a1e764ed97e3f6e2",
+    "figures/shoulder_flux_scaling.png": "2588b4614198bbc2c00606269694c4dad38c1008a1c17d09245796955dc41954",
+    "scripts/run_adiabatic_radial_protocol_eval.py": "de386a80b53a149fbed165166f598a5698de38c728b3d4ff20d7e181cdb0478b",
+    "sources/literature_review_sources.md": "933af89183983f1e3499563f123fc27bf9e947df4f8f906a5da69cae943c10ef",
+    "sources/references.bib": "90f162cfbd428927a8e8881a22c155c12d5966047f8f2e65e53d595ac0ec8254",
+    "manifest.json": "c7361cc3c5ab9b8760a7d4eaff4b01a61123278046d222cde345ba337bfeee0a"
+  }
+}
