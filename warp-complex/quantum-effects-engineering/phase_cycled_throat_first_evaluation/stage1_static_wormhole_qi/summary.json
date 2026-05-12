@@ -1,33 +1,9 @@
 {
-  "model": "Static zero-redshift Morris-Thorne throat r(l)=sqrt(r0^2+l^2), Planck units",
-  "rho_throat": "-1/(8*pi*r0^2)",
-  "radial_nec_throat": "rho+p_l=-1/(4*pi*r0^2)",
-  "lorentzian_qi": "rho_avg >= -3/(32*pi^2*tau0^4)",
-  "r0_max_by_eta": [
-    {
-      "eta": 0.1,
-      "r0_max_Lp": 48.86025119029198,
-      "r0_max_m": 7.897062528756537e-34
-    },
-    {
-      "eta": 0.03,
-      "r0_max_Lp": 542.8916798921333,
-      "r0_max_m": 8.7745139208406e-33
-    },
-    {
-      "eta": 0.01,
-      "r0_max_Lp": 4886.025119029199,
-      "r0_max_m": 7.897062528756538e-32
-    },
-    {
-      "eta": 0.003,
-      "r0_max_Lp": 54289.167989213325,
-      "r0_max_m": 8.774513920840599e-31
-    },
-    {
-      "eta": 0.001,
-      "r0_max_Lp": 488602.51190291997,
-      "r0_max_m": 7.89706252875654e-30
-    }
-  ]
+  "model": "zero-redshift static Morris-Thorne throat, r(l)=sqrt(r0^2+l^2)",
+  "qi_proxy": "Lorentzian sampling bound, -3/(32*pi^2*tau0^4)",
+  "conclusion": "static smooth macroscopic throat fails the local QI proxy; pulse train around a static mean does not hide the sustained negative average.",
+  "constants": {
+    "LP_M": 1.616255e-35,
+    "C_QI": 0.009498860966469166
+  }
 }
