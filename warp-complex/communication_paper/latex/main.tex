@@ -1,0 +1,401 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{authblk}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{orcidlink}
+\usepackage{doi}
+\usepackage[numbers,sort&compress]{natbib}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!45!black
+}
+
+\title{A Catch-Rematched Throat-Loaded Transit Ansatz for Numerical Relativity Testing}
+\author[1]{Daniel S. Goldman\,\orcidlink{0000-0003-2835-3521}}
+\affil[1]{Independent researcher; ORCID: \href{https://orcid.org/0000-0003-2835-3521}{0000-0003-2835-3521}}
+\date{\today}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper gives a stand-alone construction and reduced validation of a catch-rematched, throat-loaded transit ansatz built from two established geometric ingredients: a smooth Morris--Thorne traversable wormhole throat and a compact ADM warp shell with a Van den Broeck-style spatial-capacity factor.  The originating question is whether ``a compact warp-drive spacetime, especially one with a small external cross-section and large internal volume, [can] be consistently embedded in or propagated through a pre-existing traversable wormhole geometry without creating horizons, singularities, or uncontrollable stress-energy divergences.''  The construction begins by separating spatial capacity, lapse/time-rate support, and transport shift.  Reduced evaluations then move capacity and lapse into the wormhole throat complex, gate the transport shift by the same throat support, and introduce a catch/rematching phase that separates the passenger trajectory from the moving field label.  The resulting radial-axis ADM ansatz is
+\begin{equation*}
+ ds^2=-T^2\dd t^2 + A^2\left(\dd l+\beta^l\dd t\right)^2 + A^2r^2(l)\dd\Omega^2,
+\end{equation*}
+with
+\begin{equation*}
+ A=\exp\!\left(qW\ln C_0\right),\qquad
+ T=\exp\!\left(qW\ln(\lambda C_0)\right),\qquad
+ \beta^l=-U(t)E(X)W(l)S(l-X(t)).
+\end{equation*}
+Here $X(t)$ is the passenger/coupling center and $U(t)=\dot X(t)$ is caught from an externally superluminal transit speed to a subluminal exit speed before shift release.  The final reduced validation keeps this simple catch-rematched baseline fixed.  It gives clean passenger worldlines and clean dense $g_{tt}$ maps across the core range $V=1.5,2.0,2.5$ and the stretch range $V=3,5$.  A deliberately extreme $V=10$ stress map develops a small off-center support-edge shoulder, recorded as a future high-velocity network issue.  A possible future reinforcement, $\beta^l\propto W^{p_\beta}$ with $p_\beta>1$, is discussed as a higher-$V$ option while the present baseline remains simple.  The current evidence supports transition to constraint-quality initial-data construction and heavy-duty numerical relativity testing, with semiclassical/quantum-inequality exposure, source modeling, dynamical stability, and global chronology as the principal remaining domains.
+\end{abstract}
+
+\section{The construction question}
+The project begins with a compositional problem.  A traversable wormhole carries a throat supported by exotic stress-energy.  A compact warp construction carries a moving region whose exterior footprint can be far smaller than its interior spatial capacity.  The synthesis asks whether these burdens can be made to cooperate in one managed geometry: a compact warp-side component embedded in, or propagated through, a pre-existing traversable wormhole while keeping horizons, singularities, and runaway stress-energy behavior under control.  The repository note \emph{Compact Warp Shells and Traversable Wormhole Throats} first framed that question as a concrete ADM metric family \citep{goldman_compact_ansatz}.
+
+The starting pair has a clear structural motivation.  The wormhole side uses a Morris--Thorne-style throat in proper radial coordinate, keeping the minimum areal radius, flare-out, and redshift freedoms explicit \citep{morris_thorne_1988}.  The warp side uses ADM variables, following the role separation emphasized by Bobrick and Martire: lapse controls time-rate structure, shift carries transport, and the spatial metric carries capacity and shape \citep{bobrick_martire_2021}.  Van den Broeck's compact-exterior/large-interior construction supplies the capacity motivation \citep{van_den_broeck_1999}.  Alcubierre's original warp metric supplies the broader superluminal context \citep{alcubierre_1994}.  Everett and Roman's Krasnikov-tube analysis adds the infrastructure lesson: the dangerous wall or support region belongs to prepared external geometry, with passenger control mediated through the managed route and through the infrastructure surrounding the outer support layer \citep{everett_roman_1997}.
+
+The paper records a geometry at the end of a reduced-design sequence.  It presents the construction, the diagnostic logic, the final reduced validation, and the reason the system has reached the correct stage for stronger computation.  Its claims remain classical and geometric.  The source is the effective stress-energy obtained from $G_{\mu\nu}/8\pi$, and the known quantum-field-theoretic restrictions on macroscopic wormholes and warp drives remain central to the next stage \citep{ford_roman_1996,pfenning_ford_1997}.
+
+\section{Base geometry: a Morris--Thorne throat}
+The wormhole background is written in proper radial coordinate $l$ as
+\begin{equation}
+ ds^2_{\rm WH}=-e^{2\Phi(l)}\dd t^2+\dd l^2+r^2(l)\dd\Omega^2,
+ \qquad
+ \dd\Omega^2=\dd\theta^2+\sin^2\theta\,\dd\phi^2.
+\end{equation}
+The throat lies at $l=0$ with
+\begin{equation}
+ r(0)=r_0>0,
+ \qquad r'(0)=0,
+ \qquad r''(0)>0,
+\end{equation}
+and with smooth finite redshift $\Phi(l)$.  On a constant-$t$ slice the background spatial metric is
+\begin{equation}
+ q_{ij}\dd x^i\dd x^j=\dd l^2+r^2(l)\dd\Omega^2,
+\end{equation}
+and its scalar curvature is
+\begin{equation}
+ {}^{(3)}R[q]=-
+ \frac{4r''}{r}+\frac{2\left(1-(r')^2\right)}{r^2}.
+\end{equation}
+Thus the throat enters the construction as a real geometric minimum of areal radius with a flare-out curvature contribution already present before any warp-side structure is added.
+
+The reduced scans use
+\begin{equation}
+ r(l)=\sqrt{r_0^2+l^2},\qquad \Phi(l)=0.
+\end{equation}
+This choice preserves the essential proper-radial throat geometry and keeps the first validation family reproducible.  It leaves full redshift and shape-function optimization for later numerical-relativity work.
+
+\section{Base geometry: ADM warp shell and spatial capacity}
+The warp-side geometry is represented in ADM form,
+\begin{equation}
+ ds^2=-\alpha^2\dd t^2+
+ \gamma_{ij}\left(\dd x^i+\beta^i\dd t\right)
+ \left(\dd x^j+\beta^j\dd t\right),
+\end{equation}
+where $\alpha$ is the lapse, $\beta^i$ is the shift, and $\gamma_{ij}$ is the spatial metric.  The original combined shell used a compact profile $S(\rho)$ around a moving center $L(t)$ and set
+\begin{equation}
+ \alpha=e^{\Phi(l)}T(\rho),
+ \qquad
+ \gamma_{ij}=A^2(\rho)q_{ij},
+ \qquad
+ \beta^i=-\dot L(t)S(\rho)n^i.
+\end{equation}
+The Van den Broeck-style capacity factor appeared as the positive interpolation
+\begin{equation}
+ A(\rho)=\exp\!\left(S(\rho)\ln C_0\right),\qquad C_0>1,
+\end{equation}
+with a corresponding positive interpolation for $T$.  In the radial-axis reduction this gives
+\begin{equation}
+ ds^2=-e^{2\Phi(l)}T^2\dd t^2
+ +A^2\left(\dd l-\dot L(t)S\dd t\right)^2
+ +A^2r^2(l)\dd\Omega^2.
+\end{equation}
+The determinant follows directly from the ADM decomposition,
+\begin{equation}
+ \det g_{\mu\nu}=-\alpha^2\det\gamma_{ij}
+ =-e^{2\Phi}T^2A^6r^4\sin^2\theta.
+\end{equation}
+Positive finite $A$, $T$, and $r$ therefore preserve the intended Lorentzian signature away from ordinary polar-coordinate degeneracy.
+
+This first construction exposes the design tension.  A moving compact shell can formally carry capacity, lapse, and shift, yet that assignment makes the passenger-side object carry the hardest geometry.  The throat-loaded branch answers by moving the heavy support functions into the wormhole complex.
+
+\section{Throat-loaded support and the gated-shift result}
+The throat-loaded refinement places capacity and lapse under a throat profile $W(l)$ and a release profile $q$,
+\begin{equation}
+ A(l,t)=\exp\!\left(q(t)W(l)\ln C_0\right),
+ \qquad
+ T(l,t)=\exp\!\left(q(t)W(l)\ln(\lambda C_0)\right).
+ \label{eq:A_T_throat}
+\end{equation}
+The transport/coupling profile remains localized near the passenger region.  A direct comparison then separates two possibilities.  The independent passenger-shift branch uses
+\begin{equation}
+ \beta^l=-V E(L)S_{\rm pass}(l-L),
+\end{equation}
+while the throat-gated branch uses
+\begin{equation}
+ \beta^l=-V E(L)W(l)S_{\rm pass}(l-L).
+ \label{eq:old_gated_shift}
+\end{equation}
+The gated-shift evaluation selects the second branch: capacity, lapse, and shift behave as one managed throat system \citep{goldman_throat_gated_report}.  Across the 336-configuration reduced scan through $V=2.0$, the throat-gated family produced clean traversal-and-exit results for the sampled ladder, while the independent passenger-shift branch produced lapse-shift balance crossings.
+
+The reason is visible in the radial metric.  The local causal monitor is
+\begin{equation}
+ g_{tt}=-T^2+A^2V^2E^2W^2S^2.
+ \label{eq:gtt_basic}
+\end{equation}
+Transport remains controlled when its support lies inside the same throat profile carrying lapse and capacity,
+\begin{equation}
+ \supp(\beta^l)\subseteq \supp(A,T).
+\end{equation}
+The release profiles sharpen the rule.  Let $E$ control transport support and $q$ control capacity/lapse support.  The preferred ordering is
+\begin{equation}
+ L_\beta<L_q,
+\end{equation}
+so that transport fades before the throat relaxes.  Profile-robustness scans confirmed the rule: mixed synchronized release reaches its boundary when the effective $E$ profile remains high while $q$ has already fallen, allowing
+\begin{equation}
+ A\,V\,EWS>T.
+\end{equation}
+The architecture thereby converts an intuitive support hierarchy into a testable design constraint.
+
+\section{The superluminal worldline problem and the catch}
+Throat gating controls the ADM causal monitor.  Superluminal passenger transport also needs a timelike passenger curve.  In the earlier reduced family, the moving center was $L(t)=Vt$.  Treating that center as the passenger path gives the approximate norm
+\begin{equation}
+ \frac{ds^2}{dt^2}=-T^2+A^2\left(V-VEWS\right)^2.
+ \label{eq:center_norm_old}
+\end{equation}
+Inside full support, $EWS\approx1$ and the shift cancels the externally superluminal coordinate motion.  During release, $EWS\to0$, and the same curve approaches
+\begin{equation}
+ \frac{ds^2}{dt^2}\approx -1+V^2.
+\end{equation}
+For superluminal $V$, the passenger interpretation requires an exit rematching operation.
+
+The catch/rematching phase supplies that operation.  The passenger/coupling center is written as $X(t)$ with velocity
+\begin{equation}
+ U(t)=\dot X(t).
+\end{equation}
+A representative catch law is
+\begin{equation}
+ U(t)=v_{\rm exit}+(V-v_{\rm exit})C(t),
+ \label{eq:catch_law}
+\end{equation}
+where $C(t)$ falls smoothly from $1$ to $0$ inside the throat-supported region and $v_{\rm exit}<1$.  The operating sequence is
+\begin{equation}
+ L_{\rm catch}<L_\beta<L_q.
+ \label{eq:catch_order}
+\end{equation}
+In words, the throat complex catches the passenger, then fades transport, then relaxes lapse and capacity.
+
+\section{The catch-rematched ansatz}
+A passenger catch has to be reflected in the shift itself.  At high $V$, slowing the passenger while leaving the shift amplitude tied to the original cruise velocity recreates the same edge and release pressure.  The baseline ansatz therefore rematches the shift amplitude to the caught passenger speed:
+\begin{equation}
+\boxed{
+ \beta^l(l,t)=-U(t)E(X(t))W(l)S(l-X(t)).
+}
+\label{eq:catch_rematched_shift}
+\end{equation}
+The reduced radial metric is
+\begin{equation}
+\boxed{
+ ds^2=-T^2\dd t^2
+ +A^2\left(\dd l+\beta^l\dd t\right)^2
+ +A^2r^2(l)\dd\Omega^2.
+}
+\label{eq:current_metric}
+\end{equation}
+The passenger/coupling profile is centered on $X(t)$, and the shift amplitude follows $U(t)$ through the catch layer.
+
+Along the passenger center $l=X(t)$, the proper-time element is
+\begin{equation}
+ d\tau^2=\left[T^2-A^2\left(U+\beta^l\right)^2\right]\dd t^2.
+\end{equation}
+With Eq.~\eqref{eq:catch_rematched_shift}, the relevant relative speed is
+\begin{equation}
+ v_{\rm rel}=\frac{A}{T}\left(U-UEWS\right).
+\end{equation}
+Full support suppresses the relative motion, and the exit region receives a subluminal $U$ because catch has already occurred.  This gives a precise geometric implementation of the operational statement: catch the passenger and transport field together, then release the shift, then relax the throat.
+
+The source remains the effective Einstein source,
+\begin{equation}
+ T_{\mu\nu}=\frac{1}{8\pi}G_{\mu\nu}.
+\end{equation}
+That placement defines the present paper as a prescribed-geometry study.  The next stage asks whether this prescribed geometry can be turned into constraint-quality initial data with a controlled source model.
+
+\section{Reduced diagnostic suite}
+The validation suite uses invariant and frame-defined diagnostics tied to the ADM structure.  The local causal monitor is
+\begin{equation}
+ g_{tt}=-T^2+A^2(\beta^l)^2.
+\end{equation}
+The direct passenger condition is
+\begin{equation}
+ \mathcal N_X(t)=g_{\mu\nu}\dot x^\mu\dot x^\nu,
+ \qquad
+ x^\mu(t)=(t,X(t),\pi/2,0).
+\end{equation}
+Curvature and source diagnostics include $R$, $R_{\mu\nu}R^{\mu\nu}$, the Kretschmann scalar, reduced null Einstein projections $G_{\mu\nu}k_\pm^\mu k_\pm^\nu$, reduced null expansions $\theta_\pm$, ADM-normal orthonormal tidal proxies, and source-anatomy projections into energy density, pressures/tensions, and radial flux.  Burden localization is measured by integrating positive magnitudes of curvature, negative null projections, and tidal proxies over throat and passenger/coupling regions.
+
+The final reduced validation freezes the simple catch-rematched baseline and organizes speeds by design relevance.  The core range is $V=1.5,2.0,2.5$.  The stretch range is $V=3,5$.  The $V=10$ case is an extreme stress point for future high-velocity network work.  This hierarchy keeps the engineering target centered on already valuable velocities while still recording how the same ansatz behaves under stronger stress.
+
+\section{Final reduced validation results}
+The final reduced validation package \citep{goldman_final_validation_2026} contains dense worldline sampling, convergence-selected worldline checks, dense metric/source maps near catch/release, focused timing-basin perturbations, boundary cases, and an initial-data-readiness proxy.  Table~\ref{tab:velocity_results} summarizes the core outcome.  The simple catch-rematched baseline passes the core and stretch reduced checks.  The deliberately extreme $V=10$ stress map identifies a small off-center support-edge shoulder in $g_{tt}$ while the passenger worldline remains clean.
+
+\begin{table}[ht]
+\centering
+\caption{Final reduced validation hierarchy for the simple catch-rematched baseline.  ``Clean'' denotes timelike passenger worldlines together with dense reduced metric maps free of positive-$g_{tt}$ points in the corresponding range.}
+\label{tab:velocity_results}
+\begin{tabular}{lll}
+\toprule
+Velocity range & Speeds & Reduced result \\
+\midrule
+Core & $V=1.5,2.0,2.5$ & Clean passenger worldlines and clean dense $g_{tt}$ maps \\
+Stretch & $V=3,5$ & Clean passenger worldlines and clean dense $g_{tt}$ maps \\
+Extreme stress & $V=10$ & Passenger worldline clean; off-center dense-map edge shoulder \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The result extends the earlier $V\le2$ scan in a controlled way.  The original gated-shift sweep established that throat gating and shift-first release stabilize the ADM causal monitor through $V=2$.  The catch-rematched validation shows that a superluminal passenger interpretation can be retained through catch and release when the transport field is rematched to the caught passenger speed.  The baseline remains coherent through $V=5$ in the reduced tests.
+
+The timing-basin scans also show a structured boundary.  Boundary cases occur when catch is delayed toward a weakening support edge, when the catch layer is too narrow, or when catch and shift release lack sufficient separation.  The same hierarchy governs the safe basin:
+\begin{equation}
+ \text{catch} \quad \longrightarrow \quad \text{fade shift} \quad \longrightarrow \quad \text{relax throat}.
+\end{equation}
+This is an engineering rule as much as a mathematical one: the passenger and transport field are rematched while full support remains available.
+
+\section{Why the geometry is ready for heavy-duty testing}
+The case for heavier computation rests on the structure of the reduced boundary cases.  The moving-shell branch identified throat placement as the natural home for geometric burden.  The independent-shift branch identified throat-contained transport as the clean support rule.  Profile robustness identified effective release ordering as an operational constraint.  Source/worldline anatomy identified catch/rematching as the missing passenger-path component.  Each boundary case produced a design principle, and the current ansatz incorporates those principles with a compact parameter set.
+
+The resulting geometry has a clear operational structure.  The active throat complex carries the high-burden geometric functions.  Transport remains throat-gated.  The passenger is caught before shift release.  The shift amplitude is rematched to the caught passenger velocity.  The throat relaxes last.  This structure is specific enough to define a serious initial-data target.
+
+The present evidence supports transition to heavy-duty testing in a precise sense: the ansatz is ready for constraint-quality initial-data construction and numerical evolution studies.  The remaining questions belong to that stronger tier.  They include Hamiltonian and momentum constraint control, dynamical stability, source modeling, quantum-inequality exposure, and global chronology.
+
+\section{Initial-data target}
+On a constant-$t$ slice the current ansatz gives
+\begin{equation}
+ \gamma_{ij}=A^2q_{ij},
+ \qquad
+ \alpha=T,
+ \qquad
+ \beta^i=(\beta^l,0,0).
+\end{equation}
+The extrinsic curvature target is
+\begin{equation}
+ K_{ij}=\frac{1}{2\alpha}\left(D_i\beta_j+D_j\beta_i-\partial_t\gamma_{ij}\right),
+ \label{eq:Kij}
+\end{equation}
+where $D_i$ is compatible with $\gamma_{ij}$.  The constraint diagnostics are
+\begin{align}
+ \mathcal H&={}^{(3)}R+K^2-K_{ij}K^{ij}-16\pi\rho,\label{eq:H}\\
+ \mathcal M^i&=D_j\left(K^{ij}-\gamma^{ij}K\right)-8\pi j^i.\label{eq:M}
+\end{align}
+At the prescribed-metric stage, $\rho$ and $j^i$ come from the Einstein tensor.  A constraint-quality construction can then choose among an effective-source interpretation, a compatible matter model, or a conformal/thin-sandwich style solve in which part of the geometry becomes freely specified data.
+
+A practical heavy-duty path begins with axisymmetric or radial-plus-angular initial-data diagnostics at $V=2$ or $V=2.5$, then repeats at $V=5$ after the lower-speed case behaves.  Full $3+1$ evolution follows the constraint-quality pass.
+
+\section{Engineering interpretation}
+The architecture is infrastructure-first.  The passenger object is a coupling region admitted into a managed throat complex.  The throat complex supplies capacity, lapse, shift support, release timing, and catch.  A transit cycle therefore reads: admit, carry under full support, catch to a timelike exterior state, fade transport, relax the throat, and release.
+
+This naturally favors gates, nodes, and segmented networks.  For multi-light-year service, the exotic support is tied to mouth/throat complexes, transition layers, and catch stations, giving the architecture a node-and-link character with local managed complexes distributed across a route.  A separated-mouth network must also obey chronology discipline.  Morris, Thorne, and Yurtsever's time-machine analysis makes global scheduling, endpoint motion, and synchronization part of the engineering problem for any wormhole-like network \citep{morris_thorne_yurtsever_1988}.
+
+Throughput follows the same logic.  The current reduced ansatz describes one active passenger/coupling packet per managed transit/catch channel.  Sequential operation is the clean baseline.  Multiple vessels call for separated packets, parallel channels, or block-signaled routing that keeps overlapping shift/catch profiles away from shared support margins.
+
+\section{Future high-velocity option: reinforced throat-edge shift gating}
+The final validation keeps the baseline simple.  The $V=10$ edge shoulder is recorded as a future high-velocity network issue because the baseline already passes the core and stretch ranges through $V=5$.  The stress map still points to a useful optional mechanism for later work.
+
+The shoulder occurs where $W$ is partial, $S$ remains appreciable, and the lapse ratio
+\begin{equation}
+ \frac{T}{A}=\lambda^{qW}
+\end{equation}
+has weakened in the support edge.  A direct future reinforcement is stronger throat-edge shift gating,
+\begin{equation}
+ \beta^l=-U(t)E(X)W^{p_\beta}(l)S(l-X(t)),
+ \qquad p_\beta>1.
+ \label{eq:future_W_power}
+\end{equation}
+This leaves the fully supported center nearly unchanged and suppresses shift in partial-support regions.  It is a high-$V$ option, especially for $V\sim10$ or larger network designs, and it is best promoted only after the simple ansatz reaches the velocity range that motivates the extra structure.
+
+\section{Physical scope and scale}
+The reduced successes in this paper belong to classical prescribed geometry.  The supporting source is the effective stress-energy obtained from $G_{\mu\nu}/8\pi$.  Negative energy density and null-energy-condition violation appear as expected for traversable wormhole and superluminal warp families.  Quantum inequalities and semiclassical backreaction remain the strongest theoretical threats.  Ford and Roman's wormhole constraints and Pfenning and Ford's warp-drive analysis show that localized exotic support faces severe macroscopic restrictions \citep{ford_roman_1996,pfenning_ford_1997}.
+
+The reduced tidal and source diagnostics are scale-aware quantities.  Assigning a physical length scale $L_0$ converts dimensionless curvature and tidal terms through $L_0^{-2}$.  Compact laboratory-scale realizations therefore demand far larger physical tidal and stress scales than astrophysically scaled complexes.  The present result identifies a coherent reduced geometry whose scale, source, and semiclassical viability now deserve stronger methods.
+
+\section{Conclusion}
+The catch-rematched throat-loaded ansatz is the current coherent endpoint of the reduced construction.  The design began with a compact warp shell on a traversable wormhole background, moved capacity and lapse into the throat, gated shift by throat support, enforced shift-first release, separated the passenger worldline from the moving field label, and rematched shift amplitude to the caught passenger velocity.  The baseline is
+\begin{align}
+ A(l,t)&=\exp\!\left(q(t)W(l)\ln C_0\right),\nonumber\\
+ T(l,t)&=\exp\!\left(q(t)W(l)\ln(\lambda C_0)\right),\nonumber\\
+ \beta^l(l,t)&=-U(t)E(X(t))W(l)S(l-X(t)),\nonumber
+\end{align}
+with the operating order
+\begin{equation}
+ \text{catch }U(t)\quad\rightarrow\quad\text{fade }E\quad\rightarrow\quad\text{relax }q.
+\end{equation}
+The simple baseline passes reduced validation through the core $V=1.5$--$2.5$ range and the stretch $V=3$--$5$ range.  The geometry is therefore ready for constraint-quality initial-data construction and numerical relativity testing.  The next work should build and solve the corresponding $3+1$ initial-data problem, beginning at $V=2$ or $V=2.5$, then extending to $V=5$ after the lower-speed case behaves.
+
+
+\begin{thebibliography}{11}
+
+\bibitem{goldman_compact_ansatz}
+Daniel S. Goldman.
+\newblock Compact warp shells and traversable wormhole throats.
+\newblock GitHub repository note, 2026.
+\newblock \url{https://github.com/dgoldman0/homeless/blob/main/warp-complex/compact_warp_shell_ansatz.md}.
+
+\bibitem{morris_thorne_1988}
+Michael S. Morris and Kip S. Thorne.
+\newblock Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity.
+\newblock \emph{American Journal of Physics}, 56(5):395--412, 1988.
+\newblock \doi{10.1119/1.15620}.
+
+\bibitem{bobrick_martire_2021}
+Alexey Bobrick and Gianni Martire.
+\newblock Introducing physical warp drives.
+\newblock \emph{Classical and Quantum Gravity}, 38(10):105009, 2021.
+\newblock \doi{10.1088/1361-6382/abdf6e}; arXiv:2102.06824.
+
+\bibitem{van_den_broeck_1999}
+Chris Van Den Broeck.
+\newblock A `warp drive' with more reasonable total energy requirements.
+\newblock \emph{Classical and Quantum Gravity}, 16:3973--3979, 1999.
+\newblock \doi{10.1088/0264-9381/16/12/314}; arXiv:gr-qc/9905084.
+
+\bibitem{alcubierre_1994}
+Miguel Alcubierre.
+\newblock The warp drive: hyper-fast travel within general relativity.
+\newblock \emph{Classical and Quantum Gravity}, 11:L73--L77, 1994.
+\newblock \doi{10.1088/0264-9381/11/5/001}; arXiv:gr-qc/0009013.
+
+\bibitem{everett_roman_1997}
+Allen E. Everett and Thomas A. Roman.
+\newblock A superluminal subway: The Krasnikov tube.
+\newblock \emph{Physical Review D}, 56:2100--2108, 1997.
+\newblock \doi{10.1103/PhysRevD.56.2100}; arXiv:gr-qc/9702049.
+
+\bibitem{ford_roman_1996}
+L. H. Ford and Thomas A. Roman.
+\newblock Quantum field theory constrains traversable wormhole geometries.
+\newblock \emph{Physical Review D}, 53(10):5496--5507, 1996.
+\newblock \doi{10.1103/PhysRevD.53.5496}.
+
+\bibitem{pfenning_ford_1997}
+Michael J. Pfenning and L. H. Ford.
+\newblock The unphysical nature of `warp drive'.
+\newblock \emph{Classical and Quantum Gravity}, 14:1743--1751, 1997.
+\newblock \doi{10.1088/0264-9381/14/7/011}; arXiv:gr-qc/9702026.
+
+\bibitem{goldman_throat_gated_report}
+Daniel S. Goldman.
+\newblock Throat-loaded transit architecture: Gated-shift reduced evaluation.
+\newblock GitHub repository report, 2026.
+\newblock \url{https://github.com/dgoldman0/homeless/blob/main/warp-complex/wormhole-burdened-complex/throat_loaded_gated_shift_full_evaluation_report.md}.
+
+\bibitem{goldman_final_validation_2026}
+Daniel S. Goldman.
+\newblock Proper final reduced validation of the catch-rematched throat-gated transit ansatz.
+\newblock Generated validation package, 2026.
+
+\bibitem{morris_thorne_yurtsever_1988}
+Michael S. Morris, Kip S. Thorne, and Ulvi Yurtsever.
+\newblock Wormholes, time machines, and the weak energy condition.
+\newblock \emph{Physical Review Letters}, 61(13):1446--1449, 1988.
+\newblock \doi{10.1103/PhysRevLett.61.1446}.
+
+\end{thebibliography}
+
+
+\end{document}
