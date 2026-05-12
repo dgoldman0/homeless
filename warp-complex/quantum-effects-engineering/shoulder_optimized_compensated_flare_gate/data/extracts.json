@@ -1,0 +1,290 @@
+{
+  "design_name": "shoulder-optimized compensated flare-gated radial stretch",
+  "date": "2026-05-12",
+  "purpose": "Optimize shoulder R/N geometry and explicit compensation around the flare-gated radial-stretch lifecycle.",
+  "baseline_open_debt": {
+    "coreline_open_neg": 0.08659127946393436,
+    "support_open_mean_neg": 0.07833259498964873,
+    "shoulder_open_mean_neg": 0.00765725425001876,
+    "access_open_mean_neg": 0.08804578936349847
+  },
+  "branch_summary": [
+    {
+      "branch": "explicit_source",
+      "n": 36,
+      "best_score": 4.139053160468773,
+      "best_support_ratio": 1.3219210429932482,
+      "best_coreline_ratio": 1.231755570723696,
+      "best_shoulder_ratio": 6.501729275509847,
+      "median_access_leak": 3.785247192069537e-05,
+      "max_shoulder_spike": 0.01759020319879642,
+      "valid_count": 36
+    },
+    {
+      "branch": "baseline",
+      "n": 1,
+      "best_score": -0.004788925517722888,
+      "best_support_ratio": 0.0,
+      "best_coreline_ratio": 0.0,
+      "best_shoulder_ratio": 0.0,
+      "median_access_leak": 3.785247192069537e-05,
+      "max_shoulder_spike": 0.0005792603843376241,
+      "valid_count": 1
+    },
+    {
+      "branch": "shoulder_N",
+      "n": 54,
+      "best_score": -0.004788925517722888,
+      "best_support_ratio": 0.0,
+      "best_coreline_ratio": 0.0,
+      "best_shoulder_ratio": 0.0,
+      "median_access_leak": 3.785247192069537e-05,
+      "max_shoulder_spike": 0.0005792603843376241,
+      "valid_count": 54
+    },
+    {
+      "branch": "shoulder_R",
+      "n": 54,
+      "best_score": -0.03603750569320041,
+      "best_support_ratio": 0.037781164770154196,
+      "best_coreline_ratio": 0.11991022504344485,
+      "best_shoulder_ratio": 0.10648420741632046,
+      "median_access_leak": 3.785247192069537e-05,
+      "max_shoulder_spike": 0.05929342680384578,
+      "valid_count": 52
+    },
+    {
+      "branch": "combined_RN",
+      "n": 16,
+      "best_score": -0.05173762430939458,
+      "best_support_ratio": 0.0,
+      "best_coreline_ratio": 0.0,
+      "best_shoulder_ratio": 0.05002437533645181,
+      "median_access_leak": 3.785247192069537e-05,
+      "max_shoulder_spike": 0.022738014708568625,
+      "valid_count": 16
+    }
+  ],
+  "best_geometry_only_cases": [
+    {
+      "case": "shoulder_N_amp-0.45_c1.8_w0.6",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.45_c1.8_w0.9",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.45_c2.5_w1.2",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.45_c2.5_w0.9",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.45_c1.8_w1.2",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.45_c2.5_w0.6",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp0.15_c1.8_w0.6",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.15_c3.3_w1.2",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.15_c3.3_w0.9",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    },
+    {
+      "case": "shoulder_N_amp-0.15_c3.3_w0.6",
+      "branch": "shoulder_N",
+      "support_repay_ratio": 0.0,
+      "coreline_repay_ratio": 0.0,
+      "shoulder_repay_ratio": 0.0,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true
+    }
+  ],
+  "best_balanced_compensation_cases": [
+    {
+      "case": "sup0.0087_sh0.0020_Nshape",
+      "coreline_repay_ratio": 1.0777838398244064,
+      "support_repay_ratio": 1.0496222028230686,
+      "shoulder_repay_ratio": 1.062625116551306,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.0009314780540292278
+    },
+    {
+      "case": "sup0.0085_sh0.0020_Nshape",
+      "coreline_repay_ratio": 1.046989493644549,
+      "support_repay_ratio": 1.018560590614535,
+      "shoulder_repay_ratio": 1.062233454233348,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.0011471570135025008
+    },
+    {
+      "case": "sup0.0087_sh0.0020_none",
+      "coreline_repay_ratio": 1.077783839824407,
+      "support_repay_ratio": 1.049575474097034,
+      "shoulder_repay_ratio": 1.0235380738498416,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.001472355513207032
+    },
+    {
+      "case": "sup0.0085_sh0.0020_none",
+      "coreline_repay_ratio": 1.0469894936445496,
+      "support_repay_ratio": 1.0185138618885001,
+      "shoulder_repay_ratio": 1.0231464115318836,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.0017215552553076128
+    },
+    {
+      "case": "sup0.0090_sh0.0020_Nshape",
+      "coreline_repay_ratio": 1.1085781860042645,
+      "support_repay_ratio": 1.0806838150316025,
+      "shoulder_repay_ratio": 1.0630167788692637,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.004542336912575105
+    },
+    {
+      "case": "sup0.0090_sh0.0020_none",
+      "coreline_repay_ratio": 1.108578186004265,
+      "support_repay_ratio": 1.0806370863055674,
+      "shoulder_repay_ratio": 1.0239297361677995,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.005049693589125586
+    },
+    {
+      "case": "sup0.0083_sh0.0020_Nshape",
+      "coreline_repay_ratio": 1.016195147464691,
+      "support_repay_ratio": 0.9874989784060014,
+      "shoulder_repay_ratio": 1.0618417919153902,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.005189373790994865
+    },
+    {
+      "case": "sup0.0083_sh0.0020_none",
+      "coreline_repay_ratio": 1.0161951474646915,
+      "support_repay_ratio": 0.9874522496799666,
+      "shoulder_repay_ratio": 1.0227547492139257,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.005797292815427283
+    },
+    {
+      "case": "sup0.0092_sh0.0020_Nshape",
+      "coreline_repay_ratio": 1.139372532184122,
+      "support_repay_ratio": 1.1117454272401361,
+      "shoulder_repay_ratio": 1.063408441187222,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.011979733589140035
+    },
+    {
+      "case": "sup0.0092_sh0.0020_none",
+      "coreline_repay_ratio": 1.1393725321841226,
+      "support_repay_ratio": 1.1116986985141013,
+      "shoulder_repay_ratio": 1.0243213984857575,
+      "access_comp_leak_metric": 3.785247192069537e-05,
+      "shoulder_comp_spike_metric": 0.0005792603843376241,
+      "valid": true,
+      "balance_error": 0.01245356948306324
+    }
+  ],
+  "selected_reference_case": {
+    "case": "sup0.0087_sh0.0020_Nshape",
+    "coreline_repay_ratio": 1.0777838398244064,
+    "support_repay_ratio": 1.0496222028230686,
+    "shoulder_repay_ratio": 1.062625116551306,
+    "access_comp_leak_metric": 3.785247192069537e-05,
+    "shoulder_comp_spike_metric": 0.0005792603843376241,
+    "access_comp_min_N": 1.0,
+    "shoulder_comp_min_N": 1.0,
+    "shoulder_comp_min_R": 1.1683621305347913
+  },
+  "interpretation": [
+    "The optimized shoulder geometry keeps access leakage small during compensation.",
+    "Shoulder R contributes useful buffer and transition shaping while explicit source terms carry the main repayment ledger.",
+    "Shoulder N provides timing/redshift shaping and can tune shoulder compensation with low access leakage under bounded lapse.",
+    "A separated support-plus-shoulder explicit source overlay gives balanced repayment ratios with cleaner shoulder accounting than a broad single overlay.",
+    "The leading reference case uses support source amplitude about 0.0087 and shoulder source amplitude about 0.0020, with optional positive shoulder lapse shaping."
+  ]
+}
