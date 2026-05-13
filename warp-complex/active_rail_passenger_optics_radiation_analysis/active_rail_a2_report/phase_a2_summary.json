@@ -1,0 +1,166 @@
+{
+  "scope": {
+    "description": "Phase A2 frozen-frame 2D equatorial impact-parameter screen for active branch.",
+    "purpose": "Check whether Phase A radial focusing spike persists off-axis or looks like a 1D radial artifact.",
+    "limits": [
+      "Frozen-frame approximation at each service coordinate S0.",
+      "2D equatorial reduction with gamma_phi_phi = A^2 (r0^2+l^2).",
+      "Classical null Hamiltonian ray screen only.",
+      "No time-dependent geodesic integration through changing active metric.",
+      "No RSET/semiclassical radiation or material shielding dose."
+    ],
+    "r0": 1.0,
+    "width_factor": 0.25,
+    "s_frames": [
+      -0.1,
+      1.45,
+      32
+    ],
+    "xi_observers": [
+      -0.28,
+      0.0,
+      0.28
+    ],
+    "theta_degrees": [
+      5.0,
+      85.0,
+      33
+    ]
+  },
+  "all_angles": {
+    "valid_fraction": 0.10274621212121213,
+    "energy_shift": {
+      "count": 651,
+      "max": 0.8298617071192713,
+      "p99": 0.8291452671054067,
+      "p95": 0.7924765261147222,
+      "median": 0.607469697942413
+    },
+    "focusing_proxy": {
+      "count": 650,
+      "max": 23.473456284122605,
+      "p99": 21.5274070331344,
+      "p95": 12.284116866243258,
+      "median": 3.102950105594156
+    },
+    "risk_proxy": {
+      "count": 650,
+      "max": 3.7065605109685706,
+      "p99": 3.05104821055341,
+      "p95": 2.010272297781577,
+      "median": 0.4859497475494341
+    },
+    "min_abs_dl": {
+      "count": 651,
+      "max": 1.7276561666472343,
+      "p99": 1.725107343115702,
+      "p95": 1.7021563835140894,
+      "median": 1.2016353193705411
+    }
+  },
+  "offaxis_theta_ge_20deg": {
+    "valid_fraction": 0.10243055555555555,
+    "energy_shift": {
+      "count": 531,
+      "max": 0.8298617071192713,
+      "p99": 0.8292741766329997,
+      "p95": 0.7967989426775212,
+      "median": 0.6313796748533912
+    },
+    "focusing_proxy": {
+      "count": 530,
+      "max": 21.587419781465158,
+      "p99": 17.65055466837654,
+      "p95": 11.907159164950077,
+      "median": 2.9791059779138918
+    },
+    "risk_proxy": {
+      "count": 530,
+      "max": 3.7065605109685706,
+      "p99": 3.107381846796401,
+      "p95": 2.010272297781577,
+      "median": 0.5050656887798912
+    },
+    "min_abs_dl": {
+      "count": 531,
+      "max": 1.6624131999477705,
+      "p99": 1.6608506232345204,
+      "p95": 1.621432640731428,
+      "median": 1.1104514387612174
+    }
+  },
+  "per_xi": {
+    "-0.28": {
+      "valid_fraction": 0.0625,
+      "energy_shift": {
+        "count": 132,
+        "max": 0.8291994194321373,
+        "p99": 0.8201964237367866,
+        "p95": 0.7780663539648114,
+        "median": 0.5948891727140742
+      },
+      "focusing_proxy": {
+        "count": 132,
+        "max": 2.702644082188999,
+        "p99": 2.6788014672037908,
+        "p95": 2.5717149932778676,
+        "median": 1.679814486521822
+      },
+      "risk_proxy": {
+        "count": 132,
+        "max": 0.5066363218180217,
+        "p99": 0.4741644223275848,
+        "p95": 0.43734083410745406,
+        "median": 0.2845320755751976
+      }
+    },
+    "0.0": {
+      "valid_fraction": 0.078125,
+      "energy_shift": {
+        "count": 165,
+        "max": 0.8298585190421416,
+        "p99": 0.8294911610609835,
+        "p95": 0.7967098429564936,
+        "median": 0.6091482572304842
+      },
+      "focusing_proxy": {
+        "count": 165,
+        "max": 4.859421163481838,
+        "p99": 4.823743683468911,
+        "p95": 4.49246276111017,
+        "median": 3.1432981262231077
+      },
+      "risk_proxy": {
+        "count": 165,
+        "max": 0.7556259677795473,
+        "p99": 0.7530459780269172,
+        "p95": 0.6934725774874603,
+        "median": 0.48590668289173666
+      }
+    },
+    "0.28": {
+      "valid_fraction": 0.16761363636363635,
+      "energy_shift": {
+        "count": 354,
+        "max": 0.8298617071192713,
+        "p99": 0.826111429597904,
+        "p95": 0.7912498197834448,
+        "median": 0.6104396798687738
+      },
+      "focusing_proxy": {
+        "count": 353,
+        "max": 23.473456284122605,
+        "p99": 23.29461811085106,
+        "p95": 17.046449926936404,
+        "median": 3.9962540792189487
+      },
+      "risk_proxy": {
+        "count": 353,
+        "max": 3.7065605109685706,
+        "p99": 3.2589294378839444,
+        "p95": 2.712155976192439,
+        "median": 0.6887137416714172
+      }
+    }
+  }
+}

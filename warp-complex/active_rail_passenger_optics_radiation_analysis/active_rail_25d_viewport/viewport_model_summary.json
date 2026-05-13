@@ -1,0 +1,30 @@
+{
+  "description": "2.5D active-rail viewport visual atlas",
+  "status": "physics-informed renderer, not full geodesic/RSET/dose model",
+  "phases": [
+    {
+      "phase": "prepare",
+      "strength": 0.35
+    },
+    {
+      "phase": "carry",
+      "strength": 1.0
+    },
+    {
+      "phase": "catch",
+      "strength": 0.62
+    },
+    {
+      "phase": "fade",
+      "strength": 0.28
+    },
+    {
+      "phase": "relax",
+      "strength": 0.04
+    }
+  ],
+  "outputs": {
+    "png": 32,
+    "gif": 2
+  }
+}
