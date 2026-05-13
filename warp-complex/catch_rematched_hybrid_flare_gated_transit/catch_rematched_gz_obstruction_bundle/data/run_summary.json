@@ -1,0 +1,101 @@
+{
+  "bundle": "catch_rematched_gz_obstruction_bundle",
+  "created_date": "2026-05-13",
+  "description": "Reduced radial null-characteristic and packet/support-edge bundle screens for Garattini-Zatrimaylov comparison.",
+  "included_results": {
+    "stage1": {
+      "active_rail": {
+        "min_speed": 0.0014876043859688437,
+        "max_near_frac": 0,
+        "inverted": false,
+        "final_min": -5.150136268544019,
+        "final_max": 5.150136268544019
+      },
+      "catch_independent_shift": {
+        "min_speed": 0.0014876043859688437,
+        "max_near_frac": 0,
+        "inverted": false,
+        "final_min": -5.150136268544019,
+        "final_max": 5.150136268544019
+      },
+      "naive_independent_no_catch": {
+        "min_speed": 0.0001296960054670837,
+        "max_near_frac": 0.00041718815185648727,
+        "inverted": false,
+        "final_min": -5.150136268544019,
+        "final_max": 5.150136268544019
+      },
+      "naive_throat_gated_no_catch": {
+        "min_speed": 0.0004567279230200949,
+        "max_near_frac": 0.00041718815185648727,
+        "inverted": false,
+        "final_min": -5.150136268544019,
+        "final_max": 5.150136268544019
+      },
+      "late_catch_throat_gated": {
+        "min_speed": 0.0003945255538106984,
+        "max_near_frac": 0.00020859407592824363,
+        "inverted": false,
+        "final_min": -5.150136268544019,
+        "final_max": 5.150136268544019
+      }
+    },
+    "stage2": {
+      "active_rail": {
+        "min_speed": 0.6807954556315989,
+        "worst_compression": 0.8105498624226375,
+        "max_near_frac": 0,
+        "inverted": false,
+        "event_min": [
+          "packet_center_shift_fade",
+          "ingoing",
+          1.0
+        ]
+      },
+      "catch_independent_shift": {
+        "min_speed": 0.6807954616932662,
+        "worst_compression": 0.8105498624233092,
+        "max_near_frac": 0,
+        "inverted": false,
+        "event_min": [
+          "packet_center_shift_fade",
+          "ingoing",
+          1.0
+        ]
+      },
+      "naive_independent_no_catch": {
+        "min_speed": 0.19295969043051675,
+        "worst_compression": 0.4876096516486679,
+        "max_near_frac": 0,
+        "inverted": false,
+        "event_min": [
+          "packet_center_shift_fade",
+          "ingoing",
+          1.0
+        ]
+      },
+      "naive_throat_gated_no_catch": {
+        "min_speed": 0.19515196314700323,
+        "worst_compression": 0.7050646421603961,
+        "max_near_frac": 0,
+        "inverted": false,
+        "event_min": [
+          "packet_center_shift_fade",
+          "ingoing",
+          1.0
+        ]
+      },
+      "late_catch_throat_gated": {
+        "min_speed": 0.5934595580359223,
+        "worst_compression": 0.7986256709489485,
+        "max_near_frac": 0,
+        "inverted": false,
+        "event_min": [
+          "packet_center_shift_fade",
+          "ingoing",
+          1.0
+        ]
+      }
+    }
+  }
+}
