@@ -1,0 +1,106 @@
+{
+  "stressed_rows": [
+    {
+      "label": "v01_geometry_baseline",
+      "min_packet_tkk_floor_min": -0.7896582071860743,
+      "max_packet_neg_volume_proxy": 0.1236684846231773,
+      "max_packet_j_p95_abs": 0.3002568921061424,
+      "max_packet_rho_p95_abs": 0.31527743914834,
+      "max_packet_R3_p95_abs": 15.84757259767111,
+      "max_packet_K_p95_abs": 67.61664035229626,
+      "packet_lor_min_tau0.2": -0.0206446056282508,
+      "min_support_edge_tkk_floor_min": -0.212310097861193,
+      "max_support_edge_neg_volume_proxy": 0.0249776585719048,
+      "support_edge_lor_min_tau0.2": 0.0122499859374491
+    },
+    {
+      "label": "v02_C20_Cp5_B6_wB12",
+      "min_packet_tkk_floor_min": -0.1246319612076884,
+      "max_packet_neg_volume_proxy": 0.0113525472558638,
+      "max_packet_j_p95_abs": 0.0033413558854348,
+      "max_packet_rho_p95_abs": 0.096019542045308,
+      "max_packet_R3_p95_abs": 4.826470444737847,
+      "max_packet_K_p95_abs": 0.1981206327637978,
+      "packet_lor_min_tau0.2": -0.0008704038768312,
+      "min_support_edge_tkk_floor_min": -0.1082751857534224,
+      "max_support_edge_neg_volume_proxy": 0.0104033029140732,
+      "support_edge_lor_min_tau0.2": -0.0021055827647193
+    },
+    {
+      "label": "v02_noangular_C20_Cp1_B6_wB12",
+      "min_packet_tkk_floor_min": -0.3198368353427743,
+      "max_packet_neg_volume_proxy": 0.036047002548329,
+      "max_packet_j_p95_abs": 0.0004033151755749,
+      "max_packet_rho_p95_abs": 0.315282756358638,
+      "max_packet_R3_p95_abs": 15.847837788959591,
+      "max_packet_K_p95_abs": 0.0955725570648732,
+      "packet_lor_min_tau0.2": 0.007999935992592,
+      "min_support_edge_tkk_floor_min": -0.148923939100846,
+      "max_support_edge_neg_volume_proxy": 0.0157208182179777,
+      "support_edge_lor_min_tau0.2": 0.0070701241560756
+    },
+    {
+      "label": "v02_reserve_C100_Cp5_B4_wB6",
+      "min_packet_tkk_floor_min": -0.1493315992702591,
+      "max_packet_neg_volume_proxy": 0.0160399791194849,
+      "max_packet_j_p95_abs": 0.013880555920053,
+      "max_packet_rho_p95_abs": 0.0999294594098343,
+      "max_packet_R3_p95_abs": 5.023008393621912,
+      "max_packet_K_p95_abs": 0.2970732682713095,
+      "packet_lor_min_tau0.2": -0.0060984151954697,
+      "min_support_edge_tkk_floor_min": -0.1166323991526338,
+      "max_support_edge_neg_volume_proxy": 0.0133033601414269,
+      "support_edge_lor_min_tau0.2": -0.0064625403869717
+    }
+  ],
+  "aggregate_rows": [
+    {
+      "label": "v01_geometry_baseline",
+      "rel_max_packet_neg_volume_proxy": 1.0,
+      "rel_max_support_edge_neg_volume_proxy": 1.0,
+      "rel_max_service_union_neg_volume_proxy": 1.0,
+      "rel_max_packet_j_p95_abs": 1.0,
+      "rel_max_packet_rho_p95_abs": 1.0,
+      "rel_max_packet_R3_p95_abs": 1.0,
+      "rel_max_packet_K_p95_abs": 1.0,
+      "max_packet_packet_norm_max": -0.6671436557870498,
+      "max_support_edge_gtt_max": -7.584326391209385
+    },
+    {
+      "label": "v02_C20_Cp5_B6_wB12",
+      "rel_max_packet_neg_volume_proxy": 0.1029066733668241,
+      "rel_max_support_edge_neg_volume_proxy": 0.416575429476087,
+      "rel_max_service_union_neg_volume_proxy": 0.0992222383946159,
+      "rel_max_packet_j_p95_abs": 0.0129179745637587,
+      "rel_max_packet_rho_p95_abs": 0.3045557027635278,
+      "rel_max_packet_R3_p95_abs": 0.3045558185641077,
+      "rel_max_packet_K_p95_abs": 0.0034009823214236,
+      "max_packet_packet_norm_max": -0.7503201863957611,
+      "max_support_edge_gtt_max": -1.581665774928451
+    },
+    {
+      "label": "v02_noangular_C20_Cp1_B6_wB12",
+      "rel_max_packet_neg_volume_proxy": 0.3267116054549903,
+      "rel_max_support_edge_neg_volume_proxy": 0.6294062839242915,
+      "rel_max_service_union_neg_volume_proxy": 0.3267116054549903,
+      "rel_max_packet_j_p95_abs": 0.0015591158538043,
+      "rel_max_packet_rho_p95_abs": 1.0000168651785308,
+      "rel_max_packet_R3_p95_abs": 1.0000167338743424,
+      "rel_max_packet_K_p95_abs": 0.001640619517788,
+      "max_packet_packet_norm_max": -0.7503201863957611,
+      "max_support_edge_gtt_max": -1.581665774928451
+    },
+    {
+      "label": "v02_reserve_C100_Cp5_B4_wB6",
+      "rel_max_packet_neg_volume_proxy": 0.1455398544563124,
+      "rel_max_support_edge_neg_volume_proxy": 0.534746480461886,
+      "rel_max_service_union_neg_volume_proxy": 0.1455398544563124,
+      "rel_max_packet_j_p95_abs": 0.0536313655756813,
+      "rel_max_packet_rho_p95_abs": 0.3169572162382213,
+      "rel_max_packet_R3_p95_abs": 0.3169575884675279,
+      "rel_max_packet_K_p95_abs": 0.0050996250083235,
+      "max_packet_packet_norm_max": -0.7513818996933216,
+      "max_support_edge_gtt_max": -1.8477900410392192
+    }
+  ]
+}
