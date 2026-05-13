@@ -1,0 +1,54 @@
+[
+  {
+    "scenario": "V10_low_lapse",
+    "evaluated": 594,
+    "clear": 359,
+    "packet_clear": 359,
+    "clear_fraction": 0.6043771043771043,
+    "packet_clear_fraction": 0.6043771043771043,
+    "min_clear_catch_margin": -0.10000000000000003,
+    "min_clear_release_margin": 0.09999999999999987,
+    "max_clear_x_catch": 0.55,
+    "max_clear_packet_norm": -0.6219848443246091,
+    "max_clear_edge_gtt": -1.0268818504349317
+  },
+  {
+    "scenario": "V10_nominal",
+    "evaluated": 594,
+    "clear": 375,
+    "packet_clear": 375,
+    "clear_fraction": 0.6313131313131313,
+    "packet_clear_fraction": 0.6313131313131313,
+    "min_clear_catch_margin": -0.20000000000000007,
+    "min_clear_release_margin": 0.09999999999999987,
+    "max_clear_x_catch": 0.55,
+    "max_clear_packet_norm": -0.318586626723556,
+    "max_clear_edge_gtt": -1.0296559888267032
+  },
+  {
+    "scenario": "V5_low_lapse",
+    "evaluated": 594,
+    "clear": 369,
+    "packet_clear": 369,
+    "clear_fraction": 0.6212121212121212,
+    "packet_clear_fraction": 0.6212121212121212,
+    "min_clear_catch_margin": -0.10000000000000003,
+    "min_clear_release_margin": 0.09999999999999987,
+    "max_clear_x_catch": 0.55,
+    "max_clear_packet_norm": -0.7005661737752936,
+    "max_clear_edge_gtt": -1.0239344527377625
+  },
+  {
+    "scenario": "V5_nominal",
+    "evaluated": 594,
+    "clear": 386,
+    "packet_clear": 386,
+    "clear_fraction": 0.6498316498316499,
+    "packet_clear_fraction": 0.6498316498316499,
+    "min_clear_catch_margin": -0.20000000000000007,
+    "min_clear_release_margin": 0.09999999999999987,
+    "max_clear_x_catch": 0.65,
+    "max_clear_packet_norm": -0.11886405932657063,
+    "max_clear_edge_gtt": -1.0267006333240747
+  }
+]

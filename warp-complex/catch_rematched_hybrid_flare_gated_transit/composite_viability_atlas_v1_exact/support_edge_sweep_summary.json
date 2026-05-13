@@ -1,0 +1,356 @@
+[
+  {
+    "scenario": "V10_low_lapse",
+    "evaluated": 162,
+    "clear": 162,
+    "clear_fraction": 1.0,
+    "best_clear": [
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0183256733819208,
+        "release_edge_max_gtt": -1.0369871774920305,
+        "packet_max_norm": -0.7499976162526336,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      }
+    ]
+  },
+  {
+    "scenario": "V10_nominal",
+    "evaluated": 162,
+    "clear": 162,
+    "clear_fraction": 1.0,
+    "best_clear": [
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0202081631402395,
+        "release_edge_max_gtt": -1.0408246965620522,
+        "packet_max_norm": -0.7499977347372635,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      }
+    ]
+  },
+  {
+    "scenario": "V5_low_lapse",
+    "evaluated": 162,
+    "clear": 162,
+    "clear_fraction": 1.0,
+    "best_clear": [
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.0,
+        "eta_N": 1.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446943,
+        "edge_shape_proxy_max": 0.4047006766128529,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446942,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.0,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446942,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "always_open",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446942,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      },
+      {
+        "p_beta": 4.0,
+        "eta_B": 0.5,
+        "eta_N": 0.5,
+        "R_mode": "delayed_close",
+        "min_edge_margin": 1.0163238581207155,
+        "release_edge_max_gtt": -1.032914185007832,
+        "packet_max_norm": -0.7499991831446942,
+        "edge_shape_proxy_max": 0.40493524351443533,
+        "min_flare_d2_Reff2": 2.2251275383750926
+      }
+    ]
+  }
+]
