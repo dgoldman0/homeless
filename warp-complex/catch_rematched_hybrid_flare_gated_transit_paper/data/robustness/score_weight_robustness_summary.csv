@@ -1,0 +1,5 @@
+score_name,top1_label,top1_C0,top1_Cperp,top1_B0,top1_wB,top5_Cperp_values,top5_C0_values,top5_B0_values,top5_wB_values
+0p1J_geom_plus_J_dyn,C20_Cp3_B6_wB12,20.0,3.0,6.0,12.0,[3.0],"[20.0, 35.0]",[6.0],"[6.0, 8.0, 10.0, 12.0]"
+J_geom_plus_0p1J_dyn,C35_Cp3_B6_wB6,35.0,3.0,6.0,6.0,[3.0],"[20.0, 35.0]",[6.0],"[6.0, 8.0, 10.0, 12.0]"
+J_geom_plus_J_dyn,C20_Cp3_B6_wB6,20.0,3.0,6.0,6.0,[3.0],"[20.0, 35.0]",[6.0],"[6.0, 8.0, 10.0, 12.0]"
+max_norm_metrics,C35_Cp3_B6_wB6,35.0,3.0,6.0,6.0,[3.0],"[20.0, 35.0]",[6.0],"[6.0, 8.0, 10.0, 12.0]"
