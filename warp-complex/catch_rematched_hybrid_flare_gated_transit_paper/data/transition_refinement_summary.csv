@@ -1,0 +1,5 @@
+case,packet_max_norm,release_packet_max_norm,edge_max_gtt,packet_j_rel,packet_K_rel,source_cost_rel
+baseline transition,-0.194,-0.194,-1.187,1.0,1.0,1.0
+early-catch medium p_beta=4,-0.704,-1.819,-1.35,0.603,0.601,0.939
+long-gap medium p_beta=4,-0.704,-2.411,-1.35,0.612,0.612,0.941
+early-catch medium p_beta=3,-0.704,-1.819,-1.35,0.91,0.91,0.986

@@ -1,0 +1,7 @@
+case,C0,Cperp,B0,wB,J_total_rel,J_geom_rel,J_dyn_rel,packet_max_norm,edge_gtt_max
+v01 geometry baseline,100,1,8,10,1.0,1.0,1.0,-0.696,-128.5
+no-angular Cperp=1,20,1,6,12,0.574,1.0,0.00208,-0.762,-3.001
+Cperp=3 branch,20,3,6,12,0.174,0.298,0.00776,-0.762,-3.001
+Cperp=4 branch,20,4,6,12,0.166,0.284,0.00944,-0.762,-3.001
+balanced default Cperp=5,20,5,6,12,0.162,0.274,0.0108,-0.762,-3.001
+reserve branch C0=100 Cperp=5,100,5,4,6,0.174,0.278,0.0341,-0.766,-4.356

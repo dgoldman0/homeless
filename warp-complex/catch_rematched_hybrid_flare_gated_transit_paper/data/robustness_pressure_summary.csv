@@ -1,0 +1,5 @@
+case,grid,J_total_rel,J_geom_rel,J_dyn_rel,floor_exposure_rel,pressure_exposure_rel,packet_failures,edge_failures
+Cperp=5 balanced default,61x25,0.119,0.158,0.02,0.338,0.213,0,0
+Cperp=3 pressure branch,61x25,0.142,0.192,0.015,0.283,0.144,0,0
+Cperp=1 no-angular,61x25,0.721,1.0,0.005,1.0,0.026,0,0
+v01 baseline,61x25,1.0,1.0,1.0,1.0,1.0,0,0
