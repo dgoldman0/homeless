@@ -1,0 +1,5 @@
+candidate,status,score,main_strength,main_blocker
+nonminimally_coupled_scalar_reduced_operator,weak_shape_match_reduced_operator,0.20704824629199614,NMC scalar literature supports NEC/ANEC violation through curvature and second-derivative scalar terms; reduced fit tests whether that channel matches v0.3 source history.,This screen is not a scalar equation-of-motion solution and not a backreaction solution; fitted q=phi^2 amplitudes must be promoted to a real scalar field with potential/coupling and stability.
+conserved_anisotropic_effective_fluid,best_bridge_model,0.8,Directly embeds target rho/pr/pt/flux components and exposes conservation residuals.,Effective fluid is not a microscopic source until mapped to fields or actuators.
+squeezed_quantum_state_pulse_train,later_qi_timing_branch,0.45,Natural positive/negative energy pulse language.,Quantum interest and null-contracted QI likely dominate; needs exact timing constraints before fitting.
+Casimir_boundary_source,benchmark_not_lead,0.25,Real negative-energy phenomenon.,Macroscopic dynamic lifecycle and matching scale are poor fit for the current v0.3 target.

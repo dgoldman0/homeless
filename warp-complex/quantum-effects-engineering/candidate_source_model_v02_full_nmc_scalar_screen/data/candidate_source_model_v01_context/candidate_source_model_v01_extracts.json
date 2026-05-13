@@ -1,0 +1,141 @@
+{
+  "screen": "candidate_source_model_v01",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "lead_candidate": "nonminimally coupled scalar screened through reduced second-derivative null-stress operator, with conserved anisotropic effective fluid as bridge model",
+  "nmc_fit_summary": {
+    "weighted_r2_like": 0.20704824629199614,
+    "weighted_relative_rmse": 0.8869011796234852,
+    "n_basis_used": 12,
+    "n_basis_total": 42
+  },
+  "best_nmc_basis_terms": [
+    {
+      "basis": "q_setup_reset__matching_ring",
+      "coefficient_q_amplitude": 1.2392648752524384,
+      "column_norm": 0.0014786169528345895
+    },
+    {
+      "basis": "q_setup_reset__shoulder_ring",
+      "coefficient_q_amplitude": 0.7352183013103651,
+      "column_norm": 0.00331285357468368
+    },
+    {
+      "basis": "q_comp__core_gauss",
+      "coefficient_q_amplitude": 0.44862707302884197,
+      "column_norm": 0.0022416084717071165
+    },
+    {
+      "basis": "q_open_interval__support_broad_bowl",
+      "coefficient_q_amplitude": 0.3729063096406913,
+      "column_norm": 0.001438924122522752
+    },
+    {
+      "basis": "q_open_interval__support_bowl",
+      "coefficient_q_amplitude": 0.03733565929871236,
+      "column_norm": 0.003279359553149625
+    },
+    {
+      "basis": "q_setup_reset__support_broad_bowl",
+      "coefficient_q_amplitude": 0.004343063288370205,
+      "column_norm": 0.01460528115568556
+    },
+    {
+      "basis": "q_hold__support_broad_bowl",
+      "coefficient_q_amplitude": 0.0021878522038453366,
+      "column_norm": 0.007560951986726948
+    },
+    {
+      "basis": "q_hold__shoulder_ring",
+      "coefficient_q_amplitude": 0.0012879110527899544,
+      "column_norm": 0.012068025141450776
+    },
+    {
+      "basis": "q_open_close_edges__shoulder_ring",
+      "coefficient_q_amplitude": 0.0009832869036384083,
+      "column_norm": 0.003424692688131516
+    },
+    {
+      "basis": "q_B_reset__matching_ring",
+      "coefficient_q_amplitude": 8.659291361883682e-06,
+      "column_norm": 0.001045540074126728
+    },
+    {
+      "basis": "q_B_reset__shoulder_ring",
+      "coefficient_q_amplitude": 4.947860352772912e-06,
+      "column_norm": 0.0023425412277369253
+    },
+    {
+      "basis": "q_B_setup__support_broad_bowl",
+      "coefficient_q_amplitude": 1.4441890821670412e-07,
+      "column_norm": 0.010327493346321354
+    }
+  ],
+  "observer_fit_metrics": [
+    {
+      "observer_family": "core_line",
+      "target_rms": 0.0012855793554971786,
+      "fit_rms": 0.0009868455518965043,
+      "residual_rms": 0.0007115423115473761,
+      "relative_rms_error": 0.5534798832131704,
+      "correlation": 0.8519832854314213,
+      "target_min": -0.0012414148969633748,
+      "fit_min": -0.003596345906629149,
+      "target_max": 0.00819835232318242,
+      "fit_max": 0.006260020962496628
+    },
+    {
+      "observer_family": "access_mean",
+      "target_rms": 0.0012884169356735754,
+      "fit_rms": 0.0009266301353452682,
+      "residual_rms": 0.0008532080461993244,
+      "relative_rms_error": 0.662214243362651,
+      "correlation": 0.778917943958229,
+      "target_min": -0.0015769976367293445,
+      "fit_min": -0.003659961951183403,
+      "target_max": 0.008184294057451273,
+      "fit_max": 0.005960565036096556
+    },
+    {
+      "observer_family": "support_mean",
+      "target_rms": 0.003536877586018213,
+      "fit_rms": 0.0009267256967241143,
+      "residual_rms": 0.0033980105755988857,
+      "relative_rms_error": 0.9607373998529393,
+      "correlation": 0.28084850624772084,
+      "target_min": -0.009137617693911235,
+      "fit_min": -0.0034639856862724674,
+      "target_max": 0.007393608100012001,
+      "fit_max": 0.004406546106959416
+    },
+    {
+      "observer_family": "support_ring_mean",
+      "target_rms": 0.009773457621757506,
+      "fit_rms": 0.004509064714644423,
+      "residual_rms": 0.008741622138815417,
+      "relative_rms_error": 0.8944247243008473,
+      "correlation": 0.3376141091418937,
+      "target_min": -0.02821232451784591,
+      "fit_min": -0.010742124582230549,
+      "target_max": 0.005764864022024687,
+      "fit_max": 0.0027998273462560017
+    },
+    {
+      "observer_family": "shoulder_mean",
+      "target_rms": 0.0034642111973230763,
+      "fit_rms": 0.0012657216829121182,
+      "residual_rms": 0.00319014453599806,
+      "relative_rms_error": 0.9208862723075295,
+      "correlation": 0.46472747439033574,
+      "target_min": -0.00872361245458075,
+      "fit_min": -0.0035065629288764315,
+      "target_max": 0.003414113636716996,
+      "fit_max": 0.002625910996049853
+    }
+  ],
+  "interpretation": [
+    "The literature-supported NMC scalar branch is a live candidate because its second-derivative phi^2 terms can generate null-contracted stress of both signs.",
+    "The reduced fit should be read as a compatibility test for the target source history, not as a field solution.",
+    "A strong or partial reduced-operator fit advances the NMC branch to a scalar equation-of-motion and stability screen; a weak fit routes the project back to effective-fluid/actuator modeling.",
+    "The conserved anisotropic effective-fluid bridge remains necessary because it defines the full stress-tensor components any physical field must reproduce."
+  ]
+}

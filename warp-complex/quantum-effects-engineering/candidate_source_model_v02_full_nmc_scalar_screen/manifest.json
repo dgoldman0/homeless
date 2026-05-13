@@ -1,0 +1,217 @@
+{
+  "bundle": "candidate_source_model_v02_full_nmc_scalar_screen",
+  "created_from": "reference_compensated_flare_gate_geometry_working",
+  "main_report": "report/candidate_source_model_v02_report.md",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "d7d8b84ee644a5e73801e7c671d132a56cae0cdbdfdb418a0664221be56efd1f",
+      "size_bytes": 516
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/candidate_source_model_ranking_v01.csv",
+      "sha256": "dbb3734109cc921e0447c6437ee9b49b30b5a4667ff11d29aab350cb225a52db",
+      "size_bytes": 1129
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/candidate_source_model_v01_extracts.json",
+      "sha256": "49095518d67d084def5e7b6ad2cbef8258b41ebdb87ac70a8661df438a69196c",
+      "size_bytes": 5213
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/effective_fluid_bridge_components.csv",
+      "sha256": "01825bfa1be5f42ac05aa7b60649b59d77cf70aadcc8cb9c8e50b8432d8f8b18",
+      "size_bytes": 4464
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/nmc_scalar_basis_coefficients.csv",
+      "sha256": "0775333b05486d8fbafb4c2df231cbbf039be04a2255133dca0a0d2d53f56e27",
+      "size_bytes": 886
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/nmc_scalar_fit_metrics_by_observer.csv",
+      "sha256": "d11cd9e90708b10f7daddfd2e0f66a8049d95ffacf1a78fbf6e719600f26c414",
+      "size_bytes": 1130
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/nmc_scalar_fit_observer_ledgers.csv",
+      "sha256": "5ec2f0157aab2892fb9e9f605f6cb1d16943756f6c25092ddc7a4eab3096df11",
+      "size_bytes": 12590
+    },
+    {
+      "path": "data/candidate_source_model_v01_context/nmc_scalar_fit_timeseries_digest.csv",
+      "sha256": "e30f3c83f958c62529bbd0588f6f7f4805bb2bfa4de968778852fe051ab2e31b",
+      "size_bytes": 178963
+    },
+    {
+      "path": "data/candidate_source_model_v02/candidate_source_model_ranking_v02.csv",
+      "sha256": "90831b0f6a68786d40288d262f1d02733c71994d3f1aa23886697d37cf46e5f1",
+      "size_bytes": 1026
+    },
+    {
+      "path": "data/candidate_source_model_v02/candidate_source_model_v02_extracts.json",
+      "sha256": "cf170f69983e1417132872cf2a5eea6d6a4beeba128368c2ff8f3eb76e79497c",
+      "size_bytes": 12441
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_feature_coefficients.csv",
+      "sha256": "7b768fcaa4b4788a52e191363f3ad0beac9163ebe43dc58cb6c05ef24a8ad165",
+      "size_bytes": 3838
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_field_diagnostics.csv",
+      "sha256": "d031ed3e3e924293e206f0564a6a290a8acc9a2507d94ec7010a2ca713f6a0dd",
+      "size_bytes": 371
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_fit_metrics_by_observer.csv",
+      "sha256": "f372a894ab5d9a8cf4f64236d1eae99484d7a78de96d2090e08e3cde6c5a329b",
+      "size_bytes": 2868
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_observer_ledgers.csv",
+      "sha256": "d880fb576334ee4cb6e434775112c04f09306e32194341bd4bb675f3b8956f84",
+      "size_bytes": 12192
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_rank1_phi_coefficients.csv",
+      "sha256": "e5363159302d7744140621856b8d93f05450d71d84cb1379ccda4a73f9e7bfa7",
+      "size_bytes": 627
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_timeseries_digest.csv",
+      "sha256": "d045442c9742c41ae25e7dddef97f674882a3993f4af2da7c4da4bd18792da6b",
+      "size_bytes": 110758
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_full_scalar_xi_scan.csv",
+      "sha256": "95c6bff8b3b799ce22143be4c225f06d53fb43844023b8c4568ccace4b58f136",
+      "size_bytes": 460
+    },
+    {
+      "path": "data/candidate_source_model_v02/nmc_v02_vs_v01_metric_comparison.csv",
+      "sha256": "5e9730a5531118b1f76e2cbc6d385b149c3bdbf6def55a64f951f03bce40be9e",
+      "size_bytes": 2020
+    },
+    {
+      "path": "data/reference_geometry_v03_context/invariant_v03_extracts.json",
+      "sha256": "55fefe8ffd403ca6e99e6e22f95bca460c51b4919a51b849fabea12621a0ec41",
+      "size_bytes": 3055
+    },
+    {
+      "path": "data/reference_geometry_v03_context/invariant_v03_observer_ledgers.csv",
+      "sha256": "d1ecdf744ee19e6772d33764127b1fd64f7a71d0b13c8721d6f8ce5112a8ae98",
+      "size_bytes": 4308
+    },
+    {
+      "path": "data/reference_geometry_v03_context/invariant_v03_phase_zone_extrema.csv",
+      "sha256": "6943f043eafd54b80105def9eb5281e13cf49352fdb9929320a60f694af3faa9",
+      "size_bytes": 21692
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/combined_source_observer_ledgers.csv",
+      "sha256": "773834fa4c24eb0293ac34ce40e7c871cf0a039a6be12097d2b4828b8c3497ea",
+      "size_bytes": 5595
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/compensation_embedding_ansatz.csv",
+      "sha256": "d7f15516c26fe3e0e77867d85c3a88f5bbc69e5877a56b828f01e4921c2dda80",
+      "size_bytes": 953
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/sampling_aware_timing_best.csv",
+      "sha256": "28c322c4783a4e3d9b0a2caceff16fe336ceeaf44ce8c583425b79a8ca129f03",
+      "size_bytes": 3638
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/sampling_aware_timing_sweep.csv",
+      "sha256": "c4da11cf005e4d741170502a3f0bf15aeb81b191680dbf521da25d3442a4a8cd",
+      "size_bytes": 4743
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/setup_reset_compensation_best.csv",
+      "sha256": "e0f1543822974f15027ee2e6eeb043e802168a9e721413ed02b6b5aa60b2e8cf",
+      "size_bytes": 6209
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/setup_reset_compensation_refined_best.csv",
+      "sha256": "9272e2fa4eb5be509ab376a654a3eabd18b46b77be96da9391a40b55af576993",
+      "size_bytes": 6406
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/setup_reset_compensation_refined_sweep.csv",
+      "sha256": "eb50f1a0649314f1470371a319148d681e72f3cdb753b2fc07da1bb4e363b856",
+      "size_bytes": 91289
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/setup_reset_compensation_sweep.csv",
+      "sha256": "050ef1258f2c58e1b2496f2146712b065dcf8b54360e6cfa9a7dd22f939e6f12",
+      "size_bytes": 74029
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/source_embedding_ansatz_combined.csv",
+      "sha256": "3ee52dd68b0305cbd1e7398c68061f48771079df207f659b780362d3887fc077",
+      "size_bytes": 1756
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/source_realism_prescreen_v02_extracts.json",
+      "sha256": "1f23a32df160baa683eaeea155a39adf9b4572b1d18512efc4611d6d9338a2b7",
+      "size_bytes": 12863
+    },
+    {
+      "path": "data/source_realism_prescreen_v02_context/v02_lorentzian_sampling_comparison.csv",
+      "sha256": "20f0dc5fbb039f20f68fe9f921800a9d21b7719c9f7f61f7e27a3cfeb52fed7c",
+      "size_bytes": 10738
+    },
+    {
+      "path": "docs/report_progress_notes.md",
+      "sha256": "67ccfcbaf675b687140e1a7ca890f8ed6a3d373d73c1959e3e8f905ab9b2965e",
+      "size_bytes": 1521
+    },
+    {
+      "path": "figures/nmc_v02_relative_error_by_observer.png",
+      "sha256": "cc23d36c00321705445a993e1e571ac7efce2596914bd06056b0c6881d3e4996",
+      "size_bytes": 78591
+    },
+    {
+      "path": "figures/nmc_v02_vs_v01_relative_error.png",
+      "sha256": "f48de5ff50e46fdbfd16b16db6f10cc8ebc7f7c7b94a7e6b527b6df2a4219e2d",
+      "size_bytes": 77385
+    },
+    {
+      "path": "figures/nmc_v02_xi_scan.png",
+      "sha256": "582eaccee5d6397fe63e58931f108df475ddb6fdc58ead3cb072593322a1e3f6",
+      "size_bytes": 58994
+    },
+    {
+      "path": "report/candidate_source_model_v02_report.md",
+      "sha256": "296c75e24994dd691e40ea9df77d7f699d72c4350303f6f7871b4d1857d28130",
+      "size_bytes": 11408
+    },
+    {
+      "path": "report/references.bib",
+      "sha256": "46c8ee89514f76768061a55294d9ab98744e3407b302332180ea2d15f3bfb701",
+      "size_bytes": 2011
+    },
+    {
+      "path": "scripts/run_candidate_source_model_v01.py",
+      "sha256": "07e7d49652720813917b3e42293f12a1e08dc1fda6964af6eceaa53bb4a2d4d6",
+      "size_bytes": 17021
+    },
+    {
+      "path": "scripts/run_candidate_source_model_v02.py",
+      "sha256": "830d6be8a073a78f84c2e5148721b341b44d128b1eb039e7065aaedf2005e83c",
+      "size_bytes": 17102
+    },
+    {
+      "path": "scripts/run_invariant_packet_v03.py",
+      "sha256": "e58648bee20709a9f5b659407810005adba5d74c95389435c64e7d309f3ce37d",
+      "size_bytes": 17812
+    },
+    {
+      "path": "scripts/run_source_realism_prescreen_v02.py",
+      "sha256": "66958f462a40eaf503fe68a9446fc6868a56a0e7b32118d9c3a2403e935499de",
+      "size_bytes": 21928
+    }
+  ]
+}
