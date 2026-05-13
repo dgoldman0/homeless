@@ -1,0 +1,6 @@
+variant,width_factor,packet_positive_points,gtt_positive_points,local_gain_worst_max,local_gain_worst_p99,local_gain_worst_p95,local_gain_valid_fraction,trace_valid_fraction_either_branch,trace_valid_fraction_plus,trace_valid_fraction_minus,magnification_proxy_max,magnification_proxy_p99,magnification_proxy_p95,risk_proxy_max,risk_proxy_p99,risk_proxy_p95,min_null_speed_proxy
+active_rail_catch_throat_gated,0.25,0,3627,1.7320508065081301,1.7320507645597312,1.732046944174277,1.0,0.4949944382647386,0.0,0.4949944382647386,79682.22478064267,2060.9369244052905,551.2320308214654,899.9879685806986,899.9653554236457,895.0973189023994,0.0001538168018310193
+naive_independent_no_catch,0.25,8671,9200,36.166026587479976,3.7423960427375746,1.4459316835891871,0.523047304730473,,,,,,,,,,
+naive_throat_gated_no_catch,0.25,8671,9200,36.166026587479976,3.742396051566611,1.4459316835891871,0.523047304730473,,,,,,,,,,
+late_catch_throat_gated,0.25,6102,9200,36.16602656717425,4.476634062709147,2.0213550003243785,0.6643564356435644,,,,,,,,,,
+catch_independent_shift,0.25,0,3627,1.7320508065081301,1.7320507645597312,1.7320469441742719,1.0,,,,,,,,,,

@@ -1,0 +1,88 @@
+{
+  "scope": {
+    "description": "Phase A reduced radial optical/radiation-adjacent screen for active-rail model.",
+    "basis": "Reduced ADM metric and radial null characteristics from active_rail_paper obstruction_screen.py.",
+    "limits": [
+      "Classical reduced radial screen only.",
+      "No off-axis 3D geodesic calculation.",
+      "No full RSET / semiclassical stress tensor.",
+      "No material radiation transport or shielding calculation.",
+      "Flux-risk proxy is heuristic: local photon gain^4 times radial focusing proxy."
+    ],
+    "width_factor": 0.25,
+    "local_grid": {
+      "s_min": -0.2,
+      "s_max": 1.55,
+      "xi_min": -0.34,
+      "xi_max": 0.34
+    },
+    "trace_grid": {
+      "s_min": -0.1,
+      "s_max": 1.45,
+      "xi_min": -0.32,
+      "xi_max": 0.32
+    }
+  },
+  "summary_rows": [
+    {
+      "variant": "active_rail_catch_throat_gated",
+      "width_factor": 0.25,
+      "packet_positive_points": 0,
+      "gtt_positive_points": 3627,
+      "local_gain_worst_max": 1.7320508065081301,
+      "local_gain_worst_p99": 1.7320507645597312,
+      "local_gain_worst_p95": 1.732046944174277,
+      "local_gain_valid_fraction": 1.0,
+      "trace_valid_fraction_either_branch": 0.4949944382647386,
+      "trace_valid_fraction_plus": 0.0,
+      "trace_valid_fraction_minus": 0.4949944382647386,
+      "magnification_proxy_max": 79682.22478064267,
+      "magnification_proxy_p99": 2060.9369244052905,
+      "magnification_proxy_p95": 551.2320308214654,
+      "risk_proxy_max": 899.9879685806986,
+      "risk_proxy_p99": 899.9653554236457,
+      "risk_proxy_p95": 895.0973189023994,
+      "min_null_speed_proxy": 0.0001538168018310193
+    },
+    {
+      "variant": "naive_independent_no_catch",
+      "width_factor": 0.25,
+      "packet_positive_points": 8671,
+      "gtt_positive_points": 9200,
+      "local_gain_worst_max": 36.166026587479976,
+      "local_gain_worst_p99": 3.7423960427375746,
+      "local_gain_worst_p95": 1.4459316835891871,
+      "local_gain_valid_fraction": 0.523047304730473
+    },
+    {
+      "variant": "naive_throat_gated_no_catch",
+      "width_factor": 0.25,
+      "packet_positive_points": 8671,
+      "gtt_positive_points": 9200,
+      "local_gain_worst_max": 36.166026587479976,
+      "local_gain_worst_p99": 3.742396051566611,
+      "local_gain_worst_p95": 1.4459316835891871,
+      "local_gain_valid_fraction": 0.523047304730473
+    },
+    {
+      "variant": "late_catch_throat_gated",
+      "width_factor": 0.25,
+      "packet_positive_points": 6102,
+      "gtt_positive_points": 9200,
+      "local_gain_worst_max": 36.16602656717425,
+      "local_gain_worst_p99": 4.476634062709147,
+      "local_gain_worst_p95": 2.0213550003243785,
+      "local_gain_valid_fraction": 0.6643564356435644
+    },
+    {
+      "variant": "catch_independent_shift",
+      "width_factor": 0.25,
+      "packet_positive_points": 0,
+      "gtt_positive_points": 3627,
+      "local_gain_worst_max": 1.7320508065081301,
+      "local_gain_worst_p99": 1.7320507645597312,
+      "local_gain_worst_p95": 1.7320469441742719,
+      "local_gain_valid_fraction": 1.0
+    }
+  ]
+}
