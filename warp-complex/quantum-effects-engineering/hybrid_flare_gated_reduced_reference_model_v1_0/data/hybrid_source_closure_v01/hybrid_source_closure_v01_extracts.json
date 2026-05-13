@@ -1,0 +1,72 @@
+{
+  "screen": "hybrid_source_closure_v01",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "source_architecture": "Candidate Source Architecture v0.3 strict-pass hybrid",
+  "strict_pass_setup_reset_amps": {
+    "A_support_setup_reset": 0.022,
+    "A_shoulder_setup_reset": 0.011
+  },
+  "nmc_fit_parameters": {
+    "xi": 0.5,
+    "lcut": 0.8,
+    "shoulder_weight": 10.0,
+    "ring_weight": 0.8
+  },
+  "closure_readout": {
+    "access_flux": 0.0010860110053730325,
+    "access_source_scale": 0.008198278923910068,
+    "access_flux_over_source_scale": 0.13246816989897536,
+    "support_flux_over_source_scale": 0.1377212247143094,
+    "shoulder_flux_over_source_scale": 0.09740538815771795,
+    "global_flux_completed_residual_over_source_scale": 0.0005701291109803806,
+    "access_full_pos_to_neg_target": 1.7096008543036791,
+    "access_full_pos_to_neg_flux_completed_min": 1.4712217907154532,
+    "support_full_pos_to_neg_target": 3.182728221635581,
+    "support_full_pos_to_neg_flux_completed_min": 2.80087379478305,
+    "shoulder_full_pos_to_neg_target": 1.1411759336537242,
+    "shoulder_full_pos_to_neg_flux_completed_min": 0.6438441526338747
+  },
+  "sampling_compare": {
+    "core_line": {
+      "target_worst_margin": -0.0010619366765804855,
+      "flux_completed_worst_margin": -0.0010619366765804855,
+      "margin_delta_flux_minus_target": 0.0,
+      "flux_completed_tau": 5.0,
+      "flux_completed_center": 177.06
+    },
+    "access_mean": {
+      "target_worst_margin": -0.0010168441719957705,
+      "flux_completed_worst_margin": -0.001031567758137769,
+      "margin_delta_flux_minus_target": -1.4723586141998559e-05,
+      "flux_completed_tau": 5.0,
+      "flux_completed_center": 177.06
+    },
+    "support_mean": {
+      "target_worst_margin": -0.008176332804968756,
+      "flux_completed_worst_margin": -0.008214724341182322,
+      "margin_delta_flux_minus_target": -3.8391536213565336e-05,
+      "flux_completed_tau": 2.0,
+      "flux_completed_center": 8.58
+    },
+    "support_ring_mean": {
+      "target_worst_margin": -0.02735263565891263,
+      "flux_completed_worst_margin": -0.02746286348741019,
+      "margin_delta_flux_minus_target": -0.00011022782849755969,
+      "flux_completed_tau": 2.0,
+      "flux_completed_center": 8.58
+    },
+    "shoulder_mean": {
+      "target_worst_margin": -0.008549339271800946,
+      "flux_completed_worst_margin": -0.008741032146805928,
+      "margin_delta_flux_minus_target": -0.00019169287500498192,
+      "flux_completed_tau": 2.0,
+      "flux_completed_center": 8.58
+    }
+  },
+  "decision": "freeze_reduced_reference_model_with_actuator_exchange_closure",
+  "interpretation": [
+    "The hybrid source can be embedded in a reduced anisotropic tensor with conservation-completing radial flux.",
+    "The flux-completed representation localizes the active exchange/transport burden outside the access core in this reduced screen.",
+    "The remaining physical source question is field-equation closure for the NMC support component and actuator interpretation for infrastructure repayment."
+  ]
+}

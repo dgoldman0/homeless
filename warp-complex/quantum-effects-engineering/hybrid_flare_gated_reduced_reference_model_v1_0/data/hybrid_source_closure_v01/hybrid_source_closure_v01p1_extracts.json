@@ -1,0 +1,81 @@
+{
+  "screen": "hybrid_source_closure_v01p1_fluxmin_rebalance",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "source_architecture": "Hybrid source architecture v0.3 with flux-min rebalanced infrastructure repayment",
+  "setup_reset_amps": {
+    "A_support_setup_reset": 0.022,
+    "A_shoulder_setup_reset": 0.016
+  },
+  "readout": {
+    "core_line": {
+      "target_full_ratio": 1.0829179182455282,
+      "flux_completed_min_full_ratio": 1.0829179182455282,
+      "flux_completed_open_neg": 0.08040630133635575,
+      "flux_completed_setup_reset_neg": 0.00036882140734834334
+    },
+    "access_mean": {
+      "target_full_ratio": 1.7096008711089112,
+      "flux_completed_min_full_ratio": 1.4712218066495744,
+      "flux_completed_open_neg": 0.08489358305259759,
+      "flux_completed_setup_reset_neg": 0.01184024730269166
+    },
+    "support_mean": {
+      "target_full_ratio": 3.1831679233751746,
+      "flux_completed_min_full_ratio": 2.801272432182289,
+      "flux_completed_open_neg": 0.09257604452731201,
+      "flux_completed_setup_reset_neg": 0.5046562131316716
+    },
+    "support_ring_mean": {
+      "target_full_ratio": 1.2977738572753543,
+      "flux_completed_min_full_ratio": 1.1351458614397876,
+      "flux_completed_open_neg": 0.10570904749099483,
+      "flux_completed_setup_reset_neg": 1.7344716524258548
+    },
+    "shoulder_mean": {
+      "target_full_ratio": 1.9551896624050251,
+      "flux_completed_min_full_ratio": 1.130442035252793,
+      "flux_completed_open_neg": 0.09199980316028739,
+      "flux_completed_setup_reset_neg": 0.8099781078947395
+    }
+  },
+  "sampling": {
+    "core_line": {
+      "worst_qi_margin": -0.0010619366765804068,
+      "tau": 5.0,
+      "center": 177.06
+    },
+    "access_mean": {
+      "worst_qi_margin": -0.0010315677579205837,
+      "tau": 5.0,
+      "center": 177.06
+    },
+    "support_mean": {
+      "worst_qi_margin": -0.008214647738115085,
+      "tau": 2.0,
+      "center": 8.58
+    },
+    "support_ring_mean": {
+      "worst_qi_margin": -0.027461276502892124,
+      "tau": 2.0,
+      "center": 8.58
+    },
+    "shoulder_mean": {
+      "worst_qi_margin": -0.008606810118761753,
+      "tau": 2.0,
+      "center": 8.58
+    }
+  },
+  "decision": "freeze_reduced_reference_model_with_actuator_exchange_closure",
+  "closure_scores": {
+    "access_flux_over_source_scale": 0.13246816989913696,
+    "support_flux_over_source_scale": 0.1377212247143094,
+    "shoulder_flux_over_source_scale": 0.0974053889510051,
+    "global_flux_completed_residual_over_source_scale": 0.0005701291156236157
+  },
+  "interpretation": [
+    "Flux-min rebalanced setup/reset repayment restores shoulder full-cycle positive-to-negative ratio above unity after conservation-completing radial flux is included.",
+    "The conservation-completing flux remains bounded and the residual is numerically small in the reduced anisotropic embedding.",
+    "The support and access ledgers are overpaid in the strict reference, so later source shaping can reduce broad support overcompensation without changing the frozen geometry.",
+    "The Lorentzian QI proxy remains an active physics gate and is not passed by this reduced closure screen."
+  ]
+}
