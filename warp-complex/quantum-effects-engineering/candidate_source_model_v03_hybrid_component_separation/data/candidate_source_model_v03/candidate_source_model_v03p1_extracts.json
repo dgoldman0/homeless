@@ -1,0 +1,26 @@
+{
+  "screen": "candidate_source_model_v03p1_residual_balance",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "selected_nmc_locality": "lcut=0.8 shoulder_weight=10 ring_weight=0.8",
+  "best_residual_balance": {
+    "A_open_ring_comp": 0.006,
+    "A_support_setup_reset": 0.02,
+    "A_shoulder_setup_reset": 0.011,
+    "support_full_residual_ratio": 2.0814657501026597,
+    "support_ring_full_residual_ratio": 0.9878383853134115,
+    "shoulder_full_residual_ratio": 1.1367553188199493,
+    "access_full_residual_ratio": 2.6415773640296956,
+    "core_full_residual_ratio": 2.7930334204436917,
+    "support_ring_setup_reset_ratio": 1.012774278591805,
+    "shoulder_setup_reset_ratio": 1.153722556967415,
+    "support_setup_reset_ratio": 1.96895495382379,
+    "support_ring_open_residual_neg_fraction": 1.5535096513620636,
+    "shoulder_open_neg_fraction_carried_by_nmc": 0.42206662750438684,
+    "score": 0.9236812288286423
+  },
+  "interpretation": [
+    "The locality-polished NMC component is retained.",
+    "A small post-closure support-ring compensation term closes the support-ring full-cycle residual ledger.",
+    "Infrastructure repayment remains outward/support-ring/shoulder localized relative to the access family."
+  ]
+}
