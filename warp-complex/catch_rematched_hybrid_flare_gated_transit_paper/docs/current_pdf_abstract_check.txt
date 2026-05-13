@@ -1,0 +1,35 @@
+Catch-Rematched Hybrid Flare-Gated Transit:
+A Packet-Centered Active-Rail Architecture for Source-Supplied
+Spacetime Engineering
+Daniel S. Goldman1
+1
+
+Independent researcher
+May 13, 2026
+Abstract
+
+A passenger-bearing spacetime geometry has to carry a protected region through a controlled
+sequence of support, capacity, coupling, catch, shift fade, relaxation, and reset. This paper
+presents a source-supplied composite wormhole/warp transit architecture organized around that
+service sequence. The wormhole throat functions as active infrastructure: it stretches, opens,
+gates, catches, supports, relaxes, and resets. The passenger occupies a finite packet worldtube.
+The transport field is the controlled coupling between throat plant and packet.
+The resulting design separates the engineering burden into distinct channels. Packet safety
+is evaluated on the moving packet. Catch/rematch choreography controls whether the packet
+remains protected through shift release. Transition profiles carry the momentum-current and
+extrinsic-curvature burden. Mixed radial/angular capacity carries the Hamiltonian and spatialcurvature burden. The frozen reduced candidate preserves packet and support-edge clearance,
+reduces the ADM source-demand proxies relative to the reference geometry, and lowers Lorentziansampled packet current-floor exposure to about four percent of the reference value in the stressed
+source screen.
+The paper’s contribution is a concrete burden-allocation architecture for source-supplied FTL
+spacetime engineering. The literature identifies exotic support, thin-wall severity, capacity effects,
+prepared infrastructure, and ADM role separation as central constraints. This work shows how
+those constraints organize when the passenger is treated as a protected packet carried by active
+throat infrastructure.
+
+1
+
+The service object
+
+A traversable spacetime design has to carry a passenger through a sequence of physical operations.
+A support region is prepared. A capacity field opens enough room for the service. A transport
+field couples the passenger region to the infrastructure. A catch phase slows and rematches the

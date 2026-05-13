@@ -1,0 +1,107 @@
+--- Abstract ---
+Abstract
+
+A passenger-bearing spacetime geometry has to carry a protected region through a controlled
+sequence of support, capacity, coupling, catch, shift fade, relaxation, and reset. This paper
+presents a source-supplied composite wormhole/warp transit architecture organized around that
+service sequence. The wormhole throat functions as active infrastructure: it stretches, opens,
+gates, catches, supports, relaxes, and resets. The passenger occupies a finite packet worldtube.
+The transport field is the controlled coupling between throat plant and packet.
+The resulting design separates the engineering burden into distinct channels. Packet safety
+is evaluated on the moving packet. Catch/rematch choreography controls whether the packet
+remains protected through shift release. Transition profiles carry the momentum-current and
+extrinsic-curvature burden. Mixed radial/angular capacity carries the Hamiltonian and spatialcurvature burden. The frozen reduced candidate preserves packet and support-edge clearance,
+reduces the ADM source-demand proxies relative to the reference geometry, and lowers Lorentziansampled packet current-floor exposure to about four percent of the reference value in the stressed
+source screen.
+The paper’s contribution is a concrete burden-allocation architecture for source-supplied FTL
+spacetime engineering. The literature identifies exotic support, thin-wall severity, capacity effects,
+prepared infrastructure, and ADM role separation as central constraints. This work shows how
+those constraints organize when the passenger is treated as a protected packet carried by active
+throat infrastructure.
+
+1
+
+The service object
+
+A traversable spacetime design has to carry a passenger through a sequence of physical operations.
+
+--- How this reframes feasibility under source availability ---
+How this reframes feasibility under source availability
+
+Under the source-availability assumption, feasibility becomes a question about placement, timing,
+and exposure. The support is admitted as an engineering input. The design question is where that
+support acts, what job it performs, and how directly the passenger packet samples it.
+The frozen design answers that question by giving the burden a geography. The throat core
+supplies the active rail. The transition layer carries the current needed to catch the packet and fade
+the shift. The angular capacity sector relieves spatial-curvature concentration instead of leaving all
+capacity in the radial direction. The support edge contains the harshest infrastructure gradients.
+The packet worldtube becomes the cabin-level object whose sampled exposure can be screened
+separately from the plant.
+This geography is the feasibility contribution. A source model built for the composite architecture
+receives separate source targets rather than a single undifferentiated exotic-matter demand. One
+target supports the throat. One target carries transition current. One target supplies angular
+capacity. One target manages shoulder matching and reset. One target protects the packet coupling.
+The reduced screens show how those targets move when the design is changed, and the frozen
+candidate selects the operating family where the packet remains clear while the spatial and current
+burdens are assigned to the plant.
+The next research steps inherit that map. A pressure-complete stress tensor can be evaluated
+region by region. Constraint-quality data can preserve the same packet, edge, and support regions.
+Evolution tests can follow the catch, fade, and relax sequence as a service cycle rather than treating
+the geometry as a static object. Repeated-operation studies can ask how the plant resets and where
+source ledgers accumulate. The frozen design therefore gives future source construction a layout:
+where the source acts, which burden it carries, and how close that burden comes to the passenger
+packet.
+
+--- Source construction gates opened by the frozen design ---
+Source construction gates opened by the frozen design
+
+The frozen design gives the next source-construction problem a layout. The source is no longer
+a single symbolic object placed wherever the metric needs it. It becomes a set of regional jobs
+tied to the service cycle. The throat core supplies active rail support. The transition layer carries
+the current required to catch the packet and fade the shift. The angular capacity sector relieves
+spatial-curvature concentration. The shoulder and reset regions manage matching and recovery.
+The packet coupling region is the cabin-level target, where sampled exposure and tidal behavior
+matter most directly.
+That layout changes how the next calculation should be organized. A pressure-complete stress
+tensor can be decomposed by role instead of reported only as a global field. The useful question
+becomes: which part of Tµν supports the throat, which part carries transition current, which part
+supplies angular capacity, which part manages shoulder matching, and which part reaches the
+packet? The current-floor screen already points to that decomposition. It shows that the packet
+channel can be improved more strongly than the total source-demand norm, because the design
+suppresses the current term that the packet samples most sharply.
+The same layout guides constraint-quality initial data. The packet, support edge, transition
+layer, and shoulder region are distinct places with distinct jobs. Constraint solving can preserve
+that geography. It can test whether the mixed-capacity operating band still separates the current
+channel from the curvature channel when the reduced prescribed metric is replaced by higher-fidelity
+initial data.
+The evolution problem inherits the service cycle. The meaningful perturbation is not only a
+ripple in a static geometry; it is a disturbance during catch, fade, relaxation, and reset. A stable
+design keeps the packet protected while the plant changes state around it. Repeated operation then
+becomes a ledger question: where do source histories accumulate, how cleanly does the support edge
+
+--- Conclusion ---
+Conclusion
+
+The Catch-Rematched Hybrid Flare-Gated Transit v1 design presents a source-supplied spacetime
+service architecture. The throat is active rail infrastructure. The passenger rides a protected packet.
+The transport field couples the packet to the throat plant during a controlled service sequence:
+support is prepared, capacity is supplied, the packet is caught, the shift fades, the throat relaxes,
+and the plant resets.
+The central result is the distribution of burden. Packet safety, infrastructure accessibility,
+transition-current control, capacity support, spatial-curvature management, and recovery are
+separate engineering channels. The packet norm measures the passenger environment. Stationary
+gtt measures infrastructure accessibility. Momentum-current and extrinsic-curvature proxies identify
+transition burden. Hamiltonian and spatial-curvature proxies identify capacity/support burden.
+The frozen candidate assigns these roles to distinct parts of the plant instead of asking one geometric
+region to do every job.
+
+12
+
+
+The design’s most informative features are the ones that create this separation. Catch/rematch
+choreography protects the packet through shift release. Medium transition widths and W 4 edge
+shaping reduce the current and extrinsic-curvature channel. Mixed radial/angular capacity reduces
+spatial-curvature concentration. The balanced default uses moderate angular capacity as a curvaturemanagement actuator, with a nearby pressure/current-leaning branch. The source screen then shows
+the architecture doing its intended work: packet current-floor exposure falls much more sharply
+than the total source-demand proxy alone would suggest, because the design cleans the channel
+that the packet samples.

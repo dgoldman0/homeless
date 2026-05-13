@@ -13,8 +13,14 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{url}
 \usepackage{enumitem}
+\usepackage{float}
 
-\hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!45!black
+}
 
 \title{Catch-Rematched Hybrid Flare-Gated Transit:\\A Packet-Centered Active-Rail Architecture for Source-Supplied Spacetime Engineering}
 \author[1]{Daniel S. Goldman}
@@ -27,474 +33,397 @@
 \newcommand{\edge}{\mathrm{edge}}
 \newcommand{\geom}{\mathrm{geom}}
 \newcommand{\dyn}{\mathrm{dyn}}
-\newcommand{\vone}{\mathrm{v1}}
+\newcommand{\ADM}{\mathrm{ADM}}
+\newcommand{\Tkk}{T_{\mu\nu}k^\mu k^\nu}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This paper presents a standalone reduced-engineering reference model for a composite faster-than-light spacetime architecture under the source-available assumption. The model combines hybrid flare-gated wormhole infrastructure with a catch-rematched throat-loaded transit packet. The core result is a design architecture: passenger safety, infrastructure accessibility, transition-current burden, and spatial-curvature burden become separate engineering channels. The frozen v1 candidate treats the throat as active rail infrastructure and the passenger as a protected moving packet. The packet is caught before shift fade, shift support fades before throat relaxation, and the shift remains contained inside the same throat support envelope that supplies lapse and capacity. The frozen balanced default uses
-\[
-C_0=20,\quad C_\perp=5,\quad R_{\rm th}=1.25,\quad w_{\rm th}=0.12,\quad R_{\rm pass}=0.35,\quad w_{\rm pass}=0.08,\quad B_0=6,\quad w_B=12,
-\]
-with
-\[
-x_{\rm catch}=0.05,\quad x_\beta=0.70,\quad x_q=1.25,\quad w_{\rm catch}=0.25,\quad w_\beta=0.28,\quad w_q=0.30,\quad p_\beta=4.
-\]
-The reduced ADM screens show that transition profiles govern the dynamic/current channel $(j_M,K)$, while capacity/support geometry governs the Hamiltonian/spatial-curvature channel $(\rho_H,{}^{(3)}R)$. The three-scenario geometry confirmation reduces total source-demand proxy to about $0.162\times$ the v01 geometry baseline, geometry cost to $0.274\times$, and dynamic cost to $0.0108\times$. The conservative current-floor source screen reduces Lorentzian-sampled packet negative exposure at $V=10$, $\lambda=6$, and $\tau=0.2$ to about $0.042\times$ baseline. Robustness checks identify a mixed-capacity operating band, with $C_\perp=5$ as the balanced default and $C_\perp=3$ as a pressure/current-leaning branch. The paper's central contribution is a burden-distribution map for source-supplied spacetime transport: the passenger rides a packet, the throat acts as plant, transition profiles manage current, and angular capacity manages spatial-curvature concentration.
+A passenger-bearing spacetime geometry has to carry a protected region through a controlled sequence of support, capacity, coupling, catch, shift fade, relaxation, and reset. This paper presents a source-supplied composite wormhole/warp transit architecture organized around that service sequence. The wormhole throat functions as active infrastructure: it stretches, opens, gates, catches, supports, relaxes, and resets. The passenger occupies a finite packet worldtube. The transport field is the controlled coupling between throat plant and packet.
+
+The resulting design separates the engineering burden into distinct channels. Packet safety is evaluated on the moving packet. Catch/rematch choreography controls whether the packet remains protected through shift release. Transition profiles carry the momentum-current and extrinsic-curvature burden. Mixed radial/angular capacity carries the Hamiltonian and spatial-curvature burden. The frozen reduced candidate preserves packet and support-edge clearance, reduces the ADM source-demand proxies relative to the reference geometry, and lowers Lorentzian-sampled packet current-floor exposure to about four percent of the reference value in the stressed source screen.
+
+The paper's contribution is a concrete burden-allocation architecture for source-supplied FTL spacetime engineering. The literature identifies exotic support, thin-wall severity, capacity effects, prepared infrastructure, and ADM role separation as central constraints. This work shows how those constraints organize when the passenger is treated as a protected packet carried by active throat infrastructure.
 \end{abstract}
 
-\section{The engineering object}
+\section{The service object}
 
-The usual language of traversable wormholes and warp drives begins with a shape. A throat connects two regions. A bubble moves through an exterior. A route is prepared. These shapes are the right starting point for geometry. A transport system needs one more layer of description. It needs a service object.
+A traversable spacetime design has to carry a passenger through a sequence of physical operations. A support region is prepared. A capacity field opens enough room for the service. A transport field couples the passenger region to the infrastructure. A catch phase slows and rematches the passenger packet. The shift field fades. The throat relaxes. The support plant resets for the next service interval.
 
-A passenger system is a sequence of controlled events. Support is prepared. Capacity is supplied. Motion is coupled. The passenger is caught. The transport field is faded. The infrastructure relaxes and resets. The engineering object is the whole service process together with the metric at each instant.
+That sequence is the engineering object in this paper. The geometry is the way the sequence is represented in spacetime. The metric still matters, and the source support still dominates the feasibility problem, but the passenger system is understood through the work it performs over time. The design is judged by the quality of the packet worldtube, the containment of the infrastructure burden, the ordering of the catch/release sequence, and the source channels left for a physical construction to supply.
 
-The combined architecture developed here takes that service view seriously. The wormhole throat is active infrastructure. It stretches, opens, gates, catches, supports, and relaxes. The passenger is represented by a finite packet. The packet is the cabin-level object; the throat is the plant. The transport field is the controlled coupling between the two.
+The combined system studied here joins two ideas that are usually presented separately. The first is a flare-gated wormhole support infrastructure, where the throat has radial stretch, areal-radius flare control, lapse/timing structure, shoulder matching, and reset phases. The second is a throat-loaded warp-like packet, where lapse, capacity, and shift are placed inside the throat-support envelope. When these are combined, the throat acts as rail infrastructure. The passenger occupies a packet riding through that infrastructure. The corridor image gives way to a service image: plant below, packet within, transport field between.
 
-This framing changes the technical question. A passive tunnel design asks for a broadly comfortable throat. A standalone bubble design asks the moving wall to carry both transport and passenger protection. The composite design asks how burden should be distributed across a source-supplied plant:
+The resulting architecture is shown conceptually by the following service sentence:
 \begin{equation}
-\boxed{\hbox{packet safety}+\hbox{transition current control}+\hbox{capacity support}+\hbox{spatial-curvature management}+\hbox{infrastructure reset}.}
-\label{eq:service_object}
+\begin{aligned}
+\hbox{prepare throat support}&\rightarrow\hbox{carry packet}\rightarrow\hbox{catch packet}\\
+&\rightarrow\hbox{fade shift}\rightarrow\hbox{relax throat}.
+\end{aligned}
+\label{eq:service_sentence}
 \end{equation}
-The frozen v1 candidate is the first reduced model in this line that makes that distribution explicit.
+This sentence is the organizing principle for the paper. The mathematical construction expresses the same service sequence through ADM variables, source-demand proxies, and robustness checks.
 
-\section{The contribution in engineering terms}
+\section{The field context: support, capacity, timing, and burden}
 
-The paper contributes four concrete design results.
+The literature already gives the physical pressure points. Morris and Thorne describe the traversable throat as a flared geometry supported by exotic stress-energy while maintaining traveler-compatible tidal conditions \citep{morris_thorne_1988}. Morris, Thorne, and Yurtsever connect wormhole mouth arrangements to chronology control \citep{morris_thorne_yurtsever_1988}. Ford and Roman show that quantum inequalities convert negative energy into a magnitude-duration and length-scale problem for macroscopic throats \citep{ford_roman_1996}; Fewster and Roman sharpen the null-contracted sampling pressure for small-exotic-matter constructions \citep{fewster_roman_2005}. Dynamic throat analyses keep local null expansion and local energy-condition diagnostics central \citep{hochberg_visser_1998}.
 
-First, it separates passenger safety from infrastructure accessibility. The passenger criterion is the moving packet worldtube. Stationary $g_{tt}$ remains an infrastructure and station-access diagnostic. This separation lets the model evaluate what the passenger actually rides while treating passive comfort throughout the active plant as an infrastructure question.
+Warp and prepared-route geometries contribute another part of the map. Alcubierre writes a superluminal metric driven by a shift structure \citep{alcubierre_1994}. Pfenning and Ford connect the Alcubierre wall to quantum-inequality severity and wall-thickness pressure \citep{pfenning_ford_1997}. Van den Broeck shows that capacity engineering changes energy accounting by separating exterior size from interior volume \citep{van_den_broeck_1999}. Natario clarifies that warp motion is tied to the shift structure and calls for diagnostics beyond simple expansion/contraction language \citep{natario_2002}. Everett and Roman frame route-based superluminal travel as prepared infrastructure with negative-energy and causal-control demands \citep{everett_roman_1997}. Bobrick and Martire place warp geometries in a broader ADM language where lapse, shift, spatial geometry, capacity, and time-rate structure can be discussed separately \citep{bobrick_martire_2021}. Recent warp-shell and soliton work continues to sharpen the role of matter shells and source structure in subluminal or positive-energy settings \citep{lentz_2021,fuchs_2024}. Gao, Jafferis, and Wall show a distinct controlled-traversability mechanism in which source timing opens a traversable channel in a holographic setting \citep{gao_jafferis_wall_2017}.
 
-Second, it identifies catch/rematch choreography as the hard packet gate. The service order
+Those works define the terrain. They tell us where the pressures are: exotic support, thin-layer exposure, wall thickness, capacity, ADM variable allocation, prepared infrastructure, source timing, and chronology. The present paper follows that terrain into a more specific engineering question. Given a source-supplied throat infrastructure, how should the passenger service distribute burden between the passenger packet, the transition layer, the support edge, and the capacity geometry?
+
+The answer that emerges is more structured than a single lower-cost metric. The combined system separates into named channels. The packet worldtube carries the passenger condition. The catch/release layer carries current and extrinsic-curvature burden. The capacity/support geometry carries Hamiltonian and spatial-curvature burden. The angular capacity sector reduces curvature concentration. The throat infrastructure absorbs the parts of the problem that a passive passenger tunnel would try to hide.
+
+
+\section{A packet's passage through the plant}
+
+The architecture is easiest to understand by following one packet. Before the packet reaches the active region, the throat has already prepared the geometry that will carry it. Radial stretch has widened the service coordinate. The flare geometry is held in a posture that preserves the angular support needed by the packet. The lapse and capacity envelope cover the region where the shift field will act. The transport field is therefore inside its own support plant before the passenger region arrives.
+
+As the packet enters, the geometry treats it as a localized service object. The packet is localized. Its center is tracked. Its velocity is interpreted through the stretched radial geometry. The throat-gated shift acts only where the support envelope is present. The service then begins its critical sequence: the packet is caught, the shift fades, and the throat relaxes. Each step has a role. Catch rematches the packet to the local service state. Shift fade removes the transport field after the packet has been controlled. Throat relaxation returns the infrastructure toward reset.
+
+This picture also explains why the diagnostics separate naturally. The passenger condition follows the packet. The support edge follows the plant. The release edge follows the fading shift. The shoulder follows matching to the exterior throat environment. A single scalar comfort test over the whole active region would erase those roles. The composite architecture gains clarity by keeping them separate.
+
+The service cycle also gives physical meaning to the mathematical support-inclusion rule,
+\[
+\supp(\beta^l)\subseteq\supp(A,T).
+\]
+The shift is a transport action performed by supported infrastructure. That rule is what turns the combined wormhole/warp geometry into an active rail system.
+
+\section{The four design results}
+
+The frozen v1 design is built around four results. They are stated here before the equations because they are the conceptual core of the paper.
+
+\subsection{Passenger safety separates from infrastructure accessibility}
+
+A stationary observer and a moving service packet ask different questions of the same metric. A stationary monitor uses
 \begin{equation}
-\boxed{\hbox{catch}\rightarrow\hbox{shift fade}\rightarrow\hbox{throat relaxation}}
-\label{eq:catch_fade_relax}
+g_{tt}<0
 \end{equation}
-keeps the packet supported through the shift transition. Late catch produces packet failure because the still-fast packet loses the support field that carried it.
+as an infrastructure-accessibility diagnostic. The packet uses its own worldtube norm,
+\begin{equation}
+g_{\mu\nu}\dot{x}_{\pkt}^{\mu}\dot{x}_{\pkt}^{\nu}<0.
+\end{equation}
+The combined architecture gives those diagnostics separate roles. The support edge, shoulder, and release layer can be treated as plant regions. The passenger condition belongs to the packet.
 
-Third, it separates burden channels. Transition profiles move $j_M$ and $K$. Capacity/support geometry moves $\rho_H$ and ${}^{(3)}R$. This turns a broad exotic-source burden into two engineering subsystems.
+This separation gives the engineering target its structure. The throat can be active, time-dependent, and infrastructure-heavy while the packet remains controlled. A passive-throat criterion evaluates broad local comfort. A packet-centered criterion follows the carried passenger region. The service design therefore concentrates passenger requirements where the passenger is, and leaves infrastructure burden to the plant that is built to carry it.
 
-Fourth, it identifies mixed radial/angular capacity as the spatial-burden solution in the tested composite family. The angular capacity $C_\perp$ is a curvature-management control. The useful range is mixed-capacity, with $C_\perp=5$ as the balanced default and $C_\perp=3$ as a pressure/current-leaning branch.
+\subsection{Catch/rematch choreography is the hard packet gate}
 
-Together these results turn the combined wormhole/warp construction into a source-supplied service architecture. The literature supplies the physical warning signs: exotic support, thin-wall severity, length-scale pressure, capacity bookkeeping, prepared infrastructure, and ADM role separation. The present result shows how those pressures distribute when the system is engineered as active throat infrastructure carrying a protected packet.
+The packet is protected by the order of service operations. The hard ordering is
+\begin{equation}
+x_{\rm catch}<x_\beta<x_q,
+\end{equation}
+which means catch begins before shift fade, and throat relaxation follows after shift support has already left the packet-critical phase. The catch threshold tests show that late catch produces packet failure even when other parts of the throat remain within their own infrastructure ranges. The active-rail system succeeds when the packet is rematched before the transport field is withdrawn.
 
-\section{What the literature makes clear, and what this model adds}
+This result gives the transition layer its physical meaning. The catch profile is a passenger protection actuator. The shift fade is a release actuator. The throat relaxation is an infrastructure recovery actuator. The order of those actuators carries the passenger-critical information in the service cycle.
 
-The field already provides the boundary conditions for any serious FTL geometry. Morris and Thorne establish the traversable throat as a geometric object with flare-out, finite redshift, low tidal-force, and exotic-support requirements \citep{morris_thorne_1988}. Morris, Thorne, and Yurtsever connect wormhole mouth arrangements to chronology control \citep{morris_thorne_yurtsever_1988}. Ford and Roman show that quantum inequalities turn negative energy into a magnitude-duration and length-scale problem \citep{ford_roman_1996}; Fewster and Roman sharpen the null-contracted sampled-stress pressure for small-exotic-matter proposals \citep{fewster_roman_2005}. Dynamic-throat work keeps local null expansion and local energy-condition diagnostics at the throat \citep{hochberg_visser_1998}.
+\subsection{Transition profiles and capacity geometry move different burdens}
 
-Warp and prepared-route papers supply complementary pieces. Alcubierre shows how a shift-dominated warp metric can be written in general relativity \citep{alcubierre_1994}. Pfenning and Ford show how the Alcubierre wall concentrates severe quantum-inequality pressure \citep{pfenning_ford_1997}. Van den Broeck shows that spatial capacity can change energy accounting by separating compact exterior size from interior volume \citep{van_den_broeck_1999}. Natario emphasizes the shift-structure view of warp motion beyond expansion/contraction intuition \citep{natario_2002}. Everett and Roman's Krasnikov-tube analysis places prepared infrastructure and causal control at the center of route-based superluminal travel \citep{everett_roman_1997}. Bobrick and Martire provide an ADM language in which lapse, shift, spatial geometry, capacity, and time-rate roles can be separated \citep{bobrick_martire_2021}. Lentz and Fuchs et al. show the continuing value of matter-shell and shift-structure engineering in modern warp-geometry work \citep{lentz_2021,fuchs_2024}. Gao, Jafferis, and Wall show controlled traversability through source timing/coupling in a holographic setting \citep{gao_jafferis_wall_2017}.
+The ADM screens show a clean burden-channel separation. Transition profiles primarily move the momentum-current and extrinsic-curvature channel:
+\begin{equation}
+\hbox{transition profiles}\rightarrow j_M,\ K.
+\end{equation}
+Capacity/support geometry primarily moves the Hamiltonian and spatial-curvature channel:
+\begin{equation}
+\hbox{capacity/support geometry}\rightarrow \rho_H,\ {}^{(3)}R.
+\end{equation}
+That split is the central engineering result. The broad exotic-source burden resolves into a two-channel design problem: tune service choreography for current, and tune spatial support for curvature.
 
-Those papers make the stakes legible. They leave an engineering allocation problem. If source support is available, which part of the geometry should carry passenger safety? Which part should carry transition current? Which part should carry spatial curvature? Which field should behave like a rail, which like a cabin, which like a switch, and which like a reset mechanism?
+The transition refinement therefore has a natural endpoint. Early catch, medium widths, and $W^4$ edge shaping reduce $j_M$ and $K$. After that improvement, the remaining geometry burden sits in $\rho_H$ and ${}^{(3)}R$, and the design has to move into capacity/support geometry.
 
-The answer developed here is summarized in Table~\ref{tab:lit_result_map}. The table is the paper's literature integration in compact form: broad field principle on the left, composite-specific result on the right.
+\subsection{Mixed radial/angular capacity is the spatial-burden solution}
 
-\begin{longtable}{p{0.32\linewidth}p{0.58\linewidth}}
-\caption{Field principles and composite-design clarifications.}\label{tab:lit_result_map}\\
-\toprule
-Field principle & Composite-design clarification \\
-\midrule
-\endfirsthead
-\toprule
-Field principle & Composite-design clarification \\
-\midrule
-\endhead
-Traversable throats need flare-out support and passenger-compatible access. & The throat functions as active infrastructure. Passenger compatibility attaches to a protected moving packet worldtube. \\
-Quantum inequalities punish concentrated negative energy and thin support layers. & Broadened support and mixed radial/angular capacity reduce reduced ADM source-demand and conservative packet source-exposure proxies. \\
-Warp metrics separate lapse, shift, and spatial geometry in ADM form. & The composite screen assigns burdens: transition profiles control $j_M,K$; capacity/support geometry controls $\rho_H,{}^{(3)}R$. \\
-Capacity engineering changes accounting. & Capacity splits into a radial service channel $C_0$ and an angular curvature-relief channel $C_\perp$. \\
-Prepared infrastructure can carry route burden. & The throat gates the shift and supplies the capacity/lapse envelope: $\supp(\beta^l)\subseteq\supp(A,T)$. \\
-Source timing can open traversable channels in special settings. & Packet service uses a concrete timing basin: catch, shift fade, throat relaxation. \\
-\bottomrule
-\end{longtable}
+The capacity refinement separates radial and angular support:
+\begin{equation}
+A_\parallel=\exp(qW\ln C_0),\qquad A_\perp=\exp(qW\ln C_\perp).
+\end{equation}
+The radial factor supplies service capacity along the rail direction. The angular factor manages spatial-curvature concentration around the packet support. The confirmed balanced candidate uses minimum useful radial capacity, $C_0=20$, and moderate angular capacity, $C_\perp=5$.
 
-\section{Architecture: the throat becomes plant}
+The radial-only comparison exposes the lesson. A geometry with $C_\perp=1$ can be very quiet in the dynamic/current channel while retaining reference-level spatial burden. Adding moderate angular capacity lowers the Hamiltonian/spatial-curvature channel while preserving packet and support-edge clearance. The angular sector is therefore an active curvature-management actuator.
 
-\subsection{Hybrid flare-gated infrastructure}
+Together, these four results convert the combined wormhole/warp construction into a source-supplied service architecture. The design protects the packet, lets the throat act as plant, uses choreography to control current, and uses mixed capacity to manage curvature.
 
-The throat infrastructure begins with the hybrid flare-gated form
+\section{The frozen v1 service design}
+
+The frozen balanced default is easiest to describe in operational language. The throat prepares a broad support envelope. The packet enters the service region. The catch begins almost immediately inside the service window. The shift fades only after the packet has been rematched. The throat relaxes last. Radial capacity remains modest. Angular capacity carries curvature relief. Radial stretch is broad and moderate.
+
+The transition layer is
+\begin{equation}
+ x_{\rm catch}=0.05,\quad x_\beta=0.70,\quad x_q=1.25,
+ \qquad
+ w_{\rm catch}=0.25,\quad w_\beta=0.28,\quad w_q=0.30,
+ \qquad
+ p_\beta=4.
+\end{equation}
+The capacity/support geometry is
+\begin{equation}
+\begin{aligned}
+ C_0&=20, & C_\perp&=5, & R_{\rm th}&=1.25, & w_{\rm th}&=0.12,\\
+ R_{\rm pass}&=0.35, & w_{\rm pass}&=0.08, & B_0&=6, & w_B&=12.
+\end{aligned}
+\end{equation}
+The nearby pressure/current-leaning branch uses $C_\perp=3$. The balanced default keeps $C_\perp=5$ because it gives the better combined geometry/source-demand posture in the higher-resolution stressed confirmation.
+
+The frozen service design consists of the whole architecture: catch-rematched packet, throat-gated shift, hybrid flare-gated infrastructure, early-catch transition choreography, mixed radial/angular capacity, conservative source-exposure screen, and robustness checks.
+
+\section{What the numbers reveal}
+
+The numerical screens matter because they show how the narrative architecture behaves when measured. The details are collected in Section~\ref{sec:technical}. The main results can be stated plainly.
+
+First, early catch deepens the packet margin. In the stressed transition screen, the reference transition has packet max norm $-0.194$. The early-catch medium-width $p_\beta=4$ transition gives $-0.704$, with the release packet norm deepening to $-1.819$. Packet safety improves because the packet is caught before the support that carries it is withdrawn.
+
+Second, transition refinement reduces the current channel. Packet $j_M$ falls to $0.603\times$ the transition reference and packet $K$ to $0.601\times$. The total source-cost proxy moves only modestly because the fixed geometry still carries the Hamiltonian/spatial-curvature channel. That is exactly what the channel interpretation predicts.
+
+Third, mixed capacity moves the geometry channel. In the three-scenario confirmation, the balanced $C_\perp=5$ candidate gives total cost $0.162\times$, geometry cost $0.274\times$, and dynamic cost $0.0108\times$ against the reference geometry. The radial-only comparison gives dynamic cost $0.00208\times$ and geometry cost $1.000\times$. The data therefore select the mixed-capacity family as the balanced source-demand posture.
+
+Fourth, the source-exposure proxy improves in the packet region more strongly than the total cost proxy alone suggests. The conservative Lorentzian-sampled packet current-floor exposure at $\tau=0.2$ moves from $-2.0645\times10^{-2}$ to $-8.704\times10^{-4}$, about $0.042\times$ the reference. The packet negative-volume proxy falls to $0.092\times$, and packet $j_M$ falls to $0.011\times$. The refinement therefore improves the channel that matters most for the packet's null-sensitive exposure.
+
+Fifth, robustness checks preserve the design family. The $61\times25$ stressed grid gives the balanced default total cost $0.119\times$, geometry cost $0.158\times$, and dynamic cost $0.020\times$. Pressure-sensitive brackets identify $C_\perp=3$ as a pressure/current-leaning branch and keep $C_\perp=5$ as the balanced default. Grid sensitivity preserves the ordering
+\begin{equation}
+\begin{aligned}
+\hbox{mixed-capacity candidate}
+&<\hbox{radial-only comparison}\\
+&<\hbox{reference geometry}.
+\end{aligned}
+\end{equation}
+
+These results supply the central implication: the combined architecture creates a real engineering division of labor. The packet carries passenger safety. The transition layer carries current management. The mixed capacity support carries curvature management. The throat infrastructure carries the plant burden.
+
+
+\section{Why the results were informative}
+
+The screens revealed how the composite system wants to be engineered.
+
+The first informative result was the dominance of choreography. The packet needs the right sequence of events at the right positions. A late catch leaves the packet fast while the shift field is fading; the failure then appears in the packet norm. This explains why edge smoothing is effective after the service order is correct. The packet is protected by timing before it is protected by polish.
+
+The second informative result was the clean split between transition burden and geometry burden. The transition sweep made the packet safer and reduced $j_M$ and $K$, while the spatial/Hamiltonian channel remained tied to capacity and support geometry. That outcome is valuable because it prevents overworking the wrong actuator. Once timing has cleaned the current channel, the remaining spatial burden has to be handled by the support geometry.
+
+The third informative result was angular capacity. A purely radial-capacity mindset would naturally try to increase or decrease $C_0$ as the main capacity control. The mixed-capacity screen shows a richer structure. Radial capacity supplies the service corridor; angular capacity relieves spatial curvature. The radial-only branch demonstrates the distinction sharply: it can be dynamically quiet while leaving the geometry channel essentially untouched. The balanced design uses angular capacity because the burden it reduces is spatial.
+
+The fourth informative result was the source-exposure alignment. The total source-demand proxy improved substantially, and the packet current-floor exposure improved even more. That extra improvement says the candidate is reducing the channel that most directly enters the conservative null-current exposure seen by the packet. The design therefore improves the passenger-facing source proxy in the part of the system where that improvement matters most.
+
+The robustness checks turn these observations into a frozen design family. The result is a mixed-capacity band. The balanced default sits at $C_\perp=5$; the pressure/current-leaning branch sits nearby at $C_\perp=3$. That operating-band interpretation is more useful than a one-number optimum because it tells future source work how the design can be biased when pressure-complete modeling begins.
+
+\section{Technical construction and evidence}
+\label{sec:technical}
+
+This section collects the technical definitions, formulas, and data tables used by the paper. The preceding sections use these results as the evidential base for the narrative claims.
+
+\subsection{Metric ansatz}
+
+The hybrid flare-gated throat infrastructure is represented by
 \begin{equation}
  ds^2=-N(l,t)^2\dd t^2+B(l,t)^2\dd l^2+R(l,t)^2\dd\Omega^2.
-\label{eq:throat_metric}
 \end{equation}
-The control roles are direct:
-\begin{align}
- B(l,t)&: \hbox{radial proper-length support and service-coordinate stretch},\nonumber\\
- R(l,t)&: \hbox{flare/access state and angular geometry},\nonumber\\
- N(l,t)&: \hbox{timing, lapse margin, and shoulder matching}.\nonumber
-\end{align}
-The wormhole-only v1 model used these functions to create a phased throat-support plant: prestretch, flare opening, quiet access hold, closure, repayment/shoulder matching, and reset \citep{goldman_hybrid_flare_gated_paper}. The composite model uses the same controls with a new job. They carry the infrastructure around a service packet.
-
-\subsection{Throat-loaded packet}
-
-The packet side is written in radial ADM form,
-\begin{equation}
- ds^2=-T^2\dd t^2+A^2(\dd l+\beta^l\dd t)^2+A^2r(l)^2\dd\Omega^2.
-\label{eq:packet_basic}
-\end{equation}
-Capacity and lapse are paired,
-\begin{equation}
- A=\exp(qW\ln C_0),\qquad T=\exp(qW\ln(\lambda C_0)),
-\label{eq:paired_AT}
-\end{equation}
-so that
-\begin{equation}
- T/A=\lambda^{qW}.
-\label{eq:AT_ratio}
-\end{equation}
-The shift is throat-gated:
-\begin{equation}
- \beta^l(l,t)=-U(t)E(X(t))W(l)S(l-X(t)).
-\label{eq:throat_gated_shift}
-\end{equation}
-The support-inclusion rule
-\begin{equation}
- \supp(\beta^l)\subseteq\supp(A,T)
-\label{eq:support_inclusion}
-\end{equation}
-keeps the transport shift inside the same region that supplies support. This rule is one of the bridge results from the original catch-rematched transit ansatz \citep{goldman_communication_paper}.
-
-\subsection{Final composite field}
-
 The final composite metric is
 \begin{equation}
- ds^2=-\alpha(l,t)^2\dd t^2+
- \gamma_{ll}(l,t)(\dd l+\beta^l(l,t)\dd t)^2+
- \gamma_{\Omega\Omega}(l,t)\dd\Omega^2.
-\label{eq:composite_metric}
+ ds^2=-\alpha(l,t)^2\dd t^2+\gamma_{ll}(l,t)(\dd l+\beta^l(l,t)\dd t)^2+\gamma_{\Omega\Omega}(l,t)\dd\Omega^2,
 \end{equation}
-The fields are
+with
 \begin{align}
- \alpha(l,t)&=N_{\vone}(l,t)T_{\pkt}(l,t),\label{eq:alpha}\\
- \gamma_{ll}(l,t)&=B_{\vone}(l,t)^2A_\parallel(l,t)^2,\label{eq:gll}\\
- \gamma_{\Omega\Omega}(l,t)&=R_{\vone}(l,t)^2A_\perp(l,t)^2,\label{eq:go}\\
- \beta^l(l,t)&=-\dot{X}_{\rm coord}(t)E(X(t))W(l)^{p_\beta}S(l-X(t)).\label{eq:beta_final}
+\alpha&=N_{\rm v1}T_{\pkt},\\
+\gamma_{ll}&=B_{\rm v1}^2A_\parallel^2,\\
+\gamma_{\Omega\Omega}&=R_{\rm v1}^2A_\perp^2,\\
+\beta^l&=-\dot{X}_{\rm coord}E(X)W(l)^{p_\beta}S(l-X).
 \end{align}
-The capacity factors are anisotropic,
+The capacity and packet lapse factors are
 \begin{align}
- A_\parallel&=\exp(qW\ln C_0),\label{eq:Apar}\\
- A_\perp&=\exp(qW\ln C_\perp),\label{eq:Aperp}\\
- T_{\pkt}&=\exp(qW\ln(\lambda C_0)).\label{eq:Tpkt}
+A_\parallel&=\exp(qW\ln C_0),\\
+A_\perp&=\exp(qW\ln C_\perp),\\
+T_{\pkt}&=\exp(qW\ln(\lambda C_0)).
 \end{align}
-The packet speed is measured against the stretched throat infrastructure:
+The B-aware service velocity is
 \begin{equation}
- \dot{X}_{\rm coord}=\frac{U}{B_{\vone}(X)}.
-\label{eq:baware}
+\dot{X}_{\rm coord}=\frac{U}{B_{\rm v1}(X)}.
 \end{equation}
-This is a service-coordinate statement. The throat's radial stretch remains useful, and packet motion must account for it.
-
-The passenger packet is the finite region
-\begin{equation}
- |l-X(t)|\le r_{\pkt}.
-\label{eq:packet_region}
-\end{equation}
-The moving packet norm is
-\begin{equation}
- n_{\pkt}=-\alpha^2+\gamma_{ll}(\dot{X}_{\rm coord}+\beta^l)^2.
-\label{eq:packet_norm}
-\end{equation}
-The stationary infrastructure monitor is
-\begin{equation}
- g_{tt}=-\alpha^2+\gamma_{ll}(\beta^l)^2.
-\label{eq:gtt}
-\end{equation}
-The distinction between Eq.~\eqref{eq:packet_norm} and Eq.~\eqref{eq:gtt} is a major conceptual result. The packet norm tracks the passenger worldtube. Stationary $g_{tt}$ tracks passive access and infrastructure state.
-
-\section{Diagnostics: measuring the burden channels}
-
-The reduced ADM diagnostic computes the extrinsic curvature
-\begin{equation}
- K_{ij}=\frac{D_i\beta_j+D_j\beta_i-\partial_t\gamma_{ij}}{2\alpha},
-\label{eq:Kij}
-\end{equation}
-the Hamiltonian source-demand proxy
-\begin{equation}
- \rho_H=\frac{{}^{(3)}R+K^2-K_{ij}K^{ij}}{16\pi},
-\label{eq:rhoH}
-\end{equation}
-and the momentum/current source-demand proxy
-\begin{equation}
- j_M^i=\frac{D_j(K^{ij}-\gamma^{ij}K)}{8\pi}.
-\label{eq:jM}
-\end{equation}
-The diagnostic groups these quantities into two channels:
+The packet norm and infrastructure monitor are
 \begin{align}
- J_{\dyn}&:\quad j_M\hbox{ and }K,\label{eq:Jdyn_words}\\
- J_{\geom}&:\quad \rho_H\hbox{ and }{}^{(3)}R.\label{eq:Jgeom_words}
+n_{\pkt}&=-\alpha^2+\gamma_{ll}(\dot{X}_{\rm coord}+\beta^l)^2,\\
+g_{tt}&=-\alpha^2+\gamma_{ll}(\beta^l)^2.
 \end{align}
-The conservative source-exposure proxy is
+
+\subsection{ADM source-demand diagnostics}
+
+The reduced ADM screen computes
 \begin{equation}
- Tkk_{\rm floor}=\rho_H-2|j_M|.
-\label{eq:tkk_floor}
+K_{ij}=\frac{D_i\beta_j+D_j\beta_i-\partial_t\gamma_{ij}}{2\alpha},
 \end{equation}
-A pressure-sensitive bracket adds a pressure-scale term,
+then evaluates
 \begin{equation}
- Tkk_\eta=\rho_H+\eta\rho_H-2|j_M|,
+\rho_H=\frac{{}^{(3)}R+K^2-K_{ij}K^{ij}}{16\pi}
+\end{equation}
+and
+\begin{equation}
+j_M^i=\frac{D_j(K^{ij}-\gamma^{ij}K)}{8\pi}.
+\end{equation}
+The conservative current-floor proxy is
+\begin{equation}
+Tkk_{\rm floor}=\rho_H-2|j_M|.
+\end{equation}
+The pressure-sensitive bracket uses
+\begin{equation}
+Tkk_\eta=\rho_H+\eta\rho_H-2|j_M|,
 \qquad \eta\in\{-1,0,+1\}.
-\label{eq:tkk_eta}
 \end{equation}
-These screens are engineering diagnostics. They tell a source-construction program where the candidate asks for support.
 
-\section{Result 1: passenger safety is packet-local}
+\subsection{Catch threshold evidence}
 
-The first composite result is a change in what is being protected. In a passive-tunnel reading, one tries to make the whole active throat feel like a corridor. In the packet reading, the passenger is associated with $n_{\pkt}<0$ along the finite moving worldtube. The infrastructure can carry time-dependent support and transition burden outside that worldtube.
-
-This separation explains several otherwise confusing reduced-screen outcomes. A stationary observer at a support edge can see a different diagnostic from the moving packet. A low-lapse infrastructure state can trigger passive access monitors while the service packet remains timelike under correct choreography. The design target is therefore packet safety plus controlled infrastructure burden.
-
-This result also clarifies how the combined geometry uses the wormhole v1 system. The hybrid throat supplies plant functions: radial stretch, flare support, shoulder matching, repayment/reset, and sampled-stress ledgers. The passenger rides the packet.
-
-\section{Result 2: choreography is the hard packet gate}
-
-The second result is operational. The packet is protected by the order of events. The service layer must catch the packet before the shift fades, and the throat support must relax after the packet has cleared the critical transition:
-\begin{equation}
- x_{\rm catch}<x_\beta<x_q.
-\label{eq:choreography_order}
-\end{equation}
-The tested thresholds show the structure. With $x_\beta=0.70$ and $x_q=1.25$, higher-speed/lower-margin cases require earlier catch. At $V=10$ and $\lambda=6$, catch that begins too late creates packet failure; edge shaping then operates on a packet that has already lost the support sequence it needed.
-
-\begin{table}[ht]
+\begin{table}[H]
 \centering
-\caption{Catch threshold relative to shift fade. Higher service speed and lower lapse margin require earlier catch.}
+\caption{Catch threshold with $x_\beta=0.70$ and $x_q=1.25$. Higher speed and lower lapse margin require earlier catch.}
 \label{tab:catch_threshold}
 \begin{tabular}{rrrrr}
 \toprule
 $V$ & $\lambda$ & first packet-fail $x_{\rm catch}$ & offset from $x_\beta$ & first edge $g_{tt}$ trigger \\
 \midrule
-5 & 3 & 0.65 & -0.05 & -- \\
-5 & 5 & 0.70 & 0.00 & -- \\
-10 & 6 & 0.60 & -0.10 & 0.90 \\
-10 & 11.5 & 0.60 & -0.10 & -- \\
+5 & 3.0 & 0.65 & -0.05 & none \\
+5 & 5.0 & 0.70 & 0.00 & none \\
+10 & 6.0 & 0.60 & -0.10 & 0.90 \\
+10 & 11.5 & 0.60 & -0.10 & none \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The result identifies the kind of control that matters. The service sequence is the hard gate. Once the packet is caught early, medium-width profiles and edge shaping reduce the transition burden. When catch is late, edge smoothing arrives after the missing service order has already shaped the packet history.
+\subsection{Transition refinement evidence}
 
-\section{Result 3: the transition layer carries current burden}
-
-The v01 transition refinement fixes the service order and then tunes the shape of catch, shift fade, throat relaxation, and edge taper. The selected transition layer is
-\begin{equation}
- x_{\rm catch}=0.05,
- \quad x_\beta=0.70,
- \quad x_q=1.25,
- \quad
- w_{\rm catch}=0.25,
- \quad w_\beta=0.28,
- \quad w_q=0.30,
- \quad p_\beta=4.
-\label{eq:v01_transition}
-\end{equation}
-Early catch gives the packet time to slow before shift fade. Medium transition widths reduce gradients while keeping the service phases distinct. The $W^4$ shift taper cleans the support edge after the packet sequence is correct.
-
-The transition layer primarily moves the dynamic/current channel. In the stressed screen, the early-catch medium $p_\beta=4$ transition reduces packet $j_M$ and packet $K$ to roughly $0.60\times$ the transition baseline, while strengthening packet timelike margins. Table~\ref{tab:transition_result} records the main readout.
-
-\begin{table}[ht]
+\begin{table}[H]
 \centering
-\caption{Transition refinement effect. The transition layer reduces the dynamic/current channel while improving packet margin.}
-\label{tab:transition_result}
-\begin{tabular}{lrrr}
+\caption{Transition refinement summary. Values are relative to the reference transition where marked.}
+\label{tab:transition}
+\begin{tabular}{lrrrr}
 \toprule
-Metric & Baseline & v01 transition & Relative \\
+Case & packet norm & release norm & packet $j_M$ rel. & packet $K$ rel. \\
 \midrule
-Packet max norm & -0.194 & -0.704 & stronger margin \\
-Release max packet norm & -0.194 & -1.819 & stronger margin \\
-Max packet $j_M$ proxy & 0.0397 & 0.0239 & 0.603 \\
-Max packet $K$ proxy & 13.73 & 8.25 & 0.601 \\
-Total source-cost proxy & 1.000 & 0.939 & 0.939 \\
+reference transition & -0.194 & -0.194 & 1.000 & 1.000 \\
+early-catch medium $p_\beta=4$ & -0.704 & -1.819 & 0.603 & 0.601 \\
+long-gap medium $p_\beta=4$ & -0.704 & -2.411 & 0.612 & 0.612 \\
+early-catch medium $p_\beta=3$ & -0.704 & -1.819 & 0.910 & 0.910 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The design implication is direct:
-\begin{equation}
- \boxed{\hbox{transition profiles are current and extrinsic-curvature controls}.}
-\label{eq:transition_implication}
-\end{equation}
-Once this channel is reduced, the remaining large burden belongs to the spatial geometry.
+\subsection{Geometry refinement evidence}
 
-\section{Result 4: the spatial burden wants mixed capacity}
-
-The geometry refinement answers the next question: which support/capacity geometry reduces $\rho_H$ and ${}^{(3)}R$ while preserving packet and edge clearance? The answer is mixed radial/angular capacity with broadened support.
-
-The frozen balanced default is
-\begin{equation}
-\boxed{
-C_0=20,
-\quad C_\perp=5,
-\quad R_{\rm th}=1.25,
-\quad w_{\rm th}=0.12,
-\quad R_{\rm pass}=0.35,
-\quad w_{\rm pass}=0.08,
-\quad B_0=6,
-\quad w_B=12.}
-\label{eq:v1_default}
-\end{equation}
-The three-scenario confirmation grid uses
-\begin{equation}
-(V,\lambda)\in\{(5,5.75),(10,6),(10,11.5)\},
-\qquad
-X\in\{0.05,0.35,0.70,1.00,1.25\}.
-\label{eq:geom_scenarios}
-\end{equation}
-
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.74\linewidth]{../figures/burden_channel_comparison.png}
-\caption{Burden-channel comparison. The mixed-capacity candidate reduces the geometry and dynamic channels relative to the v01 geometry baseline.}
+\caption{Burden-channel comparison. The balanced mixed-capacity design reduces geometry and dynamic channels together.}
 \label{fig:burden_channel}
 \end{figure}
 
-\begin{table}[ht]
-\centering
-\caption{Geometry confirmation grid. Costs are relative to the v01 geometry baseline.}
-\label{tab:geometry_confirmation}
-\begin{tabular}{lrrrr}
-\toprule
-Candidate & Total cost & Geometry cost & Dynamic cost & Packet max norm \\
-\midrule
-$v01$ geometry baseline & 1.000 & 1.000 & 1.000 & -0.696 \\
-No-angular $C_\perp=1$ & 0.574 & 1.000 & 0.00208 & -0.762 \\
-$C_\perp=3$ branch & 0.174 & 0.298 & 0.00776 & -0.762 \\
-$C_\perp=5$ balanced default & 0.162 & 0.274 & 0.0108 & -0.762 \\
-Reserve $C_0=100,C_\perp=5$ & 0.174 & 0.278 & 0.0341 & -0.766 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The no-angular comparison is the key control. With $C_\perp=1$, the dynamic channel is tiny, but the geometry channel remains at baseline. With $C_\perp=5$, the geometry channel falls to about $0.274\times$ baseline while the packet and support edge remain clear. Figure~\ref{fig:mixed_capacity} shows the separation.
-
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.74\linewidth]{../figures/mixed_capacity_comparison.png}
-\caption{Mixed radial/angular capacity. The angular sector reduces the spatial-curvature burden that remains in a purely radial capacity design.}
+\caption{Mixed radial/angular capacity comparison. The radial-only branch is current-clean and geometry-heavy; moderate angular capacity reduces spatial burden.}
 \label{fig:mixed_capacity}
 \end{figure}
 
-This is the core capacity result:
-\begin{equation}
-\boxed{\hbox{minimum useful radial capacity}+\hbox{moderate angular capacity}.}
-\label{eq:capacity_rule}
-\end{equation}
-The angular sector is a curvature-management actuator. It is part of the support plant.
-
-\section{Source exposure: the packet channel improves more than the total score predicts}
-
-The pre-freeze source screen applies the conservative current-floor proxy in Eq.~\eqref{eq:tkk_floor}. The v1 candidate improves the packet exposure strongly in the stressed $V=10$, $\lambda=6$ case.
-
-\begin{table}[ht]
+\begin{table}[H]
 \centering
-\caption{Conservative packet/source screen at $V=10$, $\lambda=6$.}
-\label{tab:source_screen}
-\begin{tabular}{lrrr}
+\caption{Geometry confirmation. Costs are relative to the reference geometry.}
+\label{tab:geometry}
+\begin{tabular}{lrrrr}
 \toprule
-Quantity & v01 baseline & v1 candidate & Relative \\
+Candidate & total & geometry & dynamic & packet norm \\
 \midrule
-Packet min $Tkk_{\rm floor}$ & -0.789658 & -0.124632 & 0.158 \\
-Packet negative-volume proxy & 0.123668 & 0.011353 & 0.092 \\
-Packet $j_M$ p95 & 0.300257 & 0.003341 & 0.011 \\
-Packet $\rho_H$ p95 & 0.315277 & 0.096020 & 0.305 \\
-Packet ${}^{(3)}R$ p95 & 15.847573 & 4.826470 & 0.305 \\
-Packet $K$ p95 & 67.616640 & 0.198121 & 0.003 \\
-Support-edge negative-volume proxy & 0.024978 & 0.010403 & 0.416 \\
+reference geometry & 1.000 & 1.000 & 1.000 & -0.696 \\
+radial-only $C_\perp=1$ & 0.574 & 1.000 & 0.00208 & -0.762 \\
+$C_\perp=3$ branch & 0.174 & 0.298 & 0.00776 & -0.762 \\
+$C_\perp=4$ branch & 0.166 & 0.284 & 0.00944 & -0.762 \\
+balanced default $C_\perp=5$ & 0.162 & 0.274 & 0.0108 & -0.762 \\
+reserve branch $C_0=100,C_\perp=5$ & 0.174 & 0.278 & 0.0341 & -0.766 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The Lorentzian-sampled packet floor at $\tau=0.2$ changes from
-\begin{equation}
- -2.0645\times10^{-2}
- \quad\hbox{to}\quad
- -8.704\times10^{-4},
-\label{eq:lorentzian_sampled}
-\end{equation}
-about $0.042\times$ the v01 baseline. The total geometry confirmation gave a much larger ratio, about $0.162\times$. The sampled packet exposure falls farther because the packet current channel is the channel most strongly suppressed by the transition-and-capacity combination.
+\subsection{Source-exposure evidence}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.74\linewidth]{../figures/packet_source_exposure.png}
-\caption{Packet source-exposure proxy at $V=10$, $\lambda=6$. The mixed-capacity candidate reduces sampled packet exposure and packet negative-volume proxy relative to the v01 baseline.}
-\label{fig:packet_exposure}
+\caption{Packet source-exposure proxy at $V=10$, $\lambda=6$. The balanced default reduces sampled packet exposure and negative-volume exposure relative to the reference geometry.}
+\label{fig:packet_source_exposure}
 \end{figure}
 
-This is a qualitative result and a numerical improvement. The architecture is doing the thing it was built to do: it cleans the packet channel. The infrastructure remains the place where support modeling has to happen. The passenger packet becomes the cleaner worldtube.
-
-\section{Robustness: a mixed-capacity operating band}
-
-The robustness checks refine the freeze. Pressure-sensitive source brackets, score-weighted rankings, and grid sensitivity all preserve the mixed-capacity family.
-
-At $61\times25$ in the stressed case, $C_\perp=5$ gives the best balanced total/geometry source-demand posture. The nearby $C_\perp=3$ branch gives lower pressure/current exposure in some brackets. The design is therefore an operating band with nearby pressure/current margin.
-
-\begin{table}[ht]
+\begin{table}[H]
 \centering
-\caption{Pressure-sensitive robustness screen. Ratios are relative to the v01 baseline.}
-\label{tab:pressure_screen}
-\begin{tabular}{lrrrrr}
+\caption{Conservative current-floor source screen at $V=10$, $\lambda=6$.}
+\label{tab:source}
+\begin{tabular}{lrrrr}
 \toprule
-Design & Total & Geometry & Dynamic & floor exposure & pressure exposure \\
+Case & packet min floor & neg. volume rel. & $j_M$ rel. & Lorentzian floor rel. \\
 \midrule
-$C_\perp=5$ balanced default & 0.119 & 0.158 & 0.020 & 0.338 & 0.213 \\
-$C_\perp=3$ pressure branch & 0.142 & 0.192 & 0.015 & 0.283 & 0.144 \\
-$C_\perp=1$ no-angular & 0.721 & 1.000 & 0.005 & 1.000 & 0.026 \\
+reference geometry & -0.789658 & 1.000 & 1.000 & 1.000 \\
+balanced default $C_\perp=5$ & -0.124632 & 0.092 & 0.011 & 0.042 \\
+radial-only $C_\perp=1$ & -0.319837 & 0.291 & 0.00134 & positive floor \\
+reserve branch & -0.149332 & 0.130 & 0.046 & 0.295 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The grid test preserves the ordering
-\begin{equation}
- \hbox{mixed-capacity candidate}<\hbox{no-angular comparison}<\hbox{v01 baseline}
-\label{eq:grid_ordering}
-\end{equation}
-for total cost across $25\times11$, $41\times17$, and $61\times25$ grids. Figure~\ref{fig:grid_sensitivity} shows that the ratios move with resolution while the design ordering remains stable.
+\subsection{Robustness evidence}
 
-\begin{figure}[ht]
+\begin{table}[H]
+\centering
+\caption{Pressure-sensitive robustness screen at $61\times25$ grid in the stressed case. Values are relative to the reference geometry.}
+\label{tab:robust_pressure}
+\begin{tabular}{lrrrr}
+\toprule
+Case & total & geometry & dynamic & pressure exposure \\
+\midrule
+balanced default $C_\perp=5$ & 0.119 & 0.158 & 0.020 & 0.213 \\
+pressure branch $C_\perp=3$ & 0.142 & 0.192 & 0.015 & 0.144 \\
+radial-only $C_\perp=1$ & 0.721 & 1.000 & 0.005 & 0.026 \\
+reference geometry & 1.000 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.74\linewidth]{../figures/grid_sensitivity.png}
-\caption{Grid-sensitivity ordering. The mixed-capacity family remains favored across the tested grids.}
+\caption{Grid sensitivity. The mixed-capacity candidate preserves the ordering over the tested grids.}
 \label{fig:grid_sensitivity}
 \end{figure}
 
-The freeze statement is therefore:
-\begin{equation}
-\boxed{\hbox{v1 balanced default: }C_0=20,C_\perp=5,R_{\rm th}=1.25,w_{\rm th}=0.12,B_0=6,w_B=12.}
-\label{eq:freeze_statement}
-\end{equation}
-The documented nearby branch is $C_\perp=3$ for pressure/current-leaning studies.
 
-\section{Implications for source-supplied FTL engineering}
 
-The work changes the engineering picture in five ways.
+\section{How this reframes feasibility under source availability}
 
-First, it makes the protected object explicit. The passenger rides a packet. The active throat supports the packet. That lets the design evaluate passenger safety where it belongs and evaluate plant burden where it belongs.
+Under the source-availability assumption, feasibility becomes a question about placement, timing, and exposure. The support is admitted as an engineering input. The design question is where that support acts, what job it performs, and how directly the passenger packet samples it.
 
-Second, it gives timing a mechanical role. Catch is the service operation that makes shift fade safe. The sequence catch, shift fade, throat relaxation is the control law of the packet service.
+The frozen design answers that question by giving the burden a geography. The throat core supplies the active rail. The transition layer carries the current needed to catch the packet and fade the shift. The angular capacity sector relieves spatial-curvature concentration instead of leaving all capacity in the radial direction. The support edge contains the harshest infrastructure gradients. The packet worldtube becomes the cabin-level object whose sampled exposure can be screened separately from the plant.
 
-Third, it creates two source-demand channels. Transition profiles move $j_M$ and $K$; capacity/support geometry moves $\rho_H$ and ${}^{(3)}R$. This is the map a source-construction program can use. It says which source component should be designed to carry current, and which source component should be designed to carry spatial curvature.
+This geography is the feasibility contribution. A source model built for the composite architecture receives separate source targets rather than a single undifferentiated exotic-matter demand. One target supports the throat. One target carries transition current. One target supplies angular capacity. One target manages shoulder matching and reset. One target protects the packet coupling. The reduced screens show how those targets move when the design is changed, and the frozen candidate selects the operating family where the packet remains clear while the spatial and current burdens are assigned to the plant.
 
-Fourth, it identifies angular capacity as real infrastructure. A purely radial service geometry can give low current and high curvature burden. Moderate angular capacity reduces the curvature burden. This is the strongest capacity-design lesson in the paper.
+The next research steps inherit that map. A pressure-complete stress tensor can be evaluated region by region. Constraint-quality data can preserve the same packet, edge, and support regions. Evolution tests can follow the catch, fade, and relax sequence as a service cycle rather than treating the geometry as a static object. Repeated-operation studies can ask how the plant resets and where source ledgers accumulate. The frozen design therefore gives future source construction a layout: where the source acts, which burden it carries, and how close that burden comes to the passenger packet.
 
-Fifth, it shows alignment between the geometry screen and the source-exposure screen. The frozen candidate reduces the aggregate source-demand proxy and also reduces sampled packet current-floor exposure. The packet channel improves more strongly than the total score alone suggests.
+\section{Source construction gates opened by the frozen design}
 
-These implications are the practical contribution under the source-available assumption. The result organizes the hard source problem. It turns a single undifferentiated exotic-support burden into packet, transition, geometry, edge, and source-channel tasks.
+The frozen design gives the next source-construction problem a layout. The source is no longer a single symbolic object placed wherever the metric needs it. It becomes a set of regional jobs tied to the service cycle. The throat core supplies active rail support. The transition layer carries the current required to catch the packet and fade the shift. The angular capacity sector relieves spatial-curvature concentration. The shoulder and reset regions manage matching and recovery. The packet coupling region is the cabin-level target, where sampled exposure and tidal behavior matter most directly.
 
-\section{Next research gates}
+That layout changes how the next calculation should be organized. A pressure-complete stress tensor can be decomposed by role instead of reported only as a global field. The useful question becomes: which part of $T_{\mu\nu}$ supports the throat, which part carries transition current, which part supplies angular capacity, which part manages shoulder matching, and which part reaches the packet? The current-floor screen already points to that decomposition. It shows that the packet channel can be improved more strongly than the total source-demand norm, because the design suppresses the current term that the packet samples most sharply.
 
-The frozen candidate supplies a clear target for the next phase. The next source task is pressure-complete source-channel construction,
-\begin{equation}
- T_{\mu\nu}^{\rm req}=T_{\mu\nu}^{\rm support}+T_{\mu\nu}^{\rm transition-current}+T_{\mu\nu}^{\rm angular-capacity}+T_{\mu\nu}^{\rm shoulder/matching}+T_{\mu\nu}^{\rm packet-coupling}.
-\label{eq:source_decomp}
-\end{equation}
-The next relativity task is constraint-quality initial data for the frozen metric family. The next stability task is perturbation and repeated-cycle testing. The next global task is chronology-aware network scheduling. These gates now have a concrete candidate geometry and a burden-channel map.
+The same layout guides constraint-quality initial data. The packet, support edge, transition layer, and shoulder region are distinct places with distinct jobs. Constraint solving can preserve that geography. It can test whether the mixed-capacity operating band still separates the current channel from the curvature channel when the reduced prescribed metric is replaced by higher-fidelity initial data.
 
-\section{Reproducibility package}
+The evolution problem inherits the service cycle. The meaningful perturbation is not only a ripple in a static geometry; it is a disturbance during catch, fade, relaxation, and reset. A stable design keeps the packet protected while the plant changes state around it. Repeated operation then becomes a ledger question: where do source histories accumulate, how cleanly does the support edge reset, and how much margin remains when the plant cycles again?
 
-The accompanying bundle contains LaTeX source, BibTeX references, compiled PDF, selected data, derived figures, source-access notes, and a checksum manifest. The data directory contains compact CSV outputs used in the paper. Full per-slice tensor archives can be regenerated from the diagnostic scripts in the larger project repository.
+The chronology problem also becomes more concrete. A network of such systems would need scheduling rules for active plants, not just geometric rules for connected mouths. The service packet, throat plant, support edge, and reset interval give chronology analysis operational handles. They identify the moments when the system is open, coupled, relaxing, and unavailable.
+
+These gates are demanding, but they are now attached to a specific architecture. The frozen design gives future work a map of where to look and what each region is supposed to do.
 
 \section{Conclusion}
 
-The Catch-Rematched Hybrid Flare-Gated Transit v1 candidate is a packet-centered active-rail spacetime architecture. The throat is infrastructure. The passenger is a protected packet. The shift is throat-gated. The service sequence is catch, shift fade, throat relaxation. The capacity geometry is mixed radial/angular. The burden map is separated into transition-current and spatial-curvature channels.
+The Catch-Rematched Hybrid Flare-Gated Transit v1 design presents a source-supplied spacetime service architecture. The throat is active rail infrastructure. The passenger rides a protected packet. The transport field couples the packet to the throat plant during a controlled service sequence: support is prepared, capacity is supplied, the packet is caught, the shift fades, the throat relaxes, and the plant resets.
 
-The frozen balanced default uses $C_0=20$, $C_\perp=5$, broadened support, and moderate broad radial stretch. The reduced screens preserve packet and edge clearance, reduce the confirmed total source-demand proxy to about $0.162\times$ the v01 geometry baseline, and reduce Lorentzian-sampled packet negative exposure to about $0.042\times$ baseline in the stressed current-floor screen. Robustness checks identify a mixed-capacity operating band with $C_\perp=5$ as the balanced default and $C_\perp=3$ as a pressure/current-leaning branch.
+The central result is the distribution of burden. Packet safety, infrastructure accessibility, transition-current control, capacity support, spatial-curvature management, and recovery are separate engineering channels. The packet norm measures the passenger environment. Stationary $g_{tt}$ measures infrastructure accessibility. Momentum-current and extrinsic-curvature proxies identify transition burden. Hamiltonian and spatial-curvature proxies identify capacity/support burden. The frozen candidate assigns these roles to distinct parts of the plant instead of asking one geometric region to do every job.
 
-The paper's central result is a burden-distribution rule for source-supplied spacetime engineering: protect the packet, let the throat be plant, tune choreography for current, and tune angular capacity for curvature.
+The design's most informative features are the ones that create this separation. Catch/rematch choreography protects the packet through shift release. Medium transition widths and $W^4$ edge shaping reduce the current and extrinsic-curvature channel. Mixed radial/angular capacity reduces spatial-curvature concentration. The balanced default uses moderate angular capacity as a curvature-management actuator, with a nearby pressure/current-leaning branch. The source screen then shows the architecture doing its intended work: packet current-floor exposure falls much more sharply than the total source-demand proxy alone would suggest, because the design cleans the channel that the packet samples.
+
+This is the field contribution. The standard literature identifies the pressures that make macroscopic FTL geometries hard: exotic support, quantum-inequality severity, thin walls, capacity bookkeeping, ADM role coupling, prepared-route control, and source timing. The frozen design shows how those pressures can be arranged inside a composite wormhole/warp service system. It gives the burden a geography and a sequence. It tells future source models where support acts, what each source channel carries, and how close each burden comes to the passenger packet.
+
+The next stage is source construction on that map. Pressure-complete stress evaluation, quantum-inequality screening, constraint-quality initial data, evolution, repeated operation, and chronology analysis can now be organized around the same service roles: throat support, transition current, angular capacity, shoulder/reset matching, and packet coupling. The v1 design is therefore a frozen reduced target for the next physics layer: an active throat plant carrying a protected packet through a managed spacetime service cycle.
 
 \bibliographystyle{unsrtnat}
 \bibliography{references}
