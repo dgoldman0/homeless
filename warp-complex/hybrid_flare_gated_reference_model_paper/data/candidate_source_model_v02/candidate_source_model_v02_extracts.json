@@ -1,0 +1,362 @@
+{
+  "screen": "candidate_source_model_v02",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "method": "quadratic feature fit for full null-contracted NMC scalar stress channel, followed by rank-one single-scalar consistency check",
+  "best_xi": 0.5,
+  "best_summary": {
+    "xi": 0.5,
+    "feature_weighted_r2_like": 0.056877613296462126,
+    "feature_weighted_relative_rmse": 0.9622108975521292,
+    "rank1_weighted_r2_like": -5.521561354499419e+18,
+    "rank1_weighted_relative_rmse": 2328183438.201615,
+    "rank1_positive_eigen_fraction": 0.9999598769811848,
+    "negative_eigenvalue_abs_sum": 36905282916.243225,
+    "n_features": 45.0,
+    "n_modes": 9.0
+  },
+  "xi_scan": [
+    {
+      "xi": 0.5,
+      "feature_weighted_r2_like": 0.056877613296462126,
+      "feature_weighted_relative_rmse": 0.9622108975521292,
+      "rank1_weighted_r2_like": -5.521561354499419e+18,
+      "rank1_weighted_relative_rmse": 2328183438.201615,
+      "rank1_positive_eigen_fraction": 0.9999598769811848,
+      "negative_eigenvalue_abs_sum": 36905282916.243225,
+      "n_features": 45,
+      "n_modes": 9
+    },
+    {
+      "xi": 0.16666666666666666,
+      "feature_weighted_r2_like": 0.029109592916996885,
+      "feature_weighted_relative_rmse": 0.976273159209667,
+      "rank1_weighted_r2_like": -6.092748135910062e+18,
+      "rank1_weighted_relative_rmse": 2445641847.8874264,
+      "rank1_positive_eigen_fraction": 0.9999659028332344,
+      "negative_eigenvalue_abs_sum": 10110368305.725193,
+      "n_features": 45,
+      "n_modes": 9
+    }
+  ],
+  "top_feature_terms": [
+    {
+      "kind": "cross",
+      "i": 2,
+      "j": 8,
+      "feature": "phi_comp__core_bowl*phi_setup_reset__matching_ring",
+      "feature_coefficient": 36821625716.850136,
+      "abs_feature_coefficient": 36821625716.850136
+    },
+    {
+      "kind": "cross",
+      "i": 1,
+      "j": 8,
+      "feature": "phi_open__core_bowl*phi_setup_reset__matching_ring",
+      "feature_coefficient": -2460851445.1382327,
+      "abs_feature_coefficient": 2460851445.1382327
+    },
+    {
+      "kind": "cross",
+      "i": 3,
+      "j": 8,
+      "feature": "phi_comp__shoulder_ring*phi_setup_reset__matching_ring",
+      "feature_coefficient": 51771834.44740839,
+      "abs_feature_coefficient": 51771834.44740839
+    },
+    {
+      "kind": "cross",
+      "i": 2,
+      "j": 7,
+      "feature": "phi_comp__core_bowl*phi_B_reset__shoulder_ring",
+      "feature_coefficient": -3026944.310451765,
+      "abs_feature_coefficient": 3026944.310451765
+    },
+    {
+      "kind": "cross",
+      "i": 2,
+      "j": 5,
+      "feature": "phi_comp__core_bowl*phi_setup_reset__shoulder_ring",
+      "feature_coefficient": -3026944.2871332904,
+      "abs_feature_coefficient": 3026944.2871332904
+    },
+    {
+      "kind": "cross",
+      "i": 0,
+      "j": 8,
+      "feature": "phi_open__support_broad*phi_setup_reset__matching_ring",
+      "feature_coefficient": 2287233.117942296,
+      "abs_feature_coefficient": 2287233.117942296
+    },
+    {
+      "kind": "cross",
+      "i": 3,
+      "j": 4,
+      "feature": "phi_comp__shoulder_ring*phi_setup_reset__inner_ring",
+      "feature_coefficient": 1133277.227020844,
+      "abs_feature_coefficient": 1133277.227020844
+    },
+    {
+      "kind": "cross",
+      "i": 3,
+      "j": 5,
+      "feature": "phi_comp__shoulder_ring*phi_setup_reset__shoulder_ring",
+      "feature_coefficient": 218992.81027233723,
+      "abs_feature_coefficient": 218992.81027233723
+    },
+    {
+      "kind": "cross",
+      "i": 3,
+      "j": 7,
+      "feature": "phi_comp__shoulder_ring*phi_B_reset__shoulder_ring",
+      "feature_coefficient": 218992.81027233365,
+      "abs_feature_coefficient": 218992.81027233365
+    },
+    {
+      "kind": "cross",
+      "i": 0,
+      "j": 6,
+      "feature": "phi_open__support_broad*phi_B_setup__shoulder_ring",
+      "feature_coefficient": -16807.433281019043,
+      "abs_feature_coefficient": 16807.433281019043
+    },
+    {
+      "kind": "cross",
+      "i": 0,
+      "j": 5,
+      "feature": "phi_open__support_broad*phi_setup_reset__shoulder_ring",
+      "feature_coefficient": -16807.433233794392,
+      "abs_feature_coefficient": 16807.433233794392
+    },
+    {
+      "kind": "cross",
+      "i": 1,
+      "j": 6,
+      "feature": "phi_open__core_bowl*phi_B_setup__shoulder_ring",
+      "feature_coefficient": -9749.003317720353,
+      "abs_feature_coefficient": 9749.003317720353
+    }
+  ],
+  "top_rank1_phi_terms": [
+    {
+      "basis": "phi_setup_reset__matching_ring",
+      "rank1_phi_coefficient": 135837.77396099508,
+      "abs_rank1_phi_coefficient": 135837.77396099508
+    },
+    {
+      "basis": "phi_comp__core_bowl",
+      "rank1_phi_coefficient": 135535.29568669872,
+      "abs_rank1_phi_coefficient": 135535.29568669872
+    },
+    {
+      "basis": "phi_open__core_bowl",
+      "rank1_phi_coefficient": -9058.05259130229,
+      "abs_rank1_phi_coefficient": 9058.05259130229
+    },
+    {
+      "basis": "phi_comp__shoulder_ring",
+      "rank1_phi_coefficient": 190.56488280125686,
+      "abs_rank1_phi_coefficient": 190.56488280125686
+    },
+    {
+      "basis": "phi_B_reset__shoulder_ring",
+      "rank1_phi_coefficient": -11.115860174560408,
+      "abs_rank1_phi_coefficient": 11.115860174560408
+    },
+    {
+      "basis": "phi_setup_reset__shoulder_ring",
+      "rank1_phi_coefficient": -11.113471026583978,
+      "abs_rank1_phi_coefficient": 11.113471026583978
+    },
+    {
+      "basis": "phi_open__support_broad",
+      "rank1_phi_coefficient": 8.418942053916602,
+      "abs_rank1_phi_coefficient": 8.418942053916602
+    },
+    {
+      "basis": "phi_setup_reset__inner_ring",
+      "rank1_phi_coefficient": 0.00722526254630471,
+      "abs_rank1_phi_coefficient": 0.00722526254630471
+    },
+    {
+      "basis": "phi_B_setup__shoulder_ring",
+      "rank1_phi_coefficient": 0.0023499081985606,
+      "abs_rank1_phi_coefficient": 0.0023499081985606
+    }
+  ],
+  "observer_metrics": [
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "core_line",
+      "target_rms": 0.0012801058587855667,
+      "fit_rms": 0.0009812498080079151,
+      "residual_rms": 0.0004895084023837663,
+      "relative_rms_error": 0.3823968142837203,
+      "correlation": 0.9489680617160969,
+      "target_min": -0.0011972828703221278,
+      "fit_min": -0.0008887455678386346,
+      "target_max": 0.008103341689575175,
+      "fit_max": 0.007228930830252287
+    },
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "access_mean",
+      "target_rms": 0.0013351335226945503,
+      "fit_rms": 0.0009906812817126443,
+      "residual_rms": 0.0005233325112513443,
+      "relative_rms_error": 0.39197016801433004,
+      "correlation": 0.9408470182120487,
+      "target_min": -0.0014303878413043033,
+      "fit_min": -0.0013119052766593202,
+      "target_max": 0.00807645354329483,
+      "fit_max": 0.005872918549245426
+    },
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "support_mean",
+      "target_rms": 0.00386081949764639,
+      "fit_rms": 0.0012020500487186835,
+      "residual_rms": 0.003874082242802821,
+      "relative_rms_error": 1.0034352150014194,
+      "correlation": 0.0806691153668378,
+      "target_min": -0.010216249967328386,
+      "fit_min": -0.0018553044991732597,
+      "target_max": 0.0074389404321158845,
+      "fit_max": 0.005032695012372306
+    },
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "support_ring_mean",
+      "target_rms": 0.010752448445198664,
+      "fit_rms": 0.0019098965673919452,
+      "residual_rms": 0.010638018970774923,
+      "relative_rms_error": 0.9893578216063177,
+      "correlation": 0.055127173619324635,
+      "target_min": -0.030688325472606953,
+      "fit_min": -0.0031989580278302277,
+      "target_max": 0.005788229973563707,
+      "fit_max": 0.009791254653425148
+    },
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "shoulder_mean",
+      "target_rms": 0.003469761298818732,
+      "fit_rms": 0.0012637921382711642,
+      "residual_rms": 0.003056342436069371,
+      "relative_rms_error": 0.8808509210768496,
+      "correlation": 0.5528136736474083,
+      "target_min": -0.008654675701837342,
+      "fit_min": -0.0019467954224516757,
+      "target_max": 0.003395806212781493,
+      "fit_max": 0.002474512978777566
+    },
+    {
+      "fit_type": "quadratic_feature_fit",
+      "xi": 0.5,
+      "observer_family": "matching_mean",
+      "target_rms": 0.0002694275706842809,
+      "fit_rms": 0.0132267625531131,
+      "residual_rms": 0.013435230734877854,
+      "relative_rms_error": 49.86583479845449,
+      "correlation": -0.6917612348634742,
+      "target_min": -0.0006255457151604178,
+      "fit_min": -0.09665577552279139,
+      "target_max": -3.6662676803052616e-05,
+      "fit_max": 0.02668312933080172
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "core_line",
+      "target_rms": 0.0012801058587855667,
+      "fit_rms": 7293558.863320258,
+      "residual_rms": 7293558.864450568,
+      "relative_rms_error": 5697621656.696569,
+      "correlation": -0.9000901801413246,
+      "target_min": -0.0011972828703221278,
+      "fit_min": -60020251.9738888,
+      "target_max": 0.008103341689575175,
+      "fit_max": -1.6697066653500542e-22
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "access_mean",
+      "target_rms": 0.0013351335226945503,
+      "fit_rms": 7169325.209697937,
+      "residual_rms": 7169325.210862842,
+      "relative_rms_error": 5369743990.740958,
+      "correlation": -0.9086612500644549,
+      "target_min": -0.0014303878413043033,
+      "fit_min": -48524150.6814726,
+      "target_max": 0.00807645354329483,
+      "fit_max": 4.591593967868343e-06
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "support_mean",
+      "target_rms": 0.00386081949764639,
+      "fit_rms": 4902067.6509621125,
+      "residual_rms": 4902067.650958413,
+      "relative_rms_error": 1269696149.6956315,
+      "correlation": -0.010021229165135488,
+      "target_min": -0.010216249967328386,
+      "fit_min": -26909888.26122629,
+      "target_max": 0.0074389404321158845,
+      "fit_max": 36524240.58992415
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "support_ring_mean",
+      "target_rms": 0.010752448445198664,
+      "fit_rms": 15939240.27670797,
+      "residual_rms": 15939240.276064012,
+      "relative_rms_error": 1482382394.7775533,
+      "correlation": 0.09548922793641272,
+      "target_min": -0.030688325472606953,
+      "fit_min": -25650066.29007253,
+      "target_max": 0.005788229973563707,
+      "fit_max": 154762251.37764582
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "shoulder_mean",
+      "target_rms": 0.003469761298818732,
+      "fit_rms": 18286521.69133035,
+      "residual_rms": 18286521.691434175,
+      "relative_rms_error": 5270253517.765828,
+      "correlation": 0.018791680689817517,
+      "target_min": -0.008654675701837342,
+      "fit_min": -7159254.77882233,
+      "target_max": 0.003395806212781493,
+      "fit_max": 51032677.19018506
+    },
+    {
+      "fit_type": "rank_one_single_scalar_approx",
+      "xi": 0.5,
+      "observer_family": "matching_mean",
+      "target_rms": 0.0002694275706842809,
+      "fit_rms": 237912422.73749584,
+      "residual_rms": 237912422.73773634,
+      "relative_rms_error": 883029238786.4886,
+      "correlation": -0.8272856590355324,
+      "target_min": -0.0006255457151604178,
+      "fit_min": -576860.5060729891,
+      "target_max": -3.6662676803052616e-05,
+      "fit_max": 552726682.4087398
+    }
+  ],
+  "interpretation": [
+    "The fuller scalar stress channel is tested by features generated from actual phi(l,t) modes rather than q=phi^2 modes alone.",
+    "The quadratic feature fit tests whether NMC scalar stress terms contain the right local shapes for the target ledger.",
+    "The rank-one approximation tests whether those shapes can plausibly come from one scalar field rather than an effective multi-component scalar source.",
+    "A strong feature fit together with a weaker rank-one fit supports the hybrid source architecture: NMC scalar support plus infrastructure/repayment source."
+  ]
+}

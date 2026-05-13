@@ -1,0 +1,114 @@
+{
+  "screen": "candidate_source_model_v03_component_separation_locality_polish",
+  "geometry": "Reference Geometry v0.3 frozen",
+  "xi": 0.5,
+  "best_locality_fit": {
+    "lcut": 0.8,
+    "shoulder_weight": 10.0,
+    "ring_weight": 0.8,
+    "score": 2.1330222711288256,
+    "rank1_positive_eigen_fraction": 0.6084766865690667,
+    "negative_eigenvalue_abs_sum": 2.129998071919862,
+    "shoulder_pos_ratio": 0.20873918279849465,
+    "core_line_open_activity_ratio": 0.7816630456021255,
+    "access_mean_open_activity_ratio": 0.9242736598979621,
+    "support_mean_open_activity_ratio": 0.7787825259303927,
+    "support_ring_mean_open_activity_ratio": 0.9147089078282773,
+    "shoulder_mean_open_activity_ratio": 0.6308058103028815,
+    "matching_mean_open_activity_ratio": 0.00344465878000127
+  },
+  "best_residual_repayment": {
+    "A_support_setup_reset": 0.02,
+    "A_shoulder_setup_reset": 0.012,
+    "support_residual_full_ratio": 2.0296250447686344,
+    "support_ring_residual_full_ratio": 0.9606249404559054,
+    "shoulder_residual_full_ratio": 1.2891319824662044,
+    "support_setup_reset_ratio": 1.9690587457120508,
+    "support_ring_setup_reset_ratio": 1.0132486637669955,
+    "shoulder_setup_reset_ratio": 1.3059845620945536,
+    "access_full_ratio": 2.618205833163273,
+    "access_setup_reset_ratio": 0.7600925277627768,
+    "score": 0.9085621757475528
+  },
+  "nmc_localized_fit_metrics": {
+    "core_line": {
+      "relative_rms_error": 0.2383528558730748,
+      "correlation": 0.9876203927054524,
+      "fit_min": -0.0009834292218879,
+      "fit_max": 3.559085240422907e-05
+    },
+    "access_mean": {
+      "relative_rms_error": 0.1534361251256323,
+      "correlation": 0.9875652497874472,
+      "fit_min": -0.0016907066002719,
+      "fit_max": 1.183566278793275e-05
+    },
+    "support_mean": {
+      "relative_rms_error": 0.4398996960287401,
+      "correlation": 0.9004851958298866,
+      "fit_min": -0.0031283177471207,
+      "fit_max": 0.0
+    },
+    "support_ring_mean": {
+      "relative_rms_error": 1.956425385965824,
+      "correlation": 0.1539820707992497,
+      "fit_min": -0.0061091623043671,
+      "fit_max": 0.0014584265117275
+    },
+    "shoulder_mean": {
+      "relative_rms_error": 832836440.5943284,
+      "correlation": 0.1721500090501067,
+      "fit_min": -0.0009691899899382,
+      "fit_max": 0.00048404650816
+    },
+    "matching_mean": {
+      "relative_rms_error": 563673.8754724549,
+      "correlation": NaN,
+      "fit_min": -1.6699603762371737e-07,
+      "fit_max": 2.501139754866642e-07
+    }
+  },
+  "component_ledgers": {
+    "core_line": {
+      "open_neg_fraction_carried_by_nmc": 0.7805149056125289,
+      "open_residual_neg_fraction": 0.22063323437579063,
+      "setup_reset_neg_fraction_in_nmc": 0.0,
+      "setup_reset_residual_comp_ratio": 0.0,
+      "full_residual_comp_ratio": 2.793030188572154
+    },
+    "access_mean": {
+      "open_neg_fraction_carried_by_nmc": 0.9242101481163777,
+      "open_residual_neg_fraction": 0.07981673410150918,
+      "setup_reset_neg_fraction_in_nmc": 0.0,
+      "setup_reset_residual_comp_ratio": 0.7600925277627768,
+      "full_residual_comp_ratio": 2.618205833163273
+    },
+    "support_mean": {
+      "open_neg_fraction_carried_by_nmc": 0.7787825259303927,
+      "open_residual_neg_fraction": 0.2688923283161271,
+      "setup_reset_neg_fraction_in_nmc": 0.08897047425255471,
+      "setup_reset_residual_comp_ratio": 1.9690587457120508,
+      "full_residual_comp_ratio": 2.0296250447686344
+    },
+    "support_ring_mean": {
+      "open_neg_fraction_carried_by_nmc": 0.21957626966113902,
+      "open_residual_neg_fraction": 1.5535096513620636,
+      "setup_reset_neg_fraction_in_nmc": 0.09777671807274352,
+      "setup_reset_residual_comp_ratio": 1.0132486637669955,
+      "full_residual_comp_ratio": 0.9606249404559054
+    },
+    "shoulder_mean": {
+      "open_neg_fraction_carried_by_nmc": 0.42206662750438684,
+      "open_residual_neg_fraction": 0.8568837514719345,
+      "setup_reset_neg_fraction_in_nmc": 0.08095768952627394,
+      "setup_reset_residual_comp_ratio": 1.3059845620945536,
+      "full_residual_comp_ratio": 1.2891319824662044
+    }
+  },
+  "interpretation": [
+    "The locality-polished NMC-like component remains strong in the core/access role.",
+    "Shoulder spillover is sharply reduced relative to the previous component separation pass.",
+    "Broad support fit is somewhat less aggressive, leaving infrastructure source terms to carry support-ring and shoulder repayment.",
+    "This supports promoting the source architecture to a hybrid NMC-support plus infrastructure-repayment model after report packaging."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "screen": "candidate_source_model_v03_component_separation_polish_summary",
+  "balanced_locality_case": {
+    "lcut": 0.8,
+    "shoulder_weight": 10.0,
+    "ring_weight": 0.8,
+    "score": 2.1330222711288256,
+    "rank1_positive_eigen_fraction": 0.6084766865690667,
+    "negative_eigenvalue_abs_sum": 2.129998071919862,
+    "shoulder_pos_ratio": 0.20873918279849465,
+    "core_line_open_activity_ratio": 0.7816630456021255,
+    "access_mean_open_activity_ratio": 0.9242736598979621,
+    "support_mean_open_activity_ratio": 0.7787825259303927,
+    "support_ring_mean_open_activity_ratio": 0.9147089078282773,
+    "shoulder_mean_open_activity_ratio": 0.6308058103028815,
+    "matching_mean_open_activity_ratio": 0.00344465878000127
+  },
+  "residual_balance_best_score": {
+    "A_open_ring_comp": 0.006,
+    "A_support_setup_reset": 0.02,
+    "A_shoulder_setup_reset": 0.011,
+    "support_full_residual_ratio": 2.08146575010266,
+    "support_ring_full_residual_ratio": 0.9878383853134116,
+    "shoulder_full_residual_ratio": 1.1367553188199493,
+    "access_full_residual_ratio": 2.641577364029696,
+    "core_full_residual_ratio": 2.793033420443692,
+    "support_ring_setup_reset_ratio": 1.012774278591805,
+    "shoulder_setup_reset_ratio": 1.153722556967415,
+    "support_setup_reset_ratio": 1.96895495382379,
+    "support_ring_open_residual_neg_fraction": 1.5535096513620636,
+    "shoulder_open_neg_fraction_carried_by_nmc": 0.4220666275043868,
+    "score": 0.9236812288286425
+  },
+  "recommended_strict_pass": {
+    "A_open_ring_comp": 0.0,
+    "A_support_setup_reset": 0.022,
+    "A_shoulder_setup_reset": 0.011,
+    "support_full_residual_ratio": 2.298570265526229,
+    "support_ring_full_residual_ratio": 1.0912531578836608,
+    "shoulder_full_residual_ratio": 1.1367560714011125,
+    "access_full_residual_ratio": 2.7508856865124582,
+    "core_full_residual_ratio": 2.793072499473569,
+    "support_ring_setup_reset_ratio": 1.1490769568224586,
+    "shoulder_setup_reset_ratio": 1.1537235092822935,
+    "support_setup_reset_ratio": 2.239760186446013,
+    "support_ring_open_residual_neg_fraction": 1.5535096513620636,
+    "shoulder_open_neg_fraction_carried_by_nmc": 0.4220666275043868,
+    "score": 1.3325563452002775
+  },
+  "decision": "one more report can now use candidate_source_model_v03 naming; include both balanced and strict-pass variants",
+  "interpretation": [
+    "Locality polish reduces shoulder spillover substantially compared with component separation v0.1.",
+    "The NMC-like component still carries core/access support strongly enough for a component role but no longer attempts to carry the whole support-ring/shoulder ledger.",
+    "The infrastructure repayment component closes support-ring and shoulder ledgers in the strict-pass variant, at the cost of support-zone overpayment that remains a source-shaping target.",
+    "This is ready for a v0.3 report after one decision: present the balanced case or the strict-pass variant as the reference."
+  ]
+}
