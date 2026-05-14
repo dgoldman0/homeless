@@ -1,0 +1,11 @@
+phase,region,points,Tkk_minus_min
+throat_relax,support_edge,2.0,-0.5686369302555879
+shift_fade,support_edge,5.0,-0.5037963560790457
+catch_rematch,support_edge,6.0,-0.4914710540986496
+pre_catch_support,support_edge,3.0,-0.4914626044194473
+throat_relax,core_throat,3.0,-0.3379559402396396
+catch_rematch,core_throat,3.0,-0.157337075368082
+reset_tail,support_edge,3.0,-0.1002473232231584
+shift_fade,core_throat,5.0,-0.0960692664232076
+reset_tail,core_throat,3.0,-0.0857907638032816
+shift_fade,packet_in_support,2.0,-0.0688100065641514

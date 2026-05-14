@@ -1,0 +1,11 @@
+phase,region,points,p_omega_unit_max_abs
+reset_tail,support_edge,3.0,0.520998359390537
+reset_tail,core_throat,3.0,0.5172038635131863
+shift_fade,support_edge,5.0,0.5084818304289456
+throat_relax,support_edge,2.0,0.480615646019885
+catch_rematch,support_edge,6.0,0.4433625647604373
+pre_catch_support,support_edge,3.0,0.4433198420523157
+pre_catch_support,outer_shoulder,3.0,0.3280935705756558
+catch_rematch,outer_shoulder,6.0,0.3280934558045798
+shift_fade,outer_shoulder,6.0,0.327899155448018
+throat_relax,packet_outer,1.0,0.1018304224436438

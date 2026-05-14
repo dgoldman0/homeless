@@ -1,0 +1,8 @@
+channel,global_max_abs,phase_at_max,region_at_max
+Outgoing null Tkk+,0.619243797738714,throat_relax,packet_in_support
+Ingoing null Tkk-,0.5686369302555879,throat_relax,support_edge
+Angular pressure/tension p_Omega,0.520998359390537,reset_tail,support_edge
+Euler energy density rho,0.0813250921512585,throat_relax,support_edge
+Radial pressure/tension p_l,0.065293758863691,throat_relax,support_edge
+Packet-frame density rho_pkt,0.0652342357297781,throat_relax,support_edge
+Euler radial current j_l,0.0480252068109016,throat_relax,support_edge

@@ -1,0 +1,11 @@
+phase,region,points,rho_euler_min
+throat_relax,support_edge,2.0,-0.0813250921512585
+shift_fade,support_edge,5.0,-0.040657577553757
+catch_rematch,support_edge,6.0,-0.0374116234219497
+pre_catch_support,support_edge,3.0,-0.0374096030499568
+pre_catch_support,outer_shoulder,3.0,-0.0227232179567565
+catch_rematch,outer_shoulder,6.0,-0.0227232048787105
+shift_fade,outer_shoulder,6.0,-0.0227011451830384
+reset_tail,core_throat,3.0,-0.0134549967579078
+reset_tail,support_edge,3.0,-0.0128455191701595
+throat_relax,packet_outer,1.0,-0.0102958532255245
