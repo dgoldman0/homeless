@@ -65,7 +65,7 @@ ds^2
 +
 \gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)ds\right)^2
 +
-\gamma_{\Omega\Omega}(s,l)d\Omega^2 .
+\gamma_{\Omega\Omega}(l, \sigma)d\Omega^2 .
 ```
 Here σ is the plant's scheduling parameter, and l is radial rail/throat coordinate, which labels location along the throat-supported rail/
 
