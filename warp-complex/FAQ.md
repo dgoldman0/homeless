@@ -57,7 +57,7 @@ The timed actuator/exchange sector is useful because it matches controlled negat
 ## What is the detailed nature of service for the active rail architecture?
 
 ```math
-d\s^2
+ds^2
 =
 -\alpha(\ell,\sigma)^2 d\sigma^2
 +
