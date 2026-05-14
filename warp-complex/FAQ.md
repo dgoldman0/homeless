@@ -61,12 +61,13 @@ The active rail service is a source-shaped transport cycle. The general metric s
 ```math
 ds^2
 =
--\alpha(s,l)^2 ds^2
+-\alpha(l, \sigma)^2 ds^2
 +
-\gamma_{ll}(s,l)\left(dl+\beta^l(s,l)ds\right)^2
+\gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)ds\right)^2
 +
 \gamma_{\Omega\Omega}(s,l)d\Omega^2 .
 ```
+Here σ is the plant's scheduling parameter, and l is radial rail/throat coordinate, which labels location along the throat-supported rail/
 
 Source analysis makes the service more specific. The demanded source ledger,
 
