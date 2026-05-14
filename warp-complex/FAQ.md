@@ -85,11 +85,11 @@ A useful way to remember the service sequence is:
 
 **Support, Carry, Catch, Fade, Decompress, Reset.**
 
-Support    → standing support
-Carry      → support-contained carrying flow
-Catch      → packet catch/rematch
-Fade       → controlled shift fade
-Decompress → slow throat decompression
-Reset      → resettable infrastructure
+- Support    → standing support
+- Carry      → support-contained carrying flow
+- Catch      → packet catch/rematch
+- Fade       → controlled shift fade
+- Decompress → slow throat decompression
+- Reset      → resettable infrastructure
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
