@@ -8,6 +8,15 @@ The active rail metric is a time-dependent radial spacetime geometry written in 
 
 ## What is the order of service for the active rail architecture?
 
-First the service prepares support. It then carries the packet. It must then catch the packet before fade shift, followed by throat relaxation and service reset.
+Generally, first the service prepares support. It then carries the packet. It must then catch the packet before fade shift, followed by throat relaxation and service reset.
 
 Prepare support -> carry packet -> catch packet -> fade shift -> relax throat -> reset.
+
+More specifically...
+
+Adiabatically prepare support
+→ carry packet inside the supported rail
+→ catch/rematch packet before release
+→ fade shift while support remains available
+→ complete a slow support decompression shoulder
+→ softly unwind angular capacity and reset
