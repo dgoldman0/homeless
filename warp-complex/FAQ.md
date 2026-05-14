@@ -50,7 +50,7 @@ The timed actuator/exchange sector is useful because it matches controlled negat
 
 The active rail service is a source-shaped transport cycle. The general metric supplies the service language: lapse for clock-rate and causal margin, radial geometry for stretching and compression, angular geometry for throat capacity, and radial shift for the carrying field,
 
-$$
+```math
 ds^2
 =
 -\alpha(s,l)^2 ds^2
@@ -58,15 +58,15 @@ ds^2
 \gamma_{ll}(s,l)\left(dl+\beta^l(s,l)ds\right)^2
 +
 \gamma_{\Omega\Omega}(s,l)d\Omega^2 .
-$$
+```
 
 Source analysis makes the service more specific. The demanded source ledger,
 
-$$
+```math
 T_{\mu\nu}^{\rm demand}
 =
 \frac{1}{8\pi}G_{\mu\nu}[g],
-$$
+```
 
 indicates that the active rail works best as an infrastructure-routed system: the support envelope carries the hard geometric burden, the support edge becomes the main shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the service channel.
 
@@ -79,22 +79,22 @@ Adiabatically prepare the throat-supported rail
 → hold a decompression shoulder through throat relaxation  
 → unwind angular capacity and reset the rail
 
-This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, and reset are the larger infrastructure-actuation stages. The support edge receives the main exotic/null-channel shaping duty. The angular sector receives a major pressure/tension role, so $\gamma_{\Omega\Omega}$ becomes an active design choice rather than a background decoration. The packet-facing channel is then treated as a protected service path through a managed support plant.
+This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, and reset are the larger infrastructure-actuation stages. The support edge receives the main exotic/null-channel shaping duty. The angular sector receives a major pressure/tension role, so $\gamma_{\Omega\Omega}$ becomes an active design choice. The packet-facing channel is treated as a protected service path through a managed support plant.
 
 In compact form, the source-shaped active rail is:
 
-$$
+```math
 \text{standing support}
-\;\rightarrow\;
+\rightarrow
 \text{support-contained carrying flow}
-\;\rightarrow\;
+\rightarrow
 \text{packet catch/rematch}
-\;\rightarrow\;
+\rightarrow
 \text{controlled shift fade}
-\;\rightarrow\;
+\rightarrow
 \text{slow throat decompression}
-\;\rightarrow\;
+\rightarrow
 \text{resettable infrastructure}.
-$$
+```
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
