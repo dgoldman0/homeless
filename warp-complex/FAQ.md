@@ -57,15 +57,16 @@ The timed actuator/exchange sector is useful because it matches controlled negat
 ## What is the detailed nature of service for the active rail architecture?
 
 ```math
-ds^2
+d\s^2
 =
--\alpha(l, \sigma)^2 d{\sigma}^2
+-\alpha(\ell,\sigma)^2 d\sigma^2
 +
-\gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)d\sigma\right)^2
+\gamma_{\ell\ell}(\ell,\sigma)
+\left(d\ell+\beta^\ell(\ell,\sigma)d\sigma\right)^2
 +
-\gamma_{\Omega\Omega}(l, \sigma)d\Omega^2 .
+\gamma_{\Omega\Omega}(\ell,\sigma)d\Omega^2 .
 ```
-Here σ is the plant's scheduling parameter, and l is radial rail/throat coordinate, which labels location along the throat-supported rail/
+Here $\sigma$ is the plant's scheduling or service coordinate, and $\ell$ is the radial rail/throat coordinate labeling position along the throat-supported rail. The lapse $\alpha$ controls local timing margin, $\gamma_{\ell\ell}$ controls the radial support geometry, $\beta^\ell$ is the support-contained carrying shift, and $\gamma_{\Omega\Omega}$ controls the angular capacity and pressure/tension sector.
 
 Source analysis makes the service more specific. The demanded source ledger,
 
@@ -75,7 +76,17 @@ T_{\mu\nu}^{\rm demand}
 \frac{1}{8\pi}G_{\mu\nu}[g],
 ```
 
-indicates that the active rail works best as an infrastructure-routed system: the support envelope carries the hard geometric burden, the support edge becomes the main shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the service channel.
+shows that the active rail works best as an infrastructure-routed system. The support envelope carries the standing geometric burden, the support edge becomes the main null/source-shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the protected service channel.
+
+The current reduced-design is the following **source-shaped active rail**:
+
+```text
+catch-rematched active rail
++ support-contained throat-gated shift
++ soft angular jacket
++ single long minimum-jerk support-decompression q(s)
++ baseline-subtracted source accounting
+```
 
 The refined service order is:
 
@@ -100,7 +111,6 @@ A useful way to remember the service sequence is:
 - Reset      → resettable infrastructure
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
-
 
 ## Does this work suggest any immediate real-world applications?
 
