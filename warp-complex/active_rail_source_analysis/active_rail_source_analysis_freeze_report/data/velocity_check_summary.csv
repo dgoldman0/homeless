@@ -1,0 +1,7 @@
+V,case,packet_positive_points,max_packet_norm,support_edge_min_Tkk,packet_support_min_Tkk,note
+1.5,active_caught_static_angular,0,-0.75,-0.82,-0.82,source edge burden mostly geometry dominated
+1.5,active_caught_soft_jacket,0,-0.75,-0.33,-0.33,soft jacket improvement persists at low V
+10.0,active_caught_static_angular,0,-0.75,-0.8,-0.8,stressed source ledger
+10.0,active_caught_soft_jacket_minjerk_q,0,-0.75,-0.29,-0.2,freeze candidate
+1.5,no_catch_comparison,1325,1.93,,,timing failure still present but less explosive
+10.0,no_catch_comparison,2895,455000.0,,,timing failure severe under stress

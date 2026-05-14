@@ -1,0 +1,5 @@
+quantity,region,phase,active_total,matched_holding,active_excess,interpretation
+global |pOmega| ceiling,outer shoulder/support geometry,held/early service,1.286,1.283,0.003,standing plant ledger dominates
+support-edge |pOmega| ceiling,support edge,held/early service,1.194,1.189,0.006,standing plant ledger dominates
+core decompression |pOmega| active excess,core throat,adiabatic decompression,0.262,0.049,0.213,"remaining active excess, no longer dominant"
+support-edge decompression |pOmega| active excess,support edge,adiabatic decompression,0.927,0.753,0.174,"remaining active excess, below standing ceiling"

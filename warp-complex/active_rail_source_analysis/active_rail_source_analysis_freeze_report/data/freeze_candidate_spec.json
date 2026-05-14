@@ -1,0 +1,52 @@
+{
+  "status": "provisional reduced-design refreeze",
+  "name": "source-shaped active rail v1",
+  "architecture": [
+    "catch-rematched packet service",
+    "support-contained throat-gated shift",
+    "soft angular jacket",
+    "single long minimum-jerk support decompression q(s)",
+    "baseline-subtracted source accounting distinguishing standing plant support from active-service excess"
+  ],
+  "frozen_rules": {
+    "support_containment": "supp(beta^l) subset supp(A,T)",
+    "packet_order": "catch/rematch before shift fade; shift fades inside support hold/shoulder",
+    "support_decompression": "q(s) is not a sharp post-service falloff; it is a long adiabatic decompression shoulder",
+    "angular_jacket": "mild broad angular compliance layer around the throat support"
+  },
+  "working_parameters": {
+    "angular_jacket": {
+      "a_Omega": 0.35,
+      "R_Omega": "R_th=1.25",
+      "w_Omega": 0.7,
+      "x_Omega": 2.0,
+      "w_tOmega": 0.6
+    },
+    "support_decompression_q": {
+      "profile": "minimum jerk down-ramp",
+      "t0": -0.4,
+      "Tr": 3.0
+    },
+    "stress_case": {
+      "V": 10.0,
+      "lambda": 6.0
+    },
+    "low_velocity_check": {
+      "V": 1.5
+    }
+  },
+  "interpretation": {
+    "packet_timing": "velocity-sensitive; catch/rematch remains mandatory",
+    "source_ledger": "mostly geometry/support-edge dominated in the caught branch",
+    "soft_jacket": "improves null and packet-support exposure but does not eliminate standing angular pressure",
+    "adiabatic_q": "removes the dynamic throat-relaxation angular-pressure spike",
+    "remaining_ledger": "large angular-pressure ceiling assigned primarily to standing plant-support ledger"
+  },
+  "next_gates": [
+    "constraint-quality initial data",
+    "off-axis null congruence/causal screen",
+    "semiclassical/RSET response",
+    "source model / quantum inequality sampling",
+    "repeated-cycle reset accumulation"
+  ]
+}
