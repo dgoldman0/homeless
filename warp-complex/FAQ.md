@@ -36,7 +36,9 @@ Gao–Jafferis–Wall: [https://arxiv.org/abs/1608.05687](https://arxiv.org/abs/
 The current best guess is a **hybrid stack**:
 
 **Standing support:** NMC/scalar-tensor-like sector for baseline throat exoticity and anisotropic stress.
+
 **Boundary/edge layer:** Casimir/RSET-like sector for support-edge null shaping and packet isolation.
+
 **Actuator/reset sector:** timed coupling or flux-exchange sector for adiabatic decompression, reset, and conservation bookkeeping.
 
 The hybrid makes sense because each source family fits one ledger channel but fails hard if asked to do everything. The active rail already separates geometry roles; the source side likely needs the same separation.
