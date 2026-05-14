@@ -1,0 +1,19 @@
+{
+  "bundle": "active_rail_final_optical_report_bundle",
+  "created_files": [
+    "A3_targeted_stress_results_final.csv",
+    "EXECUTIVE_SUMMARY.md",
+    "FINAL_REPORT.md",
+    "README.md",
+    "REFERENCES.md",
+    "final_stress_test_headline_chart.png"
+  ],
+  "scope": "Final synthesis only; earlier raw outputs are not duplicated.",
+  "headline": {
+    "max_packet_positive_points": 0,
+    "max_p99_local_photon_gain": 1.732050807552803,
+    "max_p99_offaxis_energy_shift": NaN,
+    "max_p99_offaxis_focusing_proxy": NaN,
+    "max_p99_offaxis_risk_proxy": NaN
+  }
+}
