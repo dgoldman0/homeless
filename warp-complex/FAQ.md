@@ -81,13 +81,15 @@ Adiabatically prepare the throat-supported rail
 
 This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, and reset are the larger infrastructure-actuation stages. The support edge receives the main exotic/null-channel shaping duty. The angular sector receives a major pressure/tension role, so $\gamma_{\Omega\Omega}$ becomes an active design choice. The packet-facing channel is treated as a protected service path through a managed support plant.
 
-In compact form, the source-shaped active rail is:
+A useful way to remember the service sequence is:
 
-standing support
-→ support-contained carrying flow
-→ packet catch/rematch
-→ controlled shift fade
-→ slow throat decompression
-→ resettable infrastructure
+**Support, Carry, Catch, Fade, Decompress, Reset.**
+
+Support    → standing support
+Carry      → support-contained carrying flow
+Catch      → packet catch/rematch
+Fade       → controlled shift fade
+Decompress → slow throat decompression
+Reset      → resettable infrastructure
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
