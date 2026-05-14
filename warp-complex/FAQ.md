@@ -18,21 +18,6 @@ For the Garattini and Zatrimaylov interface branch, the warp-like transit handle
 
 The active rail metric is a time-dependent radial spacetime geometry written in service order: a localized rail-shaped support region creates the causal and spatial infrastructure, a throat-gated transport flow carries the packet through that region first, then a catch-and-rematch stage adjusts the packet’s relation to the rail so it remains in the intended causal channel as transport ends, after which the carrying flow fades while the throat support is still held, and only then does the supporting throat geometry relax and reset. Its lapse component controls the local clock-rate and causal margin, its radial spatial component controls stretching and compression along the rail, its angular component controls the effective throat area, and its radial shift component supplies the carrying field; that carrying field is confined to the support envelope and timed so the packet is transported, synchronized for release, separated from the rail, and followed by a controlled unwind of the geometry.
 
-## What is the order of service for the active rail architecture?
-
-Generally, first the service prepares support. It then carries the packet. It must then catch the packet before fade shift, followed by throat relaxation and service reset.
-
-Prepare support -> carry packet -> catch packet -> fade shift -> relax throat -> reset.
-
-More specifically...
-
-Adiabatically prepare support
-→ carry packet inside the supported rail
-→ catch/rematch packet before release
-→ fade shift while support remains available
-→ complete a slow support decompression shoulder
-→ softly unwind angular capacity and reset
-
 ## What sources are considered for the plant support?
 
 The leading source candidate is a **nonminimally coupled scalar / scalar-tensor-like support sector**, especially the Barceló–Visser class of scalar fields that can violate energy conditions and support wormhole branches. Its strength is that it naturally matches the active-rail plant’s main need: **standing, anisotropic, curvature-linked throat support**. Its weakness is severe: the known wormhole branches require **trans-Planckian scalar field values**, so this is a strong inspiration for the support role, but not a complete physical source by itself. Barceló–Visser: [https://arxiv.org/abs/gr-qc/0003025](https://arxiv.org/abs/gr-qc/0003025)
@@ -60,3 +45,56 @@ The NMC/scalar-tensor sector is useful because it can provide curvature-linked a
 The Casimir/RSET sector is useful because it naturally produces localized vacuum stress in constrained boundary regions. In the hybrid design, that strength is aimed at the support-edge/null-channel layer, not the whole throat. That makes its scaling problem less fatal because it is used as a correction and isolation layer where boundary stress is most relevant.
 
 The timed actuator/exchange sector is useful because it matches controlled negative-null-energy timing, flux closure, decompression, and reset. In the hybrid design, that strength is aimed only at the active-service residual, which our source-shaped rail makes comparatively small. That avoids asking a timed mechanism to provide the standing throat itself.
+
+## What is the detailed nature of service for the active rail architecture?
+
+The active rail service is a source-shaped transport cycle. The general metric supplies the service language: lapse for clock-rate and causal margin, radial geometry for stretching and compression, angular geometry for throat capacity, and radial shift for the carrying field,
+
+$$
+ds^2
+=
+-\alpha(s,l)^2 ds^2
++
+\gamma_{ll}(s,l)\left(dl+\beta^l(s,l)ds\right)^2
++
+\gamma_{\Omega\Omega}(s,l)d\Omega^2 .
+$$
+
+Source analysis makes the service more specific. The demanded source ledger,
+
+$$
+T_{\mu\nu}^{\rm demand}
+=
+\frac{1}{8\pi}G_{\mu\nu}[g],
+$$
+
+indicates that the active rail works best as an infrastructure-routed system: the support envelope carries the hard geometric burden, the support edge becomes the main shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the service channel.
+
+The refined service order is:
+
+Adiabatically prepare the throat-supported rail  
+→ carry the packet inside the support envelope  
+→ catch/rematch the packet while support remains available  
+→ fade the throat-gated carrying shift  
+→ hold a decompression shoulder through throat relaxation  
+→ unwind angular capacity and reset the rail
+
+This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, and reset are the larger infrastructure-actuation stages. The support edge receives the main exotic/null-channel shaping duty. The angular sector receives a major pressure/tension role, so $\gamma_{\Omega\Omega}$ becomes an active design choice rather than a background decoration. The packet-facing channel is then treated as a protected service path through a managed support plant.
+
+In compact form, the source-shaped active rail is:
+
+$$
+\text{standing support}
+\;\rightarrow\;
+\text{support-contained carrying flow}
+\;\rightarrow\;
+\text{packet catch/rematch}
+\;\rightarrow\;
+\text{controlled shift fade}
+\;\rightarrow\;
+\text{slow throat decompression}
+\;\rightarrow\;
+\text{resettable infrastructure}.
+$$
+
+This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
