@@ -112,6 +112,65 @@ A useful way to remember the service sequence is:
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
 
+## What can go wrong in the active rail, and why does the order of service matter?
+
+The active rail’s main danger is a bad handoff. The packet is being carried by a plant, and the plant has to pass the load from one layer of geometry to the next in the right order. Support comes up first, the carrying shift lives inside that support, the packet is caught before the shift fades, the support remains in place while the shift turns down, and the plant decompresses gently before reset. When that order holds, each burden lands in the part of the architecture meant to carry it. When the order slips, the burden moves somewhere harsher: into the packet norm, the support edge, the angular pressure channel, the null ledger, or the reset history.
+
+The compact timing rule is:
+
+```math
+x_{\rm catch}<x_\beta<x_q .
+```
+
+Catch comes before shift fade. Shift fade comes before support relaxation. This is the rail’s handoff logic.
+
+The packet failure is the easiest one to picture. The packet is supposed to ride inside a protected channel, then be caught and rematched before the rail lets go. Its local condition is tracked by a packet norm of the form:
+
+```math
+n_{\rm pkt}
+=
+-\alpha^2
++
+\gamma_{\ell\ell}
+\left(\dot X+\beta^\ell\right)^2 .
+```
+
+The service wants:
+
+```math
+n_{\rm pkt}<0 .
+```
+
+When catch/rematch is present, the packet is carried into the release stage already synchronized with the rail. When catch is late or absent, the packet reaches the release while still carrying the wrong relation to the local flow. The rail begins to fade underneath it, and the packet-facing channel takes the mismatch. In the tests, this is the dramatic packet-side failure: caught branches keep the packet-positive count at zero, while no-catch branches produce packet-positive regions. The engineering picture is a payload being released before the receiving frame has taken it.
+
+The plant has its own failure channel. The carrying shift belongs inside the support envelope. It is not allowed to wander outside the region that has lapse and capacity support. The containment rule is:
+
+```math
+{\rm supp}(\beta^\ell)\subseteq{\rm supp}(A,T).
+```
+
+When the shift stays throat-gated, the plant carries it as an infrastructure load. When the shift reaches beyond that support, the support edge becomes the overloaded place. The rail is then asking an unsupported region to behave like transport infrastructure. That is why the throat-gated shift is one of the central design choices: it keeps the carrying field housed inside the plant instead of letting it become a free passenger-attached warp wall.
+
+There is also a release failure. The rail can catch the packet and still mishandle the exit if the support relaxes too early. The shift fade has to happen while the support is still present. The plant holds the channel, the carrying flow fades, and then the throat support decompresses. That order keeps the release soft. Reversing the order pulls away the platform while the transport field is still settling.
+
+The decompression stage is its own source-risk control. A held plant can look calm, then produce a spike when it shuts down too quickly. The source ledger responds to derivatives: sharp time shoulders become current, pressure, null, and angular-pressure burden. A long minimum-jerk decompression shoulder turns shutdown into a controlled unwind. The plant eases out of service instead of snapping off.
+
+The angular sector is another place where failure can hide. The term \(\gamma_{\Omega\Omega}\) carries effective throat area and angular pressure/tension. If the angular closure is too rigid, the pressure ceiling concentrates there. The soft angular jacket gives that sector some participation in the service cycle. The later source accounting separates the standing plant burden from the active-service excess, and the useful result is that the largest angular-pressure ceiling mostly belongs to the prepared support plant. The packet choreography is then read as doing its job, while the remaining angular ledger becomes a plant-support design issue.
+
+Reset is the final handoff. A rail that succeeds once and leaves residue is still a bad plant. Reset has to clear source history, support-edge residue, timing mismatch, optical disturbance, and decompression debt well enough for the next pass. That is why the architecture treats reset as a service stage rather than an afterthought. A clean single transit is only part of the story; a reusable rail has to come back quiet.
+
+The source ledger is the accounting layer underneath all of this:
+
+```math
+T_{\mu\nu}^{\rm demand}
+=
+\frac{1}{8\pi}G_{\mu\nu}[g].
+```
+
+It tells where the geometry sends the bill. Packet timing shows up in the packet norm. Plant balance shows up at the support edge. Angular closure shows up in pressure/tension. Decompression shows up through time derivatives. Reset shows up through what remains after the service.
+
+That is why the order matters. The rail is a chain of handoffs: support receives the shift, the shift carries the packet, catch receives the packet, fade releases the shift, decompression releases the support, and reset receives the plant. Each stage protects the next one. The main active-rail failure modes are the moments when that handoff is mistimed, too sharp, or assigned to the wrong layer.
+
 ## Does this work suggest any immediate real-world applications?
 
 The most immediate application is in quantum circuit engineering. The active rail gives a way to think about dynamic circuits where the protected quantum state is the packet, and the hardware support system is the rail. The packet is what must survive. The rail is the entanglement resource, couplers, measurement path, feedforward controller, buffer qubits, and reset infrastructure.
