@@ -56,18 +56,21 @@ The timed actuator/exchange sector is useful because it matches controlled negat
 
 ## What is the detailed nature of service for the active rail architecture?
 
-The active rail service is a source-shaped transport cycle. The general metric supplies the service language: lapse for clock-rate and causal margin, radial geometry for stretching and compression, angular geometry for throat capacity, and radial shift for the carrying field,
+````markdown
+The active rail service is a source-shaped transport cycle. The general metric supplies the service language: lapse for clock-rate and causal margin, radial geometry for stretching and compression, angular geometry for throat capacity and angular pressure/tension routing, and radial shift for the carrying field,
 
 ```math
-ds^2
+d\Sigma^2
 =
--\alpha(l, \sigma)^2 d{\sigma}^2
+-\alpha(\ell, \sigma)^2 d\sigma^2
 +
-\gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)d\sigma\right)^2
+\gamma_{\ell\ell}(\ell, \sigma)
+\left(d\ell+\beta^\ell(\ell, \sigma)d\sigma\right)^2
 +
-\gamma_{\Omega\Omega}(l, \sigma)d\Omega^2 .
-```
-Here σ is the plant's scheduling parameter, and l is radial rail/throat coordinate, which labels location along the throat-supported rail/
+\gamma_{\Omega\Omega}(\ell, \sigma)d\Omega^2 .
+````
+
+Here (\sigma) is the plant’s scheduling/service coordinate, (\ell) is the radial rail/throat coordinate labeling location along the throat-supported rail, (\alpha) is the lapse, (\beta^\ell) is the support-contained rail shift, (\gamma_{\ell\ell}) is the radial spatial metric component, and (\gamma_{\Omega\Omega}) is the angular capacity sector.
 
 Source analysis makes the service more specific. The demanded source ledger,
 
@@ -77,31 +80,45 @@ T_{\mu\nu}^{\rm demand}
 \frac{1}{8\pi}G_{\mu\nu}[g],
 ```
 
-indicates that the active rail works best as an infrastructure-routed system: the support envelope carries the hard geometric burden, the support edge becomes the main shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the service channel.
+indicates that the active rail works best as an infrastructure-routed system: the support envelope carries the hard geometric burden, the support edge becomes the main null/exotic shaping layer, the angular sector becomes a primary pressure/tension design variable, and the packet remains the object being synchronized through the protected service channel.
+
+The current reduced-design freeze is **source-shaped active rail v1**:
+
+```text
+catch-rematched active rail
++ support-contained throat-gated shift
++ soft angular jacket
++ long minimum-jerk support decompression
++ baseline-subtracted source accounting
+```
 
 The refined service order is:
 
-Adiabatically prepare the throat-supported rail  
-→ carry the packet inside the support envelope  
-→ catch/rematch the packet while support remains available  
-→ fade the throat-gated carrying shift  
-→ hold a decompression shoulder through throat relaxation  
+Adiabatically prepare the throat-supported rail
+→ carry the packet inside the support envelope
+→ catch/rematch the packet while support remains available
+→ fade the throat-gated carrying shift
+→ hold a long minimum-jerk decompression shoulder through throat relaxation
 → unwind angular capacity and reset the rail
 
-This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, and reset are the larger infrastructure-actuation stages. The support edge receives the main exotic/null-channel shaping duty. The angular sector receives a major pressure/tension role, so $\gamma_{\Omega\Omega}$ becomes an active design choice. The packet-facing channel is treated as a protected service path through a managed support plant.
+This ordering reflects the source ledger. Catch/rematch is the packet-control stage. Shift fade, throat relaxation, decompression, and reset are infrastructure-actuation stages. The support edge receives the main null/exotic shaping duty. The angular sector receives a major pressure/tension role, so (\gamma_{\Omega\Omega}) becomes an active design choice rather than a cosmetic closure. Baseline-subtracted source accounting separates the standing plant-support ledger from the active-service excess: the large angular-pressure ceiling is mostly a prepared-support plant cost, while the active-service addition is much smaller. The packet-facing channel is treated as a protected service path through a managed support plant.
 
 A useful way to remember the service sequence is:
 
 **Support, Carry, Catch, Fade, Decompress, Reset.**
 
-- Support    → standing support
-- Carry      → support-contained carrying flow
-- Catch      → packet catch/rematch
-- Fade       → controlled shift fade
-- Decompress → slow throat decompression
-- Reset      → resettable infrastructure
+* Support → standing throat support and angular capacity
+* Carry → support-contained throat-gated carrying flow
+* Catch → packet catch/rematch before release
+* Fade → controlled shift fade while support remains available
+* Decompress → long minimum-jerk throat/support decompression
+* Reset → resettable infrastructure and source-history cleanup
 
-This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
+This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, decompresses, and resets as one coordinated geometric plant.
+
+```
+```
+
 
 ## Does this work suggest any immediate real-world applications?
 
