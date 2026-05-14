@@ -1,3 +1,15 @@
+## What is the Packet-Centered Active-Rail Architecture?
+
+The Packet-Centered Active-Rail Architecture is a service-ordered spacetime design in which the passenger, vehicle, or payload is treated as a packet being carried by an active geometric infrastructure rather than as the object that directly owns the warp-like field. The rail is the operating plant. The packet is the serviced object. The throat-like support region creates the causal and spatial infrastructure, the rail-shaped carrying flow transports the packet through that supported region, and the service cycle catches, rematches, releases, relaxes, and resets the geometry in a controlled order.
+
+The central idea is that the architecture organizes transport as a serviced geometric process. The rail provides the support envelope, carrying flow, synchronization environment, release conditions, and reset cycle, while the packet remains the delivered payload moving through those coordinated stages. The rail performs the geometric work of transport, support management, and controlled unwind as part of a single ordered service system.
+
+## Why is it called packet-centered?
+
+The design is called packet-centered because it is organized around the packet’s service path through the active rail. The packet is the payload whose timing, causal channel, synchronization, release, and return to ordinary motion define the service requirements. The rail prepares the support environment, carries the packet, catches and rematches it, manages release, relaxes the support geometry, and resets the service cycle.
+
+This framing keeps the architecture focused on the delivered object. The packet moves through a managed transport environment, while the active rail supplies the geometric infrastructure and timed service operations that make the passage coherent.
+
 ## How does the Packet-Centered Active-Rail Architecture compare to the naive approach of interfacing warp-like transit and wormhole support as considered by Garattini and Zatrimaylov et al.?
 
 For the Garattini and Zatrimaylov interface branch, the warp-like transit handled the shift and the interface remained a warp shell interfacing with a wormhole throat. In the active rail architecture, the throat itself becomes an active transport plant; the passenger/vehicle is a packet; the warp-like shift is carried by the throat’s support envelope; the packet is caught, rematched, released, and returned to ordinary motion.
