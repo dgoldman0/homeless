@@ -61,9 +61,9 @@ The active rail service is a source-shaped transport cycle. The general metric s
 ```math
 ds^2
 =
--\alpha(l, \sigma)^2 ds^2
+-\alpha(l, \sigma)^2 d{\sigma}^2
 +
-\gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)ds\right)^2
+\gamma_{ll}(l, \sigma)\left(dl+\beta^l(l, \sigma)d\sigma\right)^2
 +
 \gamma_{\Omega\Omega}(l, \sigma)d\Omega^2 .
 ```
