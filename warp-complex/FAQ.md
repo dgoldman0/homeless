@@ -83,18 +83,11 @@ This ordering reflects the source ledger. Catch/rematch is the packet-control st
 
 In compact form, the source-shaped active rail is:
 
-```math
-\text{standing support}
-\rightarrow
-\text{support-contained carrying flow}
-\rightarrow
-\text{packet catch/rematch}
-\rightarrow
-\text{controlled shift fade}
-\rightarrow
-\text{slow throat decompression}
-\rightarrow
-\text{resettable infrastructure}.
-```
+standing support
+→ support-contained carrying flow
+→ packet catch/rematch
+→ controlled shift fade
+→ slow throat decompression
+→ resettable infrastructure
 
 This gives the architecture its practical service logic: the rail prepares, carries, synchronizes, releases, relaxes, and resets as one coordinated geometric plant.
