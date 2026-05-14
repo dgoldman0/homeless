@@ -20,3 +20,7 @@ Adiabatically prepare support
 → fade shift while support remains available
 → complete a slow support decompression shoulder
 → softly unwind angular capacity and reset
+
+## What sources are considered for the plant support? 
+
+The top candidate is a nonminimally coupled scalar / scalar-tensor support as described by [Barceló and Visser](https://arxiv.org/abs/gr-qc/0003025). However, their work requires trans-Planckian field values, making it problematic. Moreover, it may be incomplete. A hybrid approach may be the best option. The two current top candidates for additional inspiration are Casimir-like or semiclassical vacuum-stress boundary layers and timed negative-null-energy coupling / actuator-exchange source architecture. 
