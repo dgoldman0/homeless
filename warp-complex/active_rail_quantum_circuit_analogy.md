@@ -45,7 +45,7 @@ The current metric form is:
 
 ```math
 ds^2 =
--\alpha(\ell,\sigma)^2 ds^2
+-\alpha(\ell,\sigma)^2 d\sigma^2
 +\gamma_{\ell\ell}(\ell,\sigma)(d\ell+\beta^\ell(\ell,\sigma)d\sigma)^2
 +\gamma_{\Omega\Omega}(\ell,\sigma)d\Omega^2.
 ```
