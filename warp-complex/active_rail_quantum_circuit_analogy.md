@@ -112,7 +112,7 @@ The active-rail support-containment rule is:
 {\rm supp}(\beta^\ell)\subseteq{\rm supp}(A,T).
 ```
 
-The FAQ's later metric language uses `\alpha`, `\gamma_{\ell\ell}`, `\beta^\ell`, and `\gamma_{\Omega\Omega}` as the preferred general symbols. In that current language, the rule should be read as:
+The current proposed standard metric language uses $\alpha$, $\gamma_{\ell\ell}$, $\beta^\ell$, and $\gamma_{\Omega\Omega}$ as the preferred general symbols. In that current language, the rule should be read as:
 
 ```text
 The carrying shift must live inside the prepared support envelope.
