@@ -540,3 +540,122 @@ That is the direct analogy.
 - Quantum Energy Teleportation testbed: [arXiv:2301.02666](https://arxiv.org/abs/2301.02666)
 - Measurement-induced teleportation: [arXiv:2303.04792](https://arxiv.org/abs/2303.04792)
 - Traversable-wormhole-inspired teleportation circuit: [Nature 2022](https://www.nature.com/articles/s41586-022-05424-3)
+
+# Condensed QET Analog Failure Test Suite
+
+This QET test suite uses the active-rail failure logic as a circuit-engineering lens. The QET system is treated as a service cycle: a correlated support resource is prepared, Alice performs a local measurement, classical information reaches Bob, Bob applies the conditional operation inside the useful correlation window, the active resource is released, and the hardware resets cleanly enough to run again.
+
+The main question is simple: does the QET circuit produce a real conditional energy-transfer effect while keeping the surrounding circuit behavior understandable, localized, and reusable?
+
+## Core energy ledger
+
+Use a local Hamiltonian decomposition:
+
+```math
+H=\sum_i h_i
+```
+
+Track local energy relative to the chosen reference state:
+
+```math
+\epsilon_i(t)=\langle h_i(t)\rangle-\langle h_i\rangle_0
+```
+
+For any region \(F\), track the regional ledger:
+
+```math
+E_F(t)=\sum_{i\in F}\epsilon_i(t)
+```
+
+The QET signal should separate four things: Alice's injected energy, Bob's extracted usable energy, the local energy deficit left near Bob, and any residue left in buffers, neighbors, couplers, readout, or reset infrastructure.
+
+Matched baseline subtraction is essential:
+
+```math
+\epsilon_i^{\rm active}(t)=\epsilon_i^{\rm QET}(t)-\epsilon_i^{\rm base}(t)
+```
+
+The baseline should use the same timing, gates, measurements, pulses, and reset schedule, with the QET-specific ingredient removed, delayed, randomized, or decorrelated.
+
+## Test 1: support and information dependence
+
+The first failure mode is a QET circuit that looks active because Alice injects energy and hardware responds, while the actual Alice-Bob correlation resource is weak or irrelevant.
+
+Run the intended QET circuit beside controls with a product-state input, randomized feedforward, Bob's operation removed, Alice's useful measurement removed, and feedforward delayed beyond the useful window. The QET effect should survive the matched subtraction and collapse under the controls that destroy the correlation or the information link.
+
+A clean result means Bob's extraction depends on the prepared resource and Alice's information. A failed result means the apparent signal can be explained by measurement disturbance, pulse artifacts, crosstalk, readout bias, or ordinary local heating.
+
+## Test 2: Bob catch window
+
+The active-rail catch rule becomes a timing rule for QET:
+
+```math
+t_{\rm Bob}<t_{\rm release}<t_{\rm reset}
+```
+
+Bob's conditional operation should occur while the relevant correlation resource is still usable. The active resource should be released after Bob's operation has completed, and reset should begin after the local energy and fidelity ledgers have been measured.
+
+The practical test is a feedforward-delay sweep. Increase the delay between Alice's measurement and Bob's operation, then measure Bob's extracted energy, the local energy deficit near Bob, access-channel disturbance if a protected state is present, and leftover residue in neighboring hardware.
+
+A good implementation shows a real timing window. A bad implementation turns into Alice-side disturbance followed by a noisy Bob-side operation.
+
+## Test 3: containment and localization
+
+The active-rail containment rule translates into a QET locality rule: Bob's conditional operation should act inside the region actually supported by the prepared Alice-Bob correlations.
+
+A compact way to write the analog rule is:
+
+```math
+{\rm supp}(U_B)\subseteq{\rm supp}(C_{AB})
+```
+
+Here \(U_B\) is Bob's conditional operation, and \(C_{AB}\) is the useful prepared Alice-Bob correlation resource.
+
+Test this by moving Bob's operation away from the intended site, spreading it into neighboring sites, or adding controlled crosstalk. A valid QET implementation should localize the signal near the intended Bob region and place any residue into known buffer or hardware channels. A weak implementation smears the signal across neighbors or keeps producing a signal even when Bob is no longer acting on the supported region.
+
+## Test 4: resource release and reset debt
+
+The active-rail source analysis says endpoint success can hide release and reset problems. The QET analogue is a circuit that shows Bob extraction once, while leaving leakage, coupler excitation, readout residue, thermal drift, or reset contamination behind.
+
+For pulse-level hardware, compare release envelopes: abrupt shutoff, linear ramp, smooth ramp, and minimum-jerk ramp.
+
+```math
+q(u)=1-10u^3+15u^4-6u^5
+```
+
+```math
+u={t-t_0\over T_r}
+```
+
+For gate-level hardware, treat this more generally as resource release: decoupling, uncomputing, measuring, resetting, and reinitializing the support system.
+
+The key test is repeated-cycle QET:
+
+```math
+{\rm QET}_1,{\rm QET}_2,\ldots,{\rm QET}_N
+```
+
+A reusable implementation returns to the same baseline each cycle. Reset debt appears as drift in Bob extraction, growing access disturbance, rising leakage, changing readout bias, or residue that remains before the next cycle begins.
+
+## Test 5: protected-channel disturbance
+
+This test applies when the QET circuit is being used as an active-rail analogue with a protected packet, memory qubit, or logical state present during the QET operation.
+
+The QET signal should occur without dirtying that protected channel. Track fidelity, phase error, bit-flip error, leakage, and local energy shift on the protected qubits during Alice measurement, feedforward, Bob operation, resource release, and reset.
+
+A useful implementation keeps the protected channel quiet while energy bookkeeping happens elsewhere. A weak implementation produces an energy-transfer signal while damaging the state the circuit is supposed to preserve.
+
+## Minimal passing standard
+
+A QET implementation passes the active-rail analog test when the result is conditional, localized, timed, and reusable.
+
+It should show Bob extraction above matched baseline, collapse under randomized or decorrelated controls, a measurable Bob timing window, localized local-energy behavior, reduced residue under smoother release, stable repeated cycles, and low disturbance to any protected packet or access channel.
+
+The condensed active-rail lesson is:
+
+Prepare the support resource.  
+Use Alice's information to make Bob extraction possible.  
+Catch inside the useful timing window.  
+Release the resource gently.  
+Separate active QET signal from hardware baseline.  
+Reset cleanly enough to repeat.
