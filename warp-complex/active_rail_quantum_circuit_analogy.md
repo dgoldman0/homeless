@@ -14,7 +14,7 @@ The current reduced design is:
 catch-rematched active rail
 + support-contained throat-gated shift
 + soft angular jacket
-+ single long minimum-jerk support-decompression q(s)
++ single long minimum-jerk support-decompression $q(\sigmas)$
 + baseline-subtracted source accounting
 ```
 
@@ -45,25 +45,25 @@ The current metric form is:
 
 ```math
 ds^2 =
--\alpha(\ell,s)^2 ds^2
-+\gamma_{\ell\ell}(\ell,s)(d\ell+\beta^\ell(\ell,s)ds)^2
-+\gamma_{\Omega\Omega}(\ell,s)d\Omega^2.
+-\alpha(\ell,\sigma)^2 ds^2
++\gamma_{\ell\ell}(\ell,\sigma)(d\ell+\beta^\ell(\ell,\sigma)d\sigma)^2
++\gamma_{\Omega\Omega}(\ell,\sigma)d\Omega^2.
 ```
 
-Here `s` is the plant schedule coordinate and `\ell` is the rail coordinate. The active-rail fields translate naturally into dynamic-circuit controls.
+Here `s` is the plant schedule coordinate and $$\ell$$ is the rail coordinate. The active-rail fields translate naturally into dynamic-circuit controls.
 
 | Active-rail symbol or object | Active-rail role | Dynamic quantum circuit analogue |
 |---|---|---|
 | packet | delivered payload with protected service path | logical qubit, encoded state, wavepacket, or message register |
 | rail / throat plant | prepared infrastructure carrying the service | bus, qubit chain, entangled link, coupler network, teleportation resource |
-| `s` | service schedule coordinate | circuit clock, pulse schedule, feedforward timeline |
-| `\ell` | rail/throat coordinate | position along qubit chain, module link, resonator bus, or teleportation path |
-| `\alpha(\ell,s)` | local timing margin and causal margin | coherence slack, timing margin, phase margin, feedforward deadline margin |
-| `\gamma_{\ell\ell}(\ell,s)` | radial support/stretch/compression geometry | rail impedance, coupling geometry, state-transfer medium, propagation profile |
-| `\beta^\ell(\ell,s)` | support-contained carrying shift | transport coupling, state-transfer drive, double-trace-like coupling, feedforward-conditioned carrying operation |
-| `\gamma_{\Omega\Omega}(\ell,s)` | angular capacity and pressure/tension sector | buffer capacity, guard modes, leakage channels, reset reservoirs, transverse hardware compliance |
+| $\sigma$ | service schedule coordinate | circuit clock, pulse schedule, feedforward timeline |
+| $\ell$ | rail/throat coordinate | position along qubit chain, module link, resonator bus, or teleportation path |
+| $\alpha(\ell,\sigma)$ | local timing margin and causal margin | coherence slack, timing margin, phase margin, feedforward deadline margin |
+| $\gamma_{\ell\ell}(\ell,\sigma)$ | radial support/stretch/compression geometry | rail impedance, coupling geometry, state-transfer medium, propagation profile |
+| $\beta^\ell(\ell,\sigma)$ | support-contained carrying shift | transport coupling, state-transfer drive, double-trace-like coupling, feedforward-conditioned carrying operation |
+| $\gamma_{\Omega\Omega}(\ell,\sigma)$ | angular capacity and pressure/tension sector | buffer capacity, guard modes, leakage channels, reset reservoirs, transverse hardware compliance |
 | soft angular jacket | support-edge/null-channel shaping layer | guard qubits, soft coupler taper, sideband filters, buffer modes, crosstalk shielding |
-| `q(s)` decompression | controlled support relaxation | pulse ramp, coupler shutdown envelope, resource unwind, reset ramp |
+| $q(\sigmas)$ decompression | controlled support relaxation | pulse ramp, coupler shutdown envelope, resource unwind, reset ramp |
 | source ledger | demanded stress-energy accounting | energy, work, leakage, heating, crosstalk, reset, and fidelity accounting |
 
 The analogy is strongest because the active rail is already written as a controlled plant with a packet-facing channel and infrastructure channels. Dynamic circuits have the same split: the logical state is the thing being protected, while couplers, measurement devices, ancillas, buffers, feedforward logic, and reset infrastructure form the support plant.
