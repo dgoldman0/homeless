@@ -73,7 +73,7 @@ The analogy is strongest because the active rail is already written as a control
 The active rail's compact timing rule is:
 
 ```math
-x_{\rm catch}<x_\beta<x_q.
+$x_{\rm catch}<x_\beta<x_q$.
 ```
 
 In words:
