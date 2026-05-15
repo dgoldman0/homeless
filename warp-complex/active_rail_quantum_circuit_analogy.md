@@ -587,9 +587,7 @@ A clean result means Bob's extraction depends on the prepared resource and Alice
 
 The active-rail catch rule becomes a timing rule for QET:
 
-```math
-t_{\rm Bob}<t_{\rm release}<t_{\rm reset}
-```
+$t_{\rm Bob}<t_{\rm release}<t_{\rm reset}$
 
 Bob's conditional operation should occur while the relevant correlation resource is still usable. The active resource should be released after Bob's operation has completed, and reset should begin after the local energy and fidelity ledgers have been measured.
 
@@ -603,9 +601,7 @@ The active-rail containment rule translates into a QET locality rule: Bob's cond
 
 A compact way to write the analog rule is:
 
-```math
-{\rm supp}(U_B)\subseteq{\rm supp}(C_{AB})
-```
+${\rm supp}(U_B)\subseteq{\rm supp}(C_{AB})$
 
 Here \(U_B\) is Bob's conditional operation, and \(C_{AB}\) is the useful prepared Alice-Bob correlation resource.
 
