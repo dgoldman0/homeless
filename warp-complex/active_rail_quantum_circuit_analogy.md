@@ -63,7 +63,7 @@ Here `s` is the plant schedule coordinate and $$\ell$$ is the rail coordinate. T
 | $\beta^\ell(\ell,\sigma)$ | support-contained carrying shift | transport coupling, state-transfer drive, double-trace-like coupling, feedforward-conditioned carrying operation |
 | $\gamma_{\Omega\Omega}(\ell,\sigma)$ | angular capacity and pressure/tension sector | buffer capacity, guard modes, leakage channels, reset reservoirs, transverse hardware compliance |
 | soft angular jacket | support-edge/null-channel shaping layer | guard qubits, soft coupler taper, sideband filters, buffer modes, crosstalk shielding |
-| $q(\sigmas)$ decompression | controlled support relaxation | pulse ramp, coupler shutdown envelope, resource unwind, reset ramp |
+| $q(\sigma)$ decompression | controlled support relaxation | pulse ramp, coupler shutdown envelope, resource unwind, reset ramp |
 | source ledger | demanded stress-energy accounting | energy, work, leakage, heating, crosstalk, reset, and fidelity accounting |
 
 The analogy is strongest because the active rail is already written as a controlled plant with a packet-facing channel and infrastructure channels. Dynamic circuits have the same split: the logical state is the thing being protected, while couplers, measurement devices, ancillas, buffers, feedforward logic, and reset infrastructure form the support plant.
