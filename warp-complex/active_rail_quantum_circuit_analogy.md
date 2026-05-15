@@ -14,7 +14,7 @@ The current reduced design is:
 catch-rematched active rail
 + support-contained throat-gated shift
 + soft angular jacket
-+ single long minimum-jerk support-decompression $q(\sigmas)$
++ single long minimum-jerk support-decompression q(σ)
 + baseline-subtracted source accounting
 ```
 
