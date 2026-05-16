@@ -1,0 +1,25 @@
+bubble_radius,wall_width,V_or_target_factor,peak_rho,int_negative_rho,passenger_safe_aperture_factor,system,model
+0.35,0.12,1.0,-0.17471687858916757,-0.029773966986034035,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.12,3.0,-1.572451907302508,-0.2679657028743063,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.12,10.0,-17.47168785891676,-2.9773966986034033,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.18,1.0,-0.08302400400143152,-0.022171686043397008,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.18,3.0,-0.7472160360128837,-0.19954517439057307,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.18,10.0,-8.302400400143153,-2.217168604339701,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.35,1.0,-0.030498509007470538,-0.01996722569136611,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.35,3.0,-0.27448658106723484,-0.17970503122229498,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.35,10.0,-3.049850900747054,-1.9967225691366108,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.7,1.0,-0.010341217129085792,-0.029007497359050217,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.7,3.0,-0.09307095416177213,-0.26106747623145193,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+0.35,0.7,10.0,-1.0341217129085793,-2.9007497359050216,1.0,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.12,1.0,-0.1726941662847389,-0.36276470622604884,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.12,3.0,-1.55424749656265,-3.2648823560344393,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.12,10.0,-17.26941662847389,-36.27647062260488,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.18,1.0,-0.07675324739690263,-0.2427397806286898,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.18,3.0,-0.6907792265721238,-2.184658025658208,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.18,10.0,-7.6753247396902635,-24.27397806286898,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.35,1.0,-0.020364564167485773,-0.1275440326840204,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.35,3.0,-0.18328107750737196,-1.1478962941561834,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.35,10.0,-2.0364564167485772,-12.754403268402038,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.7,1.0,-0.005643662200476846,-0.07583813086652645,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.7,3.0,-0.05079295980429161,-0.682543177798738,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger
+1.25,0.7,10.0,-0.5643662200476847,-7.583813086652644,3.5714285714285716,free warp shell,Alcubierre-style shift-shell toy ledger

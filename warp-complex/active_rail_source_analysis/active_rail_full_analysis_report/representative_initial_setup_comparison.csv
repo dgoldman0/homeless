@@ -1,0 +1,5 @@
+case,peak_rho,int_negative_rho,passenger_safe_aperture_factor,note
+MT minimum passenger-safe throat,-0.32480600630999057,-0.5497787143782138,1.0,Local support inventory only; mouth separation/topology not included.
+AR cold non-passenger skeleton r=0.15,-1.768388256576615,-0.23561944901923448,0.4285714285714286,Toy cold substrate; not passenger-safe by aperture.
+AR support-scale throat-like substrate r=1.25,-0.025464790894703253,-1.9634954084936207,3.5714285714285716,"Proxy for broad support-scale substrate, not full rail warm source ledger."
+Warp shell R=0.35 wall=0.18 V=10,-8.302400400143153,-2.217168604339701,1.0,Shell inventory at operating factor; operation/setup merge.

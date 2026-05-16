@@ -1,0 +1,12 @@
+parameter,recommended_value,role
+model name,quarantined active rail v2,next model to test/freeze candidate
+packet radius Rpass,0.35,keeps passenger worldtube small
+support/quarantine radius Rth,1.75 default; 2.0 stress branch,moves worst support channels away from packet
+angular jacket radius ROmega,co-located with Rth,aligns angular support with quarantine shell
+support width w_th,0.35,broadens support edge and reduces local peaks
+angular jacket width wOmega,1.4 default; 1.6 stress branch,soft broad jacket rather than sharp shell
+angular jacket amplitude aOmega,0.20,reduces peak angular pressure compared with freeze amplitude 0.35
+q(s),minimum-jerk decompression,retains adiabatic reset insight
+service order,catch/rematch before shift fade before decompression,packet-safety choreography
+packet lifecycle,stop passenger-exposure accounting after release/rematch,avoids falsely counting reset as packet exposure
+source strategy,quarantined scalar/effective jacket + cold substrate/shell + transient service corrections,"places trans-Planckian-risk channels in infrastructure, not passenger corridor"

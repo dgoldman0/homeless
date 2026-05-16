@@ -1,0 +1,5 @@
+quantity,active_total,matched_holding,active_excess,interpretation
+global |pOmega| ceiling,1.286,1.283,0.003,standing plant dominates
+support-edge |pOmega| ceiling,1.194,1.189,0.006,standing plant dominates
+core decompression |pOmega|,0.262,0.049,0.213,visible reset/service excess
+support-edge decompression |pOmega|,0.927,0.753,0.174,below standing ceiling

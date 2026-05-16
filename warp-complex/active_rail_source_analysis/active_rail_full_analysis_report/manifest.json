@@ -1,0 +1,20 @@
+{
+  "created": "2026-05-16",
+  "report": "active_rail_full_analysis_report.md",
+  "recommended_candidate": "quarantined active rail v2, R1.75 default; R2.0 stress branch",
+  "files": [
+    "active_rail_baseline_subtraction_key_table.csv",
+    "active_rail_full_analysis_report.md",
+    "candidate_infrastructure_tradeoff.csv",
+    "minimum_jerk_setup_exposure_proxy.csv",
+    "recommended_next_candidate_parameters.csv",
+    "representative_initial_setup_comparison.csv",
+    "source_quarantine_packet_peak_comparison.csv",
+    "source_quarantine_radial_null_exposure.csv",
+    "source_quarantine_summary.csv",
+    "throat_and_cold_substrate_inventory.csv",
+    "unfreeze_refined_aggregate.csv",
+    "unfreeze_refined_sweep.csv",
+    "warp_shell_inventory.csv"
+  ]
+}
