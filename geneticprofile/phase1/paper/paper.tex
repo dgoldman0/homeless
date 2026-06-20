@@ -29,6 +29,10 @@
 \setlist[enumerate]{leftmargin=1.6em}
 \renewcommand{\arraystretch}{1.15}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\objectheading}[1]{%
+  \par\addvspace{0.9\baselineskip}%
+  \noindent\textbf{\textit{#1}}\par\nopagebreak\smallskip\noindent%
+}
 
 \title{Layered Ashkenazi Jewish Ancestry in One Genome:\\Direct Lineages, Local Haplotype Objects, and Search Targets for Broader Comparison}
 \author{Daniel S. Goldman\\\href{https://orcid.org/0000-0003-2835-3521}{ORCID: 0000-0003-2835-3521}}
@@ -38,7 +42,7 @@
 \maketitle
 
 \begin{abstract}
-An anonymized Eastern/Central European Ashkenazi Jewish whole genome was compared against public ancient, modern, Jewish, regional, direct-line, family-side, and Roma/Romani data, with controlled or request-bound sources mapped separately. Whole-genome behavior and ROH burden place the genome inside ordinary Ashkenazi variation; the pedigree points into Austro-Hungarian, Hungarian-Slovak, Austrian, Belarusian/Minsk/Stowbtsy, Ukrainian/Kiev, and broader Russian Empire Jewish settings. Broad-source testing makes regional labels meaningful when they resolve into a lineage, local window, carrier set, or concrete data need. Direct-line analysis places the maternal line at \texttt{H1aj1a} and the paternal line at \texttt{R-YP1366*(xR-Y50410)}, downstream of the Ashkenazi-Levite-associated \texttt{R1a-Y2619} lineage. Local autosomal analysis identifies a Lithuanian-supported tract at hg19 chr10:63.8--67.2 Mb, a Jewish/Samaritan/Ashkenazi core at hg19 chr9:71.1--74.2 Mb, and a rare chr3 founder block at hg19 chr3:47.0--49.3 Mb with Mediterranean/eastern-Mediterranean/West-Asian proxy anchors and a structured carrier subclass pattern. A Roma/Romani family story on the maternal-grandfather side receives a targeted open-data audit; current open references support an Ashkenazi-centered interpretation and make matched Central/Eastern European Roma references the key test for any smaller branch-level residue. The resulting targets concern Ashkenazi founder structure, Levite-associated paternal lines, northeastern Jewish inheritance, Jewish-region haplotypes, Mediterranean/West-Asian founder texture, and Roma-adjacent family-history testing.
+An anonymized Eastern/Central European Ashkenazi Jewish whole genome was compared against public ancient, modern, Jewish, regional, direct-line, family-side, and Roma/Romani data, with controlled or request-bound sources mapped separately. Whole-genome behavior and ROH burden place the genome inside ordinary Ashkenazi variation; the pedigree points into Austro-Hungarian, Hungarian-Slovak, Austrian, Belarusian/Minsk/Stowbtsy, Ukrainian/Kiev, and broader Russian Empire Jewish settings. Broad-source testing makes regional labels meaningful when they resolve into a lineage, local window, carrier set, or concrete data need. Direct-line analysis places the maternal line at \texttt{H1aj1a} and the paternal line at \texttt{R-YP1366*(xR-Y50410)}, downstream of the Ashkenazi-Levite-associated \texttt{R1a-Y2619} lineage. Local autosomal analysis identifies a Lithuanian-supported tract at hg19 chr10:63.8--67.2 Mb, a Jewish/Samaritan/Ashkenazi core at hg19 chr9:71.1--74.2 Mb, and a rare chr3 founder block at hg19 chr3:47.0--49.3 Mb with Mediterranean/eastern-Mediterranean/West-Asian proxy anchors and a structured carrier subclass pattern. A Roma/Romani family story centered on Rebecca/Rivka Reubenstein in the maternal-grandfather branch receives a targeted open-data audit; current open references support an Ashkenazi-centered interpretation and make matched Central/Eastern European Roma references the key test for any smaller branch-level residue. The resulting targets concern Ashkenazi founder structure, Levite-associated paternal lines, northeastern Jewish inheritance, Jewish-region haplotypes, Mediterranean/West-Asian founder texture, and Roma-adjacent family-history testing.
 \end{abstract}
 
 \noindent\textbf{Keywords:} Ashkenazi Jewish ancestry; local haplotypes; founder structure; Y chromosome; R1a-Y2619; R-YP1366; H1aj1a; Romani ancestry; public reference data
@@ -49,7 +53,7 @@ An anonymized Eastern/Central European Ashkenazi Jewish genome offers a compact 
 
 Ashkenazi Jewish population history includes bottlenecks, endogamy, founder effects, and older ancestry shared across Jewish, Mediterranean, eastern-Mediterranean, West Asian, and European contexts \citep{carmi2014,xue2017}. Broad regional affinity works as a starting frame. The analysis gives broad signals interpretive weight when they resolve into a Y branch, a maternal line, tract-scale haplotype, carrier set, or comparator gap that can be tested across datasets.
 
-The named targets are concrete. The paternal line falls inside the Ashkenazi-Levite-associated \texttt{R1a-Y2619} lineage and locally downstream at \texttt{R-YP1366*(xR-Y50410)}. The maternal line is \texttt{H1aj1a}. The autosomes preserve a clean Lithuanian-supported chromosome 10 tract, a compact Jewish/Samaritan/Ashkenazi chromosome 9 object, and a rare chromosome 3 founder block with Mediterranean/eastern-Mediterranean/West-Asian proxy anchors. A Roma/Romani family story on the maternal-grandfather branch creates a targeted comparator problem.
+The named targets are concrete. The paternal line falls inside the Ashkenazi-Levite-associated \texttt{R1a-Y2619} lineage and locally downstream at \texttt{R-YP1366*(xR-Y50410)}. The maternal line is \texttt{H1aj1a}. The autosomes preserve a clean Lithuanian-supported chromosome 10 tract, a compact Jewish/Samaritan/Ashkenazi chromosome 9 object, and a rare chromosome 3 founder block with Mediterranean/eastern-Mediterranean/West-Asian proxy anchors. A Roma/Romani family story centered on Rebecca/Rivka Reubenstein creates a targeted comparator problem.
 
 The central comparison set consists of \texttt{R-YP1366}, chr3:47.0--49.3 Mb, chr9:71.1--74.2 Mb, chr10:63.8--67.2 Mb, and a mapped set of Jewish subgroup, Roma/Romani, late southern-Levant Jewish-context, and exact-carrier data needs. These objects connect the genome analyzed here to Ashkenazi Jewish, Jewish diaspora, northeastern Jewish, Levite-associated, Mediterranean/West-Asian founder, and Roma-adjacent family-history questions.
 
@@ -59,7 +63,7 @@ The person in question is Eastern/Central European Ashkenazi Jewish, with recent
 
 The pedigree gives local genetic findings a historical map. Austro-Hungarian and Hungarian-Slovak Jewish branches create one recent axis, with Tokaj/Bodrogkeresztur and Presov/Lubotice as prominent place contexts. Former Russian Empire and northeastern Jewish branches create another, especially Stowbtsy/Minsk and Kiev traditions. The Lithuanian, Belorussian, and broader Litvak-facing genetic signals below become population-level search targets with a plausible recent regional setting.
 
-One maternal-grandfather branch carries a Roma/Romani family story centered in family memory around an ancestral lead. That story belongs at branch scale. Roma-adjacent stories appear in family histories across Eastern and Central Europe, and genetic testing requires matched Roma/Romani references plus segment-level support.
+One Roma/Romani family-story lead is centered on Rebecca/Rivka Reubenstein, an ancestor in the maternal-grandfather branch. That story belongs at branch scale. Roma-adjacent stories appear in family histories across Eastern and Central Europe, and genetic testing requires matched Roma/Romani references plus segment-level support.
 
 Read together, the records and genome produce a personal genetic-genealogical account and a set of shared comparison targets. The lineages, local windows, carrier sets, and comparator gaps can be searched in other people, public cohorts, controlled datasets, and future Jewish, Roma/Romani, and eastern-Mediterranean reference panels.
 
@@ -132,21 +136,15 @@ Paternal & \texttt{R-YP1366*(xR-Y50410)} & Downstream branch of Ashkenazi-Levite
 
 The autosomal results divide into three main searchable objects. Chromosome 10 is the cleanest genealogy-grade tract for northeastern Jewish and Litvak-adjacent matching. Chromosome 9 is the strongest Jewish-region haplotype object. Chromosome 3 is the strongest rare anthropological signal, a compact founder block that asks for carrier expansion.
 
-\noindent\textit{Chromosome 10 Lithuanian-supported tract.}
-
-\noindent
+\objectheading{Chromosome 10 Lithuanian-supported tract.}
 The cleanest regional tract spans hg19 chr10:63,809,527--67,227,685. On haplotype 2, the genome analyzed here shares a 2.444 cM IBD/exact segment with \texttt{lithuania3} haplotype 1, with 75/75 selected-pair markers and maternal-side coherence. ChromoPainter independently recovers \texttt{lithuania3} as the dominant donor in the same interval. The tract fits recent or semi-recent northeastern/Baltic/Litvak-adjacent inheritance inside an Ashkenazi genome and gives a concrete segment for co-segregation, match triangulation, and branch testing.
 
-\noindent\textit{Chromosome 9 Jewish/Samaritan/Ashkenazi object.}
-
-\noindent
+\objectheading{Chromosome 9 Jewish/Samaritan/Ashkenazi object.}
 The chromosome 9 core spans hg19 chr9:71,103,406--74,208,282. The paternal-side haplotype shares a 95/95 exact core with \texttt{Samaritian988} hap2 and \texttt{ashkenazy8w} hap2. \texttt{Samaritian988} extends exact sharing through chr9:76,891,412, matching the local IBD span. In ChromoPainter anchor checks, the signal moves between the Ashkenazi and Samaritan anchors when either is removed, then falls into lower-tier patchwork context when both anchors are removed.
 
 The strongest reading is an older Jewish/Samaritan/Ashkenazi local object preserved inside Ashkenazi founder ancestry. Roquetes medieval Jewish Catalonia data provide broad/core chromosome 9 context, especially in the denser rows processed locally. The natural comparator set includes Jewish, Samaritan, Karaite, Sephardi, Mizrahi, North-African Jewish, and late southern-Levant Jewish-context datasets. A third near-exact carrier, dense Jewish subgroup panel, or direct Jewish-context ancient genome is the strongest upgrade.
 
-\noindent\textit{Chromosome 3 rare-motif founder block.}
-
-\noindent
+\objectheading{Chromosome 3 rare-motif founder block.}
 The most distinctive autosomal object spans hg19 chr3:47,002,931--49,291,883. Within this interval, a 13-marker sparse-panel motif was used to compare carriers, with seven of those positions forming the bridge state used for subclassing. The genome analyzed here carries the complete seven-position bridge state \texttt{1111111} on one phased haplotype. The motif links to \texttt{Jordan546}, \texttt{Adana23108.HO}, \texttt{HGDP00635.HO}, \texttt{Y064.HO}, \texttt{moroccoC61}, and \texttt{HGDP00672.HO}. The complete bridge is currently unique in the available phased panel, with external carriers sorting into bridge subclasses around a shared inner/right block: a primary \texttt{0111111} subclass in \texttt{Adana23108.HO}, \texttt{HGDP00635.HO}, \texttt{Y064.HO}, and \texttt{moroccoC61}; an alternate \texttt{1011111} subclass in \texttt{HGDP00672.HO}; and a \texttt{0001111} full-block subclass in \texttt{Jordan546}.
 
 ChromoPainter anchor validation gives the block its weight. In the baseline, the Mediterranean and West Asian focus bucket is high, with \texttt{Jordan546} and \texttt{moroccoC61} as the strongest donors. Removing \texttt{moroccoC61} leaves the signal mainly through \texttt{Jordan546}; removing \texttt{Jordan546} leaves the signal mainly through \texttt{moroccoC61}; removing both collapses the donor-bucket signal. HGDP high-coverage checks identify \texttt{HGDP00635} and \texttt{HGDP00672} as the clearest high-coverage anchors. Figure~\ref{fig:chr3-bridge} gives the bridge subclasses and anchor behavior in one view.
@@ -161,9 +159,7 @@ ChromoPainter anchor validation gives the block its weight. In the baseline, the
 
 This is the strongest compact anthropological finding in the genome analyzed here. Current evidence supports a real founder block with Mediterranean, eastern-Mediterranean, and West Asian proxy structure. Dense exact carriers can turn the local observation into a better-dated, better-routed founder object across Jewish diaspora, Mediterranean, eastern-Mediterranean, West Asian, North-African Jewish, and potentially Roma-adjacent panels.
 
-\noindent\textit{Secondary and context signals.}
-
-\noindent
+\objectheading{Secondary and context signals.}
 The chr3 Belorussian/local-Baltic micro-haplotype at approximately hg19 chr3:106.986--107.926 Mb is credible and lower tier. Haplotype 1 shares a 27/27 exact core with \texttt{belorus5} haplotype 1, with a paternal anchor inside the core. It supplies a second northeastern search point below the chromosome 10 tract.
 
 The chr16:85--90 Mb region is broader regional context. Its texture points toward Anatolian and Byzantine-adjacent, West Asian, eastern-Mediterranean, and Jewish Mediterranean contexts, with diffuse expanded IBD and haplotype behavior. Broad Mediterranean, Italy, Sicily, Punic, Aegean, Anatolian, and Maghrebi axes recur across the work; Ashkenazi controls absorb many broad peaks. These axes remain background until a compact local object emerges.
@@ -186,7 +182,7 @@ chr3:106.986--107.926 Mb & 27/27 exact core with \texttt{belorus5}; paternal anc
 
 \section{Roma/Romani Family-Story Testing}
 
-The Roma/Romani story is located on the maternal-grandfather side of the pedigree. The open-data audit used 33 Iberian Roma Human Origins samples, 527 South Asian core references, 258 Iranian/South-Central Asian references, Iberian and South-European baselines, and eight Ashkenazi controls. The panel is adequate for a first audit and geographically indirect for a Central/Eastern European family story.
+The Roma/Romani story is a family-memory lead centered on Rebecca/Rivka Reubenstein, an ancestor in the maternal-grandfather branch. The genetic audit did not localize the question to Rebecca/Rivka or to that branch; it tested whether the genome analyzed here shows segment-real Roma/South-Asian excess under the available open references. The open-data audit used 33 Iberian Roma Human Origins samples, 527 South Asian core references, 258 Iranian/South-Central Asian references, Iberian and South-European baselines, and eight Ashkenazi controls. The panel is adequate for a first audit and geographically indirect for a Central/Eastern European family story.
 
 Whole-genome contrasts are flat. The genome analyzed here has Roma\_Iberian z = -0.020610, SouthAsian\_core z = 0.354954, and IranianPlateau\_SouthCentralAsian z = 0.583976; differential contrasts are also flat, with Roma-minus-Iberian z = -0.057944 and SouthAsian-minus-Iberian z = 0.914234. Differential 10 Mb outlier windows exist, including several z >= 3 rows, and their distribution is scattered; a coherent Roma-plus-South-Asian tract pattern has yet to appear in current data.
 
@@ -246,7 +242,7 @@ The strongest reading is Ashkenazi-centered and locally structured. Recent Easte
 
 Broad Mediterranean, Levantine, Anatolian, North-African, Roma/Romani, Samaritan, Baltic, and West-Asian-facing labels stay at the level of founder-history context until they are carried by one of those objects. Similar Ashkenazi-centered genomes gain clearer comparison value when broad regional texture appears as a tract, lineage, or carrier set that can be searched in other families and datasets.
 
-The Roma/Romani family story remains part of the genealogy because it belongs to a named maternal-grandfather branch and a real family memory. Current open comparisons keep the genetic reading Ashkenazi-centered. Any Roma/Romani residue is likely tiny, older, socially mediated, or dependent on closely matched Central/Eastern European Roma reference panels. The story becomes a branch-specific comparator problem, best approached with regional Roma controls and segment-level evidence.
+The Roma/Romani family story remains part of the genealogy because it is centered on Rebecca/Rivka Reubenstein and a real family memory. Current open comparisons keep the genetic reading Ashkenazi-centered. Any Roma/Romani residue is likely tiny, older, socially mediated, or dependent on closely matched Central/Eastern European Roma reference panels. The story becomes a named-lead comparator problem, best approached with regional Roma controls and segment-level evidence.
 
 The northeastern and Jewish-region objects add two different kinds of structure. The Lithuanian-supported tract is the cleanest regional inheritance signal and may help triangulate Litvak or Baltic-adjacent branches. The chromosome 9 window is more historical, with a paternal-side Jewish-region segment shared across Samaritan and Ashkenazi comparators and reinforced by medieval Jewish Catalonia context. Together they describe a genome shaped by recent Eastern/Central European Jewish family history and older Jewish-region continuity.
 
