@@ -1,0 +1,15 @@
+dataset_or_resource	accession_or_identifier	status_in_project	public_package_use	current_interpretation
+Allen Ancient DNA Resource	v66.p1	local reference scaffold; redistribution handled by source terms	Comparator scaffold referenced through methods and source-run manifests.	Core ancient/reference context.
+Behar-style Jewish references	local derived/reference panel; source terms apply	local summary only	Jewish subgroup and Ashkenazi-control context.
+Bray/GSE23636 Ashkenazi controls	GSE23636	local control panel; source terms apply	local summary only	Ashkenazi-control and pseudo-target sensitivity.
+HGDP high-coverage genomes	HGDP/local references	local comparison resource; source terms apply	public sample IDs and aggregate summaries only	Useful high-coverage anchors for chr3.
+Amvrakia	PRJNA1143893	processed locally	public accession and summary	Null to context-only under current windows.
+Roca Vecchia	PRJEB93761	processed locally	public accession and summary	Context-only; broad chr9 echo is control-sensitive.
+Northeast Iberian Iron Age	PRJEB111574 / ERP192183	processed locally from public FASTQ prefixes	public accession and summary	Context-only Western Mediterranean comparator.
+Roquetes medieval Jewish Catalonia	PRJEB107193	processed locally from public WGS prefixes	public accession and summary	Useful chr9 broad/core context; source replacement absent.
+Nahal Yarmuth 38	PRJEB83268	processed locally	public accession and summary	Low-power deep-prehistoric southern-Levant background comparator.
+Islamic Ibiza	PRJEB92203	processed locally	public accession and summary	Legacy broad chr9/chr7 historical context.
+Segesta	PRJNA1082095	processed locally	public accession and summary	Legacy Mediterranean context.
+Iberian Roma Human Origins	figshare/open panel used by prior literature	processed locally	public aggregate summary only	Open Roma panel, geographically indirect for Central/Eastern European story.
+Czech Roma/Czech non-Roma Human Origins	EGAD50000001103	managed-access EGA dataset	public inventory row only	Best identified Central/Eastern European Roma upgrade if access becomes available.
+Late southern-Levant Jewish-context genomes	none currently available in local public set	data gap	public data-gap statement	Major specificity gap for Judea/Galilee/Jerusalem around roughly 300 BCE-300 CE.

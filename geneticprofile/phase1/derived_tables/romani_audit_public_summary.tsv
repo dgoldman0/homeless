@@ -1,0 +1,12 @@
+audit_item	value	interpretation
+open_roma_panel	33 Iberian Roma Human Origins samples	Useful first open comparator; geographically indirect for Central/Eastern European family-story testing.
+south_asian_core_references	527 samples	Controls for South Asian-related Roma ancestry expectations.
+iranian_south_central_asian_references	258 samples	Controls for Iranian plateau and South-Central Asian context.
+ashkenazi_controls	8 samples	Used as immediate control set around the study target.
+Roma_Iberian_z	-0.020610	Flat whole-genome contrast.
+SouthAsian_core_z	0.354954	Flat to mild whole-genome contrast.
+IranianPlateau_SouthCentralAsian_z	0.583976	Flat to mild whole-genome contrast.
+Roma_minus_Iberian_z	-0.057944	Flat differential contrast.
+SouthAsian_minus_Iberian_z	0.914234	Below source-claim threshold.
+local_window_pattern	Scattered 10 Mb outliers without coherent Roma-plus-South-Asian tract pattern	Current open references support an Ashkenazi-centered interpretation.
+future_best_comparator	EGAD50000001103, managed-access Czech Roma plus Czech non-Roma Human Origins array dataset	Meaningful upgrade if approved controlled access or public release becomes available.

@@ -1,0 +1,11 @@
+scenario	window	excluded_anchor	focus_bucket	target_length_share	ashkenazi_pseudo_target_mean	z_vs_ashkenazi_pseudo_targets	interpretation
+chr3_baseline	chr3_rare_motif	none	Mediterranean_WestAsian_nonJewish	0.51352146	0.10946613	11.973066	Strong focus-bucket signal with `Jordan546` and `moroccoC61` as leading anchors.
+chr3_no_moroccoC61	chr3_rare_motif	moroccoC61	Mediterranean_WestAsian_nonJewish	0.49949531	0.10972775	11.524941	Signal remains through `Jordan546`.
+chr3_no_Jordan546	chr3_rare_motif	Jordan546	Mediterranean_WestAsian_nonJewish	0.49951306	0.10981329	11.529156	Signal remains through `moroccoC61`.
+chr3_no_moroccoC61_Jordan546	chr3_rare_motif	moroccoC61;Jordan546	Mediterranean_WestAsian_nonJewish	0.03455998	0.11007610	-2.229309	Removing both anchors collapses the focus-bucket signal.
+chr10_baseline	chr10_lithuanian_tract	none	European_nonJewish	0.47529405	0.10954883	7.236658	`lithuania3` is the dominant recovered donor in the direct tract interval.
+chr10_no_lithuania3	chr10_lithuanian_tract	lithuania3	European_nonJewish	0.19405573	0.10613838	1.982279	Removing `lithuania3` weakens the tract-specific donor signal.
+chr9_baseline	chr9_jewish_samaritan_core	none	Ashkenazi_Jewish	0.47181408	0.25545620	0.783676	`ashkenazy8w` and `Samaritian988` jointly carry the core donor pattern.
+chr9_no_ashkenazy8w	chr9_jewish_samaritan_core	ashkenazy8w	Mizrahi_Eastern_Jewish	0.50842848	0.06943057	14.380172	Signal shifts strongly to `Samaritian988` when the Ashkenazi anchor is removed.
+chr9_no_Samaritian988	chr9_jewish_samaritan_core	Samaritian988	Ashkenazi_Jewish	0.58695056	0.25542528	1.200834	Signal shifts to `ashkenazy8w` when the Samaritan anchor is removed.
+chr9_no_ashkenazy8w_Samaritian988	chr9_jewish_samaritan_core	ashkenazy8w;Samaritian988	Mizrahi_Eastern_Jewish	0.11690044	0.06971269	1.526095	Removing both anchors leaves lower-tier patchwork context.

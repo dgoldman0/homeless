@@ -1,0 +1,9 @@
+category	examples	reason	public_replacement
+raw_target_genotypes	BAM; CRAM; VCF; PLINK BED/BIM/FAM; PGEN/PVAR/PSAM; consumer DNA text files	Directly exposes the study target genome.	Aggregate summaries and window-level ledgers.
+phased_target_haplotypes	HAPS/SAMPLE; phased VCF; per-window target haplotype rows	Can reconstruct sensitive target segments.	Canonical window definitions and public-safe evidence statements.
+private_matches	IBD match lists; triangulation lists with private people; kit IDs	Living-person privacy.	Aggregate exact/IBD counts and public comparator IDs.
+family_records	vital records; private tree files; branch notes with living people	Personal and family privacy.	General pedigree geography in paper-level prose only.
+private_like_y_snps	full private-like SNP comparison list; raw Y marker calls	High-identifiability direct paternal detail.	Public branch placement `R-YP1366*(xR-Y50410)`.
+third_party_raw_references	AADR files; HGDP files; Behar/Bray local files; WGS/FASTQ/BAM downloads	Source terms and size constraints.	Accession/source identifiers and aggregate summaries.
+third_party_pdfs	published article PDFs from the local source cache	Copyright and size constraints.	`paper/bibliography.md`.
+build_artifacts	LaTeX logs; auxiliary files; scratch tables	Low public value and possible path leakage.	Figures, bibliography, and curated verification tables.

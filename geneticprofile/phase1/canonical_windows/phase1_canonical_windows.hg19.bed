@@ -1,0 +1,9 @@
+# chrom	start0	end1	object_id	status	confidence	label
+chr3	47002930	49291883	chr3_rare_motif	carry	high	rare founder block
+chr3	106985679	107926340	chr3_belorus_micro_core	carry	moderate	Belorussian/local-Baltic exact core
+chr9	71103405	74208282	chr9_jewish_samaritan_core	carry	high	Jewish/Samaritan/Ashkenazi exact core
+chr9	74208281	76891412	chr9_samaritan_extension	context	context	Samaritan right-tail extension
+chr10	63809526	67227685	chr10_lithuanian_tract	carry	high	Lithuanian-supported tract
+chr16	84999999	90000000	chr16_regional_context	context	context	diffuse regional context
+chr12	70000000	80000000	chr12_phase_limited	paused	paused	phase-limited residue
+chr2	199700000	206600000	chr2_phase_split_caution	closed	closed	parent-stitched caution interval

@@ -1,0 +1,6 @@
+claim	sensitivity_status	evidence	model_implication
+Ashkenazi global frame	stable	PCA and Q distance place the study target closest to Ashkenazi groups; whole-genome regional proxy excess is modest and shared with controls.	Use Ashkenazi founder-history frame as the base model.
+Northeastern/Litvak local inheritance	stable_local	chr10 remains the clean direct tract; global models have limited resolution for a tract-level object.	Carry as a local tract outside global ancestry proportion language.
+Older Mediterranean/eastern-Mediterranean/West-Asian founder texture	supported_as_context	Temporal and regional layers show mild/local high tails in Anatolia, Sicily/Punic/Italy, and Jewish-region axes; compact support resolves at local-object scale.	Use as proxy texture inside Ashkenazi founder history.
+Direct late southern-Levant specificity	data_limited	Available public data lack dense late southern-Levant Jewish-context genomes; Nahal Yarmuth is low-power deep-prehistoric context.	Treat direct Judean/Galilean/Jerusalem specificity as unresolved.
+Single external source model	weakened	Local objects split by evidence class and whole-genome checks remain Ashkenazi-centered.	Use the layered founder model.
